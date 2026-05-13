@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <Eyebrow tone="on-paper">Rozdział 01 · Antwerpia</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="on-paper" className="mt-5">
+                  <SectionTitle className="mt-5 text-bg">
                     Tam, gdzie wszystko się{" "}
                     <span className="it">zaczęło.</span>
                   </SectionTitle>
@@ -270,7 +270,7 @@ export default function AboutPage() {
                   <Eyebrow tone="on-paper">Rozdział 03 · Polska</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="on-paper" className="mt-5">
+                  <SectionTitle className="mt-5 text-bg">
                     Dlaczego{" "}
                     <span className="it">Częstochowa.</span>
                   </SectionTitle>
@@ -369,7 +369,7 @@ export default function AboutPage() {
                   <Eyebrow tone="on-paper">Rozdział 05 · Następny krok</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="on-paper" className="mt-5">
+                  <SectionTitle className="mt-5 text-bg">
                     Akustyka. Design.{" "}
                     <span className="it">Re-Sound.</span>
                   </SectionTitle>
