@@ -31,7 +31,7 @@ export function EditorialIntro() {
                 Co to jest
               </span>
               <Image
-                src="/images/editorial/detal-sufitu.jpg"
+                src="https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=900&q=80"
                 alt="Detal sufitu napinanego — gładka, bezspoinowa powierzchnia"
                 fill
                 loading="lazy"
