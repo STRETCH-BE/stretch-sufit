@@ -21,6 +21,7 @@ export const dynamic = "force-dynamic";
 type QuoteBody = {
   name?: unknown;
   phone?: unknown;
+  email?: unknown;
   city?: unknown;
   surface?: unknown;
   /** Honeypot — bots tick every field they see */
@@ -114,6 +115,11 @@ export async function POST(request: Request) {
 
   const name = asString(body.name, 100);
   const phone = asString(body.phone, 30);
+  const emailRaw = asString(body.email, 200).toLowerCase();
+  // Light-touch email validation — only reject if obviously malformed.
+  // Empty is fine (it's optional). A real validator would be overkill.
+  const emailValid = !emailRaw || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailRaw);
+  const email = emailValid ? emailRaw : "";
   const city = asString(body.city, 100);
   const surfaceKey = asString(body.surface, 30);
   const surface = SURFACE_LABELS[surfaceKey] || "Nie podano";
@@ -152,6 +158,7 @@ export async function POST(request: Request) {
     phoneClean,
     whatsappNumber,
     whatsappMessage,
+    email,
     city,
     surface,
     submittedAt,
@@ -164,11 +171,13 @@ export async function POST(request: Request) {
     "",
     `Imię:         ${name}`,
     `Telefon:      ${phoneDisplay}`,
+    `Email:        ${email || "Nie podano"}`,
     `Miasto:       ${city || "Nie podano"}`,
     `Powierzchnia: ${surface}`,
     "",
     `Zadzwoń:      tel:${phoneClean}`,
     `WhatsApp:     https://wa.me/${whatsappNumber}`,
+    email ? `Email:        mailto:${email}` : "",
     "",
     "—",
     `Zgłoszone: ${submittedAt} (Warszawa)`,
@@ -176,7 +185,9 @@ export async function POST(request: Request) {
     `Strona: ${refererDisplay}`,
     "",
     "Oddzwoń w ciągu 24 godzin.",
-  ].join("\n");
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   try {
     await sendMail({
@@ -185,6 +196,8 @@ export async function POST(request: Request) {
       html,
       text,
       importance: "high",
+      // If the lead gave an email, clicking Reply in Outlook goes to them
+      replyTo: email || undefined,
     });
     return NextResponse.json({ ok: true });
   } catch (err) {
@@ -213,6 +226,7 @@ type LeadEmailData = {
   whatsappNumber: string;
   /** Pre-URL-encoded */
   whatsappMessage: string;
+  email: string;
   city: string;
   surface: string;
   submittedAt: string;
@@ -227,6 +241,7 @@ function buildLeadEmail(d: LeadEmailData): string {
     phoneClean: escapeHtml(d.phoneClean),
     whatsappNumber: escapeHtml(d.whatsappNumber),
     whatsappMessage: d.whatsappMessage, // already URL-encoded, safe in href
+    email: d.email ? escapeHtml(d.email) : "",
     city: d.city ? escapeHtml(d.city) : "",
     surface: escapeHtml(d.surface),
     submittedAt: escapeHtml(d.submittedAt),
@@ -304,6 +319,11 @@ function buildLeadEmail(d: LeadEmailData): string {
             </table>
             <div style="margin-top:14px; font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; font-size:13px; color:#888; text-align:center;">
               <a href="tel:${safe.phoneClean}" style="color:${BRAND_RED}; text-decoration:none; font-weight:600; font-size:16px; letter-spacing:0.02em;">${safe.phoneDisplay}</a>
+              ${
+                safe.email
+                  ? `<br><a href="mailto:${safe.email}" style="color:${BRAND_RED}; text-decoration:none; font-weight:500; font-size:14px; margin-top:6px; display:inline-block;">✉️ ${safe.email}</a>`
+                  : ""
+              }
             </div>
           </td>
         </tr>
