@@ -20,7 +20,7 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
-import { MobileStickyCta } from "@/components/sections/mobile-sticky-cta";
+import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 export const metadata: Metadata = {
   title: "O nas — Belgijska technologia, polska produkcja | Stretch Sufit",
@@ -514,7 +514,7 @@ export default function AboutPage() {
       </main>
 
       <Footer />
-      <MobileStickyCta />
+      <MobileStickyCTA />
     </>
   );
 }
