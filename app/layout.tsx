@@ -1,0 +1,157 @@
+/**
+ * Root layout.
+ * File path: /app/layout.tsx
+ *
+ * Wires up:
+ *   - Bricolage Grotesque + Instrument Serif + DM Sans via next/font
+ *   - ConsentProvider (RODO) + CookieBanner
+ *   - PostHog, Clarity, GA4, Meta Pixel (consent-gated, env-gated)
+ *   - ScrollTracker
+ *   - Organization + Website JSON-LD on every page
+ *   - Default metadata
+ */
+
+import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
+import {
+  Bricolage_Grotesque,
+  Instrument_Serif,
+  DM_Sans,
+} from "next/font/google";
+
+import { siteConfig } from "@/lib/site-config";
+import { buildOrganization, buildWebsite } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/json-ld";
+import { ConsentProvider } from "@/components/analytics/consent-provider";
+import { CookieBanner } from "@/components/analytics/cookie-banner";
+import { PostHogProvider } from "@/components/analytics/posthog-provider";
+import { Clarity } from "@/components/analytics/clarity";
+import { GA4 } from "@/components/analytics/ga4";
+import { MetaPixel } from "@/components/analytics/meta-pixel";
+import { ScrollTracker } from "@/components/analytics/scroll-tracker";
+
+import "./globals.css";
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-bricolage",
+  display: "swap",
+});
+
+const instrument = Instrument_Serif({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0a",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.legalName }],
+  generator: "Next.js",
+  keywords: [
+    "sufity napinane",
+    "sufit napinany",
+    "stretch ceiling",
+    "Stretch Sufit",
+    "sufity premium",
+    "sufit akustyczny",
+    "sufit świetlny LED",
+    "Polska",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
+  },
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="pl"
+      className={`${bricolage.variable} ${instrument.variable} ${dmSans.variable}`}
+    >
+      <body className="bg-bg text-white antialiased">
+        {/* Site-wide structured data */}
+        <JsonLd data={buildOrganization()} />
+        <JsonLd data={buildWebsite()} />
+
+        <ConsentProvider>
+          {/* PostHog uses useSearchParams which requires a Suspense boundary in Next 15 */}
+          <Suspense fallback={null}>
+            <PostHogProvider>{children}</PostHogProvider>
+          </Suspense>
+
+          <Suspense fallback={null}>
+            <ScrollTracker />
+          </Suspense>
+
+          {/* Third-party scripts — each is consent-gated and env-gated */}
+          <Clarity />
+          <GA4 />
+          <MetaPixel />
+
+          <CookieBanner />
+        </ConsentProvider>
+      </body>
+    </html>
+  );
+}

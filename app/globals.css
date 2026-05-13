@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────
+   Tailwind v4 theme — colors and fonts.
+   These tokens automatically generate utility classes:
+     --color-bg → bg-bg / text-bg / border-bg
+     --color-red → bg-red / text-red / border-red
+     --font-display → font-display
+   ─────────────────────────────────────────────────────────── */
+@theme {
+  /* Color tokens — Stretch Sufit palette */
+  --color-bg: #0a0a0a;
+  --color-bg-soft: #131313;
+  --color-bg-card: #1a1a1a;
+  --color-paper: #f5f1eb;
+  --color-paper-2: #ece6dc;
+  --color-red: #e1101a;
+  --color-red-deep: #b00c13;
+
+  /* Fonts — these CSS variables are populated by next/font in layout.tsx */
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ───────────────────────────────────────────────────────────
+   Base resets and global typography
+   ─────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Editorial italic helper used inline within headings:
+     <h1>Nowy sufit <span class="it">w 1 dzień</span></h1> */
+.it {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Focus ring — WCAG-compliant */
+:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-red);
+  color: white;
+}
+
+/* ───────────────────────────────────────────────────────────
+   Animations
+   ─────────────────────────────────────────────────────────── */
+
+/* Used by /components/sections/ticker.tsx for the infinite red band */
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect users who prefer reduced motion — disables the ticker
+   animation and any other CSS animations. The FadeIn hook handles
+   this in JS as well. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
