@@ -40,6 +40,7 @@ export function CtaFinal() {
   const [data, setData] = useState({
     name: "",
     phone: "",
+    email: "",
     city: "",
     surface: "",
   });
@@ -206,6 +207,15 @@ export function CtaFinal() {
                     required
                     autoComplete="tel"
                     inputMode="tel"
+                  />
+                  <Field
+                    label="Adres e-mail"
+                    name="email"
+                    type="email"
+                    value={data.email}
+                    onChange={update("email")}
+                    autoComplete="email"
+                    inputMode="email"
                   />
                   <Field
                     label="Miasto"
