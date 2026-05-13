@@ -49,21 +49,32 @@ export function CtaFinal() {
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
       setData((d) => ({ ...d, [key]: e.target.value }));
 
+  // Honeypot — a hidden field bots will fill in but humans never see
+  const [honeypot, setHoneypot] = useState("");
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (status === "submitting") return;
     setStatus("submitting");
 
-    analytics.formSubmit("quote_request", true);
-    analytics.quoteRequest({ city: data.city, surface: data.surface });
-
     try {
-      // TODO (next prompt): replace with real POST to /api/quote (Resend handler)
-      await new Promise((r) => setTimeout(r, 600));
-      // eslint-disable-next-line no-console
-      console.log("[quote_request payload]", data);
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, website: honeypot }),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Server responded ${res.status}`);
+      }
+
+      analytics.formSubmit("quote_request", true);
+      analytics.quoteRequest({ city: data.city, surface: data.surface });
       setStatus("success");
-    } catch {
+    } catch (err) {
+      // eslint-disable-next-line no-console
+      console.error("[quote form] submit failed:", err);
+      analytics.formSubmit("quote_request", false);
       setStatus("error");
     }
   };
@@ -153,6 +164,31 @@ export function CtaFinal() {
                 </p>
 
                 <div className="mt-6 space-y-3">
+                  {/* Honeypot — hidden from real users, bots fill it in */}
+                  <div
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      left: "-10000px",
+                      width: "1px",
+                      height: "1px",
+                      overflow: "hidden",
+                    }}
+                  >
+                    <label htmlFor={`${formId}-website`}>
+                      Website (leave empty)
+                    </label>
+                    <input
+                      id={`${formId}-website`}
+                      name="website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={honeypot}
+                      onChange={(e) => setHoneypot(e.target.value)}
+                    />
+                  </div>
+
                   <Field
                     label="Imię"
                     name="name"
