@@ -1,0 +1,27 @@
+/* File path: APPEND to /app/globals.css
+ *
+ * Adds the keyframes needed by section components. Append these to the
+ * existing globals.css (which already has @theme tokens, the .it italic
+ * helper, focus-visible rules, and ::selection). Do not duplicate those.
+ */
+
+/* Ticker — continuous horizontal scroll. The track is rendered with two
+   copies of the phrase list so translateX(-50%) loops seamlessly. */
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Respect reduced-motion users for both the ticker and the FadeIn hook
+   (FadeIn handles this in JS; this rule covers any CSS-only animations). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
