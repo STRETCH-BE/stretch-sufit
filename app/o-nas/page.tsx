@@ -98,10 +98,10 @@ export default function AboutPage() {
             <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
                 <FadeIn>
-                  <Eyebrow tone="dark">Rozdział 01 · Antwerpia</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 01 · Antwerpia</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="dark" className="mt-5">
+                  <SectionTitle tone="on-paper" className="mt-5">
                     Tam, gdzie wszystko się{" "}
                     <span className="it">zaczęło.</span>
                   </SectionTitle>
@@ -267,10 +267,10 @@ export default function AboutPage() {
 
               <div className="md:col-span-5">
                 <FadeIn>
-                  <Eyebrow tone="dark">Rozdział 03 · Polska</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 03 · Polska</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="dark" className="mt-5">
+                  <SectionTitle tone="on-paper" className="mt-5">
                     Dlaczego{" "}
                     <span className="it">Częstochowa.</span>
                   </SectionTitle>
@@ -366,10 +366,10 @@ export default function AboutPage() {
             <div className="grid items-end gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="dark">Rozdział 05 · Następny krok</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 05 · Następny krok</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
-                  <SectionTitle tone="dark" className="mt-5">
+                  <SectionTitle tone="on-paper" className="mt-5">
                     Akustyka. Design.{" "}
                     <span className="it">Re-Sound.</span>
                   </SectionTitle>
@@ -482,7 +482,7 @@ export default function AboutPage() {
           />
           <Container>
             <div className="mx-auto max-w-3xl text-center">
-              <Eyebrow tone="light">Rozmawiajmy</Eyebrow>
+              <Eyebrow tone="on-dark">Rozmawiajmy</Eyebrow>
               <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-white">
                 Belgia projektuje.{" "}
                 <span className="it">Polska produkuje.</span>
