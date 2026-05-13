@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
         <section className="border-b border-bg/10 py-20 md:py-24">
           <Container>
             <div className="mx-auto max-w-3xl">
-              <Eyebrow tone="dark">Dokument prawny</Eyebrow>
+              <Eyebrow tone="on-paper">Dokument prawny</Eyebrow>
               <h1 className="mt-6 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-bg">
                 Polityka{" "}
                 <span className="it">prywatności.</span>
