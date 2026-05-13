@@ -2,20 +2,17 @@
  * Microsoft Graph email helper.
  * File path: /lib/email.ts
  *
- * Authenticates to Microsoft Graph using the OAuth 2.0 client-credentials
- * flow and sends email from the configured mailbox. Designed to fail loudly
- * during build only when actually called — missing env vars produce a runtime
- * error in the API route, not a build error.
+ * Authenticates to Microsoft Graph using OAuth 2.0 client-credentials
+ * and sends email from the configured mailbox. The app is restricted via
+ * an Exchange Application Access Policy to send only from
+ * MS_GRAPH_FROM_ADDRESS, so a leaked secret cannot impersonate other
+ * mailboxes in the tenant.
  *
- * The app is restricted via an Exchange Application Access Policy to send
- * only from MS_GRAPH_FROM_ADDRESS, so a leaked client secret cannot
- * impersonate other mailboxes in the tenant.
- *
- * Required env vars (set in Vercel → Settings → Environment Variables):
- *   - MS_GRAPH_TENANT_ID       Microsoft 365 tenant (directory) ID
- *   - MS_GRAPH_CLIENT_ID       App registration application ID
- *   - MS_GRAPH_CLIENT_SECRET   App registration client secret value
- *   - MS_GRAPH_FROM_ADDRESS    Mailbox to send from (must match access policy)
+ * Required env vars:
+ *   MS_GRAPH_TENANT_ID       Microsoft 365 tenant (directory) ID
+ *   MS_GRAPH_CLIENT_ID       App registration application ID
+ *   MS_GRAPH_CLIENT_SECRET   App registration client secret VALUE
+ *   MS_GRAPH_FROM_ADDRESS    Mailbox to send from
  */
 
 const GRAPH_BASE = "https://graph.microsoft.com/v1.0";
@@ -27,8 +24,8 @@ type TokenResponse = {
   token_type: string;
 };
 
-// In-memory token cache. Lives for the lifetime of the serverless instance,
-// which is typically minutes. Avoids hammering AAD for a token on every request.
+// In-memory token cache — survives for the lifetime of the serverless
+// instance (typically minutes). Saves a token request on every send.
 let cachedToken: { value: string; expiresAt: number } | null = null;
 
 async function getAccessToken(): Promise<string> {
@@ -42,7 +39,7 @@ async function getAccessToken(): Promise<string> {
     );
   }
 
-  // Reuse cached token if it's still valid (with a 60s safety buffer)
+  // Reuse cached token if it has at least 60 seconds of life left
   if (cachedToken && cachedToken.expiresAt > Date.now() + 60_000) {
     return cachedToken.value;
   }
@@ -59,7 +56,6 @@ async function getAccessToken(): Promise<string> {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: body.toString(),
-    // Don't cache token responses on the Vercel edge
     cache: "no-store",
   });
 
@@ -79,18 +75,15 @@ async function getAccessToken(): Promise<string> {
 }
 
 export type SendMailOptions = {
-  /** Recipient(s) — comma-separated string or array of addresses */
   to: string | string[];
-  /** Optional CC */
   cc?: string | string[];
-  /** Email subject line */
   subject: string;
-  /** HTML body (used as-is) */
   html: string;
-  /** Optional plain-text body. Defaults to a stripped version of `html`. */
   text?: string;
-  /** Optional Reply-To header so replying goes to the lead, not info@ */
+  /** Reply-To header — clicking Reply in Outlook sends to this address */
   replyTo?: string;
+  /** Sets the Outlook importance flag — "high" shows a red ! marker */
+  importance?: "low" | "normal" | "high";
 };
 
 function toRecipients(addresses?: string | string[]) {
@@ -101,8 +94,7 @@ function toRecipients(addresses?: string | string[]) {
 
 /**
  * Send an email via Microsoft Graph as the configured mailbox.
- * Throws on any failure — callers should wrap in try/catch and decide
- * whether to expose the error to the user.
+ * Throws on any failure — callers wrap in try/catch.
  */
 export async function sendMail(options: SendMailOptions): Promise<void> {
   const from = process.env.MS_GRAPH_FROM_ADDRESS;
@@ -115,15 +107,14 @@ export async function sendMail(options: SendMailOptions): Promise<void> {
   const message = {
     message: {
       subject: options.subject,
+      importance: options.importance || "normal",
       body: {
         contentType: "HTML",
         content: options.html,
       },
       toRecipients: toRecipients(options.to),
       ccRecipients: toRecipients(options.cc),
-      replyTo: options.replyTo
-        ? toRecipients(options.replyTo)
-        : undefined,
+      replyTo: options.replyTo ? toRecipients(options.replyTo) : undefined,
     },
     saveToSentItems: true,
   };
