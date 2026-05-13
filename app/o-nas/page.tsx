@@ -439,11 +439,11 @@ export default function AboutPage() {
                 {[
                   {
                     no: "Nie franczyza.",
-                    yes: "Każdy montaż wykonuje przeszkolona ekipa STRETCH®. Bez podwykonawców, bez ekip „z polecenia". Jedna firma, jedna gwarancja.",
+                    yes: 'Każdy montaż wykonuje przeszkolona ekipa STRETCH®. Bez podwykonawców, bez ekip „z polecenia". Jedna firma, jedna gwarancja.',
                   },
                   {
                     no: "Nie pośrednictwo.",
-                    yes: "Pracujemy z materiałem własnej produkcji — profilami i membranami STRETCH®. Bez generycznych zamienników, bez importu „okazji".",
+                    yes: 'Pracujemy z materiałem własnej produkcji — profilami i membranami STRETCH®. Bez generycznych zamienników, bez importu „okazji".',
                   },
                   {
                     no: "Nie improwizacja.",
