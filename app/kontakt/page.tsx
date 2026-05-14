@@ -56,21 +56,15 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 50.807533912693366,
-    longitude: 19.158582621002815,
+    latitude: 50.8074338,
+    longitude: 19.1585487,
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
-      closes: "17:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "10:00",
-      closes: "14:00",
+      closes: "15:30",
     },
   ],
   priceRange: "$$",
@@ -139,7 +133,7 @@ export default function KontaktPage() {
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
                   Trzy drogi kontaktu, jedna obietnica: oddzwaniamy w 24
                   godziny w dni robocze. Showroom otwarty od poniedziałku do
-                  soboty — zapraszamy z próbnikami w ręku.
+                  piątku — zapraszamy z próbnikami w ręku.
                 </p>
               </FadeIn>
             </div>
@@ -163,7 +157,7 @@ export default function KontaktPage() {
                     +48 730 700 333
                   </div>
                   <p className="mt-4 text-[15px] leading-relaxed text-white/65">
-                    Najszybszy kontakt. Odbieramy od poniedziałku do soboty —
+                    Najszybszy kontakt. Odbieramy od poniedziałku do piątku —
                     poza godzinami zostaw wiadomość, oddzwonimy.
                   </p>
                   <div className="mt-6 inline-flex items-center gap-2 font-display text-sm font-semibold text-red">
@@ -303,17 +297,11 @@ export default function KontaktPage() {
                             <td className="pr-6 py-1 font-display font-semibold text-bg">
                               Pn – Pt
                             </td>
-                            <td>09:00 – 17:00</td>
-                          </tr>
-                          <tr>
-                            <td className="pr-6 py-1 font-display font-semibold text-bg">
-                              Sob
-                            </td>
-                            <td>10:00 – 14:00</td>
+                            <td>09:00 – 15:30</td>
                           </tr>
                           <tr>
                             <td className="pr-6 py-1 font-display font-semibold text-bg/60">
-                              Nd
+                              Sob – Nd
                             </td>
                             <td className="text-bg/60">zamknięte</td>
                           </tr>
@@ -339,14 +327,14 @@ export default function KontaktPage() {
                 <FadeIn delay={120}>
                   <div className="overflow-hidden rounded border border-bg/10">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2566.3!2d19.1180!3d50.8118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDQ4JzQyLjUiTiAxOcKwMDcnMTMuMSJF!5e0!3m2!1spl!2spl!4v1715000000000"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.6!2d19.1559738!3d50.8074372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b562eb829d39%3A0xfbfd5d10b239e548!2sAlto%20Design%20Sp.%20Z%20o.o.%20-%20Sufity%20napinane!5e0!3m2!1spl!2spl!4v1715000000000"
                       width="100%"
                       height="500"
                       style={{ border: 0 }}
                       allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Mapa: Stretch Sufit, ul. Legionów 59, 42-200 Częstochowa"
+                      title="Mapa: Alto Design (Stretch Sufit), ul. Legionów 59, 42-200 Częstochowa"
                     />
                   </div>
                 </FadeIn>
