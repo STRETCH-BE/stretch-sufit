@@ -11,7 +11,7 @@ export type ProductFeature = {
 };
 
 export type ProductUseCase = {
-  context: string; // "Łazienki i kuchnie", "Open-space biura"
+  context: string;
   body: string;
 };
 
@@ -26,42 +26,22 @@ export type ProductSpec = {
 };
 
 export type Product = {
-  /** URL-safe slug, used in href: /rozwiazania/[slug] */
   slug: string;
-  /** Display number, e.g. "01" — rendered with a red accent */
   number: string;
-  /** Short label rendered after the number, e.g. "Poliester" */
   label: string;
-  /** Full headline. The substring inside <span class="it">…</span> renders italic serif. */
   title: string;
-  /** Substring of `title` to render in editorial italic. Optional. */
   italicAccent?: string;
-  /** 1–2 sentence Polish description (for homepage card). */
   description: string;
-  /** Image displayed in the circular thumbnail. */
   image: string;
-  /** Polish alt text. */
   imageAlt: string;
-  /** Short label on the bottom link, e.g. "Sufit poliestrowy". */
   linkLabel: string;
-  /** If true, the card renders red on dark to break the grid rhythm. */
   featured?: boolean;
-
-  /* ─── Full-page content (consumed by /rozwiazania/[slug]) ─── */
-
-  /** Short hero subhead, e.g. "Membrana poliestrowa z polyuretanem" */
   tagline: string;
-  /** 2-3 sentence intro paragraph for the product page hero */
   intro: string;
-  /** 4 key features displayed as cards */
   features: ProductFeature[];
-  /** 3-4 use cases — where this product wins */
   useCases: ProductUseCase[];
-  /** Technical specifications — rendered as a key/value table */
   specs: ProductSpec[];
-  /** When to choose this over alternatives — 2-3 sentences */
   comparedTo: string;
-  /** 4-5 FAQ entries — also used for FAQPage JSON-LD */
   faq: ProductFaq[];
 };
 
@@ -104,4 +84,53 @@ export type City = {
   faq: CityFaq[];
   image: string;
   imageAlt: string;
+};
+
+/** Filter key values for projects — must match Product.slug for consistent linking */
+export type ProjectProductCategory =
+  | "sufit-pvc"
+  | "sufit-poliestrowy"
+  | "sufit-akustyczny"
+  | "sufit-swietlny"
+  | "sufit-fotodruk"
+  | "sufit-prefab";
+
+/** Filter key values for space type */
+export type ProjectSpaceType =
+  | "salon"
+  | "lazienka"
+  | "kuchnia"
+  | "sypialnia"
+  | "biuro"
+  | "gastronomia"
+  | "hotel"
+  | "sklep";
+
+export type Project = {
+  /** Stable identifier used for keys and URL params */
+  slug: string;
+  /** Short editorial title shown under the image, e.g. "Apartament Mokotów" */
+  title: string;
+  /** City slug — matches `City.slug` from /content/cities.ts */
+  citySlug: string;
+  /** City display name, e.g. "Warszawa" */
+  city: string;
+  /** Optional district within the city, e.g. "Mokotów" */
+  district?: string;
+  /** Product category — matches `Product.slug` from /content/products.ts */
+  productCategory: ProjectProductCategory;
+  /** Display label for the product, e.g. "Sufit PVC" */
+  productLabel: string;
+  /** Type of space — used as a secondary filter */
+  spaceType: ProjectSpaceType;
+  /** Display label for the space, e.g. "Salon", "Open-space biuro" */
+  spaceLabel: string;
+  /** Image URL — Unsplash placeholder for now, swap to /images/gallery/{slug}.jpg later */
+  image: string;
+  /** Polish alt text — important for accessibility AND SEO */
+  imageAlt: string;
+  /** Surface area in m² for the trust signal, e.g. 42 */
+  surfaceArea?: number;
+  /** Year of installation */
+  year?: number;
 };
