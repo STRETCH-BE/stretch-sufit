@@ -43,7 +43,7 @@ export const cities: City[] = [
     trustBlocks: [
       {
         title: "Lokalna obecność, globalny system",
-        body: "Część grupy STRETCH® — belgijska technologia, polska produkcja, montaż przez przeszkolone ekipy w całej Warszawie. Bez podwykonawców, bez „ekip z polecenia".",
+        body: 'Część grupy STRETCH® — belgijska technologia, polska produkcja, montaż przez przeszkolone ekipy w całej Warszawie. Bez podwykonawców, bez „ekip z polecenia".',
       },
       {
         title: "Doświadczenie w stolicy",
@@ -205,7 +205,7 @@ export const cities: City[] = [
       },
       {
         title: "Profesjonalny montaż",
-        body: "Ekipa STRETCH® z własnymi narzędziami i protokołem. Bez wynajętych monterów „dorobkowych", bez kompromisów w jakości.",
+        body: 'Ekipa STRETCH® z własnymi narzędziami i protokołem. Bez wynajętych monterów „dorobkowych", bez kompromisów w jakości.',
       },
       {
         title: "Pełna gama produktów",
@@ -393,7 +393,7 @@ export const cities: City[] = [
       },
       {
         title: "Lokalne ekipy",
-        body: "Wszyscy nasi monterzy to stała kadra z Częstochowy i okolic. To nie firma „dla turystów" — to lokalna marka z ogólnoeuropejskim zapleczem.",
+        body: 'Wszyscy nasi monterzy to stała kadra z Częstochowy i okolic. To nie firma „dla turystów" — to lokalna marka z ogólnoeuropejskim zapleczem.',
       },
     ],
     faq: [
@@ -719,7 +719,7 @@ export const cities: City[] = [
       },
       {
         title: "Lokalna obecność",
-        body: "Radomsko jest naszym sąsiadem — znamy lokalne kamienice, deweloperów, architektów. Bez „pomyłek z dostawą" przez nieznajomość terenu.",
+        body: 'Radomsko jest naszym sąsiadem — znamy lokalne kamienice, deweloperów, architektów. Bez „pomyłek z dostawą" przez nieznajomość terenu.',
       },
     ],
     faq: [
