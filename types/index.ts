@@ -5,6 +5,26 @@
  * Imported by all `/content/*.ts` files and the components that consume them.
  */
 
+export type ProductFeature = {
+  title: string;
+  body: string;
+};
+
+export type ProductUseCase = {
+  context: string; // "Łazienki i kuchnie", "Open-space biura"
+  body: string;
+};
+
+export type ProductFaq = {
+  q: string;
+  a: string;
+};
+
+export type ProductSpec = {
+  label: string;
+  value: string;
+};
+
 export type Product = {
   /** URL-safe slug, used in href: /rozwiazania/[slug] */
   slug: string;
@@ -16,7 +36,7 @@ export type Product = {
   title: string;
   /** Substring of `title` to render in editorial italic. Optional. */
   italicAccent?: string;
-  /** 1–2 sentence Polish description. */
+  /** 1–2 sentence Polish description (for homepage card). */
   description: string;
   /** Image displayed in the circular thumbnail. */
   image: string;
@@ -26,6 +46,23 @@ export type Product = {
   linkLabel: string;
   /** If true, the card renders red on dark to break the grid rhythm. */
   featured?: boolean;
+
+  /* ─── Full-page content (consumed by /rozwiazania/[slug]) ─── */
+
+  /** Short hero subhead, e.g. "Membrana poliestrowa z polyuretanem" */
+  tagline: string;
+  /** 2-3 sentence intro paragraph for the product page hero */
+  intro: string;
+  /** 4 key features displayed as cards */
+  features: ProductFeature[];
+  /** 3-4 use cases — where this product wins */
+  useCases: ProductUseCase[];
+  /** Technical specifications — rendered as a key/value table */
+  specs: ProductSpec[];
+  /** When to choose this over alternatives — 2-3 sentences */
+  comparedTo: string;
+  /** 4-5 FAQ entries — also used for FAQPage JSON-LD */
+  faq: ProductFaq[];
 };
 
 export type GalleryItem = {
@@ -55,28 +92,16 @@ export type CityTrustBlock = {
 };
 
 export type City = {
-  /** URL-safe slug, used in href: /sufity-napinane/[slug] */
   slug: string;
-  /** Display name with Polish diacritics (Mianownik / nominative) */
   name: string;
-  /** Polish voivodeship */
   region: string;
-  /** Locative case for SEO copy ("w Warszawie", "we Wrocławiu") */
   locative: string;
-  /** Display population, e.g. "1,86 mln mieszkańców" */
   populationDisplay: string;
-  /** Distance from Częstochowa HQ in kilometers */
   distanceFromHq: number;
-  /** Districts/neighborhoods (empty array for smaller cities) */
   districts: string[];
-  /** 2-3 sentence intro paragraph, unique per city */
   intro: string;
-  /** 3 why-us trust blocks — standardized structure, city-specific copy */
   trustBlocks: CityTrustBlock[];
-  /** 4 city-specific FAQ entries — used for FAQPage JSON-LD too */
   faq: CityFaq[];
-  /** Hero/showcase image URL */
   image: string;
-  /** Polish alt text for the image */
   imageAlt: string;
 };
