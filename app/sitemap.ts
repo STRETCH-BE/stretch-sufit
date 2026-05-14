@@ -1,22 +1,57 @@
 /**
- * Dynamic sitemap.xml.
+ * Sitemap — auto-generated at request time.
  * File path: /app/sitemap.ts
  *
- * Currently lists just the homepage. Will be extended in later prompts
- * to include /rozwiazania/[slug] product pages and /sufity-napinane/[slug]
- * city pages by importing from /content/products.ts and /content/cities.ts.
+ * Discoverable at /sitemap.xml. Submit this URL to Google Search Console
+ * and Bing Webmaster Tools once the real domain is connected.
+ *
+ * To add new routes:
+ *  - city pages are auto-discovered via `cities` array
+ *  - other static routes go in `staticRoutes`
  */
 
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/site-config";
+import { cities } from "@/content/cities";
+
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+  const lastModified = new Date();
+
+  const staticRoutes: MetadataRoute.Sitemap = [
     {
-      url: siteConfig.url,
-      lastModified: new Date(),
+      url: BASE_URL,
+      lastModified,
       changeFrequency: "weekly",
-      priority: 1,
+      priority: 1.0,
+    },
+    {
+      url: `${BASE_URL}/o-nas`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/sufity-napinane`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/polityka-prywatnosci`,
+      lastModified,
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
+
+  const cityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${BASE_URL}/sufity-napinane/${city.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...cityRoutes];
 }
