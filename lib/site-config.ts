@@ -36,7 +36,7 @@ export const siteConfig = {
 
   social: {
     facebook: "https://www.facebook.com/StretchSufit",
-    instagram: "https://www.instagram.com/stretchsufit",
+    instagram: "https://www.instagram.com/stretch_sufit?igsh=bXFlNXFvcTBtOGk0",
     youtube: "https://www.youtube.com/@stretchsufit",
     tiktok: "https://www.tiktok.com/@stretchsufit",
   },
@@ -44,7 +44,7 @@ export const siteConfig = {
   sameAs: [
     "https://stretchplafond.be",
     "https://www.facebook.com/StretchSufit",
-    "https://www.instagram.com/stretchsufit",
+    "https://www.instagram.com/stretch_sufit?igsh=bXFlNXFvcTBtOGk0",
   ],
 
   ogImage: "/images/og/default.jpg",
