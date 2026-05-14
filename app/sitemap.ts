@@ -5,13 +5,16 @@
  * Discoverable at /sitemap.xml. Submit this URL to Google Search Console
  * and Bing Webmaster Tools once the real domain is connected.
  *
- * To add new routes:
- *  - city pages are auto-discovered via `cities` array
- *  - other static routes go in `staticRoutes`
+ * Routes auto-discovered:
+ *  - city pages via `cities` array
+ *  - product pages via `products` array
+ *
+ * Add new static routes to `staticRoutes` below.
  */
 
 import type { MetadataRoute } from "next";
 import { cities } from "@/content/cities";
+import { products } from "@/content/products";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
@@ -33,10 +36,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${BASE_URL}/rozwiazania`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${BASE_URL}/sufity-napinane`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/kontakt`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     {
       url: `${BASE_URL}/polityka-prywatnosci`,
@@ -46,6 +61,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
+  const productRoutes: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${BASE_URL}/rozwiazania/${product.slug}`,
+    lastModified,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
   const cityRoutes: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${BASE_URL}/sufity-napinane/${city.slug}`,
     lastModified,
@@ -53,5 +75,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...cityRoutes];
+  return [...staticRoutes, ...productRoutes, ...cityRoutes];
 }
