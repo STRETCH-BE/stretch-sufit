@@ -110,7 +110,7 @@ export default function AboutPage() {
                   <figure className="mt-10 overflow-hidden rounded">
                     <div className="relative aspect-[4/5] w-full bg-bg-soft">
                       <Image
-                        src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80"
+                        src="images/about/michael-nicasens.jpg"
                         alt="Michael Nicasens, założyciel STRETCH® Group"
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"
@@ -279,7 +279,7 @@ export default function AboutPage() {
                   <figure className="mt-10 overflow-hidden rounded">
                     <div className="relative aspect-[4/5] w-full bg-bg-soft">
                       <Image
-                        src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80"
+                        src="images/about/hala-czestochowa.jpg"
                         alt="Hala produkcyjna Stretch Sufit w Częstochowie"
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"
