@@ -1,15 +1,6 @@
 /**
  * Sitemap — auto-generated at request time.
  * File path: /app/sitemap.ts
- *
- * Discoverable at /sitemap.xml. Submit this URL to Google Search Console
- * and Bing Webmaster Tools once the real domain is connected.
- *
- * Routes auto-discovered:
- *  - city pages via `cities` array
- *  - product pages via `products` array
- *
- * Add new static routes to `staticRoutes` below.
  */
 
 import type { MetadataRoute } from "next";
@@ -46,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/galeria`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/kontakt`,
