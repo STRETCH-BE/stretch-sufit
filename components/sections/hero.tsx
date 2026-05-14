@@ -101,7 +101,7 @@ export function Hero() {
             <div className="flex flex-col gap-5 pb-5">
               <figure className="relative isolate aspect-[4/3] overflow-hidden rounded bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a]">
                 <Image
-                  image: "/images/hero/salon-warszawa.jpg"
+                  src="/images/hero/salon-warszawa.jpg"
                   alt="Sufit napinany w nowoczesnym salonie — realizacja Warszawa"
                   fill
                   priority
