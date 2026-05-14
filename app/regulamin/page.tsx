@@ -1,31 +1,15 @@
 /**
- * Regulamin (Terms and Conditions) page — /regulamin
+ * Ogólne Warunki Sprzedaży (OWU) page — /regulamin
  * File path: /app/regulamin/page.tsx
  *
- * Comprehensive Polish-law-compliant Terms and Conditions document.
- * Structured per Ustawa o prawach konsumenta (Consumer Rights Act),
- * Kodeks cywilny (Civil Code), Ustawa o świadczeniu usług drogą
- * elektroniczną (Electronic Services Act).
+ * IMPORTANT: This document is the lawyer-drafted "Ogólne Warunki Sprzedaży
+ * i Dostaw" for Alto Design Sp. z o.o. It governs B2B transactions.
+ * Content is verbatim from the lawyer's draft — DO NOT paraphrase or
+ * edit any clause without legal review.
  *
- * REVIEW NOTE: This is a comprehensive draft. Specific business facts
- * are marked [TODO: VERIFY] inline — replace before publishing. Polish
- * legal counsel review recommended before going live.
- *
- * Key sections covered:
- *  §1  Definicje
- *  §2  Postanowienia ogólne
- *  §3  Zawarcie umowy
- *  §4  Pomiar i wycena
- *  §5  Cena i płatność
- *  §6  Termin realizacji
- *  §7  Montaż
- *  §8  Odbiór
- *  §9  Odstąpienie od umowy
- *  §10 Reklamacje / rękojmia
- *  §11 Gwarancja
- *  §12 Ochrona danych osobowych
- *  §13 Rozstrzyganie sporów
- *  §14 Postanowienia końcowe
+ * For consumer transactions (osoby fizyczne), Polish consumer law
+ * (Ustawa o prawach konsumenta) applies automatically regardless of
+ * what is written here.
  */
 
 import type { Metadata } from "next";
@@ -43,9 +27,9 @@ const LAST_UPDATED = "14 maja 2026";
 const EFFECTIVE_DATE = "14 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Regulamin | Stretch Sufit",
+  title: "Ogólne Warunki Sprzedaży | Stretch Sufit",
   description:
-    "Regulamin świadczenia usług przez Stretch Sufit (Alto Design Sp. z o.o.). Warunki umowy, płatność, gwarancja, prawo odstąpienia, reklamacje.",
+    "Ogólne Warunki Sprzedaży i Dostaw Alto Design Sp. z o.o. (Stretch Sufit). Pełna treść OWU regulujących umowy handlowe B2B.",
   alternates: { canonical: "/regulamin" },
 };
 
@@ -69,7 +53,7 @@ export default function RegulaminPage() {
               </li>
               <li aria-hidden="true">·</li>
               <li className="text-white" aria-current="page">
-                Regulamin
+                Regulamin (OWU)
               </li>
             </ol>
           </Container>
@@ -83,539 +67,619 @@ export default function RegulaminPage() {
                 Obowiązuje od {EFFECTIVE_DATE} · Aktualizacja: {LAST_UPDATED}
               </Eyebrow>
               <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.03em] text-white">
-                Regulamin{" "}
-                <span className="it text-paper">świadczenia usług.</span>
+                Ogólne warunki{" "}
+                <span className="it text-paper">sprzedaży i dostaw.</span>
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
-                Warunki, na jakich Alto Design Sp. z o.o. (działająca pod marką
-                Stretch Sufit) świadczy usługi pomiaru, produkcji i montażu
-                sufitów napinanych STRETCH® na terytorium Polski.
+                Pełna treść Ogólnych Warunków Sprzedaży (OWU) Alto Design Sp. z
+                o.o., regulujących umowy handlowe zawierane z kontrahentami
+                będącymi przedsiębiorcami.
               </p>
             </div>
           </Container>
         </section>
 
-        {/* ════════ Regulamin body ════════ */}
+        {/* ════════ OWU body ════════ */}
         <section className="bg-paper pb-24 pt-20 md:pb-32 md:pt-24">
           <Container>
-            <article className="mx-auto max-w-3xl space-y-14">
-              {/* ───── §1 ───── */}
-              <Section number="§1" title="Definicje">
+            <article className="mx-auto max-w-3xl">
+              {/* Preamble */}
+              <div className="rounded border border-bg/10 bg-paper-2 p-7 text-[15px] leading-[1.7] text-bg/85">
                 <p>
-                  Użyte w Regulaminie określenia oznaczają:
+                  <strong>Ogólne warunki sprzedaży i dostaw ALTO DESIGN
+                  Spółka z ograniczoną odpowiedzialnością</strong> z siedzibą
+                  w Częstochowie (42-200), pod adresem: ul. Legionów 59, 42-200
+                  Częstochowa, wpisanej do rejestru przedsiębiorców Krajowego
+                  Rejestru Sądowego prowadzonego przez Sąd Rejonowy w
+                  Częstochowie, XVII Wydział Gospodarczy Krajowego Rejestru
+                  Sądowego pod numerem KRS: 0000786996, REGON: 383390837,
+                  NIP: 5732911703; o kapitale zakładowym: 5 000,00 zł.
                 </p>
-                <Definitions
-                  items={[
-                    {
-                      term: "Wykonawca / Sprzedawca",
-                      def: 'Alto Design Sp. z o.o. z siedzibą w Częstochowie, ul. Legionów 59, 42-200 Częstochowa, wpisana do Krajowego Rejestru Sądowego pod numerem KRS [TODO: VERIFY], NIP [TODO: VERIFY], REGON [TODO: VERIFY], działająca pod marką handlową „Stretch Sufit".',
-                    },
-                    {
-                      term: "Klient",
-                      def: "osoba fizyczna posiadająca pełną zdolność do czynności prawnych, osoba prawna lub jednostka organizacyjna nieposiadająca osobowości prawnej, której odrębne przepisy przyznają zdolność prawną, zawierająca umowę z Wykonawcą.",
-                    },
-                    {
-                      term: "Konsument",
-                      def: "Klient będący osobą fizyczną dokonującą z Wykonawcą czynności prawnej niezwiązanej bezpośrednio z jej działalnością gospodarczą lub zawodową (zgodnie z art. 22¹ Kodeksu cywilnego).",
-                    },
-                    {
-                      term: "Przedsiębiorca na prawach konsumenta",
-                      def: "osoba fizyczna prowadząca działalność gospodarczą, dla której umowa nie ma charakteru zawodowego (zgodnie z art. 38a Ustawy o prawach konsumenta) — przysługują jej wybrane prawa konsumenta.",
-                    },
-                    {
-                      term: "Umowa",
-                      def: "umowa o dzieło zawarta pomiędzy Wykonawcą a Klientem, obejmująca dostawę i montaż sufitu napinanego oraz powiązanych elementów (oświetlenie, profile, akcesoria).",
-                    },
-                    {
-                      term: "Produkt",
-                      def: "sufit napinany w jednym z dostępnych wariantów (PVC, poliester, akustyczny, świetlny, fotodruk, prefab) wraz z elementami montażowymi i — opcjonalnie — oświetleniem.",
-                    },
-                    {
-                      term: "Pomiar",
-                      def: "bezpłatne, niezobowiązujące oględziny pomieszczenia w celu sporządzenia oferty, wykonywane przez pomiarowca Wykonawcy w miejscu wskazanym przez Klienta.",
-                    },
-                    {
-                      term: "Oferta",
-                      def: "pisemna lub elektroniczna propozycja cenowa sporządzona przez Wykonawcę po pomiarze, ważna 30 dni od daty wystawienia.",
-                    },
-                    {
-                      term: "Zamówienie",
-                      def: "oświadczenie woli Klienta o akceptacji Oferty, składane w formie pisemnej, elektronicznej (email) lub przez podpisanie umowy.",
-                    },
-                  ]}
-                />
-              </Section>
+              </div>
 
-              {/* ───── §2 ───── */}
-              <Section number="§2" title="Postanowienia ogólne">
-                <Para>
-                  1. Niniejszy Regulamin określa zasady świadczenia usług przez
-                  Wykonawcę polegających na sprzedaży i montażu sufitów
-                  napinanych marki STRETCH® na terytorium Rzeczypospolitej
-                  Polskiej.
-                </Para>
-                <Para>
-                  2. Wykonawca jest oficjalnym dealerem belgijskiego producenta
-                  STRETCH® (Stretch Productions BV, Belgia) i ma prawo do
-                  oferowania pełnego asortymentu produktów STRETCH® wraz z
-                  oryginalną gwarancją producenta.
-                </Para>
-                <Para>
-                  3. Regulamin stanowi integralną część każdej umowy zawartej
-                  pomiędzy Wykonawcą a Klientem. Złożenie Zamówienia jest
-                  równoznaczne z akceptacją Regulaminu.
-                </Para>
-                <Para>
-                  4. W sprawach nieuregulowanych Regulaminem zastosowanie mają
-                  przepisy prawa polskiego, w szczególności Kodeksu cywilnego,
-                  Ustawy o prawach konsumenta oraz Ustawy o świadczeniu usług
-                  drogą elektroniczną.
-                </Para>
-                <Para>
-                  5. Wykonawca zastrzega sobie prawo do zmiany Regulaminu.
-                  Zmiany nie mogą naruszać praw Klientów, którzy złożyli
-                  Zamówienie przed wprowadzeniem zmian. Aktualna wersja
-                  Regulaminu dostępna jest pod adresem stretchsufit.pl/regulamin
-                  oraz przesyłana Klientowi przed zawarciem umowy.
-                </Para>
-              </Section>
+              <div className="mt-14 space-y-14">
+                {/* ───── §I ───── */}
+                <Section number="I." title="Postanowienia ogólne">
+                  <Para>
+                    1. Niniejsze ogólne warunki umów sprzedaży (dalej: „OWU")
+                    regulują stosunki cywilnoprawne pomiędzy stronami, w
+                    zakresie obrotu handlowego wszelkimi towarami sprzedawanym
+                    przez ALTO DESIGN Spółka z ograniczoną odpowiedzialnością z
+                    siedzibą w Częstochowie i stanowią integralną część umów
+                    handlowych podpisywanych indywidualnie z kontrahentami ALTO
+                    DESIGN Spółka z ograniczoną odpowiedzialnością z siedzibą
+                    w Częstochowie.
+                  </Para>
+                  <Para>
+                    2. W zakresie określonym w ust. 1 wyłączeniu podlegają
+                    wzorce i ogólne warunki umów stosowane przez Kupującego.
+                  </Para>
+                  <Para>3. Użyte w treści OWU terminy oznaczają:</Para>
+                  <Definitions
+                    items={[
+                      {
+                        term: "Sprzedawca",
+                        def: "ALTO DESIGN Spółka z ograniczoną odpowiedzialnością z siedzibą w Częstochowie (42-200), pod adresem: ul. Legionów 59, 42-200 Częstochowa, wpisanej do rejestru przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez Sąd Rejonowy w Częstochowie, XVII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS: 0000786996, REGON: 383390837, NIP: 5732911703; o kapitale zakładowym: 5 000,00 zł",
+                      },
+                      {
+                        term: "Towar",
+                        def: "produkty znajdujące się w ofercie handlowej Sprzedawcy lub towar dostępny na indywidualne zamówienie,",
+                      },
+                      {
+                        term: "Kupujący",
+                        def: "będący przedsiębiorcą (w rozumieniu ustawy Kodeks Cywilny) nabywca towarów oferowanych przez Sprzedawcę,",
+                      },
+                      {
+                        term: "Strony",
+                        def: "Sprzedawca oraz Kupujący.",
+                      },
+                    ]}
+                  />
+                  <Para>
+                    4. Kupujący wyraża zgodę na przesyłanie drogą pocztową lub
+                    elektroniczną na adresy e-mail funkcjonujące w jego
+                    przedsiębiorstwie, informacji handlowych dotyczących
+                    aktualnej oferty cenowej, dostępnych promocjach oraz
+                    nowościach oferowanych przez ALTO DESIGN Spółka z
+                    ograniczoną odpowiedzialnością z siedzibą w Częstochowie.
+                  </Para>
+                  <Para>
+                    5. Strony postanowiły, że każdy sprzedany towar pozostaje
+                    własnością Sprzedawcy do czasu uregulowania całej ceny.
+                  </Para>
+                  <Para>
+                    6. Nieważność lub bezskuteczność niektórych z postanowień
+                    niniejszych OWU nie wpływa na ważność lub skuteczność
+                    pozostałych postanowień.
+                  </Para>
+                </Section>
 
-              {/* ───── §3 ───── */}
-              <Section number="§3" title="Zawarcie umowy">
-                <Para>
-                  1. Umowa zawierana jest po następujących etapach:
-                </Para>
-                <List
-                  items={[
-                    "Zgłoszenie zainteresowania przez Klienta (telefon, email, formularz na stronie).",
-                    "Bezpłatny pomiar pomieszczenia przez pomiarowca Wykonawcy w miejscu wskazanym przez Klienta.",
-                    "Przygotowanie i przesłanie Klientowi Oferty cenowej w ciągu 3 dni roboczych od pomiaru.",
-                    "Akceptacja Oferty przez Klienta (forma pisemna, elektroniczna lub podpisanie umowy).",
-                    "Wpłata zaliczki w wysokości 30% wartości Zamówienia.",
-                    "Z chwilą zaksięgowania zaliczki — umowa jest zawarta.",
-                  ]}
-                />
-                <Para>
-                  2. Oferta ważna jest przez 30 dni od daty wystawienia. Po
-                  upływie tego terminu Wykonawca może odmówić zawarcia umowy
-                  na pierwotnych warunkach.
-                </Para>
-                <Para>
-                  3. W przypadku Konsumentów oraz Przedsiębiorców na prawach
-                  konsumenta umowa zawierana poza lokalem przedsiębiorstwa
-                  (np. w domu Klienta) podlega przepisom Ustawy o prawach
-                  konsumenta dotyczącym takich umów — w tym prawu odstąpienia
-                  od umowy (zob. §9).
-                </Para>
-              </Section>
+                {/* ───── §II ───── */}
+                <Section number="II." title="Oferta cenowa">
+                  <Para>
+                    1. Oferty cenowe obowiązują przez 30 dni kalendarzowych od
+                    daty podanej na złożonej cenowej.
+                  </Para>
+                  <Para>
+                    2. Kupujący ma obowiązek, zarówno przy rozpoczęciu
+                    współpracy, jak i w trakcie jej trwania, niezwłocznie
+                    przekazać wszelkie informacje niezbędne do optymalnego
+                    wykonania umowy oraz wymagane dane. Cena wskazana przez
+                    Sprzedającego opiera się na informacjach dostarczonych
+                    przez Kupującego i dlatego jest jedynie ceną szacunkową
+                    opartą na dostępnych informacjach lub na podstawie
+                    zakładanych ilości.
+                  </Para>
+                  <Para>
+                    3. Wszelkie zamówienia przyjmowane są pod warunkiem
+                    posiadania wystarczających zapasów i możliwości
+                    produkcyjnych dostawców Sprzedającego.
+                  </Para>
+                  <Para>
+                    4. Wszelkie prace i/lub dostarczone towary, które nie
+                    zostały wyraźnie przewidziane w ofercie cenowej i/lub
+                    umowie, będą traktowane jako prace dodatkowe i/lub
+                    dodatkowe zamówienia wymagane przez Kupującego i jako takie
+                    będą fakturowane Kupującemu. O ile Kupujący nie zgłosi
+                    pisemnych zastrzeżeń w ciągu 72 godzin od wykonania i/lub
+                    dostawy, prace i/lub produkty nie objęte umową, będą
+                    traktowane jako prace dodatkowe i/lub zamówienia dodatkowe.
+                  </Para>
+                  <Para>
+                    5. Ewentualne rabaty obowiązują tylko na jedno zamówienie.
+                  </Para>
+                  <Para>
+                    6. Wszystkie ceny nie zawierają podatku VAT i wyrażone są
+                    w PLN.
+                  </Para>
+                  <Para>
+                    7. Wszystkie obecne i przyszłe podatki oraz inne koszty,
+                    opłaty i/lub opłaty wszelkiego rodzaju (na przykład: VAT,
+                    cło itp.) zostaną opłacone przez Kupującego.
+                  </Para>
+                  <Para>
+                    8. Sprzedający nie jest związany oczywistymi omyłkami lub
+                    błędami w ofercie.
+                  </Para>
+                  <Para>
+                    9. Sprzedający może również zażądać zaliczki w wysokości do
+                    40% całkowitej ceny każdego zamówienia. Kupujący nie może
+                    żądać dostarczenia towaru ani wykonania pracy przez
+                    Sprzedającego przed wpłatą tej zaliczki.
+                  </Para>
+                  <Para>
+                    10. Uzgodniona cena obejmuje wyłącznie wartość towaru i
+                    nie obejmuje transportu, instalacji, wsparcia technicznego
+                    i innych kosztów, jeśli występują.
+                  </Para>
+                </Section>
 
-              {/* ───── §4 ───── */}
-              <Section number="§4" title="Pomiar i wycena">
-                <Para>
-                  1. Pomiar jest bezpłatny i nie zobowiązuje Klienta do
-                  złożenia Zamówienia.
-                </Para>
-                <Para>
-                  2. Termin pomiaru ustalany jest indywidualnie. Standardowy
-                  czas oczekiwania na pomiar wynosi 3–10 dni roboczych, w
-                  zależności od lokalizacji i obciążenia ekipy pomiarowej.
-                </Para>
-                <Para>
-                  3. Klient zobowiązany jest do udostępnienia pomieszczenia w
-                  umówionym terminie. W przypadku nieobecności Klienta lub
-                  niemożności wejścia do pomieszczenia, Wykonawca zastrzega
-                  sobie prawo do obciążenia Klienta kosztem dojazdu w wysokości
-                  150 zł.
-                </Para>
-                <Para>
-                  4. Po pomiarze Wykonawca przygotowuje Ofertę zawierającą:
-                </Para>
-                <List
-                  items={[
-                    "Szczegółowy opis Produktu (rodzaj membrany, kolor, wykończenie, wymiary)",
-                    "Specyfikację oświetlenia (jeśli dotyczy)",
-                    "Całkowitą cenę brutto",
-                    "Przewidywany termin realizacji",
-                    "Warunki płatności",
-                    "Okres ważności Oferty (30 dni)",
-                  ]}
-                />
-                <Para>
-                  5. Ceny podane w Ofercie są ostateczne. Nie zawierają ukrytych
-                  kosztów. Jakiekolwiek dodatkowe prace wykraczające poza
-                  zakres Oferty wymagają osobnego ustalenia z Klientem.
-                </Para>
-              </Section>
+                {/* ───── §III ───── */}
+                <Section number="III." title="Zamawianie towaru">
+                  <Para>
+                    1. Składanie zamówień przez Kupującego odbywa się drogą
+                    elektroniczną, poprzez przesłanie wiadomości na adres
+                    e-mail siedziby Sprzedawcy, bądź osobiście w siedzibie
+                    Sprzedawcy na podstawie pisemnego zamówienia.
+                  </Para>
+                  <Para>2. W treści zamówienia Kupujący wskazuje:</Para>
+                  <SubList
+                    items={[
+                      "dane podmiotu (Kupującego) w imieniu którego występuje w tym: firmę, adres, oraz stosowny numer w rejestrze KRS/NIP/REGON, zależnie od formy prowadzenia działalności gospodarczej,",
+                      "towary, które chciałby kupić, wraz ze wskazaniem ich ilości, wymiarów, bądź inną konieczną do ich identyfikacji specyfikacją techniczną",
+                      "dokładny adres dostarczenia towaru, bądź informację o odbiorze własnym z siedziby Sprzedawcy.",
+                    ]}
+                  />
+                  <Para>
+                    3. Osoba odpowiedzialna w siedzibie Sprzedawcy potwierdza
+                    złożenie zamówienia w tym samym trybie w jakim je
+                    otrzymała, informuje o dostępności zamówionych towarów oraz
+                    przedstawia Kupującemu łączną cenę zamówionych towarów oraz
+                    koszt dostawy, a także termin dostawy lub przygotowania
+                    towarów do odbioru zgodnie z wskazaniami Kupującego.
+                  </Para>
+                  <Para>
+                    4. Jeżeli w ciągu 24 godzin od otrzymania potwierdzenia
+                    zamówienia przez Sprzedawcę, Kupujący nie wniesie
+                    zastrzeżeń, umowa uważana jest za zawartą i wiążącą obie
+                    Strony.
+                  </Para>
+                  <Para>
+                    5. Jeżeli w zamówieniu nie zostanie wskazany żaden adres,
+                    przyjmuje się, że odbiór towarów nastąpi przez Kupującego
+                    w siedzibie Sprzedawcy w dniu wskazanym przez Sprzedawcę.
+                  </Para>
+                  <Para>
+                    6. Zawarcie umowy nie wiąże Sprzedawcy w sytuacji gdy, z
+                    przyczyn niezależnych od Sprzedawcy, sprzedaż towarów jest
+                    niemożliwa lub nadmiernie utrudniona.
+                  </Para>
+                </Section>
 
-              {/* ───── §5 ───── */}
-              <Section number="§5" title="Cena i płatność">
-                <Para>
-                  1. Ceny podawane w Ofercie są cenami brutto (zawierają
-                  podatek VAT zgodnie z obowiązującą stawką).
-                </Para>
-                <Para>
-                  2. Standardowy harmonogram płatności:
-                </Para>
-                <List
-                  items={[
-                    "30% wartości Zamówienia — zaliczka, wpłacana po akceptacji Oferty. Umowa zawarta jest z chwilą zaksięgowania zaliczki.",
-                    "70% wartości Zamówienia — wpłacane po zakończeniu montażu i podpisaniu protokołu odbioru.",
-                  ]}
-                />
-                <Para>
-                  3. Dla Zamówień o wartości przekraczającej 50 000 zł brutto
-                  możliwe jest indywidualne ustalenie harmonogramu płatności
-                  (np. 3 transze).
-                </Para>
-                <Para>
-                  4. Płatność dokonywana jest:
-                </Para>
-                <List
-                  items={[
-                    "Przelewem na rachunek bankowy Wykonawcy: [TODO: VERIFY numer konta bankowego]",
-                    "Gotówką w siedzibie Wykonawcy lub u Klienta (do 15 000 zł zgodnie z Ustawą o limicie płatności gotówkowych)",
-                    "Kartą płatniczą (terminal w showroomie w Częstochowie)",
-                  ]}
-                />
-                <Para>
-                  5. W przypadku zwłoki w płatności końcowej (powyżej 14 dni od
-                  podpisania protokołu odbioru) Wykonawca ma prawo do naliczenia
-                  odsetek ustawowych za opóźnienie.
-                </Para>
-                <Para>
-                  6. Faktura VAT wystawiana jest na żądanie Klienta — należy
-                  zgłosić takie żądanie przed dokonaniem płatności, podając NIP
-                  i pełne dane firmy.
-                </Para>
-              </Section>
+                {/* ───── §IV ───── */}
+                <Section number="IV." title="Warunki dostawy i odbiór towaru">
+                  <Para>
+                    1. Sprzedawca jest zobowiązany do zorganizowania dostawy
+                    towaru do miejsca spełnienia świadczenia wskazanego przez
+                    Kupującego.
+                  </Para>
+                  <Para>2. Koszt dostawy ponosi w całości Kupujący.</Para>
+                  <Para>
+                    3. Formy oraz koszty dostawy zostały opisane w odrębnym
+                    dokumencie.
+                  </Para>
+                  <Para>
+                    4. Jeżeli strony nie uzgodnią wynagrodzenia za transport
+                    towarów, wynosi ono 2,00 zł. netto + VAT za 1 km dzielący
+                    siedzibę Sprzedającego, w której towar jest zamawiany od
+                    adresu dostawy, w zaokrągleniu w górę do pełnego kilometra
+                    i przyjmując najkrótszą możliwą trasę przejazdu.
+                  </Para>
+                  <Para>
+                    5. Uznaje się, że wszystkie dostawy odbywają się z
+                    magazynów Sprzedającego i ryzyko przemieszczenia towaru
+                    następuje w chwili opuszczenia przez towar magazynów
+                    Sprzedającego. Wysyłka towaru zawsze odbywa się na ryzyko
+                    Kupującego.
+                  </Para>
+                  <Para>
+                    6. Do dostawy nie zalicza się rozładunku towaru w miejscu
+                    przeznaczenia, który organizuje samodzielnie i na własny
+                    koszt Kupujący.
+                  </Para>
+                  <Para>
+                    7. Koszty opóźnienia w przeprowadzeniu rozładunku obciążają
+                    w całości Kupującego. Podane daty i godziny dostaw mają
+                    charakter wyłącznie informacyjny, a ich przekroczenie w
+                    żadnym wypadku nie może stanowić podstawy do odstąpienia od
+                    umowy lub zapłaty odszkodowania.
+                  </Para>
+                  <Para>
+                    8. Kupujący zobowiązany jest zapewnić odbiór towaru i
+                    podpisanie dokumentu WZ oraz faktury VAT przez osobę do
+                    tego umocowaną. Mając na uwadze treść ust. 1, ryzyko i
+                    konsekwencje odbioru towaru i podpisania dokumentu WZ i/lub
+                    faktury VAT przez osobę nieuprawnioną w całości obciążają
+                    Kupującego, a strony ustalają, że każda osoba, która towar
+                    przyjmie w miejscu wskazanym jako miejsce dostawy lub każda
+                    osoba, która w imieniu Kupującego zgłosi się po towar do
+                    siedziby Sprzedawcy jest uprawniona do odbioru towaru i
+                    podpisania ww. dokumentów. Wydanie towaru takiej osobie
+                    przez Sprzedawcę uważa się za prawidłowe wykonanie
+                    świadczenia przez Sprzedawcę na rzecz Kupującego.
+                  </Para>
+                  <Para>
+                    9. Kupujący ma obowiązek bezpłatnie zapewnić prąd i wodę na
+                    terenie obiektu. Kupujący ma obowiązek zapewnić staranne
+                    przechowywanie towarów, materiałów i sprzętu dostarczonego
+                    na plac budowy oraz zapewnić im bezpieczeństwo i
+                    ubezpieczenie.
+                  </Para>
+                  <Para>
+                    10. Jeżeli w wyniku przeszkody niespowodowanej przez
+                    Sprzedającego (np. katastrofy naturalnej, trudnych warunków
+                    pogodowych, strajków, braku surowców, zamknięcia
+                    przedsiębiorstwa producenta, zakłóceń w ruchu, wypadku
+                    komunikacyjnego, przerw w dostawie energii), realizacja
+                    zamówienia/umowy jest znacząco utrudniona bądź tymczasowo
+                    uniemożliwiona, termin realizacji zamówienia nie rozpoczyna
+                    się, a rozpoczęty termin ulega zawieszenia przez czas
+                    trwania przeszkody.
+                  </Para>
+                  <Para>
+                    11. O wystąpieniu przeszkody, o której mowa w pkt. 10,
+                    Sprzedawca niezwłocznie powiadomi Kupującego pisemnie lub
+                    e-mailem lub telefonicznie.
+                  </Para>
+                  <Para>
+                    12. Odbiór ilościowo–jakościowy odbywa się w miejscu
+                    spełnienia świadczenia, poprzez potwierdzenie przez
+                    Kupującego deklarowanych w dokumencie WZ ilości towarów.
+                  </Para>
+                  <Para>
+                    13. Wraz z wydaniem towaru Kupujący i opatruje pieczęcią
+                    firmową Kupującego:
+                  </Para>
+                  <SubList
+                    items={[
+                      "dokument WZ i fakturę VAT jeżeli towar jest odbierany w siedzibie Sprzedawcy lub dostarczany przez Sprzedawcę,",
+                      "dokument WZ i list przewozowy jeżeli towar jest dostarczany bezpośrednio przez producenta. W takiej sytuacji Faktura VAT zostanie wystawiona w terminie 7 dni od dnia otrzymania listu przewozowego i dokumentu WZ przez Sprzedawcę.",
+                    ]}
+                  />
+                  <Para>
+                    14. Sprzedawca uprawniony jest do wystawienia zbiorczej
+                    faktury VAT obejmującej większą liczbę transakcji
+                    dokonywanych w ciągu miesiąca.
+                  </Para>
+                  <Para>
+                    15. W razie nieodebrania towaru przez Kupującego, Kupujący
+                    pozostaje zobowiązany do zapłaty za towar wraz z kosztami
+                    transportu zgodnie z umową i OWU tak jakby do
+                    dostawy/odbioru doszło oraz dodatkowo jest zobowiązany do:
+                  </Para>
+                  <SubList
+                    items={[
+                      "odbioru na swój koszt towaru z siedziby Sprzedającego, a w razie dostawy bezpośrednio przez producenta z magazynu tego producenta w terminie 7 dni od dnia w którym towar miał być odebrany lub od dnia nieskutecznej dostawy,",
+                      "zapłaty wynagrodzenia za przechowanie w wysokości stanowiącej równowartości 0,1% wartości zamówienia netto + VAT za każdy dzień przechowania począwszy od ósmego dnia.",
+                    ]}
+                  />
+                  <Para>
+                    16. Sprzedający nie ma obowiązku przechowania towaru dłużej
+                    niż dwa miesiące od uzgodnionego terminu odbioru lub
+                    dostawy.
+                  </Para>
+                  <Para>
+                    17. Sprzedający nie ponosi ryzyka pogorszenia się stanu
+                    technicznego towarów w czasie przechowania i po jego
+                    zakończeniu.
+                  </Para>
+                  <Para>
+                    18. Indywidualne postanowienia umowy mogą określać inne
+                    warunki dostawy towaru. W takim wypadku należy stosować
+                    postanowienia umowne.
+                  </Para>
+                </Section>
 
-              {/* ───── §6 ───── */}
-              <Section number="§6" title="Termin realizacji">
-                <Para>
-                  1. Termin realizacji Zamówienia liczony jest od dnia
-                  zaksięgowania zaliczki i wynosi:
-                </Para>
-                <List
-                  items={[
-                    "Standardowo: 2–4 tygodnie od zawarcia umowy",
-                    "W szczycie sezonu (kwiecień–czerwiec, wrzesień–listopad): 4–6 tygodni",
-                    "Dla Zamówień nietypowych (specjalne kolory, fotodruk z autorską grafiką, projekty seryjne >200 m²): termin indywidualny, podawany w Ofercie",
-                  ]}
-                />
-                <Para>
-                  2. Konkretny termin montażu ustalany jest z Klientem
-                  telefonicznie lub mailowo, najpóźniej 7 dni przed planowanym
-                  montażem.
-                </Para>
-                <Para>
-                  3. W przypadku opóźnienia z winy Wykonawcy przekraczającego
-                  14 dni od ustalonego terminu, Klient ma prawo:
-                </Para>
-                <List
-                  items={[
-                    "Wyznaczyć dodatkowy termin realizacji (nie krótszy niż 7 dni)",
-                    "W przypadku dalszego opóźnienia — odstąpić od umowy z prawem do zwrotu wpłaconej zaliczki",
-                  ]}
-                />
-                <Para>
-                  4. Opóźnienia spowodowane okolicznościami niezależnymi od
-                  Wykonawcy (siła wyższa, opóźnienia w produkcji u producenta
-                  STRETCH® w Belgii, problemy logistyczne, nieobecność Klienta)
-                  nie stanowią podstawy do roszczeń.
-                </Para>
-              </Section>
+                {/* ───── §V ───── */}
+                <Section
+                  number="V."
+                  title="Odpowiedzialność Sprzedawcy z tytułu rękojmi"
+                >
+                  <Para>
+                    1. Sprzedawca nie ponosi odpowiedzialności z tytułu rękojmi
+                    za wady fizyczne i prawne.
+                  </Para>
+                  <Para>
+                    2. Sprzedawca nie zajmuje się montażem sprzedawanych
+                    towarów i doradztwem technicznym w sprawie ich
+                    wykorzystania, stąd nie ponosi odpowiedzialności za
+                    prawidłowość wyboru towaru przez Kupującego, a także jego
+                    sposób wykorzystania.
+                  </Para>
+                  <Para>
+                    3. Sprzedający nie może w żadnym wypadku ponosić
+                    odpowiedzialności za szkody lub szkody następcze po stronie
+                    Kupującego, jeżeli są one następstwem lub są spowodowane
+                    przez samego Kupującego, takie jak (między innymi):
+                    nieprawidłowe lub niekompletne informacje, opóźnienie
+                    wynikające z działania lub zaniedbania Kupującego,
+                    niedopełnienie obowiązku ograniczenia szkody, samodzielne
+                    wykonanie (lub za pośrednictwem innych osób) prac na
+                    dostarczonym lub zamontowanym przedmiocie, wada
+                    konstrukcyjna, wiek i/lub brak konserwacji towaru, na
+                    którym lub w którym towar ma zostać zamontowany itp.
+                  </Para>
+                  <Para>
+                    4. Kupujący zobowiązuje się do zawarcia ubezpieczenia od
+                    szkód wyrządzonych osobom trzecim, które mogą powstać w
+                    trakcie wykonywania umowy.
+                  </Para>
+                  <Para>
+                    5. Z chwilą wydania towaru z magazynu, na Kupującego
+                    przechodzą wszystkie korzyści i ciężary z rzeczą związane,
+                    a także ryzyko przypadkowej utraty bądź uszkodzenia rzeczy.
+                  </Para>
+                  <Para>
+                    6. Indywidualne postanowienia umowy mogą określać inny
+                    zakres odpowiedzialności Sprzedawcy z tytułu rękojmi. W
+                    takim wypadku należy stosować postanowienia umowne.
+                  </Para>
+                  <Para>
+                    7. Odpowiedzialność Sprzedającego z jakichkolwiek tytułów
+                    ograniczona jest do wartości netto sprzedanego Towaru.
+                  </Para>
+                </Section>
 
-              {/* ───── §7 ───── */}
-              <Section number="§7" title="Montaż">
-                <Para>
-                  1. Klient zobowiązany jest do przygotowania pomieszczenia
-                  przed montażem:
-                </Para>
-                <List
-                  items={[
-                    "Wyniesienie lub odsunięcie mebli na odległość minimum 1 m od ścian",
-                    "Zdjęcie obrazów i innych elementów wiszących na ścianach (jeśli mogą przeszkadzać w pracy)",
-                    "Zapewnienie dostępu do pomieszczenia w umówionym terminie",
-                    "W przypadku montażu PVC — zalecane wyprowadzenie zwierząt domowych i roślin (montaż wymaga rozgrzania pomieszczenia do ok. 50°C)",
-                  ]}
-                />
-                <Para>
-                  2. Montaż wykonywany jest przez autoryzowane ekipy Wykonawcy,
-                  posiadające szkolenia producenta STRETCH®.
-                </Para>
-                <Para>
-                  3. Standardowy czas montażu wynosi 3–6 godzin na pomieszczenie
-                  do 50 m². Większe powierzchnie — odpowiednio dłużej. Ekipa
-                  pracuje w godzinach 8:00–18:00, chyba że ustalono inaczej.
-                </Para>
-                <Para>
-                  4. Wykonawca zabezpiecza podłogę folią ochronną. Nie ponosi
-                  jednak odpowiedzialności za uszkodzenia mienia Klienta
-                  niezgłoszone w protokole odbioru.
-                </Para>
-                <Para>
-                  5. W przypadku ujawnienia podczas montażu okoliczności
-                  uniemożliwiających realizację (np. wykryte uszkodzenia
-                  konstrukcji budynku, brak zasilania), Wykonawca niezwłocznie
-                  informuje Klienta. Klient i Wykonawca wspólnie ustalają
-                  dalsze postępowanie.
-                </Para>
-              </Section>
+                {/* ───── §VI ───── */}
+                <Section number="VI." title="Procedura reklamacyjna">
+                  <Para>
+                    1. W związku z wyłączeniem odpowiedzialności Sprzedawcy z
+                    tytułu rękojmi za wady fizyczne i prawne towaru, Sprzedawca
+                    może uwzględnić reklamację Kupującego dokonaną jedynie
+                    zgodnie z procedurą i na zasadach opisanych w niniejszym
+                    paragrafie.
+                  </Para>
+                  <Para>
+                    2. Sprzedający może uwzględnić reklamację pod warunkiem,
+                    że Reklamacja łącznie spełnia następujące wymagania:
+                  </Para>
+                  <SubList
+                    items={[
+                      "zostanie sporządzona na piśmie i podpisana przez Kupującego i dostarczona w formie pisemnej na adres siedziby firmy ALTO DESIGN Spółka z ograniczoną odpowiedzialnością z siedzibą w Częstochowie,",
+                      "zostanie doręczona Sprzedawcy w terminie 7 dni od dnia odbioru lub od dnia dostawy towaru,",
+                      "będzie dokładnie wskazywała reklamowany towar oraz jego ilość,",
+                      "będzie obejmowała opis wady,",
+                      "na wyraźne żądanie Sprzedającego, zgłoszone w dowolnej formie, w terminie 5 dni od dnia doręczenia reklamacji, reklamowany towar zostanie zwrócony przez Kupującego do siedziby w której został zakupiony w terminie kolejnych 7 dni od dnia otrzymania tego żądania. Jeżeli dostawa była realizowana bezpośrednio przez producenta towar zostanie w tym terminie zwrócony do producenta. Postanowienia dotyczące dostarczenia lub oględzin towaru nie dotyczą reklamacji wyłącznie ilościowej (wskazującej na niedobór w dostawie).",
+                    ]}
+                  />
+                  <Para>
+                    3. W przypadku potwierdzenia przez Sprzedającego informacji
+                    zawartych w reklamacji, Sprzedawca może uwzględnić
+                    reklamację dokonując uzupełnienia lub wymiany towaru, a gdy
+                    to będzie niemożliwe obniżając cenę za towar brakujący lub
+                    wadliwy.
+                  </Para>
+                  <Para>
+                    4. O sposobie rozpatrzenia reklamacji Sprzedawca powiadomi
+                    Kupującego w terminie nie dłuższym niż 14 dni od odbioru
+                    towaru, bądź od dnia przeprowadzenia jego oględzin, a w
+                    przypadku reklamacji wyłącznie ilościowej, w terminie 14
+                    dni od dnia doręczenia dokumentu reklamacyjnego.
+                  </Para>
+                  <Para>
+                    5. Sprzedający zastrzega sobie prawo do odmowy rozpatrzenia
+                    reklamacji, jeśli Kupujący wykorzysta (np. zabuduje) towary
+                    objęte roszczeniem reklamacyjnym przed upływem terminu jego
+                    rozpatrzenia.
+                  </Para>
+                  <Para>
+                    6. Zgłoszenie reklamacji przedmiotu dostawy lub usługi nie
+                    uprawnia Kupującego do wstrzymania zapłaty za towar lub
+                    usługę bądź za ich część.
+                  </Para>
+                </Section>
 
-              {/* ───── §8 ───── */}
-              <Section number="§8" title="Odbiór">
-                <Para>
-                  1. Po zakończeniu montażu sporządzany jest protokół odbioru,
-                  podpisywany przez Klienta i przedstawiciela Wykonawcy.
-                </Para>
-                <Para>
-                  2. W protokole Klient ma prawo zgłosić uwagi i zastrzeżenia
-                  dotyczące jakości wykonania. Wykonawca zobowiązany jest
-                  ustosunkować się do uwag w ciągu 7 dni roboczych.
-                </Para>
-                <Para>
-                  3. Podpisanie protokołu bez zastrzeżeń stanowi potwierdzenie
-                  należytego wykonania umowy i obowiązuje Klienta do uregulowania
-                  pozostałej części wynagrodzenia w terminie 7 dni.
-                </Para>
-                <Para>
-                  4. Wady ujawnione po podpisaniu protokołu mogą być zgłaszane
-                  w ramach rękojmi lub gwarancji (zob. §10 i §11).
-                </Para>
-              </Section>
+                {/* ───── §VII ───── */}
+                <Section
+                  number="VII."
+                  title="Zapłata i skutki opóźnienia w płatności"
+                >
+                  <Para>
+                    1. Kupujący zapłaci Sprzedawcy należności z tytułu
+                    wykonania danego zamówienia w terminie wskazanym na
+                    fakturze VAT, a jeżeli termin ten nie wynika z faktury VAT
+                    zapłata należy się w dniu wydania towaru lub dniu w którym
+                    towar miał być wydany lecz nie został odebrany przez
+                    Kupującego.
+                  </Para>
+                  <Para>
+                    2. W przypadku opóźnienia w zapłacie jakiejkolwiek
+                    wymagalnej wierzytelności względem Sprzedawcy, jest on
+                    uprawniony do:
+                  </Para>
+                  <SubList
+                    items={[
+                      "odmowy realizacji zamówień na rzecz Kupującego do czasu uregulowania zaległości,",
+                      "odmowy sprzedaży w warunkach kredytu kupieckiego kolejnych towarów zamawianych przez Kupującego, niezależnie od kwoty wykorzystanego limitu,",
+                      "anulowania udzielonego Kupującemu odroczenia płatności w ramach kredytu kupieckiego i postawienia w stan natychmiastowej wymagalności wszystkich wierzytelności przysługujących mu od Kupującego pierwszym dniem opóźnienia w płatności.",
+                    ]}
+                  />
+                  <Para>
+                    3. Z uprawnień opisanych w pkt 2 Sprzedawca może skorzystać
+                    łącznie lub oddzielnie, wedle własnego uznania.
+                  </Para>
+                  <Para>
+                    4. W razie opóźnienia z zapłatą ceny, Sprzedającemu należą
+                    się odsetki za czas opóźnienia, chociażby Sprzedający nie
+                    poniósł żadnej szkody i chociażby opóźnienie było
+                    następstwem okoliczności, za które Kupujący
+                    odpowiedzialności nie ponosi. Sprzedającemu należą się
+                    maksymalne odsetki ustawowe za opóźnienie, o ile inna
+                    wysokość odsetek nie zostanie określona w umowie. Obowiązek
+                    zapłaty odsetek nie wyłącza roszczenia o naprawienie szkody
+                    na zasadach ogólnych.
+                  </Para>
+                </Section>
 
-              {/* ───── §9 ───── */}
-              <Section number="§9" title="Prawo odstąpienia od umowy">
-                <Para>
-                  1. Konsument oraz Przedsiębiorca na prawach konsumenta, który
-                  zawarł umowę poza lokalem przedsiębiorstwa lub na odległość,
-                  ma prawo odstąpić od umowy w terminie 14 dni bez podania
-                  przyczyny, zgodnie z Ustawą o prawach konsumenta.
-                </Para>
-                <Para>
-                  2. Termin 14 dni liczony jest od dnia zawarcia umowy (tj. od
-                  dnia zaksięgowania zaliczki).
-                </Para>
-                <Para>
-                  3. Aby skorzystać z prawa odstąpienia, Klient musi poinformować
-                  Wykonawcę o swojej decyzji w drodze jednoznacznego oświadczenia,
-                  wysłanego na adres: info@stretch-sufit.pl lub pocztą tradycyjną
-                  na adres siedziby Wykonawcy.
-                </Para>
-                <Para>
-                  4. <strong>WAŻNE — wyjątek od prawa odstąpienia:</strong>{" "}
-                  zgodnie z art. 38 pkt 3 Ustawy o prawach konsumenta, prawo
-                  odstąpienia nie przysługuje w przypadku umów, w których
-                  przedmiotem świadczenia jest rzecz nieprefabrykowana,
-                  wyprodukowana według specyfikacji konsumenta lub służąca
-                  zaspokojeniu jego zindywidualizowanych potrzeb.
-                </Para>
-                <Para>
-                  5. Sufity napinane są produktami wykonywanymi na wymiar,
-                  pod konkretne pomieszczenie Klienta. <strong>Z tego powodu
-                  prawo odstąpienia wygasa z chwilą rozpoczęcia produkcji
-                  membrany</strong> (tj. po przekazaniu produkcji do realizacji,
-                  zwykle 2–4 dni od wpłaty zaliczki). Wykonawca informuje
-                  Klienta pisemnie o dacie rozpoczęcia produkcji.
-                </Para>
-                <Para>
-                  6. W przypadku skutecznego odstąpienia (przed rozpoczęciem
-                  produkcji), Wykonawca zwraca Klientowi pełną kwotę zaliczki
-                  w terminie 14 dni od otrzymania oświadczenia o odstąpieniu,
-                  na rachunek bankowy wskazany przez Klienta.
-                </Para>
-              </Section>
+                {/* ───── §VIII ───── */}
+                <Section number="VIII." title="Zabezpieczenia">
+                  <Para>
+                    1. Sprzedawca zastrzega sobie uprawnienie do żądania od
+                    Kupującego — przed przystąpieniem do realizacji zamówienia
+                    — ustanowienia stosownego zabezpieczenia zapłaty w postaci
+                    między innymi:
+                  </Para>
+                  <SubList
+                    items={[
+                      "bezwarunkowej i płatnej na pierwsze żądanie gwarancji bankowej lub gwarancji ubezpieczeniowej na takich samych zasadach,",
+                      'weksla in blanco opatrzonego klauzulą „bez protestu",',
+                      "hipoteki do wysokości 150% prognozowanego obrotu rocznego netto między stronami,",
+                      "dobrowolnego poddania się egzekucji na podstawie art. 777 kodeksu postępowania cywilnego,",
+                      "poręczenia,",
+                      "przewłaszczenia na zabezpieczenie,",
+                      "cesji wierzytelności,",
+                      "zastawu rejestrowego.",
+                    ]}
+                  />
+                  <Para>
+                    2. Wybór zabezpieczeń, ich ilości i kwoty zabezpieczenia
+                    zależy od decyzji Sprzedawcy ustalonej po konsultacjach z
+                    Kupującym oraz od jego możliwości finansowych i wartości
+                    składników jego majątku.
+                  </Para>
+                  <Para>
+                    3. W przypadku nieustanowienia zabezpieczenia w terminie
+                    wskazanym przez Sprzedawcę, bądź oświadczenia o odmowie
+                    ustanowienia zabezpieczenia, Sprzedawca może odmówić
+                    realizacji zamówienia, a także wstrzymać się z
+                    przyjmowaniem kolejnych zamówień do czasu ustanowienia
+                    żądanego zabezpieczenia zapłaty.
+                  </Para>
+                </Section>
 
-              {/* ───── §10 ───── */}
-              <Section number="§10" title="Reklamacje (rękojmia)">
-                <Para>
-                  1. Wykonawca odpowiada wobec Konsumenta z tytułu rękojmi za
-                  wady fizyczne i prawne Produktu na zasadach określonych w
-                  Kodeksie cywilnym (art. 556–576).
-                </Para>
-                <Para>
-                  2. Okres rękojmi wynosi 2 lata od dnia wydania Produktu
-                  (zakończenia montażu).
-                </Para>
-                <Para>
-                  3. W ramach rękojmi Konsument może żądać:
-                </Para>
-                <List
-                  items={[
-                    "Wymiany Produktu na wolny od wad",
-                    "Usunięcia wady (naprawy)",
-                    "Obniżenia ceny (w odpowiedniej proporcji)",
-                    "Odstąpienia od umowy — tylko jeśli wada jest istotna",
-                  ]}
-                />
-                <Para>
-                  4. Reklamację należy zgłosić na adres: info@stretch-sufit.pl
-                  lub pisemnie na adres siedziby Wykonawcy. Reklamacja powinna
-                  zawierać:
-                </Para>
-                <List
-                  items={[
-                    "Dane Klienta i numer Zamówienia (lub faktury)",
-                    "Opis wady wraz z okolicznościami jej powstania",
-                    "Zdjęcia wady (zalecane, min. 3 zdjęcia z różnych odległości)",
-                    "Żądanie Klienta (wymiana, naprawa, obniżenie ceny, odstąpienie)",
-                  ]}
-                />
-                <Para>
-                  5. Wykonawca rozpatruje reklamację w terminie 14 dni od dnia
-                  otrzymania zgłoszenia. Brak odpowiedzi w tym terminie oznacza
-                  uznanie reklamacji za zasadną w zakresie żądania Klienta
-                  (zgodnie z art. 561⁵ KC).
-                </Para>
-                <Para>
-                  6. Koszty reklamacji uznanej za zasadną — w tym koszty
-                  dostawy lub demontażu i ponownego montażu — pokrywa
-                  Wykonawca.
-                </Para>
-              </Section>
+                {/* ───── §IX ───── */}
+                <Section number="IX." title="Rozwiązanie i wypowiedzenie umowy">
+                  <Para>
+                    1. Każda ze stron może wypowiedzieć umowę z zachowaniem
+                    jednomiesięcznego terminu wypowiedzenia ze skutkiem na
+                    koniec miesiąca kalendarzowego następującego po miesiącu
+                    w którym umowę wypowiedziano.
+                  </Para>
+                  <Para>
+                    2. Sprzedawca może wypowiedzieć umowę bez zachowania
+                    terminu wypowiedzenia w przypadku gdy:
+                  </Para>
+                  <SubList
+                    items={[
+                      "Kupujący opóźnia się w płatności jakiejkolwiek wymagalnej wierzytelności powyżej 30 dni,",
+                      "jakikolwiek organ państwowy stwierdzi niewypłacalność Kupującego (np. poprzez postanowienie o bezskutecznej egzekucji komorniczej),",
+                      "innego rażącego naruszenia przez Kupującego postanowień umowy lub OWU.",
+                    ]}
+                  />
+                  <Para>
+                    3. Kupujący może wypowiedzieć umowę bez zachowania terminu
+                    wypowiedzenia w przypadku zmiany przez Sprzedającego
+                    postanowień OWU i braku akceptacji zmian przez Kupującego
+                    w terminie 30 dni.
+                  </Para>
+                  <Para>
+                    4. W każdej chwili strony mogą rozwiązać umowę za
+                    porozumieniem stron.
+                  </Para>
+                  <Para>
+                    5. Jeżeli na skutek działania siły wyższej i/lub przyczyny
+                    zewnętrznej — niemożliwej do przewidzenia w dniu zawarcia
+                    umowy — realizacja zobowiązań przez Sprzedającego stanie
+                    się niemożliwa lub zostanie znacząco utrudniona,
+                    Sprzedający nie może być zobowiązany do wykonania
+                    zobowiązania ani ponosić odpowiedzialności. Przez siłę
+                    wyższą i/lub przyczynę zewnętrzną rozumie się na przykład
+                    (bez ograniczeń): strajk, lockout, bunt, terroryzm,
+                    epidemia/pandemia, choroba, pożar, powódź, zastosowane
+                    środki rządowe, strajk u dostawcy, upadłość dostawcy, brak
+                    rąk do pracy, brak paliwa, zniszczenie maszyn, warunki
+                    atmosferyczne itp.
+                  </Para>
+                </Section>
 
-              {/* ───── §11 ───── */}
-              <Section number="§11" title="Gwarancja jakości">
-                <Para>
-                  1. Niezależnie od ustawowej rękojmi, Wykonawca udziela
-                  Klientowi <strong>15-letniej gwarancji materiałowej</strong>{" "}
-                  na membrany STRETCH® oraz <strong>5-letniej gwarancji</strong>{" "}
-                  na elementy elektroniczne (LED, sterowniki).
-                </Para>
-                <Para>
-                  2. Pełne warunki gwarancji opisane są na osobnej stronie:{" "}
-                  <Link href="/gwarancja" className="text-red underline">
-                    Gwarancja
-                  </Link>
-                  .
-                </Para>
-                <Para>
-                  3. Skorzystanie z gwarancji nie wyłącza ani nie ogranicza
-                  praw Klienta z tytułu rękojmi. Klient może wybrać korzystną
-                  dla siebie ścieżkę reklamacyjną lub skorzystać z obu
-                  jednocześnie.
-                </Para>
-              </Section>
+                {/* ───── §X ───── */}
+                <Section number="X." title="Tajemnica przedsiębiorstwa">
+                  <Para>
+                    Wszelkie informacje uzyskane w związku z zawarciem i
+                    wykonywaniem niniejszej umowy stanowią tajemnicę handlową
+                    stron, a nieprzestrzeganie obowiązku zachowania tajemnicy
+                    handlowej uprawnia każdą ze stron do odstąpienia od umowy
+                    i dochodzenia odszkodowania za powstałą szkodę.
+                  </Para>
+                </Section>
 
-              {/* ───── §12 ───── */}
-              <Section number="§12" title="Ochrona danych osobowych">
-                <Para>
-                  1. Administratorem danych osobowych Klientów jest Alto Design
-                  Sp. z o.o. z siedzibą w Częstochowie.
-                </Para>
-                <Para>
-                  2. Dane osobowe przetwarzane są w celach:
-                </Para>
-                <List
-                  items={[
-                    "Realizacji umowy (art. 6 ust. 1 lit. b RODO)",
-                    "Wypełnienia obowiązków prawnych — w szczególności podatkowych, księgowych (art. 6 ust. 1 lit. c RODO)",
-                    "Marketingu bezpośredniego usług własnych — w oparciu o prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO), do czasu wniesienia sprzeciwu",
-                  ]}
-                />
-                <Para>
-                  3. Szczegółowe informacje dotyczące przetwarzania danych
-                  osobowych (kategorie danych, odbiorcy, okres przechowywania,
-                  prawa osób, których dane dotyczą) zawarte są w{" "}
-                  <Link
-                    href="/polityka-prywatnosci"
-                    className="text-red underline"
-                  >
-                    Polityce prywatności
-                  </Link>
-                  .
-                </Para>
-              </Section>
+                {/* ───── §XI ───── */}
+                <Section number="XI." title="Zmiana OWU">
+                  <Para>
+                    1. Jakiekolwiek zmiany umowy handlowej wymagają formy
+                    pisemnej pod rygorem nieważności.
+                  </Para>
+                  <Para>
+                    2. Zmiana niniejszych OWU następuje poprzez opublikowanie
+                    nowej wersji OWU na stronie internetowej Sprzedawcy.
+                  </Para>
+                  <Para>
+                    3. Kupujący zobowiązany jest przed złożeniem każdego
+                    kolejnego zamówienia do każdorazowego zapoznania się z
+                    nowymi OWU.
+                  </Para>
+                  <Para>
+                    4. W razie zmiany OWU dla każdej poszczególnej transakcji
+                    zastosowanie będą miały postanowienia OWU obowiązujące w
+                    dniu złożenia zamówienia przez Kupującego.
+                  </Para>
+                </Section>
 
-              {/* ───── §13 ───── */}
-              <Section number="§13" title="Rozstrzyganie sporów">
-                <Para>
-                  1. Strony dołożą wszelkich starań, aby ewentualne spory były
-                  rozstrzygane polubownie — w drodze negocjacji lub mediacji.
-                </Para>
-                <Para>
-                  2. Konsument ma prawo skorzystać z pozasądowych sposobów
-                  rozpatrywania reklamacji i dochodzenia roszczeń:
-                </Para>
-                <List
-                  items={[
-                    "Wojewódzkie Inspektoraty Inspekcji Handlowej — postępowanie mediacyjne",
-                    "Stałe sądy polubowne przy WIIH",
-                    "Miejscy/Powiatowi Rzecznicy Konsumentów — bezpłatna pomoc prawna",
-                    "Platforma internetowego rozstrzygania sporów ODR Komisji Europejskiej: https://ec.europa.eu/consumers/odr",
-                  ]}
-                />
-                <Para>
-                  3. W przypadku braku porozumienia, spory rozstrzygane są
-                  przez sąd właściwy według przepisów Kodeksu postępowania
-                  cywilnego. Dla Konsumentów właściwy jest sąd miejsca
-                  zamieszkania, dla pozostałych Klientów — sąd właściwy dla
-                  siedziby Wykonawcy (Częstochowa).
-                </Para>
-                <Para>
-                  4. Prawem właściwym dla umów zawieranych z Wykonawcą jest
-                  prawo polskie.
-                </Para>
-              </Section>
+                {/* ───── §XII ───── */}
+                <Section number="XII." title="Jurysdykcja i prawo właściwe">
+                  <Para>
+                    1. Wszelkie spory powstałe pomiędzy stronami będą
+                    rozstrzygane zgodnie z przepisami prawa polskiego, z
+                    wyłączeniem Konwencji Wiedeńskiej o Umowach Międzynarodowej
+                    Sprzedaży Towarów podpisanej w Wiedniu 11 kwietnia 1980
+                    roku.
+                  </Para>
+                  <Para>
+                    2. Wszelkie spory wynikłe w związku ze wszelkimi relacjami
+                    handlowymi między stronami zostają poddane jurysdykcji
+                    sądów polskich.
+                  </Para>
+                </Section>
 
-              {/* ───── §14 ───── */}
-              <Section number="§14" title="Postanowienia końcowe">
-                <Para>
-                  1. Regulamin wchodzi w życie z dniem {EFFECTIVE_DATE} i ma
-                  zastosowanie do umów zawieranych po tej dacie.
-                </Para>
-                <Para>
-                  2. W sprawach nieuregulowanych Regulaminem stosuje się
-                  przepisy prawa polskiego, w szczególności:
-                </Para>
-                <List
-                  items={[
-                    "Ustawa z dnia 23 kwietnia 1964 r. — Kodeks cywilny",
-                    "Ustawa z dnia 30 maja 2014 r. o prawach konsumenta",
-                    "Ustawa z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną",
-                    "Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO)",
-                  ]}
-                />
-                <Para>
-                  3. Jeżeli którekolwiek z postanowień Regulaminu okaże się
-                  nieważne lub niewykonalne, pozostałe postanowienia zachowują
-                  pełną moc.
-                </Para>
-                <Para>
-                  4. Wszelkie zmiany Regulaminu wymagają formy pisemnej i
-                  publikacji na stronie stretchsufit.pl/regulamin z 14-dniowym
-                  wyprzedzeniem przed wejściem w życie.
-                </Para>
-                <Para>
-                  5. Aktualna wersja Regulaminu wraz ze wszystkimi załącznikami
-                  dostępna jest pod adresem stretchsufit.pl/regulamin.
-                </Para>
-              </Section>
-
-              {/* ───── Footer info ───── */}
-              <div className="rounded border border-bg/10 bg-paper-2 p-7">
-                <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
-                  Kontakt
-                </div>
-                <div className="mt-4 space-y-1 text-[15px] text-bg/80">
-                  <div className="font-display font-semibold text-bg">
-                    Alto Design Sp. z o.o.
+                {/* ───── Footer contact info ───── */}
+                <div className="rounded border border-bg/10 bg-paper-2 p-7">
+                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                    Kontakt
                   </div>
-                  <div>ul. Legionów 59, 42-200 Częstochowa</div>
-                  <div>
-                    Email:{" "}
-                    <a
-                      href="mailto:info@stretch-sufit.pl"
-                      className="text-red underline"
-                    >
-                      info@stretch-sufit.pl
-                    </a>
-                  </div>
-                  <div>
-                    Telefon:{" "}
-                    <a href="tel:+48730700333" className="text-red underline">
-                      +48 730 700 333
-                    </a>
+                  <div className="mt-4 space-y-1 text-[15px] text-bg/80">
+                    <div className="font-display font-semibold text-bg">
+                      ALTO DESIGN Sp. z o.o.
+                    </div>
+                    <div>ul. Legionów 59, 42-200 Częstochowa</div>
+                    <div>KRS: 0000786996 · NIP: 5732911703 · REGON: 383390837</div>
+                    <div className="pt-2">
+                      Email:{" "}
+                      <a
+                        href="mailto:info@stretch-sufit.pl"
+                        className="text-red underline"
+                      >
+                        info@stretch-sufit.pl
+                      </a>
+                    </div>
+                    <div>
+                      Telefon:{" "}
+                      <a
+                        href="tel:+48730700333"
+                        className="text-red underline"
+                      >
+                        +48 730 700 333
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -689,16 +753,18 @@ function Para({ children }: { children: React.ReactNode }) {
   return <p>{children}</p>;
 }
 
-function List({ items }: { items: string[] }) {
+function SubList({ items }: { items: string[] }) {
   return (
-    <ul className="space-y-2 pl-1">
+    <ol className="space-y-2 pl-1">
       {items.map((item, i) => (
         <li key={i} className="flex gap-3">
-          <span className="text-red">●</span>
+          <span className="font-mono text-xs text-red/70 pt-1">
+            {String.fromCharCode(97 + i)}.
+          </span>
           <span>{item}</span>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 }
 
