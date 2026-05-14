@@ -13,7 +13,7 @@ export const siteConfig = {
   description:
     "Stretch Sufit — belgijska technologia sufitów napinanych w Polsce. Montaż w 1 dzień, bez kurzu, 25 lat żywotności. Część grupy STRETCH®.",
 
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://stretchsufit.pl",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.pl",
 
   locales: ["pl", "en", "uk"] as const,
   defaultLocale: "pl" as const,
@@ -22,7 +22,7 @@ export const siteConfig = {
     phonePL: "+48730700333",
     phonePLUA: "+48455444475",
     whatsapp: "48730700333",
-    email: "info@stretchsufit.pl",
+    email: "info@stretch-sufit.pl",
     address: {
       street: "ul. Legionów 59",
       city: "Częstochowa",
@@ -30,8 +30,8 @@ export const siteConfig = {
       region: "Śląskie",
       country: "PL",
     },
-    geo: { lat: 50.8118, lng: 19.1203 },
-    hours: "Mo-Fr 09:00-17:00",
+    geo: { lat: 50.80758922274901, lng: 19.158936942638512 },
+    hours: "Mo-Fr 09:00-15:30",
   },
 
   social: {
