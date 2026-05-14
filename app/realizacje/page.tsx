@@ -1,13 +1,13 @@
 /**
- * Gallery page — /galeria
- * File path: /app/galeria/page.tsx
+ * Realizacje (Projects) page — /realizacje
+ * File path: /app/realizacje/page.tsx
  *
  * Filterable showcase of all project photos. Server-rendered hero and
  * metadata, client-rendered filter grid (see /components/sections/gallery-grid.tsx).
  *
- * The full project list is rendered server-side initially, so the page
- * works without JavaScript and is fully SEO-indexable. Filtering only
- * activates once the client component hydrates.
+ * URL chosen as "realizacje" (Polish: "realizations / projects") rather
+ * than "galeria" — matches existing nav label and is what Polish
+ * prospects actually search for.
  */
 
 import type { Metadata } from "next";
@@ -29,22 +29,21 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Galeria realizacji — Stretch Sufit",
+  title: "Realizacje — Stretch Sufit",
   description:
-    "Galeria realizacji sufitów napinanych Stretch Sufit — apartamenty, biura, restauracje, hotele w 17 miastach Polski. PVC, akustyka, LED, fotodruk.",
-  alternates: { canonical: "/galeria" },
+    "Realizacje sufitów napinanych Stretch Sufit — apartamenty, biura, restauracje, hotele w 17 miastach Polski. PVC, akustyka, LED, fotodruk.",
+  alternates: { canonical: "/realizacje" },
   openGraph: {
-    title: "Galeria realizacji | Stretch Sufit",
+    title: "Realizacje sufitów napinanych | Stretch Sufit",
     description:
       "Realizacje sufitów napinanych w Polsce — filtruj po produkcie i mieście.",
     type: "website",
-    url: `${BASE_URL}/galeria`,
+    url: `${BASE_URL}/realizacje`,
     locale: "pl_PL",
   },
 };
 
-export default function GalleryPage() {
-  // Build filter options with counts, sorted by count descending
+export default function RealizacjePage() {
   const productOptions = [
     { value: "all", label: "Wszystkie", count: projects.length },
     ...products
@@ -69,11 +68,10 @@ export default function GalleryPage() {
       .sort((a, b) => b.count - a.count),
   ];
 
-  // JSON-LD: ItemList with each project
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Galeria realizacji Stretch Sufit",
+    name: "Realizacje Stretch Sufit",
     description: "Realizacje sufitów napinanych w Polsce",
     numberOfItems: projects.length,
     itemListElement: projects.map((project, index) => ({
@@ -99,8 +97,8 @@ export default function GalleryPage() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Galeria",
-        item: `${BASE_URL}/galeria`,
+        name: "Realizacje",
+        item: `${BASE_URL}/realizacje`,
       },
     ],
   };
@@ -127,7 +125,7 @@ export default function GalleryPage() {
               </li>
               <li aria-hidden="true">·</li>
               <li className="text-white" aria-current="page">
-                Galeria
+                Realizacje
               </li>
             </ol>
           </Container>
@@ -161,7 +159,6 @@ export default function GalleryPage() {
                 </p>
               </div>
 
-              {/* Quick stats */}
               <div className="md:col-span-4">
                 <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
                   <Stat number={projects.length.toString()} label="realizacji" />
@@ -176,7 +173,6 @@ export default function GalleryPage() {
           </Container>
         </section>
 
-        {/* ════════ Filterable grid (client component) ════════ */}
         <GalleryGrid
           projects={projects}
           productOptions={productOptions}
@@ -221,8 +217,6 @@ export default function GalleryPage() {
     </>
   );
 }
-
-/* ─────────────────────────────────────────────────────────── */
 
 function Stat({ number, label }: { number: string; label: string }) {
   return (
