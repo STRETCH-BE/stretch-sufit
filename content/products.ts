@@ -18,7 +18,7 @@ export const products: Product[] = [
     italicAccent: "Stretch®",
     description:
       "Bezszwowo do 5,15 m. Montaż na zimno. Bardzo matowa, naturalna powierzchnia — wygląda jak idealna gładź.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=80",
+    image: "images/products/poliester.JPG",
     imageAlt: "Sufit poliestrowy — matowa, naturalna powierzchnia",
     linkLabel: "Sufit poliestrowy",
   },
@@ -30,7 +30,7 @@ export const products: Product[] = [
     italicAccent: "recyklingowy",
     description:
       "Bezszwowo do 5,70 m. Łatwo demontowalny i w 100% recyklingowy do surowca. Doskonały do łazienek i kuchni.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80",
+    image: "images/products/pvc.jpg",
     imageAlt: "Sufit napinany PVC w nowoczesnej łazience",
     linkLabel: "Sufit PVC",
     featured: true,
@@ -43,7 +43,7 @@ export const products: Product[] = [
     italicAccent: "akustyczny",
     description:
       "Redukuje pogłos do 75%. Idealny dla biur, restauracji, sal konferencyjnych, kin domowych i studiów.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=400&q=80",
+    image: "images/products/akustyczny.jpg",
     imageAlt: "Akustyczny sufit napinany w sali konferencyjnej",
     linkLabel: "Akustyka",
   },
@@ -55,7 +55,7 @@ export const products: Product[] = [
     italicAccent: "świetlny",
     description:
       "Cała powierzchnia podświetlona równomiernie. LED-y liniowe, gwiezdne niebo, RGB — kontrola przez smartfon.",
-    image: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=400&q=80",
+    image: "images/products/swietlny.jpg",
     imageAlt: "Podświetlany sufit LED w sypialni",
     linkLabel: "Light system",
   },
@@ -67,7 +67,7 @@ export const products: Product[] = [
     italicAccent: "fotodrukiem",
     description:
       "Dowolny obraz w jakości foto. Dla hoteli, restauracji, sklepów i wnętrz prywatnych. Bez ograniczeń.",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=400&q=80",
+    image: "images/products/fotodruk.jpg",
     imageAlt: "Sufit z fotodrukiem w restauracji",
     linkLabel: "Print",
   },
@@ -79,7 +79,7 @@ export const products: Product[] = [
     italicAccent: "prefabrykowany",
     description:
       "Gotowe moduły dla budownictwa modułowego, hoteli i obiektów seryjnych. Montaż na placu w godzinach.",
-    image: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=400&q=80",
+    image: "images/products/prefab.jpg",
     imageAlt: "Prefabrykowane moduły sufitów napinanych",
     linkLabel: "Prefab",
   },
