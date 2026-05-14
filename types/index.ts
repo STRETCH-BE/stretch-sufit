@@ -29,36 +29,54 @@ export type Product = {
 };
 
 export type GalleryItem = {
-  /** Image src — final delivery uses /images/gallery/{slug}.jpg */
   image: string;
-  /** Polish alt text. */
   imageAlt: string;
-  /** Italic serif caption (e.g. "Salon · LED liniowy") */
   room: string;
-  /** Bold display caption (e.g. "Warszawa") */
   city: string;
-  /** Tailwind grid-area class controlling the asymmetric layout. */
   gridClass: string;
 };
 
 export type Testimonial = {
-  /** Customer first name + initial */
   name: string;
-  /** Project type + city, e.g. "Espressivo · Warszawa" */
   meta: string;
-  /** The Polish quote. Wrapped in “…” at render time. */
   quote: string;
-  /** Star rating, 1–5 */
   rating: number;
-  /** 2-letter initials displayed in avatar circle */
   initials: string;
+};
+
+export type CityFaq = {
+  q: string;
+  a: string;
+};
+
+export type CityTrustBlock = {
+  title: string;
+  body: string;
 };
 
 export type City = {
   /** URL-safe slug, used in href: /sufity-napinane/[slug] */
   slug: string;
-  /** Display name with Polish diacritics */
+  /** Display name with Polish diacritics (Mianownik / nominative) */
   name: string;
-  /** Polish voivodeship or "Centrala" for HQ */
+  /** Polish voivodeship */
   region: string;
+  /** Locative case for SEO copy ("w Warszawie", "we Wrocławiu") */
+  locative: string;
+  /** Display population, e.g. "1,86 mln mieszkańców" */
+  populationDisplay: string;
+  /** Distance from Częstochowa HQ in kilometers */
+  distanceFromHq: number;
+  /** Districts/neighborhoods (empty array for smaller cities) */
+  districts: string[];
+  /** 2-3 sentence intro paragraph, unique per city */
+  intro: string;
+  /** 3 why-us trust blocks — standardized structure, city-specific copy */
+  trustBlocks: CityTrustBlock[];
+  /** 4 city-specific FAQ entries — used for FAQPage JSON-LD too */
+  faq: CityFaq[];
+  /** Hero/showcase image URL */
+  image: string;
+  /** Polish alt text for the image */
+  imageAlt: string;
 };
