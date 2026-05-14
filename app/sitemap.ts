@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/galeria`,
+      url: `${BASE_URL}/realizacje`,
       lastModified,
       changeFrequency: "weekly",
       priority: 0.8,
