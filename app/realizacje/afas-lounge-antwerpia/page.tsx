@@ -5,12 +5,12 @@ import { notFound } from "next/navigation";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { CtaFinal } from "@/components/sections/cta-final";
-import { MobileStickyCta } from "@/components/sections/mobile-sticky-cta";
+import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
-// Homepage components assumed to accept props (see note in PROMPT 6 reply)
-import { RedTicker } from "@/components/sections/red-ticker";
-import { HeritageStrip } from "@/components/sections/heritage-strip";
-import { StatsBand } from "@/components/sections/stats-band";
+// Homepage sections — now prop-driven with defaults
+import { Ticker } from "@/components/sections/ticker";
+import { Heritage } from "@/components/sections/heritage";
+import { Stats } from "@/components/sections/stats";
 
 // Project-specific sections
 import { ProjectHero } from "@/components/sections/project/project-hero";
@@ -29,7 +29,7 @@ import {
   buildBreadcrumbs,
   buildFaqPage,
   buildCreativeWork,
-} from "@/lib/jsonld";
+} from "@/lib/schema";
 
 const SLUG = "afas-lounge-antwerpia";
 
@@ -137,8 +137,8 @@ export default function AfasLoungeAntwerpiaPage() {
         {/* 3 — Meta strip */}
         <ProjectMetaStrip project={project} />
 
-        {/* 4 — Red ticker (project-specific) */}
-        <RedTicker
+        {/* 4 — Ticker (project-specific items) */}
+        <Ticker
           items={[
             "Made in Belgium",
             "Installed in Belgium",
@@ -150,19 +150,48 @@ export default function AfasLoungeAntwerpiaPage() {
           ]}
         />
 
-        {/* 5 — Heritage strip */}
-        <HeritageStrip
-          italicLine="Belgijska technologia. Belgijski obiekt. Belgijska realizacja od pierwszego szkicu do ostatniego napięcia folii."
-          flags={["BE", "BE"]}
+        {/* 5 — Heritage strip (project-specific paragraph + flag pair) */}
+        <Heritage
+          paragraph={
+            <em className="italic">
+              Belgijska technologia. Belgijski obiekt. Belgijska realizacja od
+              pierwszego szkicu do ostatniego napięcia folii.
+            </em>
+          }
+          tags={[
+            { flag: "BE", label: "Produkcja Belgia" },
+            { flag: "BE", label: "Montaż w Belgii" },
+          ]}
         />
 
-        {/* 6 — Stats band */}
-        <StatsBand
-          stats={[
-            { value: "250 m²", label: "powierzchni sufitu" },
-            { value: "1 dzień", label: "montażu w czynnym obiekcie" },
-            { value: "2-w-1", label: "lustro i akustyka w jednej powłoce" },
-            { value: "0 kurzu", label: "prac wykończeniowych po nas" },
+        {/* 6 — Stats band (project-specific) */}
+        <Stats
+          ariaLabel="Kluczowe parametry realizacji AFAS Lounge"
+          items={[
+            {
+              number: "250",
+              suffix: "m²",
+              emphasis: "Powierzchni sufitu.",
+              description: "Multifunkcyjny lounge w AFAS Dome.",
+            },
+            {
+              number: <span className="text-red">1</span>,
+              suffix: "dzień",
+              emphasis: "Montażu w czynnym obiekcie.",
+              description: "Bez przerwy w przygotowaniach do otwarcia.",
+            },
+            {
+              number: "2",
+              suffix: "w 1",
+              emphasis: "Lustro i akustyka.",
+              description: "Jedna powłoka, dwa efekty.",
+            },
+            {
+              number: <span className="text-red">0</span>,
+              suffix: "kurzu",
+              emphasis: "Prac wykończeniowych po nas.",
+              description: "Sufit gotowy do pierwszego wieczoru BE•AT.",
+            },
           ]}
         />
 
@@ -264,6 +293,7 @@ export default function AfasLoungeAntwerpiaPage() {
             studio={project.designStudio}
             bodyText="Creneau International (Hasselt, Belgia) odpowiadało za pełen scope projektu AFAS Lounge — od researchu i koncepcji po projekt wnętrza, project management i build. Nasza rola obejmowała wyłącznie dostawę i montaż sufitu napinanego w specyfikacji ustalonej przez studio."
             projectSlug={SLUG}
+            intro="Wnętrze AFAS Lounge zostało zaprojektowane od podstaw przez zewnętrzne studio. Nasza rola ograniczała się do dostawy i montażu sufitu w zatwierdzonym przez nich kształcie i wykończeniu."
           />
         )}
 
@@ -274,13 +304,18 @@ export default function AfasLoungeAntwerpiaPage() {
         <div id="wycena">
           <CtaFinal
             source="project_afas_lounge"
-            headingOverride="Chcesz podobny sufit u siebie?"
+            headingOverride={
+              <>
+                Chcesz podobny sufit
+                <br />u <span className="it">siebie?</span>
+              </>
+            }
             subheadOverride="Pomiar i wycena bezpłatne. Realizujemy w całej Polsce, projekty komercyjne i prywatne."
           />
         </div>
       </main>
 
-      <MobileStickyCta />
+      <MobileStickyCTA />
       <Footer />
 
       {/* JSON-LD */}
