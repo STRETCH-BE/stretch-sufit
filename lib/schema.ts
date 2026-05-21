@@ -1,29 +1,64 @@
 /**
- * Schema.org JSON-LD builders.
+ * JSON-LD schema builders — typed helpers for structured data.
  * File path: /lib/schema.ts
  *
- * Type-safe builders for the structured data rendered on every page.
- * Pair with <JsonLd data={...} /> from /components/seo/json-ld.tsx.
+ * One file, one source of truth. Used by metadata generators on each page.
  */
 
-import { siteConfig } from "./site-config";
-
-const SITE = siteConfig.url;
+import { siteConfig } from "@/lib/site-config";
 
 /* ─── ORGANIZATION ─────────────────────────────────────── */
 export function buildOrganization() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": `${SITE}#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
-    url: SITE,
-    logo: `${SITE}/images/logo.png`,
-    image: `${SITE}${siteConfig.ogImage}`,
-    description: siteConfig.description,
-    telephone: siteConfig.contact.phonePL,
-    email: siteConfig.contact.email,
+    url: siteConfig.url,
+    logo: `${siteConfig.url}/images/logo.png`,
+    sameAs: siteConfig.sameAs,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.contact.phonePL,
+        contactType: "customer service",
+        areaServed: "PL",
+        availableLanguage: ["Polish", "English"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.contact.phonePLUA,
+        contactType: "customer service",
+        areaServed: "PL",
+        availableLanguage: ["Ukrainian", "Polish"],
+      },
+    ],
+  };
+}
+
+/* ─── WEBSITE ─────────────────────────────────────────── */
+export function buildWebsite() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteConfig.name,
+    url: siteConfig.url,
+    inLanguage: ["pl-PL", "en", "uk"],
+  };
+}
+
+/* ─── LOCAL BUSINESS ──────────────────────────────────── */
+export function buildLocalBusiness(opts?: {
+  citySlug?: string;
+  cityName?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: opts?.cityName
+      ? `${siteConfig.name} — ${opts.cityName}`
+      : siteConfig.name,
+    image: `${siteConfig.url}${siteConfig.ogImage}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.contact.address.street,
@@ -32,98 +67,44 @@ export function buildOrganization() {
       addressRegion: siteConfig.contact.address.region,
       addressCountry: siteConfig.contact.address.country,
     },
-    sameAs: siteConfig.sameAs,
-    parentOrganization: {
-      "@type": "Organization",
-      name: "STRETCH® Group",
-      url: "https://stretchplafond.be",
-    },
-  };
-}
-
-/* ─── WEBSITE (with SearchAction) ──────────────────────── */
-export function buildWebsite() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": `${SITE}#website`,
-    url: SITE,
-    name: siteConfig.name,
-    description: siteConfig.description,
-    inLanguage: "pl-PL",
-    publisher: { "@id": `${SITE}#organization` },
-  };
-}
-
-/* ─── LOCAL BUSINESS (home + city pages) ───────────────── */
-export function buildLocalBusiness(opts?: {
-  cityName?: string;
-  url?: string;
-  geo?: { lat: number; lng: number };
-}) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    "@id": `${opts?.url || SITE}#business`,
-    name: opts?.cityName
-      ? `${siteConfig.name} — ${opts.cityName}`
-      : siteConfig.name,
-    image: `${SITE}${siteConfig.ogImage}`,
-    url: opts?.url || SITE,
-    telephone: siteConfig.contact.phonePL,
-    priceRange: "€€",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.address.street,
-      addressLocality: opts?.cityName || siteConfig.contact.address.city,
-      postalCode: siteConfig.contact.address.postalCode,
-      addressRegion: siteConfig.contact.address.region,
-      addressCountry: siteConfig.contact.address.country,
-    },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: opts?.geo?.lat || siteConfig.contact.geo.lat,
-      longitude: opts?.geo?.lng || siteConfig.contact.geo.lng,
+      latitude: siteConfig.contact.geo.lat,
+      longitude: siteConfig.contact.geo.lng,
     },
+    telephone: siteConfig.contact.phonePL,
+    email: siteConfig.contact.email,
     openingHours: siteConfig.contact.hours,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "230",
-      bestRating: "5",
-      worstRating: "1",
-    },
-    areaServed: opts?.cityName
-      ? { "@type": "City", name: opts.cityName }
-      : { "@type": "Country", name: "Poland" },
+    priceRange: "$$",
+    url: opts?.citySlug
+      ? `${siteConfig.url}/sufity-napinane/${opts.citySlug}`
+      : siteConfig.url,
   };
 }
 
-/* ─── SERVICE (each product page) ──────────────────────── */
+/* ─── SERVICE ─────────────────────────────────────────── */
 export function buildService(opts: {
   name: string;
   description: string;
-  url: string;
-  image?: string;
-  category?: string;
+  slug: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name: opts.name,
     description: opts.description,
-    url: opts.url,
-    image: opts.image ? `${SITE}${opts.image}` : undefined,
-    category: opts.category,
-    provider: { "@id": `${SITE}#organization` },
-    areaServed: { "@type": "Country", name: "Poland" },
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    url: `${siteConfig.url}/rozwiazania/${opts.slug}`,
+    areaServed: "Poland",
   };
 }
 
 /* ─── BREADCRUMB LIST ──────────────────────────────────── */
-export function buildBreadcrumbs(
-  items: { name: string; url: string }[]
-) {
+export function buildBreadcrumbs(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -149,5 +130,54 @@ export function buildFaqPage(faqs: { question: string; answer: string }[]) {
         text: faq.answer,
       },
     })),
+  };
+}
+
+/* ─── CREATIVE WORK (realizacje case studies) ──────────── */
+export type BuildCreativeWorkArgs = {
+  name: string;
+  description: string;
+  url: string;
+  image: string[];
+  dateCreated: string;
+  locationName: string;
+  locationCountry: string;
+  contributor?: { name: string; url: string };
+  producer: { name: string; url: string };
+  keywords: string[];
+};
+
+export function buildCreativeWork(args: BuildCreativeWorkArgs) {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["CreativeWork", "Project"],
+    name: args.name,
+    description: args.description,
+    url: args.url,
+    image: args.image,
+    dateCreated: args.dateCreated,
+    locationCreated: {
+      "@type": "Place",
+      name: args.locationName,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality:
+          args.locationName.split(",")[1]?.trim() ?? args.locationName,
+        addressCountry: args.locationCountry,
+      },
+    },
+    ...(args.contributor && {
+      contributor: {
+        "@type": "Organization",
+        name: args.contributor.name,
+        url: args.contributor.url,
+      },
+    }),
+    producer: {
+      "@type": "Organization",
+      name: args.producer.name,
+      url: args.producer.url,
+    },
+    keywords: args.keywords.join(", "),
   };
 }
