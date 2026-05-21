@@ -1,7 +1,11 @@
-// components/sections/project/project-gallery.tsx
+/**
+ * Project Gallery — asymmetric grid of project photos on dark bg.
+ * File path: /components/sections/project/project-gallery.tsx
+ */
+
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
-import { TrackedCTA } from "@/components/ui/TrackedCTA";
+import { Container } from "@/components/ui/container";
+import { TrackedCTA } from "@/components/ui/tracked-cta";
 import type { ProjectGalleryItem } from "@/types";
 
 type Props = {
@@ -11,7 +15,7 @@ type Props = {
   indexHref?: string;
 };
 
-// Asymmetric layout: 12-col grid, item col-spans cycle for visual rhythm.
+// Asymmetric 12-col layout
 const COL_SPANS = [
   "md:col-span-7",
   "md:col-span-5",
@@ -28,18 +32,13 @@ export function ProjectGallery({
   indexHref = "/realizacje",
 }: Props) {
   return (
-    <section
-      id={id}
-      className="bg-[color:var(--surface-dark)] py-20 text-white md:py-28"
-    >
+    <section id={id} className="bg-bg py-20 text-white md:py-28">
       <Container>
-        <div className="mb-10 flex items-end justify-between gap-6">
-          <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/60">
-              Galeria
-            </p>
-            <h2 className="mt-3 font-display text-3xl md:text-4xl">{title}</h2>
-          </div>
+        <div className="mb-10">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/60">
+            Galeria
+          </p>
+          <h2 className="mt-3 font-display text-3xl md:text-4xl">{title}</h2>
         </div>
 
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-5">
@@ -47,7 +46,6 @@ export function ProjectGallery({
             <li
               key={item.src}
               className={`${COL_SPANS[i % COL_SPANS.length]} group`}
-              style={{ animationDelay: `${i * 60}ms` }}
             >
               <figure className="overflow-hidden rounded-xl ring-1 ring-white/10">
                 <div className="relative aspect-[4/3] w-full overflow-hidden">
@@ -79,8 +77,6 @@ export function ProjectGallery({
               location: "project_gallery_footer",
               label: "realizacje_index",
             }}
-            variant="link"
-            tone="light"
             className="inline-flex items-center gap-2 text-sm font-medium text-white/85 underline underline-offset-4 hover:text-white"
           >
             Zobacz więcej realizacji <span aria-hidden>→</span>

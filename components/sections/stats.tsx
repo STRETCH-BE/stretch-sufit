@@ -6,20 +6,24 @@
  * Concrete, factual, and short — written to be quotable by AI engines.
  *
  *   1 dzień   25 lat   130+   0 kurzu
+ *
+ * Reusable: pass `items` to override. Default = original homepage stats so
+ * existing <Stats /> call site keeps working unchanged.
  */
 
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/container";
 import { FadeIn } from "@/components/ui/fade-in";
 
-type Stat = {
-  /** Pre-rendered JSX so we can color the leading digit red where wanted */
-  number: React.ReactNode;
+export type Stat = {
+  /** Leading number — accepts JSX so a digit can be colored red, etc. */
+  number: ReactNode;
   suffix?: string;
   emphasis: string;
   description: string;
 };
 
-const stats: Stat[] = [
+const DEFAULT_STATS: Stat[] = [
   {
     number: <span className="text-red">1</span>,
     suffix: "dzień",
@@ -46,15 +50,20 @@ const stats: Stat[] = [
   },
 ];
 
-export function Stats() {
+type Props = {
+  items?: Stat[];
+  ariaLabel?: string;
+};
+
+export function Stats({
+  items = DEFAULT_STATS,
+  ariaLabel = "Kluczowe parametry",
+}: Props = {}) {
   return (
-    <section
-      aria-label="Kluczowe parametry"
-      className="bg-bg py-20 md:py-28"
-    >
+    <section aria-label={ariaLabel} className="bg-bg py-20 md:py-28">
       <Container>
         <ul className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, i) => (
+          {items.map((stat, i) => (
             <FadeIn key={i} as="li" delay={i * 80}>
               <div className="font-display text-[clamp(64px,8vw,112px)] font-medium leading-[0.92] tracking-[-0.04em] text-white">
                 {stat.number}

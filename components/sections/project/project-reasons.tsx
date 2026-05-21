@@ -1,6 +1,10 @@
-// components/sections/project/project-reasons.tsx
-import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
+/**
+ * Project Reasons — 3-card "why this product" section on white bg.
+ * File path: /components/sections/project/project-reasons.tsx
+ */
+
+import { Container } from "@/components/ui/container";
+import { SectionTitle } from "@/components/ui/section-title";
 
 export type ReasonCard = {
   title: string;
@@ -24,16 +28,13 @@ export function ProjectReasons({
           {cards.map((c, i) => (
             <article
               key={i}
-              className="rounded-2xl border border-black/10 bg-[color:var(--paper)] p-7 transition hover:border-black/25"
+              className="rounded-2xl border border-bg/10 bg-paper p-7 transition hover:border-bg/25"
             >
-              <span
-                aria-hidden
-                className="block h-px w-8 bg-[color:var(--brand-red)]"
-              />
+              <span aria-hidden className="block h-px w-8 bg-red" />
               <h3 className="mt-5 text-xl font-semibold leading-tight">
                 {c.title}
               </h3>
-              <p className="mt-3 text-base leading-relaxed text-black/70">
+              <p className="mt-3 text-base leading-relaxed text-bg/70">
                 {c.body}
               </p>
             </article>

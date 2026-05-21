@@ -1,6 +1,10 @@
-// components/sections/project/project-meta-strip.tsx
-import { Container } from "@/components/ui/Container";
-import { TrackedCTA } from "@/components/ui/TrackedCTA";
+/**
+ * Project Meta Strip — sticky-style horizontal credits row.
+ * File path: /components/sections/project/project-meta-strip.tsx
+ */
+
+import { Container } from "@/components/ui/container";
+import { TrackedCTA } from "@/components/ui/tracked-cta";
 import type { Project } from "@/types";
 
 type Props = {
@@ -14,7 +18,7 @@ export function ProjectMetaStrip({ project }: Props) {
     link?: {
       href: string;
       ariaLabel: string;
-      event: Record<string, unknown>;
+      event: Record<string, string | number | boolean | undefined>;
     };
   }> = [
     { label: "Klient", value: project.client },
@@ -37,7 +41,7 @@ export function ProjectMetaStrip({ project }: Props) {
   }
 
   return (
-    <section className="border-y border-black/10 bg-[color:var(--paper)]">
+    <section className="border-y border-bg/10 bg-paper">
       <Container className="py-6">
         <dl className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 md:grid-cols-6">
           {items.map((it) => (
@@ -45,16 +49,16 @@ export function ProjectMetaStrip({ project }: Props) {
               key={it.label}
               className="font-mono text-[11px] uppercase tracking-[0.16em]"
             >
-              <dt className="text-black/45">{it.label}</dt>
-              <dd className="mt-1 text-sm normal-case tracking-normal text-black/85">
+              <dt className="text-bg/45">{it.label}</dt>
+              <dd className="mt-1 text-sm normal-case tracking-normal text-bg/85">
                 {it.link ? (
                   <TrackedCTA
                     href={it.link.href}
                     event="outbound_click"
                     props={it.link.event}
-                    external
-                    variant="link"
-                    className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-[color:var(--brand-red)]"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 underline underline-offset-4 hover:text-red"
                     aria-label={it.link.ariaLabel}
                   >
                     {it.value} <span aria-hidden>↗</span>

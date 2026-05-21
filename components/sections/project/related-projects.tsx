@@ -1,8 +1,12 @@
-// components/sections/project/related-projects.tsx
+/**
+ * Related Projects — 3-card rail on paper bg.
+ * File path: /components/sections/project/related-projects.tsx
+ */
+
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
-import { SectionTitle } from "@/components/ui/SectionTitle";
-import { TrackedCTA } from "@/components/ui/TrackedCTA";
+import { Container } from "@/components/ui/container";
+import { SectionTitle } from "@/components/ui/section-title";
+import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { getOtherProjects } from "@/content/projects";
 
 type Props = {
@@ -14,7 +18,7 @@ export function RelatedProjects({ currentSlug }: Props) {
   const fillers = Math.max(0, 3 - others.length);
 
   return (
-    <section className="bg-[color:var(--paper)] py-20 md:py-28">
+    <section className="bg-paper py-20 md:py-28">
       <Container>
         <SectionTitle as="h2">Inne realizacje</SectionTitle>
 
@@ -25,10 +29,9 @@ export function RelatedProjects({ currentSlug }: Props) {
               href={`/realizacje/${p.slug}`}
               event="project_view"
               props={{ project: p.slug, source: currentSlug }}
-              variant="bare"
-              className="group block overflow-hidden rounded-2xl border border-black/10 bg-white transition hover:border-black/25"
+              className="group block overflow-hidden rounded-2xl border border-bg/10 bg-white transition hover:border-bg/25"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-black/5">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-bg/5">
                 <Image
                   src={p.cardImage ?? p.heroImage}
                   alt={`Realizacja ${p.title} — ${p.venue}`}
@@ -39,14 +42,14 @@ export function RelatedProjects({ currentSlug }: Props) {
                 />
               </div>
               <div className="p-5">
-                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-black/50">
+                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-bg/50">
                   {p.venue} · {p.year}
                 </p>
                 <h3 className="mt-2 text-lg font-semibold leading-tight">
                   {p.title}
                 </h3>
                 {p.cardSummary && (
-                  <p className="mt-2 text-sm leading-relaxed text-black/65">
+                  <p className="mt-2 text-sm leading-relaxed text-bg/65">
                     {p.cardSummary}
                   </p>
                 )}
@@ -54,26 +57,25 @@ export function RelatedProjects({ currentSlug }: Props) {
             </TrackedCTA>
           ))}
 
-          {/* Placeholder cards until more projects exist */}
           {Array.from({ length: fillers }).map((_, i) => (
             <div
               key={`placeholder-${i}`}
-              className="overflow-hidden rounded-2xl border border-dashed border-black/15 bg-white/50"
+              className="overflow-hidden rounded-2xl border border-dashed border-bg/15 bg-white/50"
               aria-hidden
             >
-              <div className="flex aspect-[4/3] w-full items-center justify-center bg-black/[0.03]">
-                <span className="font-mono text-xs uppercase tracking-[0.2em] text-black/30">
+              <div className="flex aspect-[4/3] w-full items-center justify-center bg-bg/[0.03]">
+                <span className="font-mono text-xs uppercase tracking-[0.2em] text-bg/30">
                   Wkrótce
                 </span>
               </div>
               <div className="p-5">
-                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-black/35">
+                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-bg/35">
                   Realizacja w przygotowaniu
                 </p>
-                <h3 className="mt-2 text-lg font-semibold leading-tight text-black/40">
+                <h3 className="mt-2 text-lg font-semibold leading-tight text-bg/40">
                   Coming soon
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-black/40">
+                <p className="mt-2 text-sm leading-relaxed text-bg/40">
                   Kolejna realizacja pojawi się tutaj wkrótce.
                 </p>
               </div>

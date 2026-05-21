@@ -5,23 +5,22 @@
  * File path: /components/sections/cta-final.tsx
  *
  * Client component because the form needs state. The submit handler posts to
- * /api/quote — that route handler will be built in a later prompt. Until then,
- * a `console.log` simulates the request and the form transitions to success.
+ * /api/quote.
+ *
+ * Reusable: optional props let case-study pages override the heading and tag
+ * the analytics events with a different source. Defaults match the original
+ * homepage copy, so the existing <CtaFinal /> call keeps working unchanged.
  *
  * Events:
  *   - phone_click          when the phone button is tapped
  *   - whatsapp_click       when the WhatsApp button is tapped
- *   - quote_request        on successful form submit (with city + surface)
+ *   - quote_request        on successful form submit (with city + surface + source)
  *   - form_submit          mirror event for funnel analytics
- *
- * RODO: explicit consent line below the submit; data isn't sent anywhere
- * until consent is implied by submission (acceptable in the Polish market
- * for a contact-back request — confirm with your DPO).
  */
 
-import { useId, useState } from "react";
+import { useId, useState, type ReactNode } from "react";
 import { Container } from "@/components/ui/container";
-import { analytics } from "@/lib/analytics";
+import { analytics, track } from "@/lib/analytics";
 import { siteConfig } from "@/lib/site-config";
 
 const surfaces = [
@@ -34,7 +33,30 @@ const surfaces = [
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function CtaFinal() {
+type Props = {
+  /** Tag for analytics events, e.g. "homepage" or "project_afas_lounge" */
+  source?: string;
+  /** Override the H2. Pass ReactNode for italic accents. */
+  headingOverride?: ReactNode;
+  /** Override the lead paragraph below the heading. */
+  subheadOverride?: ReactNode;
+};
+
+const DEFAULT_HEADING = (
+  <>
+    Bezpłatny pomiar
+    <br />w <span className="it">48 godzinach.</span>
+  </>
+);
+
+const DEFAULT_SUBHEAD =
+  "Zostaw numer, oddzwonimy. Specjalista przyjedzie do Ciebie, zmierzy pomieszczenie, doradzi materiał i kolor, przedstawi wycenę na miejscu.";
+
+export function CtaFinal({
+  source = "homepage",
+  headingOverride,
+  subheadOverride,
+}: Props = {}) {
   const formId = useId();
   const [status, setStatus] = useState<Status>("idle");
   const [data, setData] = useState({
@@ -50,7 +72,7 @@ export function CtaFinal() {
     (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
       setData((d) => ({ ...d, [key]: e.target.value }));
 
-  // Honeypot — a hidden field bots will fill in but humans never see
+  // Honeypot
   const [honeypot, setHoneypot] = useState("");
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -62,7 +84,7 @@ export function CtaFinal() {
       const res = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, website: honeypot }),
+        body: JSON.stringify({ ...data, website: honeypot, source }),
       });
 
       if (!res.ok) {
@@ -70,7 +92,12 @@ export function CtaFinal() {
       }
 
       analytics.formSubmit("quote_request", true);
-      analytics.quoteRequest({ city: data.city, surface: data.surface });
+      // Pass `source` through analytics so we can attribute leads
+      track("quote_request", {
+        city: data.city,
+        surface: data.surface,
+        source,
+      });
       setStatus("success");
     } catch (err) {
       // eslint-disable-next-line no-console
@@ -102,18 +129,19 @@ export function CtaFinal() {
               id={`${formId}-heading`}
               className="font-display text-[clamp(40px,6vw,88px)] font-medium leading-[0.95] tracking-[-0.03em]"
             >
-              Bezpłatny pomiar
-              <br />w <span className="it">48 godzinach.</span>
+              {headingOverride ?? DEFAULT_HEADING}
             </h2>
             <p className="mt-6 max-w-[460px] text-[18px] leading-[1.55] text-white/90">
-              Zostaw numer, oddzwonimy. Specjalista przyjedzie do Ciebie, zmierzy
-              pomieszczenie, doradzi materiał i kolor, przedstawi wycenę na miejscu.
+              {subheadOverride ?? DEFAULT_SUBHEAD}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
               <a
                 href={`tel:${siteConfig.contact.phonePL}`}
-                onClick={() => analytics.phoneClick("cta_final")}
+                onClick={() => {
+                  analytics.phoneClick("cta_final");
+                  track("phone_click", { location: "cta_final", source });
+                }}
                 className="inline-flex items-center gap-2.5 rounded-full bg-bg px-[26px] py-4 text-sm font-semibold text-white transition-colors hover:bg-[#2a2a2a]"
               >
                 📞 {formatPhone(siteConfig.contact.phonePL)}
@@ -122,7 +150,10 @@ export function CtaFinal() {
                 href={`https://wa.me/${siteConfig.contact.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => analytics.whatsappClick("cta_final")}
+                onClick={() => {
+                  analytics.whatsappClick("cta_final");
+                  track("whatsapp_click", { location: "cta_final", source });
+                }}
                 className="group/btn inline-flex items-center gap-2.5 rounded-full bg-white px-[26px] py-4 text-sm font-semibold text-bg transition-colors hover:bg-paper-2"
               >
                 WhatsApp
@@ -146,7 +177,9 @@ export function CtaFinal() {
             {status === "success" ? (
               <div role="status" className="py-8 text-center">
                 <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-red">
-                  <span aria-hidden="true" className="text-2xl">✓</span>
+                  <span aria-hidden="true" className="text-2xl">
+                    ✓
+                  </span>
                 </div>
                 <div className="font-display text-xl font-semibold text-white">
                   Dziękujemy!
@@ -165,7 +198,7 @@ export function CtaFinal() {
                 </p>
 
                 <div className="mt-6 space-y-3">
-                  {/* Honeypot — hidden from real users, bots fill it in */}
+                  {/* Honeypot */}
                   <div
                     aria-hidden="true"
                     style={{
@@ -256,7 +289,8 @@ export function CtaFinal() {
 
                   {status === "error" && (
                     <p role="alert" className="text-xs text-red">
-                      Coś poszło nie tak. Zadzwoń: {formatPhone(siteConfig.contact.phonePL)}.
+                      Coś poszło nie tak. Zadzwoń:{" "}
+                      {formatPhone(siteConfig.contact.phonePL)}.
                     </p>
                   )}
                 </div>
@@ -265,8 +299,9 @@ export function CtaFinal() {
                   id={`${formId}-note`}
                   className="mt-4 text-[11px] leading-[1.5] text-white/55"
                 >
-                  Klikając, zgadzasz się na kontakt zwrotny. Twoje dane są chronione
-                  zgodnie z RODO i nigdy nie są przekazywane podmiotom trzecim.
+                  Klikając, zgadzasz się na kontakt zwrotny. Twoje dane są
+                  chronione zgodnie z RODO i nigdy nie są przekazywane podmiotom
+                  trzecim.
                 </p>
               </>
             )}
@@ -277,7 +312,7 @@ export function CtaFinal() {
   );
 }
 
-/* Reusable input — kept local since it's only used in this section's form */
+/* Reusable input */
 function Field({
   label,
   name,
@@ -303,7 +338,6 @@ function Field({
   );
 }
 
-/** "+48730700333" → "+48 730 700 333" for display only */
 function formatPhone(p: string) {
   return p.replace(/^(\+\d{2})(\d{3})(\d{3})(\d{3})$/, "$1 $2 $3 $4");
 }
