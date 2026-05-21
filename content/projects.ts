@@ -2,6 +2,9 @@
 import type { Project } from "@/types";
 
 export const projects: Project[] = [
+  // ═══════════════════════════════════════════════════════════════════
+  // 2025 — AFAS Lounge, Antwerpia
+  // ═══════════════════════════════════════════════════════════════════
   {
     slug: "afas-lounge-antwerpia",
     title: "AFAS Lounge",
@@ -63,6 +66,72 @@ export const projects: Project[] = [
     cardImage: "/images/projects/afas-lounge/card.jpg",
     cardSummary:
       "250 m² czarnego połysku z akustyką w kultowym AFAS Dome. Projekt: Creneau International.",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // 2018 — Kancelaria Notarialna Ampe Anthony, Kruibeke
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "kancelaria-ampe-kruibeke",
+    title: "Kancelaria Ampe",
+    subtitle: "Akustyka spotyka design",
+    client: "Notariat Ampe Anthony",
+    venue: "Kancelaria notarialna, Kruibeke",
+    country: "BE",
+    year: 2018,
+    surface_m2: 350,
+    product: "Sufit akustyczny + wełna poliestrowa D40/50",
+    designStudio: {
+      name: "Ante Architecten",
+      url: "https://www.ante.be/",
+      location: "Belgia",
+    },
+    heroImage: "/images/projects/kancelaria-ampe-kruibeke/hero.jpg",
+    heroAlt:
+      "Sufit napinany akustyczny z eliptycznymi wycięciami w kancelarii notarialnej Ampe Anthony w Kruibeke, Belgia.",
+    ogImage: "/images/projects/kancelaria-ampe-kruibeke/og.jpg",
+    gallery: [
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/01-ellipse-cutout.jpg",
+        alt: "Duże eliptyczne wycięcie w suficie napinanym akustycznym, kancelaria Ampe Anthony, Kruibeke.",
+        caption: "Eliptyczne wycięcie",
+        note: "Iluzja wyższej przestrzeni przy wysokości 260 cm",
+      },
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/02-reception.jpg",
+        alt: "Strefa recepcji z gładkim sufitem akustycznym, kancelaria Ampe Anthony.",
+        caption: "Strefa recepcji",
+        note: "Pogłos 0,6 s — wnętrze wyraźnie ciche",
+      },
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/03-perimeter.jpg",
+        alt: "Detal białych profili PVC obwodowych sufitu napinanego.",
+        caption: "Wykończenie obwodowe",
+        note: "Białe profile PVC, czysty styk z ścianą",
+      },
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/04-lighting.jpg",
+        alt: "Integracja oświetlenia Wever & Ducre i Delta Light w suficie napinanym.",
+        caption: "Integracja oświetlenia",
+        note: "Wever & Ducre + Delta Light, otwory fabryczne",
+      },
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/05-meeting-room.jpg",
+        alt: "Sala konferencyjna z polerowanym betonem i sufitem akustycznym.",
+        caption: "Sala konferencyjna",
+        note: "Twarda podłoga, miękka akustyka sufitu",
+      },
+      {
+        src: "/images/projects/kancelaria-ampe-kruibeke/06-overview.jpg",
+        alt: "Widok ogólny 350-metrowej kancelarii Ampe Anthony.",
+        caption: "Widok ogólny",
+        note: "350 m² powierzchni biurowej",
+      },
+    ],
+    tags: ["akustyka", "biuro", "polyester wool", "belgia", "ante architecten"],
+    cardImage: "/images/projects/kancelaria-ampe-kruibeke/card.jpg",
+    cardSummary:
+      "350 m² akustyki dla kancelarii notarialnej. Pogłos 0,6 s. Projekt: Ante Architecten.",
   },
 ];
 
