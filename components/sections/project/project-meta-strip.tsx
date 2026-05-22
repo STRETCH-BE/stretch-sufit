@@ -1,6 +1,11 @@
 /**
  * Project Meta Strip — sticky-style horizontal credits row.
  * File path: /components/sections/project/project-meta-strip.tsx
+ *
+ * Rendering rules:
+ * - `surface_m2 === 0` is treated as "not disclosed" and the row is hidden.
+ * - `designStudio.url` is rendered as an outbound link only when it points to
+ *   a real third-party website (not back to a stretchplafond.be source page).
  */
 
 import { Container } from "@/components/ui/container";
@@ -24,19 +29,31 @@ export function ProjectMetaStrip({ project }: Props) {
     { label: "Klient", value: project.client },
     { label: "Obiekt", value: project.venue },
     { label: "Rok", value: String(project.year) },
-    { label: "Powierzchnia", value: `${project.surface_m2} m²` },
-    { label: "Produkt", value: project.product },
   ];
 
+  if (project.surface_m2 && project.surface_m2 > 0) {
+    items.push({
+      label: "Powierzchnia",
+      value: `${project.surface_m2} m²`,
+    });
+  }
+
+  items.push({ label: "Produkt", value: project.product });
+
   if (project.designStudio) {
+    const studio = project.designStudio;
+    const isExternalStudio =
+      !!studio.url && !studio.url.includes("stretchplafond.be");
     items.push({
       label: "Studio projektowe",
-      value: project.designStudio.name,
-      link: {
-        href: project.designStudio.url,
-        ariaLabel: `Strona ${project.designStudio.name} — opis projektu ${project.title} (otwiera się w nowej karcie)`,
-        event: { destination: "creneau", project: project.slug },
-      },
+      value: studio.name,
+      link: isExternalStudio
+        ? {
+            href: studio.url,
+            ariaLabel: `Strona ${studio.name} — opis projektu ${project.title} (otwiera się w nowej karcie)`,
+            event: { destination: studio.name, project: project.slug },
+          }
+        : undefined,
     });
   }
 
