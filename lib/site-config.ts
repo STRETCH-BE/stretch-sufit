@@ -8,10 +8,10 @@
 export const siteConfig = {
   name: "Stretch Sufit",
   legalName: "Alto Design Sp. z o.o.",
-  parent: "STRETCH® Group",
+  parent: "Stretchgroup",
   tagline: "Nowy sufit w 1 dzień. Bez kurzu.",
   description:
-    "Stretch Sufit — belgijska technologia sufitów napinanych w Polsce. Montaż w 1 dzień, bez kurzu, 25 lat żywotności. Część grupy STRETCH®.",
+    "Stretch Sufit — sufity napinane PVC produkowane w Polsce, polyester z Belgii. Część belgijskiej Stretchgroup. Montaż w 1 dzień, bez kurzu, 25 lat żywotności, do 15 lat gwarancji.",
 
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.pl",
 

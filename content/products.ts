@@ -3,8 +3,12 @@
  * File path: /content/products.ts
  *
  * Each entry powers BOTH the homepage Solutions card AND its dedicated
- * landing page at /rozwiazania/[slug]. Content modeled on the parent
- * STRETCH® brand from Belgium (stretchplafond.be / .nl).
+ * landing page at /rozwiazania/[slug]. PVC products are manufactured in
+ * Poland by Alto Design (Stretch Sufit). Polyester products are
+ * manufactured in Belgium by Stretch Productions BV. Both companies
+ * belong to the Belgian Stretchgroup holding.
+ *
+ * Warranty: 15 years on PVC, 10 years on polyester.
  *
  * Order matters — the rendered grid on the homepage relies on this order
  * so the featured PVC card lands in the second slot to break the rhythm.
@@ -20,8 +24,8 @@ export const products: Product[] = [
     slug: "sufit-poliestrowy",
     number: "01",
     label: "Poliester",
-    title: "Sufit poliestrowy Stretch®",
-    italicAccent: "Stretch®",
+    title: "Sufit poliestrowy Stretch",
+    italicAccent: "Stretch",
     description:
       "Bezszwowo do 5,15 m. Montaż na zimno. Bardzo matowa, naturalna powierzchnia — wygląda jak idealna gładź.",
     image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
@@ -30,7 +34,7 @@ export const products: Product[] = [
 
     tagline: "Tkana membrana poliestrowa z powłoką poliuretanową",
     intro:
-      "Poliestrowy sufit napinany STRETCH® to materiał najbliższy klasycznej gładzi — bardzo matowy, naturalny w odbiorze, bez połysku ani plastikowego wyglądu. Powstaje z tkanej membrany poliestrowej pokrytej trwałą powłoką poliuretanową. Montaż odbywa się na zimno (bez nagrzewania pomieszczenia), co czyni go idealnym wyborem do renowacji w domach zamieszkanych.",
+      "Poliestrowy sufit napinany Stretch to materiał najbliższy klasycznej gładzi — bardzo matowy, naturalny w odbiorze, bez połysku ani plastikowego wyglądu. Produkowany w belgijskiej fabryce Stretch Productions BV z tkanej membrany poliestrowej pokrytej trwałą powłoką poliuretanową. Montaż odbywa się na zimno (bez nagrzewania pomieszczenia), co czyni go idealnym wyborem do renowacji w domach zamieszkanych.",
     features: [
       {
         title: "Bezszwowo do 5,15 m",
@@ -45,8 +49,8 @@ export const products: Product[] = [
         body: 'Współczynnik połysku < 5%. Wygląda jak idealnie wykonana gładź — żadnego efektu „plastiku".',
       },
       {
-        title: "15 lat gwarancji",
-        body: "Materiałowa gwarancja STRETCH®. Powłoka poliuretanowa zabezpiecza tkaninę przed kurzem, wilgocią i odbarwieniem.",
+        title: "10 lat gwarancji",
+        body: "Materiałowa gwarancja producenta (Stretch Productions BV, Belgia). Powłoka poliuretanowa zabezpiecza tkaninę przed kurzem, wilgocią i odbarwieniem.",
       },
     ],
     useCases: [
@@ -70,14 +74,14 @@ export const products: Product[] = [
       { label: "Grubość membrany", value: "0,35–0,40 mm" },
       { label: "Współczynnik połysku", value: "< 5% (głęboka matowość)" },
       { label: "Klasa palności", value: "B-s2,d0" },
-      { label: "Gwarancja", value: "15 lat" },
+      { label: "Gwarancja", value: "10 lat" },
     ],
     comparedTo:
       "Wybierz poliester, jeśli chcesz idealnie matową, naturalną powierzchnię i nie potrzebujesz odporności na 100% wilgoci. Jeśli to łazienka lub kuchnia — wybierz PVC. Jeśli zależy Ci na akustyce — wybierz sufit akustyczny.",
     faq: [
       {
         q: "Czym poliester różni się od PVC?",
-        a: "Poliester ma głębsze matowanie i bardziej naturalny wygląd — wygląda jak idealna gładź. PVC jest dostępne w większej palecie kolorów i wykończeń (włącznie z lakierowym połyskiem). Poliester montuje się na zimno, PVC na ciepło. Oba mają 15 lat gwarancji.",
+        a: "Poliester ma głębsze matowanie i bardziej naturalny wygląd — wygląda jak idealna gładź. PVC jest dostępne w większej palecie kolorów i wykończeń (włącznie z lakierowym połyskiem, brokatem i teksturą). Poliester montuje się na zimno (produkowany w Belgii), PVC na ciepło (produkowany w naszej fabryce w Polsce). Gwarancja: 10 lat na poliester, 15 lat na PVC.",
       },
       {
         q: "Czy poliester nadaje się do łazienki?",
@@ -108,19 +112,19 @@ export const products: Product[] = [
     title: "Sufit PVC recyklingowy",
     italicAccent: "recyklingowy",
     description:
-      "Bezszwowo do 5,70 m. Łatwo demontowalny i w 100% recyklingowy do surowca. Doskonały do łazienek i kuchni.",
+      "Bezszwowo do 6,50 m. Produkcja w naszej fabryce w Polsce. Łatwo demontowalny i w 100% recyklingowy. Doskonały do łazienek, kuchni i salonów.",
     image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
     imageAlt: "Sufit napinany PVC w nowoczesnej łazience",
     linkLabel: "Sufit PVC",
     featured: true,
 
-    tagline: "Membrana PVC, w 100% recyklingowa, demontowalna",
+    tagline: "Membrana PVC z naszej fabryki w Polsce — w 100% recyklingowa, demontowalna",
     intro:
-      "PVC to nasz najczęściej wybierany produkt — wszechstronny materiał, idealny do większości wnętrz domowych i komercyjnych. Dostępny w ponad 100 kolorach i 7 wykończeniach (matowy, satynowy, lakierowany, lustrzany, perłowy, metaliczny, transparentny). 100% wodoszczelny — w razie zalania z góry sufit zatrzymuje wodę i można go po prostu opróżnić.",
+      "PVC to nasz najczęściej wybierany produkt i flagowa specjalizacja Stretch Sufit. Produkujemy go w fabryce Alto Design w Częstochowie (część belgijskiej Stretchgroup) — wszechstronny materiał, idealny do większości wnętrz domowych i komercyjnych. Dostępny w ponad 100 kolorach i 9 wykończeniach (mat, satyna, połysk, brokat, tekstura, lustro, perła, metalik, transparentny). 100% wodoszczelny — w razie zalania z góry sufit zatrzymuje wodę i można go po prostu opróżnić.",
     features: [
       {
-        title: "Bezszwowo do 5,70 m",
-        body: "Największa dostępna szerokość na rynku. Pokrywa większość polskich pomieszczeń jednym kawałkiem membrany.",
+        title: "Bezszwowo do 6,50 m",
+        body: "Największa dostępna szerokość na rynku. Pokrywa praktycznie każde polskie pomieszczenie jednym kawałkiem membrany — bez widocznych łączeń.",
       },
       {
         title: "100% wodoszczelny",
@@ -131,8 +135,8 @@ export const products: Product[] = [
         body: "Można zdemontować i ponownie zamontować (np. po remoncie ścian). 100% recyklingowy do surowca pierwotnego.",
       },
       {
-        title: "100+ kolorów, 7 wykończeń",
-        body: "Mat, satyna, lakier (do 200% odbicia światła), lustro, perła, metalik, transparent. Pełna paleta wzorników do wglądu.",
+        title: "100+ kolorów, 9 wykończeń",
+        body: "Mat, satyna, połysk (do 200% odbicia światła), brokat, tekstura, lustro, perła, metalik, transparent. Pełna paleta wzorników do wglądu.",
       },
     ],
     useCases: [
@@ -141,8 +145,8 @@ export const products: Product[] = [
         body: "Klasyczne zastosowanie — pełna odporność na parę wodną, chlapanie, opary kuchenne. Łatwe w czyszczeniu, nie chłonie zapachów.",
       },
       {
-        context: "Salony z efektem lakierowym",
-        body: "Wykończenie lakierowe (gloss) wizualnie podwaja wysokość pomieszczenia poprzez odbicie. Klasa premium dla nowoczesnych apartamentów.",
+        context: "Salony z efektem połysku",
+        body: "Wykończenie połysk (gloss) wizualnie podwaja wysokość pomieszczenia poprzez odbicie. Klasa premium dla nowoczesnych apartamentów. Brokat i tekstura — dla wnętrz z charakterem.",
       },
       {
         context: "Lokale gastronomiczne",
@@ -155,11 +159,12 @@ export const products: Product[] = [
     ],
     specs: [
       { label: "Materiał", value: "PVC z dodatkami stabilizującymi" },
-      { label: "Maksymalna szerokość bez szwu", value: "5,70 m" },
+      { label: "Produkcja", value: "Alto Design, Częstochowa (Polska)" },
+      { label: "Maksymalna szerokość bez szwu", value: "6,50 m" },
       { label: "Typ montażu", value: "Na ciepło (rozgrzewanie do ~50°C)" },
       { label: "Grubość membrany", value: "0,17–0,35 mm" },
       { label: "Wodoszczelność", value: "100% (zatrzymuje do 100 l/m²)" },
-      { label: "Wykończenia", value: "Mat, satyna, lakier, lustro, perła, metalik, transparent" },
+      { label: "Wykończenia", value: "Mat, satyna, połysk, brokat, tekstura, lustro, perła, metalik, transparent" },
       { label: "Kolory", value: "100+ kolorów standardowych + RAL na zamówienie" },
       { label: "Klasa palności", value: "B-s2,d0" },
       { label: "Gwarancja", value: "15 lat" },
@@ -169,7 +174,7 @@ export const products: Product[] = [
     faq: [
       {
         q: "Czy PVC jest bezpieczny dla zdrowia?",
-        a: "Tak. Nasze membrany STRETCH® są certyfikowane zgodnie z normą A+ (najwyższy poziom czystości powietrza wewnątrz pomieszczeń), klasa palności B-s2,d0. Nie emitują szkodliwych VOC po zakończeniu instalacji.",
+        a: "Tak. Nasze membrany PVC są certyfikowane zgodnie z normą A+ (najwyższy poziom czystości powietrza wewnątrz pomieszczeń), klasa palności B-s2,d0. Nie emitują szkodliwych VOC po zakończeniu instalacji.",
       },
       {
         q: "Czy mogę wybrać dowolny kolor?",
@@ -181,11 +186,11 @@ export const products: Product[] = [
       },
       {
         q: "Czy PVC pożółknie z czasem?",
-        a: "Nie — wszystkie membrany STRETCH® mają stabilizatory UV i barwy. 15-letnia gwarancja obejmuje też utrzymanie koloru. Po 10–15 latach kolor jest praktycznie nieodróżnialny od pierwotnego.",
+        a: "Nie — wszystkie nasze membrany PVC mają stabilizatory UV i barwy. 15-letnia gwarancja obejmuje też utrzymanie koloru. Po 10–15 latach kolor jest praktycznie nieodróżnialny od pierwotnego.",
       },
       {
         q: "Ile kosztuje sufit PVC?",
-        a: "Cena startowa: ok. 170 zł/m² za matowy PVC. Lakierowane i lustrzane wykończenia: od ok. 250 zł/m². Pełna wycena na podstawie bezpłatnego pomiaru.",
+        a: "Cena startowa: ok. 170 zł/m² za matowy PVC. Połysk, brokat, tekstura i lustrzane wykończenia: od ok. 250 zł/m². Pełna wycena na podstawie bezpłatnego pomiaru.",
       },
     ],
   },
@@ -207,7 +212,7 @@ export const products: Product[] = [
 
     tagline: "Mikroperforowana membrana z absorberem akustycznym",
     intro:
-      "Sufit akustyczny STRETCH® łączy estetykę membrany napinanej z realną wartością akustyczną. Składa się z mikroperforowanej powierzchni i podkładu absorbującego dźwięk umieszczonego w przestrzeni sufitu właściwego. Wynik: redukcja czasu pogłosu nawet o 75%, a w połączeniu z naszymi absorberami sound-grade — pochłanianie dźwięku do 90%.",
+      "Sufit akustyczny Stretch łączy estetykę membrany napinanej z realną wartością akustyczną. Składa się z mikroperforowanej powierzchni i podkładu absorbującego dźwięk umieszczonego w przestrzeni sufitu właściwego. Wynik: redukcja czasu pogłosu nawet o 75%, a w połączeniu z naszymi absorberami sound-grade — pochłanianie dźwięku do 90%.",
     features: [
       {
         title: "Pochłanianie do 90%",
@@ -249,9 +254,9 @@ export const products: Product[] = [
       { label: "Klasa pochłaniania (ISO 354)", value: "Klasa A (z absorberem)" },
       { label: "NRC (Noise Reduction Coefficient)", value: "0,75–0,90" },
       { label: "Średnica perforacji", value: "0,2 mm (niewidoczna z 50 cm)" },
-      { label: "Maksymalna szerokość bez szwu", value: "5,15 m (poliester) / 5,70 m (PVC)" },
+      { label: "Maksymalna szerokość bez szwu", value: "5,15 m (poliester) / 6,50 m (PVC)" },
       { label: "Klasa palności", value: "A2-s1,d0 / B-s2,d0" },
-      { label: "Gwarancja", value: "15 lat" },
+      { label: "Gwarancja", value: "15 lat (PVC) / 10 lat (poliester)" },
     ],
     comparedTo:
       "Wybierz sufit akustyczny zawsze, gdy w pomieszczeniu zależy na czytelnej mowie lub komforcie dźwiękowym. Dla typowych mieszkań to często zbędne. Dla biur, restauracji, gabinetów lekarskich, sal lekcyjnych — zwykle niezbędne. ROI mierzony w produktywności zespołu.",
@@ -296,7 +301,7 @@ export const products: Product[] = [
 
     tagline: "Translucentna membrana + system LED za sufitem",
     intro:
-      "Sufit świetlny STRETCH® zamienia cały sufit (lub jego część) w równomiernie świecącą powierzchnię. Translucentna membrana o przepuszczalności 30–70% montowana nad systemem LED tworzy efekt niezakłóconego, miękkiego światła. Steruj kolorem, jasnością i scenami przez smartfon — od światła dnia po klimat wieczoru w jednej dotyku.",
+      "Sufit świetlny Stretch zamienia cały sufit (lub jego część) w równomiernie świecącą powierzchnię. Translucentna membrana o przepuszczalności 30–70% montowana nad systemem LED tworzy efekt niezakłóconego, miękkiego światła. Steruj kolorem, jasnością i scenami przez smartfon — od światła dnia po klimat wieczoru w jednej dotyku.",
     features: [
       {
         title: "Równomierne światło bez punktów",
@@ -385,7 +390,7 @@ export const products: Product[] = [
 
     tagline: "Druk UV o wysokiej rozdzielczości na membranie napinanej",
     intro:
-      "Sufit z fotodrukiem to nieograniczona swoboda projektowa — drukujemy na membranie STRETCH® dowolny obraz: zdjęcie, ilustrację, autorską grafikę, mapę gwiazd, malarstwo. Druk UV o rozdzielczości do 1440 DPI gwarantuje fotograficzną jakość. Maksymalny format pojedynczego elementu: 5,10 m szerokości × 50 m długości.",
+      "Sufit z fotodrukiem to nieograniczona swoboda projektowa — drukujemy na membranie Stretch dowolny obraz: zdjęcie, ilustrację, autorską grafikę, mapę gwiazd, malarstwo. Druk UV o rozdzielczości do 1440 DPI gwarantuje fotograficzną jakość. Maksymalny format pojedynczego elementu: 5,10 m szerokości × 50 m długości.",
     features: [
       {
         title: "1440 DPI — jakość fotograficzna",
@@ -474,7 +479,7 @@ export const products: Product[] = [
 
     tagline: "Moduły gotowe do montażu — produkcja w hali, instalacja na miejscu",
     intro:
-      "STRETCH® Prefab to wersja systemu dla budownictwa modułowego, sieci hoteli i deweloperów. Sufity produkujemy w pełni w naszej hali w Częstochowie — naciągnięte, okablowane, z gotową instalacją LED — a na placu inwestycji wystarczy je zamontować w przygotowanych ramach. Montaż jednego modułu: 1–2 godziny.",
+      "Stretch Prefab to wersja systemu dla budownictwa modułowego, sieci hoteli i deweloperów. Sufity produkujemy w pełni w naszej hali Alto Design w Częstochowie — naciągnięte, okablowane, z gotową instalacją LED — a na placu inwestycji wystarczy je zamontować w przygotowanych ramach. Montaż jednego modułu: 1–2 godziny.",
     features: [
       {
         title: "Produkcja off-site",
@@ -512,13 +517,13 @@ export const products: Product[] = [
       },
     ],
     specs: [
-      { label: "Sposób produkcji", value: "Off-site (hala Stretch Sufit, Częstochowa)" },
-      { label: "Maksymalny rozmiar modułu", value: "5,70 m × 30 m" },
+      { label: "Sposób produkcji", value: "Off-site (hala Alto Design, Częstochowa)" },
+      { label: "Maksymalny rozmiar modułu", value: "6,50 m × 30 m" },
       { label: "Czas montażu na miejscu", value: "1–2 godziny/moduł" },
       { label: "Możliwe wykończenia", value: "Wszystkie — PVC, poliester, akustyczny, świetlny, fotodruk" },
       { label: "Minimalna ilość zamówienia", value: "20 m² (typowo: 200+ m² dla optymalnej ceny)" },
       { label: "Integracja BIM", value: "Pliki .ifc, .rvt na zamówienie" },
-      { label: "Gwarancja", value: "15 lat" },
+      { label: "Gwarancja", value: "15 lat (PVC) / 10 lat (poliester)" },
     ],
     comparedTo:
       "Prefab wybierają inwestorzy seryjni — deweloperzy, hotele, sieci handlowe. Dla pojedynczego mieszkania nie ma sensu (cena jednostkowa wyższa od klasycznej instalacji). Próg opłacalności: ok. 200 m² jednolitej powierzchni lub 20+ powtarzalnych pomieszczeń.",

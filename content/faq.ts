@@ -78,7 +78,7 @@ export const faqs: FaqEntry[] = [
     slug: "roznica-pvc-poliester",
     category: "produkty",
     q: "Czym różni się sufit PVC od poliestrowego?",
-    a: "PVC ma większą paletę kolorów i wykończeń (mat, satyna, lakier, lustro, perła, metalik, transparent), bezszwowo do 5,70 m, 100% wodoszczelność, montowany na ciepło. Poliester ma bardziej naturalny, głęboko matowy wygląd (jak idealna gładź gipsowa), bezszwowo do 5,15 m, montowany na zimno. PVC wybiera ok. 80% naszych klientów — uniwersalny i bogaty wizualnie. Poliester dla wymagających projektów premium z preferencją na matowe wnętrza.",
+    a: "PVC ma większą paletę kolorów i wykończeń (mat, satyna, połysk, brokat, tekstura, lustro, perła, metalik, transparent), bezszwowo do 6,50 m, 100% wodoszczelność, montowany na ciepło. Produkujemy go w naszej fabryce Alto Design w Częstochowie. Poliester ma bardziej naturalny, głęboko matowy wygląd (jak idealna gładź gipsowa), bezszwowo do 5,15 m, montowany na zimno — produkowany przez Stretch Productions w Belgii. Gwarancja: 15 lat na PVC, 10 lat na polyester. PVC wybiera ok. 80% naszych klientów.",
   },
   {
     slug: "ile-kolorow",
@@ -164,7 +164,7 @@ export const faqs: FaqEntry[] = [
     slug: "porownanie-z-gladzia",
     category: "ceny",
     q: "Czy sufit napinany jest droższy od gładzi gipsowej?",
-    a: "Bezpośrednia cena za m² — tak, sufit napinany jest droższy od gładzi (170+ zł/m² vs 50–80 zł/m² za gładź z malowaniem). Ale gładź wymaga wcześniejszego zerwania sufitu, wynoszenia mebli, wyprowadzania z mieszkania na 5–10 dni, generuje pyły, pęka w starszych budynkach. Sufit napinany to 1 dzień, bez kurzu, z 15-letnią gwarancją. Liczone całkowicie — wychodzi podobnie, ale wygodniej.",
+    a: "Bezpośrednia cena za m² — tak, sufit napinany jest droższy od gładzi (170+ zł/m² vs 50–80 zł/m² za gładź z malowaniem). Ale gładź wymaga wcześniejszego zerwania sufitu, wynoszenia mebli, wyprowadzania z mieszkania na 5–10 dni, generuje pyły, pęka w starszych budynkach. Sufit napinany to 1 dzień, bez kurzu, z gwarancją do 15 lat (15 lat na PVC, 10 lat na polyester). Liczone całkowicie — wychodzi podobnie, ale wygodniej.",
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -174,13 +174,13 @@ export const faqs: FaqEntry[] = [
     slug: "jaka-gwarancja",
     category: "gwarancja",
     q: "Jak długa jest gwarancja na sufit napinany?",
-    a: "15 lat gwarancji materiałowej producenta STRETCH® na wszystkie membrany. To najdłuższa gwarancja na rynku polskim. Dotyczy: stabilności kolorystyki, braku odkształceń, braku pęknięć, trwałości połączeń membrany z profilami. Elektronika LED — gwarancja 5 lat.",
+    a: "Do 15 lat gwarancji materiałowej producenta: 15 lat na PVC (produkowany w naszej fabryce w Polsce przez Alto Design) oraz 10 lat na polyester (produkowany w Belgii przez Stretch Productions). To jedna z najdłuższych gwarancji na rynku polskim. Dotyczy: stabilności kolorystyki, braku odkształceń, braku pęknięć, trwałości połączeń membrany z profilami. Elektronika LED — gwarancja 5 lat.",
   },
   {
     slug: "co-obejmuje-gwarancja",
     category: "gwarancja",
-    q: "Co dokładnie obejmuje 15-letnia gwarancja?",
-    a: "Gwarancja materiałowa obejmuje wszelkie wady fabryczne i procesowe: blaknięcie koloru, rozszerzanie membrany, popękanie, oderwanie od profilu, deformacje. Nie obejmuje uszkodzeń mechanicznych (przecięcie nożem, ostrym przedmiotem) — choć takie uszkodzenia są naprawialne, zwykle bez wymiany całego sufitu.",
+    q: "Co dokładnie obejmuje gwarancja?",
+    a: "Gwarancja materiałowa (15 lat dla PVC, 10 lat dla polyestru) obejmuje wszelkie wady fabryczne i procesowe: blaknięcie koloru, rozszerzanie membrany, popękanie, oderwanie od profilu, deformacje. Nie obejmuje uszkodzeń mechanicznych (przecięcie nożem, ostrym przedmiotem) — choć takie uszkodzenia są naprawialne, zwykle bez wymiany całego sufitu.",
   },
   {
     slug: "co-jesli-zaleje",

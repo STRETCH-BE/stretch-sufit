@@ -43,7 +43,7 @@ export const cities: City[] = [
     trustBlocks: [
       {
         title: "Lokalna obecność, globalny system",
-        body: 'Część grupy STRETCH® — belgijska technologia, polska produkcja, montaż przez przeszkolone ekipy w całej Warszawie. Bez podwykonawców, bez „ekip z polecenia".',
+        body: 'Część belgijskiej Stretchgroup — PVC produkowany w naszej fabryce Alto Design w Częstochowie, polyester z Belgii. Montaż przez przeszkolone ekipy w całej Warszawie. Bez podwykonawców, bez „ekip z polecenia".',
       },
       {
         title: "Doświadczenie w stolicy",
@@ -123,7 +123,7 @@ export const cities: City[] = [
       },
       {
         q: "Czy mogę zamówić sufit z fotodrukiem do restauracji?",
-        a: "Tak. Fotodruk to popularny wybór wśród krakowskich restauratorów — pozwala na pełną dowolność wzoru: nadruk autorskich grafik, motywów historycznych, klimatycznych zdjęć. Rozdzielczość drukarska, gwarancja koloru 15 lat.",
+        a: "Tak. Fotodruk to popularny wybór wśród krakowskich restauratorów — pozwala na pełną dowolność wzoru: nadruk autorskich grafik, motywów historycznych, klimatycznych zdjęć. Rozdzielczość drukarska, gwarancja koloru do 15 lat (15 lat na druku PVC, 10 lat na polyestrze).",
       },
     ],
     image:
@@ -147,7 +147,7 @@ export const cities: City[] = [
       "Karłowice",
     ],
     intro:
-      "Wrocław to dynamicznie rosnący rynek — nowe apartamentowce na Krzykach, biurowce na Fabrycznej, lofts na Psim Polu. Naszym wrocławskim klientom dostarczamy projekty premium z centrali w Częstochowie (180 km), z gwarancją jednodniowego montażu i 15-letnią gwarancją materiałową.",
+      "Wrocław to dynamicznie rosnący rynek — nowe apartamentowce na Krzykach, biurowce na Fabrycznej, lofts na Psim Polu. Naszym wrocławskim klientom dostarczamy projekty premium z naszej fabryki PVC w Częstochowie (180 km), z gwarancją jednodniowego montażu oraz gwarancją materiałową do 15 lat (15 lat na PVC, 10 lat na polyester).",
     trustBlocks: [
       {
         title: "Apartamenty i biura",
@@ -158,8 +158,8 @@ export const cities: City[] = [
         body: "Profile, membrany, oświetlenie LED — wszystko z jednego źródła. Bez koordynacji między dostawcami, bez przerzucania odpowiedzialności.",
       },
       {
-        title: "15 lat gwarancji",
-        body: "Materiałowa gwarancja producenta STRETCH®. Najdłuższa na rynku dla sufitów napinanych w Polsce.",
+        title: "Do 15 lat gwarancji",
+        body: "Materiałowa gwarancja producenta — 15 lat na PVC z naszej fabryki w Polsce, 10 lat na polyester ze Stretch Productions BV (Belgia). Jedna z najdłuższych na rynku sufitów napinanych.",
       },
     ],
     faq: [
@@ -205,17 +205,17 @@ export const cities: City[] = [
       },
       {
         title: "Profesjonalny montaż",
-        body: 'Ekipa STRETCH® z własnymi narzędziami i protokołem. Bez wynajętych monterów „dorobkowych", bez kompromisów w jakości.',
+        body: 'Ekipa Stretch Sufit z własnymi narzędziami i protokołem. Bez wynajętych monterów „dorobkowych", bez kompromisów w jakości.',
       },
       {
         title: "Pełna gama produktów",
-        body: "Poliester, PVC, akustyczny, fotodruk, świetlny — wszystko z jednego producenta, z jedną gwarancją.",
+        body: "Poliester (Belgia), PVC (Polska), akustyczny, fotodruk, świetlny — pełen katalog Stretchgroup z gwarancją do 15 lat.",
       },
     ],
     faq: [
       {
         q: "Czy montujecie sufity napinane w Poznaniu?",
-        a: "Tak — obsługujemy cały Poznań oraz aglomerację (Tarnowo Podgórne, Swarzędz, Luboń, Komorniki). Montaż w 1 dzień, 15 lat gwarancji.",
+        a: "Tak — obsługujemy cały Poznań oraz aglomerację (Tarnowo Podgórne, Swarzędz, Luboń, Komorniki). Montaż w 1 dzień, gwarancja do 15 lat.",
       },
       {
         q: "Ile kosztuje sufit napinany w Poznaniu?",
