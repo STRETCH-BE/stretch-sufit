@@ -1,10 +1,10 @@
 /**
- * Become a dealer (STRETCH® Partner) page — /dealerzy
+ * Become a dealer (Stretch Partner) page — /dealerzy
  * File path: /app/dealerzy/page.tsx
  *
- * Recruitment page for STRETCH® Partner Program — the international model
+ * Recruitment page for Stretch Partner Program — the international model
  * referenced on the homepage and /o-nas (13+ countries, "wyszkolone ekipy
- * STRETCH®"). Polish copy carefully avoids the word "franczyza" because
+ * Stretch"). Polish copy carefully avoids the word "franczyza" because
  * /o-nas explicitly says "Nie franczyza" — instead it's positioned as a
  * licensing + training partnership.
  *
@@ -38,14 +38,14 @@ const PARTNER_MAILTO =
 
 export const metadata: Metadata = {
   title:
-    "Zostań dealerem — STRETCH® Partner Program | Stretch Sufit",
+    "Zostań dealerem — Stretch Partner Program | Stretch Sufit",
   description:
-    "Licencjonowana technologia sufitów napinanych STRETCH® dla firm wykonawczych. Szkolenie w Belgii lub Polsce, własne profile aluminiowe, narzędzia, wsparcie marketingowe. Wyłączność na region.",
+    "Licencjonowana technologia sufitów napinanych Stretch dla firm wykonawczych. Szkolenie w Belgii lub Polsce, własne profile aluminiowe, narzędzia, wsparcie marketingowe. Wyłączność na region.",
   alternates: { canonical: "/dealerzy" },
   openGraph: {
-    title: "STRETCH® Partner Program | Stretch Sufit",
+    title: "Stretch Partner Program | Stretch Sufit",
     description:
-      "Zostań licencjonowanym partnerem STRETCH® — belgijski system sufitów napinanych z polskim zapleczem produkcyjnym.",
+      "Zostań licencjonowanym partnerem Stretch — belgijski system sufitów napinanych z polskim zapleczem produkcyjnym.",
     type: "website",
     url: `${BASE_URL}/dealerzy`,
     locale: "pl_PL",
@@ -70,12 +70,12 @@ const pillars = [
   {
     label: "Licencja",
     title: "System, nie franczyza",
-    body: "Nie kupujesz prawa do logo. Otrzymujesz licencję na technologię STRETCH®: protokół montażu, autorskie profile aluminiowe, kalibrowane membrany i markę, która coś znaczy w branży.",
+    body: "Nie kupujesz prawa do logo. Otrzymujesz licencję na technologię Stretch: protokół montażu, autorskie profile aluminiowe, kalibrowane membrany i markę, która coś znaczy w branży.",
   },
   {
     label: "Szkolenie",
     title: "Brussels lub Częstochowa",
-    body: "Pełny program szkoleniowy w siedzibie STRETCH® w Belgii albo w polskim centrum produkcyjnym. 5 – 10 dni teorii + praktyki na realnych obiektach.",
+    body: "Pełny program szkoleniowy w siedzibie Stretch w Belgii albo w polskim centrum produkcyjnym. 5 – 10 dni teorii + praktyki na realnych obiektach.",
   },
   {
     label: "Narzędzia",
@@ -144,7 +144,7 @@ const processSteps = [
   {
     no: "04",
     title: "Start operacyjny",
-    body: "Pierwsze 3 montaże nadzorowane przez naszego inżyniera. Po certyfikacji — pełne uprawnienia do operowania pod marką STRETCH® na swoim regionie.",
+    body: "Pierwsze 3 montaże nadzorowane przez naszego inżyniera. Po certyfikacji — pełne uprawnienia do operowania pod marką Stretch na swoim regionie.",
   },
 ];
 
@@ -188,7 +188,7 @@ export default function DealerzyPage() {
           />
           <Container>
             <FadeIn>
-              <Eyebrow>STRETCH® Partner Program · Belgium → World</Eyebrow>
+              <Eyebrow>Stretch Partner Program · Belgium → World</Eyebrow>
             </FadeIn>
             <FadeIn delay={80}>
               <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.5rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
@@ -201,7 +201,7 @@ export default function DealerzyPage() {
             <FadeIn delay={160}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
                 Dla firm wykonawczych, które chcą wnieść technologię sufitów
-                napinanych STRETCH® na swój rynek. Nie franczyza —{" "}
+                napinanych Stretch na swój rynek. Nie franczyza —{" "}
                 <span className="text-white">licencja na system</span>:
                 technologię, narzędzia, szkolenie i markę.
               </p>
@@ -245,10 +245,10 @@ export default function DealerzyPage() {
                 <FadeIn delay={120}>
                   <div className="space-y-6 text-[17px] leading-[1.7] text-bg/80 md:text-lg">
                     <p>
-                      Partner Program STRETCH® to{" "}
+                      Partner Program Stretch to{" "}
                       <strong className="text-bg">licencja techniczna</strong>{" "}
                       połączona ze szkoleniem, ciągłym wsparciem inżynieryjnym
-                      i prawem do operowania pod marką STRETCH® w
+                      i prawem do operowania pod marką Stretch w
                       uzgodnionym regionie.
                     </p>
                     <p>
@@ -262,7 +262,7 @@ export default function DealerzyPage() {
                     </p>
                     <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-bg">
                       „Franczyza polega na powielaniu. Partnerstwo polega na
-                      tym, że każda ekipa STRETCH® mogłaby pojechać na obiekt
+                      tym, że każda ekipa Stretch mogłaby pojechać na obiekt
                       drugiej — i kontynuować ten sam montaż bez słowa
                       tłumaczenia."
                     </p>

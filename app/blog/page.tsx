@@ -99,7 +99,7 @@ const editorialPipeline: EditorialEntry[] = [
     title:
       "PVC vs poliester — który materiał wybrać do nowoczesnego wnętrza?",
     excerpt:
-      "Pełne porównanie dwóch flagowych membran STRETCH®. Estetyka, parametry techniczne, zachowanie w łazience, behawior przy zalaniu, sytuacje, w których jeden materiał jest jedyną sensowną opcją.",
+      "Pełne porównanie dwóch flagowych membran Stretch. Estetyka, parametry techniczne, zachowanie w łazience, behawior przy zalaniu, sytuacje, w których jeden materiał jest jedyną sensowną opcją.",
     readTime: "8 min",
   },
   {

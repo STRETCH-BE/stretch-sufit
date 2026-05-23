@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   title:
     "Kariera — praca w Stretch Sufit | Belgijska technologia, polska produkcja",
   description:
-    "Pracuj w Stretch Sufit — części belgijskiej grupy STRETCH®. Monter sufitów napinanych, pomiarowiec, doradca klienta, produkcja. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
+    "Pracuj w Stretch Sufit — części belgijskiej grupy Stretch. Monter sufitów napinanych, pomiarowiec, doradca klienta, produkcja. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
   alternates: { canonical: "/kariera" },
   openGraph: {
     title: "Kariera w Stretch Sufit",
@@ -87,7 +87,7 @@ const roles: Role[] = [
     location: "Częstochowa + delegacje (PL)",
     body: "Pracujesz w 2-osobowej ekipie montażowej. Realizujesz pełen cykl montażu na obiekcie klienta — od rozłożenia ochrony, przez instalację profili i napinanie membrany, po protokół odbioru.",
     responsibilities: [
-      "Montaż sufitów PVC, poliestrowych i akustycznych według protokołu STRETCH®",
+      "Montaż sufitów PVC, poliestrowych i akustycznych według protokołu Stretch",
       "Instalacja oświetlenia LED i punktów świetlnych integrowanych z sufitem",
       "Reprezentowanie firmy w bezpośrednim kontakcie z klientem",
       "Dbałość o sprzęt i samochód służbowy",
@@ -171,11 +171,11 @@ const benefits = [
   {
     label: "Sprzęt",
     title: "Pełne wyposażenie firmowe",
-    body: "Samochód służbowy dla terenu, telefon, narzędzia, odzież z logo. Bez „dorzucania własnego sprzętu”. Wszystko brand-owane STRETCH®.",
+    body: "Samochód służbowy dla terenu, telefon, narzędzia, odzież z logo. Bez „dorzucania własnego sprzętu”. Wszystko brand-owane Stretch.",
   },
   {
     label: "Szkolenia",
-    title: "Protokół STRETCH® — w Belgii lub Częstochowie",
+    title: "Protokół Stretch — w Belgii lub Częstochowie",
     body: "Pełne szkolenie wstępne według protokołu producenta, doszkalanie przy każdym nowym produkcie. Dla wyróżniających się — wyjazdy do hali w Brussels.",
   },
   {
@@ -257,7 +257,7 @@ export default function KarieraPage() {
             </FadeIn>
             <FadeIn delay={160}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                Stretch Sufit to polski filar belgijskiej grupy STRETCH®.
+                Stretch Sufit to polski filar belgijskiej grupy Stretch.
                 Rośniemy w 17 polskich miastach, produkujemy w Częstochowie,
                 montujemy w domach, biurach, restauracjach. Szukamy ludzi,
                 którzy lubią robotę z mierzalnym efektem.
@@ -304,22 +304,27 @@ export default function KarieraPage() {
                     <p>
                       Pracujesz w polskiej firmie z polską kulturą, polską
                       księgowością i polskim szefem produkcji. Ale produkt,
-                      który montujesz, technologia, którą obsługujesz,
-                      protokoły, których się uczysz — pochodzą z Brussels.
+                      który montujesz — w części pochodzi z naszej fabryki
+                      PVC w Częstochowie (od 2016), w części z poliestrowej
+                      fabryki Stretch Productions w Belgii (od 2018). Cały
+                      system, w którym pracujesz, należy do{" "}
+                      <strong className="text-bg">Stretchgroup</strong>.
                     </p>
                     <p>
                       To nie jest „pracujemy dla zagranicznej firmy”.
                       To jest{" "}
-                      <span className="font-serif italic">jesteśmy zagraniczną firmą,</span>{" "}
-                      która ma centralę w Belgii i polski oddział, który
-                      jest jednym z najszybciej rosnących w grupie. Decyzje
-                      operacyjne zapadają w Częstochowie.
+                      <span className="font-serif italic">jesteśmy częścią międzynarodowej grupy,</span>{" "}
+                      w której polska spółka — Alto Design Sp. z o.o., działająca
+                      pod marką Stretch Sufit — odpowiada za produkcję PVC i
+                      montaż w 17 polskich miastach. Decyzje operacyjne zapadają
+                      w Częstochowie, decyzje strategiczne — wspólnie z centralą
+                      w Belgii.
                     </p>
                     <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-bg">
-                      „Wzięliśmy najlepszą firmę montażową w Częstochowie i
+                      „Wzięliśmy najlepszą firmę produkcyjną w Częstochowie i
                       wpuściliśmy w nią belgijski standard. Polska załoga,
-                      belgijska technologia, polski właściciel —{" "}
-                      <span className="not-italic">Alto Design Sp. z o.o.</span>"
+                      polska fabryka PVC, belgijska technologia poliestru —{" "}
+                      <span className="not-italic">jedna grupa, dwie fabryki, jeden standard.</span>"
                     </p>
                   </div>
                 </FadeIn>

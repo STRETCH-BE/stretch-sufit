@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   title:
     "Współpraca B2B — architekci, wykonawcy, deweloperzy | Stretch Sufit",
   description:
-    "Współpraca B2B ze Stretch Sufit: dedykowany project manager, próbniki i pliki BIM/CAD, ceny projektowe, montaż po godzinach, faktura VAT, terminy gwarantowane. 15 lat gwarancji STRETCH®.",
+    "Współpraca B2B ze Stretch Sufit: dedykowany project manager, próbniki i pliki BIM/CAD, ceny projektowe, montaż po godzinach, faktura VAT, terminy gwarantowane. 15 lat gwarancji Stretch.",
   alternates: { canonical: "/wspolpraca-b2b" },
   openGraph: {
     title: "Współpraca B2B | Stretch Sufit",
@@ -204,7 +204,7 @@ export default function WspolpracaB2BPage() {
                 </FadeIn>
                 <FadeIn delay={160}>
                   <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                    Sufity napinane STRETCH® dla zespołów, dla których
+                    Sufity napinane Stretch dla zespołów, dla których
                     powtarzalna jakość, kontrolowane terminy i pełna
                     dokumentacja nie są opcją — tylko warunkiem startu.
                   </p>
