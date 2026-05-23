@@ -15,7 +15,7 @@ export const siteConfig = {
 
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.pl",
 
-  locales: ["pl", "en", "uk"] as const,
+  locales: ["pl", "en", "ua"] as const,
   defaultLocale: "pl" as const,
 
   contact: {
