@@ -1,10 +1,6 @@
 /**
- * Footer.
- * File path: /components/sections/footer.tsx
- *
- * Server component. Phone links call analytics through small client wrappers
- * (TrackedCTA). All other links are plain Next <Link>. The bottom bar carries
- * the copyright + "Made in Belgium, installed in Poland" tagline.
+ * Footer — Ukrainian.
+ * File path: /components/sections/ua/footer.tsx
  */
 
 import Link from "next/link";
@@ -12,22 +8,23 @@ import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { siteConfig } from "@/lib/site-config";
-import { products } from "@/content/products";
+import { products } from "@/content/ua/products";
 
 const company = [
-  { href: "/o-nas", label: "O nas" },
-  { href: "/wspolpraca-b2b", label: "Współpraca B2B" },
-  { href: "/dealerzy", label: "Zostań dealerem" },
-  { href: "/kariera", label: "Kariera" },
-  { href: "/blog", label: "Blog i FAQ" },
-  { href: "/kontakt", label: "Kontakt" },
+  { href: "/ua/pro-nas", label: "Про нас" },
+  { href: "/wspolpraca-b2b", label: "Співпраця B2B", note: "PL" },
+  { href: "/dealerzy", label: "Стати дилером", note: "PL" },
+  { href: "/kariera", label: "Кар'єра", note: "PL" },
+  { href: "/blog", label: "Блог", note: "PL" },
+  { href: "/ua/pytannya", label: "Питання та відповіді" },
+  { href: "/ua/kontakty", label: "Контакти" },
 ];
 
 const policies = [
-  { href: "/polityka-prywatnosci", label: "Polityka prywatności" },
+  { href: "/polityka-prywatnosci", label: "Політика конфіденційності" },
   { href: "/polityka-cookies", label: "Cookies" },
-  { href: "/regulamin", label: "Regulamin" },
-  { href: "/gwarancja", label: "Gwarancja" },
+  { href: "/regulamin", label: "Правила" },
+  { href: "/ua/harantiya", label: "Гарантія" },
 ];
 
 const socials = [
@@ -42,14 +39,10 @@ export function Footer() {
     <footer className="border-t border-white/8 bg-bg py-20 pb-8 text-white">
       <Container>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-16">
-          {/* Brand */}
           <div>
             <Logo tone="on-dark" size={28} />
             <p className="mt-5 max-w-[320px] text-sm leading-[1.6] text-white/55">
-              Część belgijskiej Stretchgroup. Producent sufitów napinanych
-              PVC w Polsce oraz wykonawca montażu — także dla polyestrowych
-              membran Stretch Productions z Belgii. Operator:{" "}
-              {siteConfig.legalName}.
+              Частина бельгійської Stretchgroup. Виробник ПВХ натяжних стель у Польщі й монтажник — включно з поліестровими мембранами зі Stretch Productions у Бельгії. Оператор: {siteConfig.legalName}.
             </p>
 
             <div className="mt-6 flex gap-3">
@@ -68,12 +61,11 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Rozwiązania */}
-          <FooterColumn title="Rozwiązania">
+          <FooterColumn title="Рішення">
             {products.map((p) => (
               <li key={p.slug}>
                 <Link
-                  href={`/rozwiazania/${p.slug}`}
+                  href={`/ua/rishennya/${p.slug}`}
                   className="text-sm text-white/55 transition-colors hover:text-white"
                 >
                   {p.label}
@@ -82,22 +74,25 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-          {/* Firma */}
-          <FooterColumn title="Firma">
+          <FooterColumn title="Компанія">
             {company.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-white/55 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-1.5 text-sm text-white/55 transition-colors hover:text-white"
                 >
                   {item.label}
+                  {"note" in item && item.note && (
+                    <span className="rounded border border-white/20 px-1 py-0.5 font-mono text-[9px] uppercase tracking-[0.1em] text-white/50">
+                      {item.note}
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}
           </FooterColumn>
 
-          {/* Kontakt */}
-          <FooterColumn title="Kontakt">
+          <FooterColumn title="Контакти">
             <li className="text-sm font-semibold text-white">
               {siteConfig.legalName}
             </li>
@@ -106,9 +101,19 @@ export function Footer() {
             </li>
             <li className="text-sm text-white/55">
               {siteConfig.contact.address.postalCode}{" "}
-              {siteConfig.contact.address.city}
+              {siteConfig.contact.address.city}, Польща
             </li>
             <li className="pt-3">
+              <TrackedCTA
+                event="phone_click"
+                props={{ location: "footer", language: "ua" }}
+                href={`tel:${siteConfig.contact.phonePLUA}`}
+                className="text-sm text-white/55 transition-colors hover:text-white"
+              >
+                {formatPhone(siteConfig.contact.phonePLUA)} (UA)
+              </TrackedCTA>
+            </li>
+            <li>
               <TrackedCTA
                 event="phone_click"
                 props={{ location: "footer" }}
@@ -116,16 +121,6 @@ export function Footer() {
                 className="text-sm text-white/55 transition-colors hover:text-white"
               >
                 {formatPhone(siteConfig.contact.phonePL)} (PL/EN)
-              </TrackedCTA>
-            </li>
-            <li>
-              <TrackedCTA
-                event="phone_click"
-                props={{ location: "footer", language: "ua" }}
-                href={`tel:${siteConfig.contact.phonePLUA}`}
-                className="text-sm text-white/55 transition-colors hover:text-white"
-              >
-                {formatPhone(siteConfig.contact.phonePLUA)} (PL/UA)
               </TrackedCTA>
             </li>
             <li>
@@ -153,8 +148,7 @@ export function Footer() {
             ))}
           </ul>
           <div>
-            © {new Date().getFullYear()} {siteConfig.name} — Część
-            Stretchgroup · PVC made in Poland, polyester made in Belgium
+            © {new Date().getFullYear()} {siteConfig.name} — Частина Stretchgroup · ПВХ зроблено в Польщі, поліестер у Бельгії
           </div>
         </div>
       </Container>

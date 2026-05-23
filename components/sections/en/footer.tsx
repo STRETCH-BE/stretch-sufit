@@ -12,16 +12,17 @@ import { products } from "@/content/en/products";
 
 const company = [
   { href: "/en/about", label: "About" },
-  { href: "/en/b2b", label: "B2B collaboration" },
-  { href: "/en/dealers", label: "Become a dealer" },
-  { href: "/en/careers", label: "Careers" },
-  { href: "/en/blog", label: "Blog & FAQ" },
+  { href: "/wspolpraca-b2b", label: "B2B collaboration", note: "PL" },
+  { href: "/dealerzy", label: "Become a dealer", note: "PL" },
+  { href: "/kariera", label: "Careers", note: "PL" },
+  { href: "/blog", label: "Blog", note: "PL" },
+  { href: "/en/faq", label: "FAQ" },
   { href: "/en/contact", label: "Contact" },
 ];
 
 const policies = [
   { href: "/polityka-prywatnosci", label: "Privacy policy" },
-  { href: "/cookies", label: "Cookies" },
+  { href: "/polityka-cookies", label: "Cookies" },
   { href: "/regulamin", label: "Terms" },
   { href: "/en/warranty", label: "Warranty" },
 ];
@@ -78,9 +79,14 @@ export function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-white/55 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-1.5 text-sm text-white/55 transition-colors hover:text-white"
                 >
                   {item.label}
+                  {"note" in item && item.note && (
+                    <span className="rounded border border-white/20 px-1 py-0.5 font-mono text-[9px] uppercase tracking-[0.1em] text-white/50">
+                      {item.note}
+                    </span>
+                  )}
                 </Link>
               </li>
             ))}

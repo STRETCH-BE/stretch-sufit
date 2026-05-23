@@ -50,7 +50,7 @@ const DEFAULT_LINKS: NavLink[] = [
 const DEFAULT_LOCALES: LocaleEntry[] = [
   { code: "pl", label: "PL", href: "/" },
   { code: "en", label: "EN", href: "/en" },
-  { code: "uk", label: "UA", href: "/uk" },
+  { code: "ua", label: "UA", href: "/ua" },
 ];
 
 const DEFAULT_LABELS = {

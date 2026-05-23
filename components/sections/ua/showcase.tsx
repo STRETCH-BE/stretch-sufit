@@ -1,6 +1,6 @@
 /**
- * Showcase — asymmetric gallery. English.
- * File path: /components/sections/en/showcase.tsx
+ * Showcase — Ukrainian.
+ * File path: /components/sections/ua/showcase.tsx
  */
 
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
 import { Button } from "@/components/ui/button";
-import { gallery } from "@/content/en/gallery";
+import { gallery } from "@/content/ua/gallery";
 
 export function Showcase() {
   return (
@@ -17,16 +17,16 @@ export function Showcase() {
       <Container>
         <div className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end md:gap-16">
           <FadeIn>
-            <Eyebrow>Projects</Eyebrow>
+            <Eyebrow>Проєкти</Eyebrow>
             <SectionTitle className="mt-5 text-white">
-              Polish interiors,
+              Польські інтер'єри,
               <br />
-              <span className="it">Polish-Belgian precision.</span>
+              <span className="it">польсько-бельгійська точність.</span>
             </SectionTitle>
           </FadeIn>
           <FadeIn delay={120}>
             <p className="max-w-md text-[16px] leading-[1.6] text-white/55">
-              Over 4,000 completed projects in homes, offices, hotels and commercial venues across Poland. Every one different — and every one finished in a day.
+              Понад 4 000 завершених проєктів у квартирах, офісах, готелях і комерційних об'єктах по всій Польщі. Кожен інший — і кожен завершений за один день.
             </p>
           </FadeIn>
         </div>
@@ -65,7 +65,7 @@ export function Showcase() {
 
         <FadeIn className="mt-14 text-center">
           <Button href="/realizacje" variant="ghost" arrow>
-            See full gallery
+            Повна галерея
           </Button>
         </FadeIn>
       </Container>

@@ -19,7 +19,7 @@ const navLinks = [
 const locales = [
   { code: "pl", label: "PL", href: "/" },
   { code: "en", label: "EN", href: "/en" },
-  { code: "uk", label: "UA", href: "/uk" },
+  { code: "ua", label: "UA", href: "/ua" },
 ];
 
 const labels = {
