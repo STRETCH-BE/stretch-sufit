@@ -120,20 +120,19 @@ export function Hero() {
               <div className="grid grid-cols-2 gap-8 border-t border-white/8 pt-6">
                 <div>
                   <div className="font-display text-[56px] font-medium leading-none tracking-[-0.03em] text-white">
-                    PL
-                    <span className="mx-1 text-red">·</span>
-                    BE
+                    6,50
+                    <sup className="ml-0.5 text-2xl text-red">m</sup>
                   </div>
                   <div className="mt-2 text-[13px] leading-[1.4] text-white/55">
-                    Produkcja PVC w Polsce, polyester w Belgii
+                    Bezszwowo — najszersza folia PVC na rynku
                   </div>
                 </div>
                 <div>
                   <div className="font-display text-[56px] font-medium leading-none tracking-[-0.03em] text-white">
-                    <span className="text-[42px] text-white/55">do </span>15
+                    15
                   </div>
                   <div className="mt-2 text-[13px] leading-[1.4] text-white/55">
-                    lat gwarancji (15 lat PVC · 10 lat polyester)
+                    lat gwarancji — 15 lat PVC · 10 lat polyester
                   </div>
                 </div>
               </div>
