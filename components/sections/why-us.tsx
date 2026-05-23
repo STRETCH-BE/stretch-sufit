@@ -21,15 +21,15 @@ const reasons = [
   },
   {
     badge: "B",
-    title: "Belgijska technologia",
+    title: "Dwie fabryki, jeden system",
     body:
-      "System Stretch® z 23-letnią historią, certyfikowany w UE. Folia PVC + poliester klasy A2 (niepalna).",
+      "PVC produkujemy w naszej fabryce w Polsce (od 2016), polyester w Belgii (od 2018). Folia PVC + poliester klasy A2 (niepalna), certyfikowana w UE.",
   },
   {
     badge: "C",
-    title: "15 lat gwarancji",
+    title: "Do 15 lat gwarancji",
     body:
-      "Pisemna gwarancja na każdą realizację. Serwis i wymiana folii bez demontażu profili.",
+      "Pisemna gwarancja na każdą realizację — 15 lat na PVC, 10 lat na polyester. Serwis i wymiana folii bez demontażu profili.",
   },
   {
     badge: "D",
@@ -69,9 +69,11 @@ export function WhyUs() {
           </FadeIn>
           <FadeIn delay={120}>
             <p className="max-w-md text-[16px] leading-[1.6] text-white/55">
-              Stretch to system technologiczny rozwijany w Belgii od 2002 roku.
-              W Polsce reprezentowany przez Alto Design — oryginalnego
-              producenta i wyłącznego partnera grupy. Każdy montaż wykonują
+              Stretch to system rozwijany w Belgii od 2018 roku. Należy do{" "}
+              <strong className="font-semibold text-white">Stretchgroup</strong>,
+              która od 2024 obejmuje też polskiego producenta{" "}
+              <strong className="font-semibold text-white">Alto Design</strong> —
+              naszą fabrykę PVC w Częstochowie (od 2016). Każdy montaż wykonują
               nasi przeszkoleni monterzy, nigdy podwykonawcy.
             </p>
           </FadeIn>

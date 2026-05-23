@@ -2,8 +2,10 @@
  * Warranty page — /gwarancja
  * File path: /app/gwarancja/page.tsx
  *
- * Customer-friendly explanation of the STRETCH® 15-year material warranty,
- * plus the statutory consumer warranty (rękojmia) that runs in parallel
+ * Customer-friendly explanation of Stretch's two-tier material warranty:
+ *   - 15 years on PVC (produced in Poland by Alto Design)
+ *   - 10 years on polyester (produced in Belgium by Stretch Productions BV)
+ * Plus the statutory consumer warranty (rękojmia) that runs in parallel
  * under Polish Civil Code (Kodeks cywilny, art. 556–576).
  *
  * Style is reassuring and clear — this is a marketing document with
@@ -28,9 +30,9 @@ const BASE_URL =
 const LAST_UPDATED = "14 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Gwarancja 15 lat — sufity napinane Stretch® | Stretch Sufit",
+  title: "Gwarancja do 15 lat — sufity napinane Stretch | Stretch Sufit",
   description:
-    "Pełne warunki 15-letniej gwarancji materiałowej STRETCH® na sufity napinane. Co obejmuje, jak zgłosić reklamację, kiedy interweniujemy.",
+    "Pełne warunki gwarancji materiałowej Stretch — 15 lat na PVC produkowany w naszej fabryce w Polsce, 10 lat na polyester ze Stretch Productions BV w Belgii. Co obejmuje, jak zgłosić reklamację.",
   alternates: { canonical: "/gwarancja" },
 };
 
@@ -95,15 +97,17 @@ export default function GwarancjaPage() {
                 <FadeIn delay={80}>
                   <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
                     Gwarancja{" "}
-                    <span className="it text-paper">15 lat.</span>
+                    <span className="it text-paper">do 15 lat.</span>
                   </h1>
                 </FadeIn>
                 <FadeIn delay={160}>
                   <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                    Najdłuższa gwarancja materiałowa na rynku sufitów napinanych
-                    w Polsce. Wystawiamy ją z pewnością, bo wiemy, jak długo
-                    membrana STRETCH® rzeczywiście wytrzymuje — testowaliśmy ją
-                    w warunkach europejskich od 2018 roku.
+                    Jedna z najdłuższych gwarancji materiałowych na rynku
+                    sufitów napinanych w Polsce. <strong className="text-white">15 lat
+                    na PVC</strong> z naszej fabryki w Częstochowie,{" "}
+                    <strong className="text-white">10 lat na polyester</strong>{" "}
+                    ze Stretch Productions BV w Belgii. Oba materiały
+                    testowaliśmy w warunkach europejskich od 2016 i 2018 roku.
                   </p>
                 </FadeIn>
               </div>
@@ -111,9 +115,9 @@ export default function GwarancjaPage() {
               <div className="md:col-span-4">
                 <FadeIn delay={120}>
                   <div className="grid grid-cols-3 gap-4 md:grid-cols-1">
-                    <Stat number="15" label="lat materiału" />
+                    <Stat number="15" label="lat PVC" />
+                    <Stat number="10" label="lat polyester" />
                     <Stat number="5" label="lat elektroniki LED" />
-                    <Stat number="100%" label="zatrzymanej wody" />
                   </div>
                 </FadeIn>
               </div>
@@ -121,66 +125,70 @@ export default function GwarancjaPage() {
           </Container>
         </section>
 
-        {/* ════════ Two warranties — STRETCH + rękojmia ════════ */}
+        {/* ════════ Two-tier warranty ════════ */}
         <section className="bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn>
-                <Eyebrow tone="on-paper">Dwie ochrony równolegle</Eyebrow>
+                <Eyebrow tone="on-paper">Dwa materiały, dwie gwarancje</Eyebrow>
               </FadeIn>
               <FadeIn delay={80}>
                 <SectionTitle className="mt-5 text-bg">
-                  Masz dwa źródła{" "}
-                  <span className="it">ochrony.</span>
+                  Każdy materiał ma swoją{" "}
+                  <span className="it">krzywą trwałości.</span>
                 </SectionTitle>
               </FadeIn>
               <FadeIn delay={140}>
                 <p className="mt-6 text-[17px] leading-[1.7] text-bg/80">
-                  Polskie prawo daje konsumentowi dwie niezależne ścieżki
-                  reklamacyjne — gwarancję producenta i rękojmię ustawową.
-                  Możesz wybrać tę, która Ci pasuje, lub korzystać z obu.
+                  Gwarancja odpowiada realnej żywotności materiału — nie liczbie
+                  marketingowej. PVC ma stabilizatory UV, które utrzymują kolor
+                  i strukturę przez 15 lat. Tkanina poliestrowa to inny
+                  materiał — z powłoką poliuretanową, kierowany do segmentu
+                  premium, gwarantowany na 10 lat.
                 </p>
               </FadeIn>
             </div>
 
             <div className="mt-16 grid gap-8 md:grid-cols-2 md:gap-10">
               <FadeIn delay={160}>
-                <div className="rounded border border-bg/10 bg-paper-2 p-8">
+                <div className="rounded border-2 border-red bg-paper-2 p-8">
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
-                    01 · Gwarancja producenta
+                    01 · PVC
                   </div>
-                  <h3 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em] text-bg md:text-2xl">
-                    15 lat STRETCH®
+                  <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-0.01em] text-bg md:text-4xl">
+                    15 lat
                   </h3>
                   <p className="mt-4 text-[15px] leading-[1.7] text-bg/75">
-                    Dobrowolna gwarancja jakości membrany udzielana przez
-                    producenta STRETCH® (Stretch Productions BV, Belgia) i
-                    realizowana w Polsce przez Stretch Sufit / Alto Design Sp.
-                    z o.o.
+                    Pełna gwarancja materiałowa na membranę PVC produkowaną
+                    w naszej fabryce <strong className="text-bg">Alto Design</strong>{" "}
+                    w Częstochowie. Dotyczy stabilności koloru, braku pęknięć,
+                    trwałości połączeń z profilami, wodoszczelności do 100 l/m².
                   </p>
-                  <p className="mt-3 text-[15px] leading-[1.7] text-bg/75">
-                    Obejmuje wady materiału i wykonania — to opisujemy
-                    szczegółowo poniżej.
+                  <p className="mt-3 text-[14px] leading-[1.6] text-bg/55">
+                    Realizowana w Polsce bezpośrednio przez Stretch Sufit /
+                    Alto Design Sp. z o.o.
                   </p>
                 </div>
               </FadeIn>
 
               <FadeIn delay={220}>
                 <div className="rounded border border-bg/10 bg-paper-2 p-8">
-                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-bg/70">
-                    02 · Ochrona ustawowa
+                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                    02 · Polyester
                   </div>
-                  <h3 className="mt-4 font-display text-xl font-semibold tracking-[-0.01em] text-bg md:text-2xl">
-                    Rękojmia 2 lata
+                  <h3 className="mt-4 font-display text-3xl font-semibold tracking-[-0.01em] text-bg md:text-4xl">
+                    10 lat
                   </h3>
                   <p className="mt-4 text-[15px] leading-[1.7] text-bg/75">
-                    Ustawowa ochrona konsumencka wynikająca z Kodeksu
-                    cywilnego (art. 556–576) — przysługuje Ci niezależnie od
-                    gwarancji producenta. Działa przez 2 lata od wydania
-                    rzeczy.
+                    Gwarancja materiałowa na tkaninę poliestrową z powłoką
+                    poliuretanową, produkowaną przez{" "}
+                    <strong className="text-bg">Stretch Productions BV</strong>{" "}
+                    w Belgii. Dotyczy stabilności matowości, braku odbarwień,
+                    trwałości powłoki ochronnej.
                   </p>
-                  <p className="mt-3 text-[15px] leading-[1.7] text-bg/75">
-                    Nie możesz się jej zrzec — to prawo, nie świadczenie.
+                  <p className="mt-3 text-[14px] leading-[1.6] text-bg/55">
+                    Realizowana w Polsce przez Stretch Sufit jako autoryzowanego
+                    instalatora Stretchgroup.
                   </p>
                 </div>
               </FadeIn>
@@ -188,8 +196,40 @@ export default function GwarancjaPage() {
           </Container>
         </section>
 
-        {/* ════════ What's covered ════════ */}
+        {/* ════════ Statutory rękojmia ════════ */}
         <section className="bg-bg py-24 md:py-32">
+          <Container>
+            <div className="mx-auto max-w-3xl text-center">
+              <FadeIn>
+                <Eyebrow>Plus ochrona ustawowa</Eyebrow>
+              </FadeIn>
+              <FadeIn delay={80}>
+                <SectionTitle className="mt-5 text-white">
+                  Niezależnie —{" "}
+                  <span className="it text-paper">rękojmia 2 lata.</span>
+                </SectionTitle>
+              </FadeIn>
+              <FadeIn delay={140}>
+                <p className="mt-6 text-[17px] leading-[1.7] text-white/75">
+                  Niezależnie od gwarancji producenta przysługuje Ci rękojmia —
+                  ustawowa ochrona konsumencka wynikająca z Kodeksu cywilnego
+                  (art. 556–576). Działa przez 2 lata od wydania rzeczy.
+                  Nie możesz się jej zrzec — to prawo, nie świadczenie.
+                </p>
+              </FadeIn>
+              <FadeIn delay={200}>
+                <p className="mt-4 text-[15px] leading-[1.6] text-white/55">
+                  W praktyce konsument w Polsce ma więc <strong className="text-white">15 lat
+                  gwarancji + 2 lata rękojmi</strong> na sufit PVC, lub{" "}
+                  <strong className="text-white">10 lat + 2 lata</strong> na polyester.
+                </p>
+              </FadeIn>
+            </div>
+          </Container>
+        </section>
+
+        {/* ════════ What's covered ════════ */}
+        <section className="bg-bg-soft py-24 md:py-32">
           <Container>
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
@@ -241,7 +281,7 @@ export default function GwarancjaPage() {
         </section>
 
         {/* ════════ What's NOT covered ════════ */}
-        <section className="bg-bg-soft py-24 md:py-32">
+        <section className="bg-bg py-24 md:py-32">
           <Container>
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
@@ -275,7 +315,7 @@ export default function GwarancjaPage() {
                   />
                   <ExcludedItem
                     title="Modyfikacje przez osoby trzecie"
-                    body="Demontaż i ponowny montaż przez firmę inną niż autoryzowany dealer STRETCH®. Wprowadzanie nowych punktów świetlnych bez konsultacji."
+                    body="Demontaż i ponowny montaż przez firmę inną niż autoryzowany dealer Stretch. Wprowadzanie nowych punktów świetlnych bez konsultacji."
                   />
                   <ExcludedItem
                     title="Zdarzenia losowe"

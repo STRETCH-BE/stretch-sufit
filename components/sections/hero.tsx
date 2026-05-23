@@ -7,7 +7,7 @@
  * of the section in the server tree.
  *
  * SEO/GEO note: subhead mentions both the brand name and the parent brand so
- * AI engines can link the entity to "STRETCH®". This is intentional.
+ * AI engines can link the entity to "Stretchgroup". This is intentional.
  *
  * Performance: hero image is `priority` (LCP candidate). All others lazy.
  */
@@ -43,7 +43,7 @@ export function Hero() {
                   <span className="absolute inline-flex size-full animate-ping rounded-full bg-red opacity-60" />
                   <span className="relative inline-flex size-1.5 rounded-full bg-red" />
                 </span>
-                Część grupy STRETCH · Belgia 🇧🇪
+                Część belgijskiej Stretchgroup · 🇧🇪 🇵🇱
               </div>
             </FadeIn>
 
@@ -58,11 +58,11 @@ export function Hero() {
 
             <FadeIn delay={160}>
               <p className="mb-10 max-w-[480px] text-[18px] leading-[1.55] text-white/55">
-                Belgijska technologia sufitów napinanych — teraz w Polsce.{" "}
+                Sufity napinane z fabryki w Polsce (PVC) i z Belgii (polyester).{" "}
                 <strong className="font-semibold text-white">
-                  Sufity napinane Stretch
+                  Stretch Sufit
                 </strong>{" "}
-                instalowane czysto, szybko i bez prac wykończeniowych. Koniec
+                instaluje czysto, szybko i bez prac wykończeniowych. Koniec
                 z malowaniem, gładzią i pyłem.
               </p>
             </FadeIn>
@@ -120,19 +120,20 @@ export function Hero() {
               <div className="grid grid-cols-2 gap-8 border-t border-white/8 pt-6">
                 <div>
                   <div className="font-display text-[56px] font-medium leading-none tracking-[-0.03em] text-white">
-                    23
-                    <sup className="ml-0.5 text-2xl text-red">+</sup>
+                    PL
+                    <span className="mx-1 text-red">·</span>
+                    BE
                   </div>
                   <div className="mt-2 text-[13px] leading-[1.4] text-white/55">
-                    lat doświadczenia w produkcji sufitów napinanych
+                    Produkcja PVC w Polsce, polyester w Belgii
                   </div>
                 </div>
                 <div>
                   <div className="font-display text-[56px] font-medium leading-none tracking-[-0.03em] text-white">
-                    15
+                    <span className="text-[42px] text-white/55">do </span>15
                   </div>
                   <div className="mt-2 text-[13px] leading-[1.4] text-white/55">
-                    lat gwarancji na każdą realizację
+                    lat gwarancji (15 lat PVC · 10 lat polyester)
                   </div>
                 </div>
               </div>

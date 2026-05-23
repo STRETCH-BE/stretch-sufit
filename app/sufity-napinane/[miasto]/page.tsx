@@ -47,7 +47,7 @@ export async function generateMetadata({
   if (!city) return {};
 
   const title = `Sufity napinane ${city.locative} — montaż w 1 dzień | Stretch Sufit`;
-  const description = `Sufity napinane ${city.locative} — belgijska technologia STRETCH®. Montaż w 1 dzień, bez kurzu, 15 lat gwarancji. Bezpłatny pomiar. ${city.populationDisplay}, pełna obsługa miasta.`;
+  const description = `Sufity napinane ${city.locative} — PVC z naszej fabryki w Polsce, polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. Bezpłatny pomiar. ${city.populationDisplay}, pełna obsługa miasta.`;
 
   return {
     title,
@@ -263,11 +263,11 @@ export default async function CityPage({
               <FadeIn delay={80}>
                 <div>
                   <div className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-none tracking-[-0.02em] text-white">
-                    15 lat
+                    do 15 lat
                   </div>
                   <div className="mt-3 text-sm text-white/60">
                     Gwarancja{" "}
-                    <span className="it text-white/40">— materiałowa</span>
+                    <span className="it text-white/40">— 15 lat PVC · 10 lat polyester</span>
                   </div>
                 </div>
               </FadeIn>

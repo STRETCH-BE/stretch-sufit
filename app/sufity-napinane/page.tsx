@@ -25,12 +25,12 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Sufity napinane — 17 miast w Polsce | Stretch Sufit",
   description:
-    "Sufity napinane w 17 miastach Polski — Warszawa, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice i więcej. Belgijska technologia, montaż w 1 dzień, 15 lat gwarancji.",
+    "Sufity napinane w 17 miastach Polski — Warszawa, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice i więcej. PVC produkowany w Polsce, polyester z Belgii. Montaż w 1 dzień, do 15 lat gwarancji.",
   alternates: { canonical: "/sufity-napinane" },
   openGraph: {
     title: "Sufity napinane w 17 miastach Polski | Stretch Sufit",
     description:
-      "Belgijska technologia STRETCH®, polska produkcja, montaż w całej Polsce.",
+      "Część belgijskiej Stretchgroup. PVC produkowany w Polsce, polyester w Belgii. Montaż w całej Polsce.",
     type: "website",
     url: `${BASE_URL}/sufity-napinane`,
   },

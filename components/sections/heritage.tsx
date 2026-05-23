@@ -28,17 +28,17 @@ type Props = {
 };
 
 const DEFAULT_TAGS: HeritageTag[] = [
-  { flag: "BE", label: "Produkcja Belgia" },
-  { flag: "PL", label: "Montaż w Polsce" },
+  { flag: "BE", label: "Polyester · Belgia" },
+  { flag: "PL", label: "PVC · Polska" },
 ];
 
 const DEFAULT_PARAGRAPH = (
   <>
-    <strong className="font-semibold">Stretch Sufit</strong> to oficjalny polski
-    oddział belgijskiej grupy{" "}
-    <strong className="font-semibold">STRETCH®</strong>{" "}
+    <strong className="font-semibold">Stretch Sufit</strong> jest częścią
+    belgijskiej <strong className="font-semibold">Stretchgroup</strong>{" "}
     <span className="text-bg/55">
-      — producenta sufitów napinanych z 23-letnim doświadczeniem.
+      — producenta sufitów napinanych. Polyester powstaje w Belgii,
+      PVC w naszej fabryce w Polsce.
     </span>
   </>
 );

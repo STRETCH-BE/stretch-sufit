@@ -11,10 +11,10 @@
  */
 
 const DEFAULT_PHRASES = [
-  "Made in Belgium",
-  "Installed in Poland",
-  "Naadloos tot 5,15m",
-  "130+ kolorów",
+  "PVC produced in Poland",
+  "Polyester made in Belgium",
+  "Bezszwowo do 6,50 m",
+  "Mat · Połysk · Brokat · Tekstura",
   "Bez prac wykończeniowych",
   "100% recyklingu",
 ];

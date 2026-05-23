@@ -40,7 +40,7 @@ import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 export const metadata: Metadata = {
   title: "Stretch Sufit — Nowy sufit w 1 dzień | Sufity napinane premium",
   description:
-    "Belgijska technologia sufitów napinanych w Polsce. Montaż w 1 dzień, bez kurzu, 25 lat żywotności. Pomiar i wycena bezpłatne. 17 miast w Polsce.",
+    "Sufity napinane Stretch w Polsce. PVC produkowany w naszej fabryce w Polsce (bezszwowo do 6,50 m), polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. 17 miast w Polsce.",
   alternates: {
     canonical: "/",
     languages: {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stretch Sufit — Nowy sufit w 1 dzień",
     description:
-      "Belgijska technologia sufitów napinanych w Polsce. Montaż w 1 dzień, bez kurzu, 25 lat żywotności.",
+      "Sufity napinane Stretch. PVC produkowany w Polsce, polyester w Belgii. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji.",
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "pl_PL",
@@ -72,7 +72,7 @@ const faqs = [
   {
     question: "Co to jest sufit napinany?",
     answer:
-      "Sufit napinany to elastyczna powłoka z folii PVC lub tkaniny poliestrowej, naciągana na aluminiowy profil zamocowany przy ścianach pomieszczenia. Tworzy idealnie gładką, bezspoinową powierzchnię w jednym dniu — bez gładzi, bez malowania i bez kurzu. System Stretch® jest produkowany w Belgii od 2002 roku.",
+      "Sufit napinany to elastyczna powłoka z folii PVC lub tkaniny poliestrowej, naciągana na aluminiowy profil zamocowany przy ścianach pomieszczenia. Tworzy idealnie gładką, bezspoinową powierzchnię w jednym dniu — bez gładzi, bez malowania i bez kurzu. Stretch Sufit produkuje PVC w fabryce w Polsce (od 2016) i instaluje także polyester z belgijskiej Stretchgroup (od 2018).",
   },
   {
     question: "Ile trwa montaż sufitu napinanego?",
@@ -82,12 +82,12 @@ const faqs = [
   {
     question: "Ile kosztuje sufit napinany?",
     answer:
-      "Cena sufitu napinanego zależy od powierzchni, typu folii (PVC lub poliester), wykończenia (mat, połysk, fotodruk) oraz integracji oświetlenia LED. Stretch Sufit wykonuje pomiar i wycenę bezpłatnie na miejscu — wycena ma 30 dni ważności i nie zawiera ukrytych kosztów.",
+      "Cena sufitu napinanego zależy od powierzchni, typu folii (PVC lub poliester), wykończenia (mat, połysk, satyna, brokat, tekstura, fotodruk) oraz integracji oświetlenia LED. Stretch Sufit wykonuje pomiar i wycenę bezpłatnie na miejscu — wycena ma 30 dni ważności i nie zawiera ukrytych kosztów.",
   },
   {
     question: "Czym różni się sufit napinany od sufitu podwieszanego?",
     answer:
-      "Sufit napinany to elastyczna powłoka naciągana na profilu — instaluje się w 1 dzień, bez gładzi i malowania, jest demontowalny i nie pyli w trakcie montażu. Sufit podwieszany z płyt G-K wymaga konstrukcji stalowej, gładzi i malowania, a montaż trwa zazwyczaj 3–7 dni. Sufit napinany Stretch ma żywotność 25 lat i 15 lat gwarancji.",
+      "Sufit napinany to elastyczna powłoka naciągana na profilu — instaluje się w 1 dzień, bez gładzi i malowania, jest demontowalny i nie pyli w trakcie montażu. Sufit podwieszany z płyt G-K wymaga konstrukcji stalowej, gładzi i malowania, a montaż trwa zazwyczaj 3–7 dni. Sufit napinany Stretch ma żywotność 25 lat oraz gwarancję do 15 lat (15 lat na PVC, 10 lat na polyester).",
   },
 ];
 

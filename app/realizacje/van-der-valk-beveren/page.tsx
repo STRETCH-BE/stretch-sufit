@@ -139,8 +139,8 @@ export default function VanDerValkBeverenPage() {
           paragraph={
             <>
               <strong className="font-semibold">Stretch Sufit</strong> jest
-              polskim oddziałem belgijskiej grupy{" "}
-              <strong className="font-semibold">STRETCH®</strong>{" "}
+              częścią belgijskiej{" "}
+              <strong className="font-semibold">Stretchgroup</strong>{" "}
               <span className="text-bg/55">
                 — ten sam system akustyczny, który ucisza belgijskie hotele,
                 instalujemy w polskich obiektach HoReCa.
@@ -148,7 +148,7 @@ export default function VanDerValkBeverenPage() {
             </>
           }
           tags={[
-            { flag: "BE", label: "Technologia STRETCH" },
+            { flag: "BE", label: "Technologia Stretch" },
             { flag: "PL", label: "Realizacje w Polsce" },
           ]}
         />

@@ -37,10 +37,11 @@ export function Solutions() {
           </FadeIn>
           <FadeIn delay={120}>
             <p className="max-w-md text-[16px] leading-[1.6] text-white/55">
-              Od standardowego matowego sufitu w salonie po akustyczny sufit
-              w sali konferencyjnej i podświetlany sufit w SPA — system{" "}
-              <strong className="font-semibold text-white">Stretch</strong>{" "}
-              dopasowuje się do każdego pomieszczenia.
+              Sufit PVC bezszwowo do <strong className="font-semibold text-white">6,50 m</strong>{" "}
+              — w wykończeniach mat, połysk, satyna, brokat, tekstura i więcej.
+              Polyester dla wnętrz premium. Jeden system{" "}
+              <strong className="font-semibold text-white">Stretch</strong>,
+              dopasowany do każdego pomieszczenia.
             </p>
           </FadeIn>
         </div>

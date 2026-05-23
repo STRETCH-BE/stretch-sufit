@@ -46,8 +46,9 @@ export function Footer() {
           <div>
             <Logo tone="on-dark" size={28} />
             <p className="mt-5 max-w-[320px] text-sm leading-[1.6] text-white/55">
-              Oficjalny polski oddział belgijskiej grupy STRETCH®. Producent
-              i wykonawca sufitów napinanych premium. Część grupy{" "}
+              Część belgijskiej Stretchgroup. Producent sufitów napinanych
+              PVC w Polsce oraz wykonawca montażu — także dla polyestrowych
+              membran Stretch Productions z Belgii. Operator:{" "}
               {siteConfig.legalName}.
             </p>
 
@@ -152,8 +153,8 @@ export function Footer() {
             ))}
           </ul>
           <div>
-            © {new Date().getFullYear()} {siteConfig.name} — Część grupy
-            STRETCH® · Made in Belgium, installed in Poland
+            © {new Date().getFullYear()} {siteConfig.name} — Część
+            Stretchgroup · PVC made in Poland, polyester made in Belgium
           </div>
         </div>
       </Container>

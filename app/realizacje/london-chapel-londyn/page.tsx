@@ -142,8 +142,8 @@ export default function LondonChapelPage() {
           paragraph={
             <>
               <strong className="font-semibold">Stretch Sufit</strong> jest
-              polskim oddziałem belgijskiej grupy{" "}
-              <strong className="font-semibold">STRETCH®</strong>{" "}
+              częścią belgijskiej{" "}
+              <strong className="font-semibold">Stretchgroup</strong>{" "}
               <span className="text-bg/55">
                 — system napinanych ścian z tkaninami kontraktowymi dostępny
                 jest również w Polsce dla projektów rezydencjalnych premium.
@@ -151,7 +151,7 @@ export default function LondonChapelPage() {
             </>
           }
           tags={[
-            { flag: "BE", label: "Technologia STRETCH" },
+            { flag: "BE", label: "Technologia Stretch" },
             { flag: "PL", label: "Realizacje w Polsce" },
           ]}
         />

@@ -51,30 +51,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/blog`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/wspolpraca-b2b`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/dealerzy`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/kariera`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
       url: `${BASE_URL}/kontakt`,
       lastModified,
       changeFrequency: "monthly",

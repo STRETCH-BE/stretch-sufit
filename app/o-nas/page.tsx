@@ -2,10 +2,13 @@
  * About page — /o-nas
  * File path: /app/o-nas/page.tsx
  *
- * Editorial founder-driven narrative. Tells the real story:
- * Michael Nicasens (2018, Belgium) → built proprietary system → global expansion
- * → 2024 acquisition of Alto Design (Poland) → rebrand to Stretch Sufit
- * → Re-Sound acquisition for acoustic catalogue.
+ * Editorial dual-origin narrative. Tells the real story:
+ *
+ *   2016 · Częstochowa — Roman Pliuta founds Alto Design (PVC stretch ceilings)
+ *   2018 · Antwerpia    — Michael Nicasens founds Stretch Productions BV (polyester)
+ *   2024 · Akwizycja    — Stretchgroup (Nicasens) acquires Alto Design from Pliuta
+ *                         → rebranded operationally as Stretch Sufit
+ *   2026 · Re-Sound     — group expands catalogue with acoustic panels
  *
  * Visual rhythm follows the homepage: alternating black + paper sections,
  * Bricolage Grotesque display, Instrument Serif italics, surgical red accents.
@@ -23,14 +26,14 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 export const metadata: Metadata = {
-  title: "O nas — Belgijska technologia, polska produkcja | Stretch Sufit",
+  title: "O nas — Dwie fabryki, jedna grupa | Stretch Sufit",
   description:
-    "Stretch Sufit to polski filar grupy STRETCH® — belgijskiej firmy założonej w 2018 r. przez Michaela Nicasensa. Własny system, montaż przez wyszkolone zespoły, globalna obecność.",
+    "Stretch Sufit jest częścią belgijskiej Stretchgroup. PVC produkujemy w fabryce Alto Design w Polsce (od 2016), polyester w Stretch Productions BV w Belgii (od 2018). W 2024 grupa nabyła Alto Design — od tej pory działa pod marką Stretch Sufit.",
   alternates: { canonical: "/o-nas" },
   openGraph: {
     title: "O nas — Stretch Sufit",
     description:
-      "Belgijska technologia sufitów napinanych, polska produkcja. Historia STRETCH® i Alto Design.",
+      "Dwie fabryki, jedna grupa. PVC z Polski, polyester z Belgii. Historia Stretchgroup, Alto Design i Stretch Productions.",
     type: "article",
   },
 };
@@ -69,56 +72,57 @@ export default function AboutPage() {
           />
           <Container>
             <FadeIn>
-              <Eyebrow>Belgia · 2018 — historia, którą zbudowaliśmy sami</Eyebrow>
+              <Eyebrow>Dwie fabryki · jedna grupa · jeden standard</Eyebrow>
             </FadeIn>
             <FadeIn delay={80}>
               <h1 className="mt-6 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
-                Nie kontynuujemy{" "}
-                <span className="it text-paper">tradycji.</span>
+                Belgia produkuje{" "}
+                <span className="it text-paper">polyester.</span>
                 <br />
-                <span className="text-red">Zbudowaliśmy</span>{" "}
-                <span className="it">własną.</span>
+                <span className="text-red">Polska</span>{" "}
+                <span className="it">produkuje PVC.</span>
               </h1>
             </FadeIn>
             <FadeIn delay={160}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/65 md:text-xl">
-                Stretch Sufit to polski filar grupy{" "}
-                <strong className="text-white">STRETCH®</strong> —
-                belgijskiej firmy założonej w 2018 roku przez Michaela
-                Nicasensa. Nie franczyza, nie pośrednictwo. Własny system,
-                własna produkcja, wyszkolone ekipy.
+                Stretch Sufit jest częścią belgijskiej{" "}
+                <strong className="text-white">Stretchgroup</strong> — holdingu,
+                który łączy dwie fabryki sufitów napinanych: Stretch Productions
+                BV w Belgii i Alto Design w Polsce. Nie franczyza, nie
+                pośrednictwo. Własna produkcja po obu stronach, wyszkolone ekipy
+                montażowe na miejscu.
               </p>
             </FadeIn>
           </Container>
         </section>
 
-        {/* ════════ Origin — paper section ════════ */}
+        {/* ════════ Origin — Polish chapter on paper ════════ */}
         <section className="bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">Rozdział 01 · Antwerpia</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 01 · Częstochowa, 2016</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">
-                    Tam, gdzie wszystko się{" "}
-                    <span className="it">zaczęło.</span>
+                    Polska produkcja{" "}
+                    <span className="it">zaczyna się tutaj.</span>
                   </SectionTitle>
                 </FadeIn>
                 <FadeIn delay={140}>
                   <figure className="mt-10 overflow-hidden rounded">
                     <div className="relative aspect-[4/5] w-full bg-bg-soft">
                       <Image
-                        src="images/about/michael-nicasens.jpg"
-                        alt="Michael Nicasens, założyciel STRETCH® Group"
+                        src="images/about/hala-czestochowa.jpg"
+                        alt="Hala produkcyjna Alto Design (Stretch Sufit) w Częstochowie"
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"
                         className="object-cover"
                       />
                     </div>
                     <figcaption className="mt-3 font-serif text-sm italic text-bg/55">
-                      — Michael Nicasens, założyciel STRETCH® Group. Antwerpia, 2018.
+                      — Hala produkcyjna Alto Design. Częstochowa, ul. Legionów 59.
                     </figcaption>
                   </figure>
                 </FadeIn>
@@ -128,28 +132,27 @@ export default function AboutPage() {
                 <FadeIn delay={120}>
                   <div className="space-y-6 text-[17px] leading-[1.7] text-bg/80 md:text-lg">
                     <p>
-                      Michael Nicasens dorastał w firmie wnętrzarskiej swojego
-                      ojca. To tam, między rolkami tkanin a próbnikami kolorów,
-                      pierwszy raz zobaczył sufity napinane — kategorię
-                      technicznie doskonałą, ale handlowo rozproszoną.
+                      W 2016 roku{" "}
+                      <strong className="text-bg">Roman Pliuta</strong> założył
+                      w Częstochowie <strong className="text-bg">Alto Design</strong>{" "}
+                      — polskiego producenta sufitów napinanych PVC. Cel był
+                      konkretny: produkować membranę PVC najwyższej klasy na
+                      miejscu, w Polsce, z kontrolą każdego etapu — od kalibracji
+                      koloru po obróbkę krawędzi.
                     </p>
                     <p>
-                      Producenci sprzedawali materiały. Monterzy montowali. Ale
-                      nikt nie traktował tego jak <span className="font-serif italic">systemu</span> —
-                      ze spójnym standardem, własnym profilem aluminiowym,
-                      protokołem montażu i marką, która coś znaczy.
+                      Przez kolejne osiem lat firma zbudowała reputację
+                      precyzyjnego producenta — szanowanego w polskiej branży
+                      za jakość wykonania i bezkompromisowe podejście do
+                      detali. Wśród sufitowych instalatorów krążyła wtedy
+                      prosta zasada: <span className="font-serif italic">
+                      „jeśli chcesz dobre PVC, dzwonisz do Alto Design".
+                      </span>
                     </p>
                     <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-bg">
-                      „Widziałem rynek, na którym wszyscy robili to samo —
-                      i nikt nie robił tego naprawdę dobrze. Zbudowałem to,
-                      czego brakowało."
-                    </p>
-                    <p>
-                      W 2018 roku, w okolicach Antwerpii, powstał STRETCH®.
-                      Od pierwszego dnia z jednym celem: zbudować system, który
-                      można licencjonować globalnie — nie sieć franczyz, ale
-                      przeszkolonych partnerów montujących tę samą technologię
-                      według tego samego standardu, niezależnie od kraju.
+                      „Wszystko, co tu zrobiliśmy — fabrykę, ekipę, standard —
+                      zbudowaliśmy własnymi rękami. Polski PVC nie jest gorszy
+                      od zachodniego. Po prostu trzeba umieć go zrobić."
                     </p>
                   </div>
                 </FadeIn>
@@ -158,13 +161,132 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* ════════ System ════════ */}
+        {/* ════════ Origin — Belgian chapter ════════ */}
+        <section className="bg-bg py-24 md:py-32">
+          <Container>
+            <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
+              <div className="md:col-span-7 md:order-2 md:pl-8">
+                <FadeIn delay={120}>
+                  <div className="space-y-6 text-[17px] leading-[1.7] text-white/75 md:text-lg">
+                    <p>
+                      Dwa lata później, w 2018 roku, w okolicach Antwerpii{" "}
+                      <strong className="text-white">Michael Nicasens</strong>{" "}
+                      założył <strong className="text-white">Stretch
+                      Productions BV</strong> — belgijskiego producenta sufitów
+                      napinanych z tkanej membrany poliestrowej. Polyester z
+                      powłoką poliuretanową: materiał technicznie inny od PVC,
+                      kierowany do bardziej wymagającego segmentu rynku
+                      premium.
+                    </p>
+                    <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-white/85">
+                      „Chciałem zbudować system, który można licencjonować
+                      globalnie — nie sieć franczyz, ale przeszkolonych
+                      partnerów montujących tę samą technologię według tego
+                      samego standardu, niezależnie od kraju."
+                    </p>
+                    <p>
+                      Wokół Stretch Productions wyrosła{" "}
+                      <strong className="text-white">Stretchgroup</strong> —
+                      holding, w którym Nicasens skupił produkcję polyestrową,
+                      profile aluminiowe i protokół montażowy. W kilka lat
+                      grupa rozszerzyła się na kilkanaście rynków przez sieć
+                      przeszkolonych partnerów montażowych.
+                    </p>
+                  </div>
+                </FadeIn>
+              </div>
+
+              <div className="md:col-span-5 md:order-1">
+                <FadeIn>
+                  <Eyebrow>Rozdział 02 · Antwerpia, 2018</Eyebrow>
+                </FadeIn>
+                <FadeIn delay={80}>
+                  <SectionTitle className="mt-5 text-white">
+                    Belgijski polyester{" "}
+                    <span className="it text-paper">i system.</span>
+                  </SectionTitle>
+                </FadeIn>
+                <FadeIn delay={140}>
+                  <figure className="mt-10 overflow-hidden rounded">
+                    <div className="relative aspect-[4/5] w-full bg-bg-soft">
+                      <Image
+                        src="images/about/michael-nicasens.jpg"
+                        alt="Michael Nicasens, założyciel Stretchgroup"
+                        fill
+                        sizes="(min-width: 768px) 40vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <figcaption className="mt-3 font-serif text-sm italic text-white/55">
+                      — Michael Nicasens, założyciel Stretchgroup. Antwerpia, 2018.
+                    </figcaption>
+                  </figure>
+                </FadeIn>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ════════ The merger — 2024 ════════ */}
+        <section className="bg-paper py-24 md:py-32">
+          <Container>
+            <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
+              <div className="md:col-span-5">
+                <FadeIn>
+                  <Eyebrow tone="on-paper">Rozdział 03 · Akwizycja, 2024</Eyebrow>
+                </FadeIn>
+                <FadeIn delay={80}>
+                  <SectionTitle className="mt-5 text-bg">
+                    Dwie fabryki —{" "}
+                    <span className="it">jedna grupa.</span>
+                  </SectionTitle>
+                </FadeIn>
+              </div>
+
+              <div className="md:col-span-7 md:pl-8">
+                <FadeIn delay={120}>
+                  <div className="space-y-6 text-[17px] leading-[1.7] text-bg/80 md:text-lg">
+                    <p>
+                      Do 2024 roku Stretchgroup produkował polyester w Belgii
+                      i instalował przez przeszkolone ekipy w kilkunastu
+                      krajach. Brakowało jednak własnej, w pełni kontrolowanej
+                      bazy produkcyjnej PVC w Europie Środkowej. Decyzja:
+                      zamiast budować fabrykę od zera, znaleźć najlepszą firmę,
+                      jaka już istnieje na rynku — i połączyć siły.
+                    </p>
+                    <p>
+                      W 2024 roku Michael Nicasens nabył od Romana Pliuty{" "}
+                      <strong className="text-bg">Alto Design</strong> —
+                      częstochowską firmę z reputacją precyzji w produkcji
+                      sufitów napinanych PVC. Alto Design dołączył do
+                      Stretchgroup jako pełnoprawna spółka zależna, zachowując
+                      polską załogę, polską hałę i polski standard wykonania.
+                    </p>
+                    <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-bg">
+                      „Polska łączy autentyczną kulturę rzemiosła z bliskością
+                      europejskich materiałów. To jest miejsce, w którym
+                      powstaje lepszy PVC, w bardziej zrównoważony sposób."
+                    </p>
+                    <p>
+                      Po rebrandingu operacyjnym Alto Design publicznie działa
+                      pod marką <strong className="text-bg">Stretch Sufit</strong>{" "}
+                      — jednocześnie polski producent PVC, instalator w całej
+                      Polsce i centrum produkcyjne PVC dla całej grupy.
+                    </p>
+                  </div>
+                </FadeIn>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* ════════ System cards ════════ */}
         <section className="bg-bg py-24 md:py-32">
           <Container>
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
                 <FadeIn>
-                  <Eyebrow>Rozdział 02 · System</Eyebrow>
+                  <Eyebrow>Rozdział 04 · System</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-white">
@@ -176,11 +298,11 @@ export default function AboutPage() {
               <div className="md:col-span-7">
                 <FadeIn delay={120}>
                   <p className="text-[17px] leading-[1.7] text-white/75 md:text-lg">
-                    STRETCH® to nie pojedynczy produkt. To zamknięty ekosystem:
-                    autorskie profile aluminiowe, kalibrowane membrany PVC i
-                    poliestrowe, narzędzia montażowe i protokół szkoleniowy.
-                    Każdy element zaprojektowany tak, aby pracował razem —
-                    i tylko razem.
+                    Stretch to nie pojedynczy produkt. To zamknięty ekosystem:
+                    autorskie profile aluminiowe, kalibrowane membrany PVC
+                    (Polska) i polyester (Belgia), narzędzia montażowe i
+                    protokół szkoleniowy. Każdy element zaprojektowany tak, aby
+                    pracował razem — i tylko razem.
                   </p>
                 </FadeIn>
 
@@ -193,8 +315,8 @@ export default function AboutPage() {
                     },
                     {
                       label: "Membrana",
-                      title: "Kalibrowane materiały",
-                      body: "PVC do 5,70 m i poliester do 5,15 m bez szwów. Materiały klasy A2 (akustyka) i 100% recykling.",
+                      title: "Dwie fabryki",
+                      body: "PVC do 6,50 m z Alto Design (Polska), polyester do 5,15 m ze Stretch Productions (Belgia). Materiały klasy A2 (akustyka) i 100% recykling.",
                     },
                     {
                       label: "Protokół",
@@ -203,8 +325,8 @@ export default function AboutPage() {
                     },
                     {
                       label: "Gwarancja",
-                      title: "15 lat",
-                      body: "Materiałowa gwarancja producenta. Sieciowa odpowiedzialność grupy, nie pojedynczego instalatora.",
+                      title: "Do 15 lat",
+                      body: "15 lat na PVC, 10 lat na polyester. Sieciowa odpowiedzialność grupy, nie pojedynczego instalatora.",
                     },
                   ].map((card, i) => (
                     <FadeIn delay={140 + i * 60} key={card.label}>
@@ -227,84 +349,15 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* ════════ Polish chapter — paper ════════ */}
-        <section className="bg-paper py-24 md:py-32">
-          <Container>
-            <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
-              <div className="md:col-span-7 md:order-1">
-                <FadeIn delay={120}>
-                  <div className="space-y-6 text-[17px] leading-[1.7] text-bg/80 md:text-lg">
-                    <p>
-                      Do 2024 roku STRETCH® rósł międzynarodowo — instalując
-                      przez przeszkolone ekipy w kilkunastu krajach. Brakowało
-                      jednak własnej, kontrolowanej bazy produkcyjnej w Europie
-                      Środkowej. Polska była strategicznym wyborem.
-                    </p>
-                    <p>
-                      Decyzja: zamiast zakładać operację od zera, znaleźć
-                      najlepszą firmę, jaka już istnieje na rynku — i połączyć
-                      siły. Wybór padł na{" "}
-                      <strong className="text-bg">Alto Design</strong> —
-                      częstochowską firmę z reputacją precyzji w produkcji i
-                      montażu sufitów napinanych.
-                    </p>
-                    <p className="border-l-2 border-red pl-5 font-serif text-xl italic text-bg">
-                      „Polska łączy autentyczną kulturę rzemiosła z bliskością
-                      europejskich materiałów. To jest miejsce, w którym powstaje
-                      lepszy produkt, w bardziej zrównoważony sposób."
-                    </p>
-                    <p>
-                      W 2024 roku STRETCH® Group nabył Alto Design — nie po to,
-                      by go wchłonąć, ale by uczynić go produkcyjnym kręgosłupem
-                      całej grupy. Po rebrandingu firma stała się{" "}
-                      <strong className="text-bg">Stretch Sufit</strong> —
-                      jednocześnie polski wykonawca i międzynarodowe centrum
-                      produkcyjne.
-                    </p>
-                  </div>
-                </FadeIn>
-              </div>
-
-              <div className="md:col-span-5">
-                <FadeIn>
-                  <Eyebrow tone="on-paper">Rozdział 03 · Polska</Eyebrow>
-                </FadeIn>
-                <FadeIn delay={80}>
-                  <SectionTitle className="mt-5 text-bg">
-                    Dlaczego{" "}
-                    <span className="it">Częstochowa.</span>
-                  </SectionTitle>
-                </FadeIn>
-                <FadeIn delay={140}>
-                  <figure className="mt-10 overflow-hidden rounded">
-                    <div className="relative aspect-[4/5] w-full bg-bg-soft">
-                      <Image
-                        src="images/about/hala-czestochowa.jpg"
-                        alt="Hala produkcyjna Stretch Sufit w Częstochowie"
-                        fill
-                        sizes="(min-width: 768px) 40vw, 100vw"
-                        className="object-cover"
-                      />
-                    </div>
-                    <figcaption className="mt-3 font-serif text-sm italic text-bg/55">
-                      — Hala produkcyjna. Częstochowa, ul. Legionów 59.
-                    </figcaption>
-                  </figure>
-                </FadeIn>
-              </div>
-            </div>
-          </Container>
-        </section>
-
         {/* ════════ Stats strip ════════ */}
         <section className="border-y border-white/10 bg-bg py-16 md:py-20">
           <Container>
             <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
               {[
+                { value: "2016", label: "Polska", italic: "Alto Design — start PVC" },
+                { value: "2018", label: "Belgia", italic: "Stretch Productions — start polyester" },
+                { value: "2024", label: "Grupa", italic: "Alto Design dołącza do Stretchgroup" },
                 { value: "13+", label: "krajów", italic: "globalnie" },
-                { value: "2018", label: "Belgia", italic: "założenie STRETCH®" },
-                { value: "2024", label: "Polska", italic: "Stretch Sufit dołącza" },
-                { value: "1", label: "system", italic: "jeden standard" },
               ].map((stat, i) => (
                 <FadeIn delay={i * 80} key={stat.label}>
                   <div>
@@ -326,19 +379,20 @@ export default function AboutPage() {
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn>
-                <Eyebrow>Rozdział 04 · Zasięg</Eyebrow>
+                <Eyebrow>Rozdział 05 · Zasięg</Eyebrow>
               </FadeIn>
               <FadeIn delay={80}>
                 <SectionTitle className="mt-5 text-white">
-                  Polska to nasza baza.{" "}
+                  Polska to nasza fabryka PVC.{" "}
                   <span className="it text-paper">Świat to nasz rynek.</span>
                 </SectionTitle>
               </FadeIn>
               <FadeIn delay={140}>
                 <p className="mt-6 text-lg leading-relaxed text-white/65">
                   Stretch Sufit obsługuje rynek polski, a jednocześnie zasila
-                  produkcyjnie sieć STRETCH® w ponad tuzin krajów na czterech
-                  kontynentach.
+                  produkcyjnie sieć Stretchgroup w ponad tuzin krajów na
+                  czterech kontynentach. Polyestrowa fabryka w Belgii i nasza
+                  PVC w Polsce wspólnie zaopatrują instalatorów grupy.
                 </p>
               </FadeIn>
             </div>
@@ -366,7 +420,7 @@ export default function AboutPage() {
             <div className="grid items-end gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">Rozdział 05 · Następny krok</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 06 · Następny krok</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">
@@ -376,12 +430,13 @@ export default function AboutPage() {
                 </FadeIn>
                 <FadeIn delay={140}>
                   <p className="mt-8 text-[17px] leading-[1.7] text-bg/75 md:text-lg">
-                    W 2026 roku STRETCH® Group nabył belgijską markę{" "}
-                    <strong className="text-bg">Re-Sound</strong> — specjalistę
-                    od wysokiej klasy paneli akustycznych. Dla Stretch Sufit
-                    oznacza to katalog rozszerzony o produkty designerskie z
-                    realnymi właściwościami akustycznymi: redukcję pogłosu do
-                    75% bez kompromisu w estetyce.
+                    <strong className="text-bg">Re-Sound BV</strong> to
+                    trzecia spółka w portfelu Stretchgroup —
+                    belgijski specjalista od wysokiej klasy paneli
+                    akustycznych. Dla Stretch Sufit oznacza to katalog
+                    rozszerzony o produkty designerskie z realnymi
+                    właściwościami akustycznymi: redukcję pogłosu do 75% bez
+                    kompromisu w estetyce.
                   </p>
                 </FadeIn>
                 <FadeIn delay={200}>
@@ -439,11 +494,11 @@ export default function AboutPage() {
                 {[
                   {
                     no: "Nie franczyza.",
-                    yes: 'Każdy montaż wykonuje przeszkolona ekipa STRETCH®. Bez podwykonawców, bez ekip „z polecenia". Jedna firma, jedna gwarancja.',
+                    yes: 'Każdy montaż wykonuje przeszkolona ekipa Stretch Sufit. Bez podwykonawców, bez ekip „z polecenia". Jedna firma, jedna gwarancja.',
                   },
                   {
                     no: "Nie pośrednictwo.",
-                    yes: 'Pracujemy z materiałem własnej produkcji — profilami i membranami STRETCH®. Bez generycznych zamienników, bez importu „okazji".',
+                    yes: "Pracujemy z materiałem własnej produkcji — profilami z Belgii, PVC z naszej fabryki w Polsce, polyester ze Stretch Productions. Bez generycznych zamienników.",
                   },
                   {
                     no: "Nie improwizacja.",
@@ -484,8 +539,8 @@ export default function AboutPage() {
             <div className="mx-auto max-w-3xl text-center">
               <Eyebrow tone="on-dark">Rozmawiajmy</Eyebrow>
               <h2 className="mt-6 font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-white">
-                Belgia projektuje.{" "}
-                <span className="it">Polska produkuje.</span>
+                Polska produkuje PVC.{" "}
+                <span className="it">Belgia produkuje polyester.</span>
                 <br />
                 <span className="text-white/85">Ty</span>{" "}
                 <span className="it">— zyskujesz.</span>

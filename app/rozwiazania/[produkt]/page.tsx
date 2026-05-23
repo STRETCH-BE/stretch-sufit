@@ -43,7 +43,7 @@ export async function generateMetadata({
   if (!product) return {};
 
   const title = `${product.title} | Stretch Sufit`;
-  const description = `${product.tagline}. ${product.description} 15 lat gwarancji, montaż w 1 dzień, belgijska technologia STRETCH®.`;
+  const description = `${product.tagline}. ${product.description} Do 15 lat gwarancji (15 lat PVC · 10 lat polyester), montaż w 1 dzień. Część belgijskiej Stretchgroup.`;
 
   return {
     title,
@@ -79,11 +79,11 @@ export default async function ProductPage({
     image: product.image,
     brand: {
       "@type": "Brand",
-      name: "STRETCH®",
+      name: "Stretch",
     },
     manufacturer: {
       "@type": "Organization",
-      name: "STRETCH® Group",
+      name: "Stretchgroup",
       url: BASE_URL,
     },
     offers: {
@@ -419,7 +419,7 @@ export default async function ProductPage({
             <FadeIn delay={80}>
               <h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em] text-bg md:text-3xl">
                 Cały system —{" "}
-                <span className="it">6 produktów STRETCH®.</span>
+                <span className="it">6 produktów Stretch.</span>
               </h2>
             </FadeIn>
             <FadeIn delay={120}>

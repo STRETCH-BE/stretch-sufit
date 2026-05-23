@@ -399,7 +399,7 @@ function buildLeadEmail(d: LeadEmailData): string {
 
       <div style="margin-top:16px; font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; font-size:11px; color:#999; text-align:center;">
         Automatyczna wiadomość z formularza na stretchsufit.pl<br>
-        <span style="color:#bbb;">Stretch Sufit — Część grupy STRETCH® · Made in Belgium, installed in Poland</span>
+        <span style="color:#bbb;">Stretch Sufit — Część Stretchgroup · PVC made in Poland, polyester made in Belgium</span>
       </div>
 
     </td>

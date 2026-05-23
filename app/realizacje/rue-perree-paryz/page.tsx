@@ -142,8 +142,8 @@ export default function RuePerreeParyzPage() {
           paragraph={
             <>
               <strong className="font-semibold">Stretch Sufit</strong> jest
-              polskim oddziałem belgijskiej grupy{" "}
-              <strong className="font-semibold">STRETCH®</strong>{" "}
+              częścią belgijskiej{" "}
+              <strong className="font-semibold">Stretchgroup</strong>{" "}
               <span className="text-bg/55">
                 — system STRETCH Light Tunable White dostępny jest również dla
                 projektów retailowych w Polsce.
@@ -151,7 +151,7 @@ export default function RuePerreeParyzPage() {
             </>
           }
           tags={[
-            { flag: "BE", label: "Technologia STRETCH" },
+            { flag: "BE", label: "Technologia Stretch" },
             { flag: "PL", label: "Realizacje w Polsce" },
           ]}
         />

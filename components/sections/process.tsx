@@ -35,7 +35,7 @@ const steps = [
     num: "04",
     title: "Montaż w 1 dzień",
     body:
-      "Zespół 2 monterów. Bez kurzu, bez bałaganu. Możesz mieszkać w trakcie prac. 15 lat gwarancji.",
+      "Zespół 2 monterów. Bez kurzu, bez bałaganu. Możesz mieszkać w trakcie prac. Do 15 lat gwarancji.",
   },
 ];
 

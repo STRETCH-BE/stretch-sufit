@@ -71,8 +71,8 @@ export default function PrivacyPolicyPage() {
                 <p className="mt-5">
                   Administratorem Twoich danych osobowych jest{" "}
                   <strong>Alto Design Sp. z o.o.</strong> (dalej:{" "}
-                  <em>„Stretch Sufit"</em> lub <em>„my"</em>), polski filar
-                  grupy STRETCH®.
+                  <em>„Stretch Sufit"</em> lub <em>„my"</em>), spółka
+                  zależna belgijskiej Stretchgroup.
                 </p>
                 <div className="mt-5 rounded border border-bg/10 bg-paper-2 p-6 text-[15px]">
                   <div className="space-y-1">

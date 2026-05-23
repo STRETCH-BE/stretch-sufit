@@ -26,7 +26,7 @@ export function Showcase() {
             <SectionTitle className="mt-5 text-white">
               Polskie wnętrza,
               <br />
-              <span className="it">belgijska precyzja.</span>
+              <span className="it">polsko-belgijska precyzja.</span>
             </SectionTitle>
           </FadeIn>
           <FadeIn delay={120}>

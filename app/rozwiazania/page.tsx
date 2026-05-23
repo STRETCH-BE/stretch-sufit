@@ -2,7 +2,7 @@
  * Products hub page — /rozwiazania
  * File path: /app/rozwiazania/page.tsx
  *
- * Lists all 6 STRETCH® products with comparison-friendly cards.
+ * Lists all 6 Stretch products with comparison-friendly cards.
  * Acts as the canonical entry point for product-intent SEO queries.
  */
 
@@ -23,14 +23,14 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Rozwiązania — 6 produktów STRETCH® | Stretch Sufit",
+  title: "Rozwiązania — 6 produktów Stretch | Stretch Sufit",
   description:
-    "Pełen katalog sufitów napinanych STRETCH® — PVC, poliester, akustyczny, świetlny LED, fotodruk, prefab. Belgijska technologia, polska produkcja, 15 lat gwarancji.",
+    "Pełen katalog sufitów napinanych Stretch — PVC (produkowany w Polsce, bezszwowo do 6,50 m), poliester (Belgia), akustyczny, świetlny LED, fotodruk, prefab. Część Stretchgroup, do 15 lat gwarancji.",
   alternates: { canonical: "/rozwiazania" },
   openGraph: {
-    title: "6 produktów STRETCH® — pełen katalog | Stretch Sufit",
+    title: "6 produktów Stretch — pełen katalog | Stretch Sufit",
     description:
-      "Belgijska technologia sufitów napinanych w 6 wariantach. Wybierz to, co pasuje do Twojego wnętrza.",
+      "Sufity napinane w 6 wariantach. PVC z Polski, polyester z Belgii. Wybierz to, co pasuje do Twojego wnętrza.",
     type: "website",
     url: `${BASE_URL}/rozwiazania`,
   },
@@ -80,7 +80,7 @@ export default function ProductsHubPage() {
               <FadeIn delay={80}>
                 <h1 className="mt-6 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
                   Sufity napinane{" "}
-                  <span className="it text-paper">STRETCH®.</span>
+                  <span className="it text-paper">Stretch.</span>
                   <br />
                   <span className="text-red">Cały katalog.</span>
                 </h1>
@@ -88,8 +88,10 @@ export default function ProductsHubPage() {
               <FadeIn delay={160}>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
                   Sześć produktów, jeden system, identyczny standard montażu.
-                  Każde rozwiązanie zoptymalizowane pod konkretny kontekst:
-                  łazienki, salony, biura, akustykę, podświetlenie, druk.
+                  PVC produkowany w naszej fabryce w Polsce, polyester w Belgii —
+                  obie marki należą do Stretchgroup. Każde rozwiązanie
+                  zoptymalizowane pod konkretny kontekst: łazienki, salony,
+                  biura, akustykę, podświetlenie, druk.
                 </p>
               </FadeIn>
             </div>
