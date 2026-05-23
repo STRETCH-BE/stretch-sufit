@@ -11,6 +11,10 @@
  * CTA fires `cta_click` via TrackedCTA.
  *
  * Accessibility: includes a skip-to-main link rendered visible on focus.
+ *
+ * Locale awareness: defaults to Polish. EN and UA variant components import
+ * the same structure with translated `navLinks`, `labels`, and pass
+ * `currentLocale` so the language switcher highlights the right code.
  */
 
 import { useEffect, useState } from "react";
@@ -18,7 +22,24 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { TrackedCTA } from "@/components/ui/tracked-cta";
 
-const navLinks = [
+type NavLink = { href: string; label: string };
+type LocaleEntry = { code: string; label: string; href: string };
+
+export type NavProps = {
+  navLinks?: NavLink[];
+  locales?: LocaleEntry[];
+  currentLocale?: string;
+  labels?: {
+    skipToContent: string;
+    mainNav: string;
+    openMenu: string;
+    closeMenu: string;
+    cta: string;
+  };
+  ctaHref?: string;
+};
+
+const DEFAULT_LINKS: NavLink[] = [
   { href: "/#solutions", label: "Rozwiązania" },
   { href: "/#process", label: "Realizacja" },
   { href: "/#showcase", label: "Galeria" },
@@ -26,13 +47,27 @@ const navLinks = [
   { href: "/kontakt", label: "Kontakt" },
 ];
 
-const locales = [
+const DEFAULT_LOCALES: LocaleEntry[] = [
   { code: "pl", label: "PL", href: "/" },
   { code: "en", label: "EN", href: "/en" },
   { code: "uk", label: "UA", href: "/uk" },
 ];
 
-export function Nav() {
+const DEFAULT_LABELS = {
+  skipToContent: "Przejdź do treści",
+  mainNav: "Nawigacja główna",
+  openMenu: "Otwórz menu",
+  closeMenu: "Zamknij menu",
+  cta: "Bezpłatna wycena",
+};
+
+export function Nav({
+  navLinks = DEFAULT_LINKS,
+  locales = DEFAULT_LOCALES,
+  currentLocale = "pl",
+  labels = DEFAULT_LABELS,
+  ctaHref = "/#cta",
+}: NavProps = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -57,11 +92,11 @@ export function Nav() {
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded focus:bg-red focus:px-4 focus:py-2 focus:text-sm focus:text-white"
       >
-        Przejdź do treści
+        {labels.skipToContent}
       </a>
 
       <nav
-        aria-label="Nawigacja główna"
+        aria-label={labels.mainNav}
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
             ? "border-b border-white/8 bg-bg/85 backdrop-blur-md"
@@ -91,7 +126,7 @@ export function Nav() {
                   <Link
                     href={l.href}
                     className={
-                      i === 0
+                      l.code === currentLocale
                         ? "text-white"
                         : "text-white/45 hover:text-white"
                     }
@@ -110,16 +145,16 @@ export function Nav() {
             <TrackedCTA
               event="cta_click"
               props={{ location: "nav", label: "bezplatna_wycena" }}
-              href="/#cta"
+              href={ctaHref}
               className="rounded-full border border-red bg-red px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-red-deep hover:border-red-deep"
             >
-              Bezpłatna wycena
+              {labels.cta}
             </TrackedCTA>
           </div>
 
           <button
             type="button"
-            aria-label={open ? "Zamknij menu" : "Otwórz menu"}
+            aria-label={open ? labels.closeMenu : labels.openMenu}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -168,11 +203,13 @@ export function Nav() {
 
           <div className="mt-auto flex flex-col gap-6">
             <ul className="flex gap-4 text-[13px] font-semibold text-white/55">
-              {locales.map((l, i) => (
+              {locales.map((l) => (
                 <li key={l.code}>
                   <Link
                     href={l.href}
-                    className={i === 0 ? "text-white" : "hover:text-white"}
+                    className={
+                      l.code === currentLocale ? "text-white" : "hover:text-white"
+                    }
                   >
                     {l.label}
                   </Link>
@@ -182,10 +219,10 @@ export function Nav() {
             <TrackedCTA
               event="cta_click"
               props={{ location: "nav_mobile", label: "bezplatna_wycena" }}
-              href="/#cta"
+              href={ctaHref}
               className="rounded-full bg-red px-6 py-4 text-center text-sm font-semibold text-white"
             >
-              Bezpłatna wycena
+              {labels.cta}
             </TrackedCTA>
           </div>
         </div>

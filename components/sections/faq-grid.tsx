@@ -7,17 +7,18 @@
  * Renders the comprehensive FAQ with:
  *   - Category filter chips (Wszystkie / Produkty / Montaż / Ceny / etc.)
  *   - Expandable accordion entries grouped by category
- *   - URL param sync (?kategoria=montaz) for shareable filtered views
+ *   - URL param sync for shareable filtered views
  *   - Auto-scroll to the question when arriving with a #slug anchor
  *
- * Default unfiltered view = all 28 questions rendered server-side,
- * which means Google indexes everything regardless of JavaScript.
+ * Locale-aware: pass `categories`, `categoryParam` and `labels` to render
+ * an English/Ukrainian FAQ page. Defaults match the Polish setup so existing
+ * /pytania page keeps working unchanged.
  */
 
 import { useEffect, useMemo, useState } from "react";
 
 import type { FaqEntry, FaqCategory } from "@/content/faq";
-import { faqCategories } from "@/content/faq";
+import { faqCategories as defaultFaqCategories } from "@/content/faq";
 
 type CategoryFilter = "all" | FaqCategory;
 
@@ -30,32 +31,47 @@ type FilterOption = {
 type FaqGridProps = {
   faqs: FaqEntry[];
   options: FilterOption[];
+  /** Override category map for non-PL locales. Default = PL faqCategories. */
+  categories?: Record<FaqCategory, { label: string; description: string }>;
+  /** URL search param name. Default "kategoria". EN: "category", UK: "kategoriya". */
+  categoryParam?: string;
+  /** Localised UI labels. */
+  labels?: {
+    categoryHint: string;
+  };
 };
 
-export function FaqGrid({ faqs, options }: FaqGridProps) {
+const DEFAULT_LABELS = {
+  categoryHint: "Kategoria",
+};
+
+export function FaqGrid({
+  faqs,
+  options,
+  categories = defaultFaqCategories,
+  categoryParam = "kategoria",
+  labels = DEFAULT_LABELS,
+}: FaqGridProps) {
   const [filter, setFilter] = useState<CategoryFilter>("all");
 
-  // Hydrate filter from URL on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const k = params.get("kategoria");
+    const k = params.get(categoryParam);
     if (k && options.some((o) => o.value === k)) {
       setFilter(k as CategoryFilter);
     }
-  }, [options]);
+  }, [options, categoryParam]);
 
-  // Push state back to URL on change
   useEffect(() => {
     const params = new URLSearchParams();
-    if (filter !== "all") params.set("kategoria", filter);
+    if (filter !== "all") params.set(categoryParam, filter);
     const qs = params.toString();
     const newUrl = qs
       ? `${window.location.pathname}?${qs}${window.location.hash}`
       : `${window.location.pathname}${window.location.hash}`;
     window.history.replaceState(null, "", newUrl);
-  }, [filter]);
+  }, [filter, categoryParam]);
 
-  // On mount, if URL has a #slug anchor, expand that question and scroll
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (!hash) return;
@@ -73,37 +89,33 @@ export function FaqGrid({ faqs, options }: FaqGridProps) {
     return faqs.filter((f) => f.category === filter);
   }, [faqs, filter]);
 
-  // Group by category for visual sections (only when showing "all")
   const grouped = useMemo(() => {
     if (filter !== "all") {
-      // Single section
       return [
         {
           category: filter as FaqCategory,
-          label: faqCategories[filter as FaqCategory].label,
+          label: categories[filter as FaqCategory].label,
           entries: filtered,
         },
       ];
     }
 
-    // Group by category
-    return (Object.keys(faqCategories) as FaqCategory[])
+    return (Object.keys(categories) as FaqCategory[])
       .map((cat) => ({
         category: cat,
-        label: faqCategories[cat].label,
+        label: categories[cat].label,
         entries: faqs.filter((f) => f.category === cat),
       }))
       .filter((group) => group.entries.length > 0);
-  }, [faqs, filter, filtered]);
+  }, [faqs, filter, filtered, categories]);
 
   return (
     <>
-      {/* ════════ Filter bar — sticky on scroll ════════ */}
       <div className="sticky top-20 z-30 border-b border-white/10 bg-bg/95 backdrop-blur md:top-24">
         <div className="mx-auto max-w-7xl px-4 py-5 md:px-6 md:py-6">
           <div className="flex flex-wrap items-center gap-2">
             <span className="mr-2 hidden font-mono text-[11px] uppercase tracking-[0.15em] text-white/45 md:inline">
-              Kategoria
+              {labels.categoryHint}
             </span>
             {options.map((opt) => {
               const active = filter === opt.value;
@@ -135,7 +147,6 @@ export function FaqGrid({ faqs, options }: FaqGridProps) {
         </div>
       </div>
 
-      {/* ════════ FAQ groups ════════ */}
       <div className="bg-bg pb-20 md:pb-24">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           {grouped.map((group, gi) => (
