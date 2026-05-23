@@ -12,10 +12,10 @@ import { products } from "@/content/ua/products";
 
 const company = [
   { href: "/ua/pro-nas", label: "Про нас" },
-  { href: "/wspolpraca-b2b", label: "Співпраця B2B", note: "PL" },
-  { href: "/dealerzy", label: "Стати дилером", note: "PL" },
-  { href: "/kariera", label: "Кар'єра", note: "PL" },
-  { href: "/blog", label: "Блог", note: "PL" },
+  { href: "/ua/b2b", label: "Співпраця B2B" },
+  { href: "/ua/dileri", label: "Стати дилером" },
+  { href: "/ua/kariera", label: "Кар'єра" },
+  { href: "/ua/blog", label: "Блог" },
   { href: "/ua/pytannya", label: "Питання та відповіді" },
   { href: "/ua/kontakty", label: "Контакти" },
 ];
@@ -79,14 +79,9 @@ export function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1.5 text-sm text-white/55 transition-colors hover:text-white"
+                  className="text-sm text-white/55 transition-colors hover:text-white"
                 >
                   {item.label}
-                  {"note" in item && item.note && (
-                    <span className="rounded border border-white/20 px-1 py-0.5 font-mono text-[9px] uppercase tracking-[0.1em] text-white/50">
-                      {item.note}
-                    </span>
-                  )}
                 </Link>
               </li>
             ))}
