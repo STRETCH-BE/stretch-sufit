@@ -24,7 +24,7 @@ export function ProjectCredit({
   intro = "Wnętrze zostało zaprojektowane od podstaw przez zewnętrzne studio. Nasza rola ograniczała się do dostawy i montażu sufitu w zatwierdzonym przez nich kształcie i wykończeniu.",
 }: Props) {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="text-bg bg-white py-20 md:py-28">
       <Container className="grid gap-10 md:grid-cols-12 md:gap-12">
         <div className="md:col-span-5">
           <SectionTitle as="h2">{heading}</SectionTitle>

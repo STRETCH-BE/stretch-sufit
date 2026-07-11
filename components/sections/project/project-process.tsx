@@ -21,7 +21,7 @@ export function ProjectProcess({
   steps,
 }: Props) {
   return (
-    <section className="bg-paper py-20 md:py-28">
+    <section className="text-bg bg-paper py-20 md:py-28">
       <Container>
         <SectionTitle as="h2">{heading}</SectionTitle>
 

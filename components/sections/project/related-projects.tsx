@@ -18,7 +18,7 @@ export function RelatedProjects({ currentSlug }: Props) {
   const fillers = Math.max(0, 3 - others.length);
 
   return (
-    <section className="bg-paper py-20 md:py-28">
+    <section className="text-bg bg-paper py-20 md:py-28">
       <Container>
         <SectionTitle as="h2">Inne realizacje</SectionTitle>
 

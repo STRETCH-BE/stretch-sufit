@@ -23,7 +23,7 @@ export function ProjectBrief({
   imageAlt,
 }: Props) {
   return (
-    <section className="bg-paper">
+    <section className="text-bg bg-paper">
       <Container className="grid gap-10 py-20 md:grid-cols-12 md:gap-12 md:py-28">
         <div className="md:col-span-5">
           <figure className="overflow-hidden rounded-2xl">

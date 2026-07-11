@@ -33,7 +33,7 @@ export function CreditCard({
 
   return (
     <div
-      className={`rounded-2xl border border-black/10 bg-paper p-6 md:p-8 ${className}`}
+      className={`rounded-2xl border border-black/10 bg-paper p-6 text-bg md:p-8 ${className}`}
     >
       <p className="font-mono text-xs uppercase tracking-[0.18em] text-bg/55">
         {label}

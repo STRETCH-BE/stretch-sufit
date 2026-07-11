@@ -58,7 +58,7 @@ export function ProjectMetaStrip({ project }: Props) {
   }
 
   return (
-    <section className="border-y border-bg/10 bg-paper">
+    <section className="text-bg border-y border-bg/10 bg-paper">
       <Container className="py-6">
         <dl className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 md:grid-cols-6">
           {items.map((it) => (

@@ -21,7 +21,7 @@ export function ProjectReasons({
   cards,
 }: Props) {
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="text-bg bg-white py-20 md:py-28">
       <Container>
         <SectionTitle as="h2">{heading}</SectionTitle>
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
