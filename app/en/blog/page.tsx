@@ -261,7 +261,7 @@ export default function BlogPageEn() {
           </Container>
         </section>
 
-        <section id="articles" className="bg-paper py-24 md:py-32">
+        <section id="articles" className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
@@ -466,7 +466,7 @@ export default function BlogPageEn() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">

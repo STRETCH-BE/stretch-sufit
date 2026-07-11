@@ -120,7 +120,7 @@ export default function CitiesHubPage() {
         </section>
 
         {/* ════════ Cities by region ════════ */}
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="space-y-16 md:space-y-20">
               {citiesByRegion.map((group, gi) => (

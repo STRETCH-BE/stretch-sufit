@@ -81,7 +81,7 @@ export default function ProductsHubPageUk() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid gap-8 md:grid-cols-2 md:gap-10">
               {products.map((product, i) => (

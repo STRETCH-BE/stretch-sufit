@@ -241,7 +241,7 @@ export default async function CityPageUk({
         </section>
 
         {city.districts.length > 0 && (
-          <section className="bg-paper py-24 md:py-32">
+          <section className="text-bg bg-paper py-24 md:py-32">
             <Container>
               <div className="mx-auto max-w-4xl">
                 <FadeIn><Eyebrow tone="on-paper">Райони, які ми обслуговуємо</Eyebrow></FadeIn>

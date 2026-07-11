@@ -237,7 +237,7 @@ export default function B2BPageUa() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-5">
@@ -332,7 +332,7 @@ export default function B2BPageUa() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">

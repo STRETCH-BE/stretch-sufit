@@ -98,7 +98,7 @@ export default function WarrantyPageUk() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn><Eyebrow tone="on-paper">Два матеріали, дві гарантії</Eyebrow></FadeIn>
@@ -261,7 +261,7 @@ export default function WarrantyPageUk() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn><Eyebrow tone="on-paper">Як подати заявку</Eyebrow></FadeIn>

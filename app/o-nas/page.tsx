@@ -101,7 +101,7 @@ export default function AboutPage() {
         </section>
 
         {/* ════════ Origin — Polish chapter on paper ════════ */}
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
@@ -232,7 +232,7 @@ export default function AboutPage() {
         </section>
 
         {/* ════════ The merger — 2024 ════════ */}
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-start gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
@@ -419,7 +419,7 @@ export default function AboutPage() {
         </section>
 
         {/* ════════ What's next — Re-Sound ════════ */}
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-7">

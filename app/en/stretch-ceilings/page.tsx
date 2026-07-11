@@ -87,7 +87,7 @@ export default function CitiesHubPageEn() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <FadeIn>
               <Eyebrow tone="on-paper">Featured cities</Eyebrow>

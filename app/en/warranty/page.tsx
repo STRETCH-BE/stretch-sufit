@@ -103,7 +103,7 @@ export default function WarrantyPageEn() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn>
@@ -282,7 +282,7 @@ export default function WarrantyPageEn() {
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn>

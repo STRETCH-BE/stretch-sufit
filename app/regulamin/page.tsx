@@ -80,7 +80,7 @@ export default function RegulaminPage() {
         </section>
 
         {/* ════════ OWU body ════════ */}
-        <section className="bg-paper pb-24 pt-20 md:pb-32 md:pt-24">
+        <section className="text-bg bg-paper pb-24 pt-20 md:pb-32 md:pt-24">
           <Container>
             <article className="mx-auto max-w-3xl">
               {/* Preamble */}

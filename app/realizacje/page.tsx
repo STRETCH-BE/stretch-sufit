@@ -21,7 +21,7 @@ export default function RealizacjeIndexPage() {
     <>
       <Nav />
       <main id="main">
-        <section className="bg-paper py-20 md:py-28">
+        <section className="text-bg bg-paper py-20 md:py-28">
           <Container>
             <SectionTitle as="h1">Realizacje</SectionTitle>
             <p className="mt-4 max-w-2xl text-lg text-bg/70">

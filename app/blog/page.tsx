@@ -282,7 +282,7 @@ export default function BlogPage() {
         </section>
 
         {/* ════════ Editorial pipeline ════════ */}
-        <section id="artykuly" className="bg-paper py-24 md:py-32">
+        <section id="artykuly" className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
@@ -491,7 +491,7 @@ export default function BlogPage() {
         </section>
 
         {/* ════════ Products as further reading ════════ */}
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">

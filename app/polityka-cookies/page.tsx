@@ -153,7 +153,7 @@ export default function PolitykaCookiesPage() {
         </section>
 
         {/* ════════ Categories ════════ */}
-        <section className="bg-paper py-20 md:py-24">
+        <section className="text-bg bg-paper py-20 md:py-24">
           <Container>
             <div className="mx-auto max-w-4xl space-y-14">
               {/* What are cookies — intro */}

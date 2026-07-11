@@ -200,7 +200,7 @@ export default async function ProductPageUk({
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <FadeIn><Eyebrow tone="on-paper">Що вирізняє цей продукт</Eyebrow></FadeIn>
@@ -269,7 +269,7 @@ export default async function ProductPageUk({
           </Container>
         </section>
 
-        <section className="bg-paper py-24 md:py-32">
+        <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="mx-auto max-w-3xl">
               <FadeIn><Eyebrow tone="on-paper">Технічна специфікація</Eyebrow></FadeIn>
@@ -348,7 +348,7 @@ export default async function ProductPageUk({
           </Container>
         </section>
 
-        <section className="bg-paper py-20 md:py-24">
+        <section className="text-bg bg-paper py-20 md:py-24">
           <Container>
             <FadeIn><Eyebrow tone="on-paper">Інші рішення</Eyebrow></FadeIn>
             <FadeIn delay={80}>

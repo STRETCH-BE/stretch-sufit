@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   title:
     "AFAS Lounge, Antwerpia — sufit czarny połysk + akustyka | Stretch Sufit",
   description:
-    "Realizacja sufitu napinanego w wykończeniu czarny połysk z warstwą akustyczną w 250-metrowym loungu AFAS Dome w Antwerpii. Projekt: Creneau International. Belgijska technologia, montaż w 1 dzień.",
+    "Realizacja sufitu napinanego w wykończeniu czarny połysk z warstwą akustyczną w 250-metrowym VIP loungu AFAS Dome w Antwerpii. Projekt: Creneau International. Produkcja: Alto Design (Polska), montaż: nasz belgijski zespół, 3 dni.",
   alternates: {
     canonical: "/realizacje/afas-lounge-antwerpia",
   },
@@ -67,7 +67,7 @@ export default function AfasLoungeAntwerpiaPage() {
   const creativeWorkLd = buildCreativeWork({
     name: "AFAS Lounge, Antwerpia — sufit napinany czarny połysk + akustyka",
     description:
-      "250 m² sufitu napinanego w wykończeniu czarny połysk z warstwą akustyczną. Multifunkcyjny lounge AFAS Dome w Antwerpii. Projekt wnętrza: Creneau International.",
+      "250 m² sufitu napinanego w wykończeniu czarny połysk z warstwą akustyczną. Multifunkcyjny VIP lounge AFAS Dome w Antwerpii. Produkcja: Alto Design (Polska), montaż: belgijski zespół Stretchgroup, 3 dni. Projekt wnętrza: Creneau International.",
     url: `${siteConfig.url}/realizacje/${SLUG}`,
     image: [
       `${siteConfig.url}${project.heroImage}`,
@@ -93,7 +93,7 @@ export default function AfasLoungeAntwerpiaPage() {
     {
       question: "Ile trwał montaż sufitu w AFAS Dome?",
       answer:
-        "Montaż 250 m² sufitu napinanego w loungu AFAS Dome trwał 1 dzień, w czynnym obiekcie, bez prac wykończeniowych po stronie sufitu.",
+        "Montaż 250 m² sufitu napinanego w VIP loungu AFAS Dome trwał 3 dni, w czynnym obiekcie, bez prac wykończeniowych po stronie sufitu. Folię wyprodukowała fabryka Alto Design w Polsce, montaż wykonał nasz belgijski zespół.",
     },
     {
       question: "Kto zaprojektował AFAS Lounge?",
@@ -112,8 +112,8 @@ export default function AfasLoungeAntwerpiaPage() {
           titleRed="AFAS Lounge."
           titleItalic="Czarny połysk"
           titleTail=" spotyka akustykę."
-          subheadFactual="Sufit napinany w wykończeniu czarny połysk z warstwą akustyczną, zamontowany w 250-metrowym loungu AFAS Dome w Antwerpii."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — w tym projekcie belgijska technologia trafiła do belgijskiego obiektu, dla belgijskiego operatora BE•AT i sponsora tytularnego AFAS."
+          subheadFactual="Sufit napinany w wykończeniu czarny połysk z warstwą akustyczną, zamontowany w 250-metrowym VIP loungu AFAS Dome — teatru eventowego w Antwerpii."
+          subheadSecondary="Stretch jest częścią belgijskiej Stretchgroup — w tym projekcie nasze sufity napinane, wyprodukowane w Polsce przez Alto Design, trafiły do belgijskiego obiektu. Montaż w VIP Roomie wykonał nasz belgijski zespół — dla operatora BE•AT i sponsora tytularnego AFAS."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",
@@ -131,7 +131,7 @@ export default function AfasLoungeAntwerpiaPage() {
           heroImage={project.heroImage}
           heroAlt={project.heroAlt}
           heroCaption="AFAS Lounge · AFAS Dome, Antwerpia · 2025"
-          chips={["250 m²", "1 dzień montażu", "Czarny połysk + akustyka"]}
+          chips={["250 m²", "3 dni montażu", "Czarny połysk + akustyka"]}
         />
 
         {/* 3 — Meta strip */}
@@ -140,12 +140,12 @@ export default function AfasLoungeAntwerpiaPage() {
         {/* 4 — Ticker (project-specific items) */}
         <Ticker
           items={[
-            "Made in Belgium",
+            "Made in Poland",
             "Installed in Belgium",
             "250 m²",
             "Gloss Black PVC",
             "Acoustic backing",
-            "1 day on site",
+            "3 days on site",
             "Designed by Creneau International",
           ]}
         />
@@ -154,12 +154,12 @@ export default function AfasLoungeAntwerpiaPage() {
         <Heritage
           paragraph={
             <em className="italic">
-              Belgijska technologia. Belgijski obiekt. Belgijska realizacja od
-              pierwszego szkicu do ostatniego napięcia folii.
+              Wyprodukowany w Polsce przez Alto Design. Zamontowany w Belgii
+              przez nasz belgijski zespół — jedna grupa, dwa kraje, jeden sufit.
             </em>
           }
           tags={[
-            { flag: "BE", label: "Produkcja Belgia" },
+            { flag: "PL", label: "Produkcja Polska" },
             { flag: "BE", label: "Montaż w Belgii" },
           ]}
         />
@@ -175,8 +175,8 @@ export default function AfasLoungeAntwerpiaPage() {
               description: "Multifunkcyjny lounge w AFAS Dome.",
             },
             {
-              number: <span className="text-red">1</span>,
-              suffix: "dzień",
+              number: <span className="text-red">3</span>,
+              suffix: "dni",
               emphasis: "Montażu w czynnym obiekcie.",
               description: "Bez przerwy w przygotowaniach do otwarcia.",
             },
@@ -222,8 +222,8 @@ export default function AfasLoungeAntwerpiaPage() {
               body: "perforacja + absorber, redukuje pogłos w pasmach mowy i muzyki.",
             },
             {
-              strong: "Bezszwowy montaż do 5,15 m szerokości",
-              body: "produkcja Stretch Ceiling MSD, Belgia — bez widocznych łączeń na większości powierzchni.",
+              strong: "Folia bezszwowa do 6,50 m szerokości",
+              body: "produkcja Alto Design, Polska — bez widocznych łączeń na większości powierzchni.",
             },
             {
               strong: "Zintegrowane oświetlenie LED i punkty głośnikowe",
@@ -234,7 +234,7 @@ export default function AfasLoungeAntwerpiaPage() {
               body: "sufit można otworzyć dla serwisu instalacji nad nim, bez wymiany folii.",
             },
           ]}
-          caption="Połysk i akustyka w jednej powłoce to standard w Stretch Ceiling MSD — nie była to specjalna konstrukcja dla tego projektu, tylko właściwy wybór z istniejącej oferty."
+          caption="Połysk i akustyka w jednej powłoce to standard w Stretch — nie była to specjalna konstrukcja dla tego projektu, tylko właściwy wybór z istniejącej oferty."
         />
 
         {/* 9 — Galeria */}
@@ -254,12 +254,12 @@ export default function AfasLoungeAntwerpiaPage() {
               body: "Wymiary, wymóg lustra + tłumienia, paleta AFAS/BE•AT. Spec ustalony w jednym przejściu.",
             },
             {
-              title: "Produkcja w Belgii",
-              body: "Wycięcie folii czarny połysk + warstwy akustycznej pod kształt sali, w tym otwory pod oświetlenie i głośniki.",
+              title: "Produkcja w Polsce",
+              body: "Folia czarny połysk + warstwa akustyczna wycięte pod kształt sali w fabryce Alto Design w Częstochowie, w tym otwory pod oświetlenie i głośniki.",
             },
             {
-              title: "Montaż w 1 dzień",
-              body: "W czynnym obiekcie, bez prac wykończeniowych, bez kurzu. Ekipa wchodzi i wychodzi w jednym oknie.",
+              title: "Montaż w 3 dni",
+              body: "Nasz belgijski zespół, w czynnym obiekcie, bez prac wykończeniowych, bez kurzu.",
             },
             {
               title: "Odbiór i otwarcie",
@@ -281,7 +281,7 @@ export default function AfasLoungeAntwerpiaPage() {
             },
             {
               title: "Montaż w obiekcie w użyciu",
-              body: "1 dzień, bez kurzu, bez przerwy w przygotowaniach do otwarcia.",
+              body: "3 dni, bez kurzu, bez przerwy w przygotowaniach do otwarcia.",
             },
           ]}
         />
