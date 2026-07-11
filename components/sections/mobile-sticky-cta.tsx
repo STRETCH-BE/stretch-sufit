@@ -27,10 +27,10 @@ export function MobileStickyCTA() {
   return (
     <div
       aria-hidden={!show}
-      className={`pointer-events-none fixed inset-x-4 bottom-4 z-40 transition-all duration-300 lg:hidden ${
+      className={`fixed inset-x-4 bottom-4 z-40 transition-all duration-300 lg:hidden ${
         show
           ? "pointer-events-auto translate-y-0 opacity-100"
-          : "translate-y-4 opacity-0"
+          : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
       <TrackedCTA

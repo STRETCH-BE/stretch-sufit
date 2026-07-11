@@ -31,7 +31,7 @@ export function EditorialIntro() {
                 Co to jest
               </span>
               <Image
-                src="images/details/szczegół sufitu napinanego sufitu napinanego z poliestru.jpg"
+                src="/images/details/detal-sufitu-poliestrowego.jpg"
                 alt="Detal sufitu napinanego — gładka, bezspoinowa powierzchnia"
                 fill
                 loading="lazy"

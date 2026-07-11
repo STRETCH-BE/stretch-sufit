@@ -27,7 +27,7 @@ export function EditorialIntro() {
                 Що це
               </span>
               <Image
-                src="/images/details/szczegół sufitu napinanego sufitu napinanego z poliestru.jpg"
+                src="/images/details/detal-sufitu-poliestrowego.jpg"
                 alt="Деталь натяжної стелі — гладка безшовна поверхня"
                 fill
                 loading="lazy"

@@ -27,7 +27,7 @@ export function EditorialIntro() {
                 What it is
               </span>
               <Image
-                src="/images/details/szczegół sufitu napinanego sufitu napinanego z poliestru.jpg"
+                src="/images/details/detal-sufitu-poliestrowego.jpg"
                 alt="Detail of a stretch ceiling — smooth, jointless surface"
                 fill
                 loading="lazy"
