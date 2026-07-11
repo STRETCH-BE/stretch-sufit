@@ -107,7 +107,7 @@ export default function RuePerreeParyzPage() {
           titleItalic="Tunable White"
           titleTail=" w paryskim concept storze."
           subheadFactual="Sufit STRETCH Light Tunable White na 45 m² powierzchni paryskiego concept store'u ART RECHERCHE INDUSTRIE przy Rue Perrée. Regulacja temperatury barwowej w zakresie od ciepłej do chłodnej — w jednej powłoce sufitowej."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — ten sam system Tunable White, który oświetla butiki w Paryżu, dostarczamy klientom retailowym w Polsce."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — ten sam system Tunable White, który oświetla butiki w Paryżu, dostarczamy klientom retailowym w Polsce."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",

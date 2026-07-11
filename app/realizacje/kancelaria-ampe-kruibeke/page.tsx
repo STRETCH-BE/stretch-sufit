@@ -117,7 +117,7 @@ export default function KancelariaAmpePage() {
           titleItalic="Akustyka"
           titleTail=" spotyka design."
           subheadFactual="Sufit napinany akustyczny z dodatkową warstwą wełny poliestrowej D40/50, zamontowany na 350 m² powierzchni kancelarii notarialnej Ampe Anthony w Kruibeke. Czas pogłosu po montażu: 0,6 sekundy."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — ten projekt zrealizował lokalny belgijski dealer grupy. Pokazuje pełen zakres technologii akustycznej dostępnej również w polskim oddziale."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — ten projekt zrealizował lokalny belgijski dealer grupy. Pokazuje pełen zakres technologii akustycznej dostępnej również w polskim oddziale."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",

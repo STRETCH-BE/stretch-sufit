@@ -104,7 +104,7 @@ export default function VanDerValkBeverenPage() {
           titleItalic="aW 0,95"
           titleTail=" w sali bankietowej."
           subheadFactual="Sala bankietowa hotelu Van der Valk Beveren miała wysokość zaledwie 255 cm i wieloletni problem akustyczny. System sufitowy o głębokości 50 mm uzyskał współczynnik pochłaniania aW 0,95 — przy obniżeniu sufitu o 5 cm."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — ten sam system akustyczny, który rozwiązał problem pogłosu w belgijskim hotelu, dostarczamy klientom hotelowym i HoReCa w Polsce."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — ten sam system akustyczny, który rozwiązał problem pogłosu w belgijskim hotelu, dostarczamy klientom hotelowym i HoReCa w Polsce."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",
@@ -217,7 +217,7 @@ export default function VanDerValkBeverenPage() {
           <ProjectCredit
             heading="Wykonawca"
             studio={project.designStudio}
-            bodyText="Projekt zrealizował belgijski oddział grupy STRETCH przy konsultacji z Michaelem Nicasens. Dobrane rozwiązanie — system 50 mm o współczynniku aW 0,95 — pochodzi z katalogu Stretch Ceiling MSD, tego samego, z którego oferujemy systemy akustyczne klientom w Polsce."
+            bodyText="Projekt zrealizował belgijski oddział grupy STRETCH przy konsultacji z Michaelem Nicasens. Dobrane rozwiązanie — system 50 mm o współczynniku aW 0,95 — pochodzi z katalogu Stretchgroup, tego samego, z którego oferujemy systemy akustyczne klientom w Polsce."
             projectSlug={SLUG}
             intro="Realizacja powstała w belgijskim oddziale grupy STRETCH. Stretch Sufit dostarcza identyczne rozwiązania akustyczne dla hoteli, sal weselnych i obiektów HoReCa w Polsce."
           />

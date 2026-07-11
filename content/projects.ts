@@ -59,12 +59,9 @@ export const projects: Project[] = [
     heroAlt: "Sufit STRETCH Light Tunable White w boutique concept store ART RECHERCHE INDUSTRIE przy Rue Perrée w Paryżu.",
     ogImage: "/images/projects/rue-perree-paryz/og.jpg",
     gallery: [
-      { src: "/images/projects/rue-perree-paryz/01-overview.jpg", alt: "Widok ogólny butiku ART RECHERCHE INDUSTRIE z sufitem Tunable White.", caption: "Widok ogólny", note: "45 m² podświetlonej powierzchni sufitu" },
-      { src: "/images/projects/rue-perree-paryz/02-warm-mode.jpg", alt: "Tryb ciepły — światło 2700 K.", caption: "Tryb ciepły", note: "Niska temperatura barwowa, klimat butikowy" },
-      { src: "/images/projects/rue-perree-paryz/03-cool-mode.jpg", alt: "Tryb zimny — światło 6500 K.", caption: "Tryb zimny", note: "Wysoka temperatura barwowa, pełna ekspozycja produktu" },
-      { src: "/images/projects/rue-perree-paryz/04-product-display.jpg", alt: "Ekspozycja produktu pod sufitem podświetlanym.", caption: "Ekspozycja produktu", note: "Sufit jako równomierne źródło światła" },
-      { src: "/images/projects/rue-perree-paryz/05-detail.jpg", alt: "Detal styku sufitu napinanego ze ścianą.", caption: "Detal wykończenia", note: "Bezszwowa folia translucentna" },
-      { src: "/images/projects/rue-perree-paryz/06-night.jpg", alt: "Butik wieczorem z sufitem jako głównym źródłem światła.", caption: "Tryb wieczorny", note: "Cały sufit jako oprawa świetlna" },
+      { src: "/images/projects/rue-perree-paryz/01-boutique.jpg", alt: "Wnętrze butiku ART RECHERCHE INDUSTRIE z podświetlanym sufitem napinanym Tunable White.", caption: "Widok ogólny butiku", note: "Fot. Quentin Lacombe" },
+      { src: "/images/projects/rue-perree-paryz/02-ekspozycja.jpg", alt: "Ekspozycja produktów pod równomiernie świecącym sufitem tekstylnym.", caption: "Ekspozycja pod sufitem świetlnym", note: "Fot. Quentin Lacombe" },
+      { src: "/images/projects/rue-perree-paryz/03-sufit-swietlny.jpg", alt: "Bezcieniowy, podświetlany sufit napinany — cała powierzchnia jako oprawa świetlna.", caption: "Bezcieniowy sufit świetlny", note: "Równomierna luminancja całej powierzchni" },
     ],
     tags: ["tunable white", "light", "retail", "francja", "paryż"],
     cardImage: "/images/projects/rue-perree-paryz/card.jpg",
@@ -161,12 +158,12 @@ export const projects: Project[] = [
     heroAlt: "Sufit napinany w kształcie wieka fortepianu w sklepie Polette w Antwerpii — koncept Imagine zaprojektowany przez zU-studio.",
     ogImage: "/images/projects/polette-antwerpia/og.jpg",
     gallery: [
-      { src: "/images/projects/polette-antwerpia/01-piano-ceiling.jpg", alt: "Rzeźba sufitowa w kształcie otwartego wieka fortepianu.", caption: "Wieko fortepianu w suficie", note: "20 m głębokości showroomu" },
-      { src: "/images/projects/polette-antwerpia/02-keyboard-wall.jpg", alt: "Ściana z 88 klawiszami fortepianowymi w sklepie Polette.", caption: "Ściana z 88 klawiszami", note: "Białe klawisze — lustra, czarne — półki" },
-      { src: "/images/projects/polette-antwerpia/03-mirror-keys.jpg", alt: "Klawisze-lustra od podłogi do sufitu w Polette.", caption: "Klawisze-lustra", note: "Efekt nieskończoności" },
-      { src: "/images/projects/polette-antwerpia/04-bench.jpg", alt: "Centralna biała kwadratowa ławka — odniesienie do Bed-In Lennona.", caption: "Centralna ławka", note: "Odniesienie do Bed-In Lennona" },
-      { src: "/images/projects/polette-antwerpia/05-light-sensors.jpg", alt: "Klawisze z sensorami — interaktywny instrument muzyczny.", caption: "Interaktywne klawisze", note: "Sensory + sygnały świetlne" },
-      { src: "/images/projects/polette-antwerpia/06-translucent.jpg", alt: "Detal akustycznego sufitu translucentnego.", caption: "Sufit translucentny", note: "Akustyka + przepuszczalność światła" },
+      { src: "/images/projects/polette-antwerpia/01-widok-ogolny.jpg", alt: "Widok ogólny salonu polette w Antwerpii z podświetlaną rzeźbą sufitową.", caption: "Widok ogólny salonu", note: "Wizual: zU-studio architecture" },
+      { src: "/images/projects/polette-antwerpia/02-wnetrze.jpg", alt: "Wnętrze salonu optycznego polette — strefa ekspozycji opraw.", caption: "Strefa ekspozycji opraw", note: "Wizual: zU-studio architecture" },
+      { src: "/images/projects/polette-antwerpia/03-detal.jpg", alt: "Detal translucentnej powłoki sufitu napinanego nad ekspozycją.", caption: "Detal powłoki translucentnej", note: "Światło rozproszone bez olśnienia" },
+      { src: "/images/projects/polette-antwerpia/04-sufit.jpg", alt: "Podświetlany sufit napinany prowadzący klienta w głąb salonu.", caption: "Sufit świetlny w osi salonu", note: "Wizual: zU-studio architecture" },
+      { src: "/images/projects/polette-antwerpia/05-ekspozycja.jpg", alt: "Ekspozycja okularów pod miękkim światłem sufitu napinanego.", caption: "Ekspozycja pod miękkim światłem", note: "Wizual: zU-studio architecture" },
+      { src: "/images/projects/polette-antwerpia/06-strefa.jpg", alt: "Strefa przymiarek salonu polette z rzeźbą sufitową.", caption: "Strefa przymiarek", note: "Wizual: zU-studio architecture" },
     ],
     tags: ["retail", "translucentny", "akustyka", "antwerpia", "zu-studio"],
     cardImage: "/images/projects/polette-antwerpia/card.jpg",
@@ -195,12 +192,14 @@ export const projects: Project[] = [
     heroAlt: "Akustyczny sufit napinany w prywatnej rezydencji 't Vier Emmershof w Lokeren — projekt Inzicht Architecten z widokiem na las.",
     ogImage: "/images/projects/vier-emmershof-lokeren/og.jpg",
     gallery: [
-      { src: "/images/projects/vier-emmershof-lokeren/01-glass-facade.jpg", alt: "Przeszklona tylna fasada otwierająca dom na las.", caption: "Przeszklenie na las", note: "Pełna przeszklenie tylnej elewacji" },
-      { src: "/images/projects/vier-emmershof-lokeren/02-living-area.jpg", alt: "Otwarty salon z widokiem na drzewa.", caption: "Salon", note: "Akustyka uspokaja otwartą przestrzeń" },
-      { src: "/images/projects/vier-emmershof-lokeren/03-void.jpg", alt: "Przestronna antresola z akustycznym sufitem.", caption: "Antresola", note: "Wielopoziomowa przestrzeń bez echa" },
-      { src: "/images/projects/vier-emmershof-lokeren/04-natural-finish.jpg", alt: "Naturalne wykończenia ścian harmonizujące z lasem.", caption: "Naturalne wykończenia", note: "Materiały spójne z otoczeniem" },
-      { src: "/images/projects/vier-emmershof-lokeren/05-detail.jpg", alt: "Detal styku sufitu napinanego z drewnianym elementem.", caption: "Detal sufitu", note: "Bezszwowy styk z drewnem" },
-      { src: "/images/projects/vier-emmershof-lokeren/06-forest-view.jpg", alt: "Widok z domu na zachowane stare świerki w ogrodzie.", caption: "Widok na las", note: "Największe świerki zachowane przy budowie" },
+      { src: "/images/projects/vier-emmershof-lokeren/03.jpg", alt: "Strefa dzienna apartamentu Vier Emmershof z gładkim sufitem akustycznym.", caption: "Strefa dzienna", note: "Sufit akustyczny bez widocznych paneli" },
+      { src: "/images/projects/vier-emmershof-lokeren/04.jpg", alt: "Minimalistyczne wnętrze z sufitem napinanym i zabudową na wymiar.", caption: "Gabinet domowy", note: "Oświetlenie zintegrowane w powłoce" },
+      { src: "/images/projects/vier-emmershof-lokeren/01.jpg", alt: "Detal wnętrza apartamentu — sufit akustyczny nad strefą wypoczynku.", caption: "Strefa wypoczynku", note: "Wełna poliestrowa D40/50 za powłoką" },
+      { src: "/images/projects/vier-emmershof-lokeren/02.jpg", alt: "Sufit napinany w komunikacji apartamentu.", caption: "Komunikacja", note: "Jednolita płaszczyzna bez łączeń" },
+      { src: "/images/projects/vier-emmershof-lokeren/08.jpg", alt: "Wysokie wnętrze apartamentu z sufitem akustycznym.", caption: "Przestrzeń dwukondygnacyjna", note: "Kontrola pogłosu w otwartej przestrzeni" },
+      { src: "/images/projects/vier-emmershof-lokeren/11.jpg", alt: "Kuchnia i jadalnia apartamentu Vier Emmershof.", caption: "Kuchnia i jadalnia", note: "Sufit akustyczny nad strefą dzienną" },
+      { src: "/images/projects/vier-emmershof-lokeren/12.jpg", alt: "Salon apartamentu z sufitem napinanym.", caption: "Salon", note: "Detal styku powłoki ze ścianą" },
+      { src: "/images/projects/vier-emmershof-lokeren/06.jpg", alt: "Sypialnia z akustycznym sufitem napinanym.", caption: "Sypialnia", note: "Cisza w strefie nocnej" },
     ],
     tags: ["akustyka", "rezydencja", "lokeren", "belgia", "inzicht"],
     cardImage: "/images/projects/vier-emmershof-lokeren/card.jpg",
@@ -239,6 +238,108 @@ export const projects: Project[] = [
     tags: ["akustyka", "biuro", "polyester wool", "belgia", "ante architecten"],
     cardImage: "/images/projects/kancelaria-ampe-kruibeke/card.jpg",
     cardSummary: "350 m² akustyki dla kancelarii notarialnej. Pogłos 0,6 s. Projekt: Ante Architecten.",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // 2024 — BNP Paribas Fortis, Bruksela (Jaspers-Eyers Architects)
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "bnp-paribas-fortis-bruksela",
+    title: "BNP Paribas Fortis",
+    subtitle: "Światło i akustyka w centrali banku",
+    client: "BNP Paribas Fortis",
+    venue: "Warandeberg, Bruksela",
+    country: "BE",
+    year: 2024,
+    surface_m2: 2000,
+    product: "STRETCH Light + STRETCH Acoustic — tekstylne sufity świetlne i akustyczne",
+    designStudio: {
+      name: "Jaspers-Eyers Architects",
+      url: "https://www.jaspers-eyers.be",
+      location: "Bruksela, Belgia",
+    },
+    heroImage: "/images/projects/bnp-paribas-fortis-bruksela/hero.jpg",
+    heroAlt:
+      "Barista Bar w centrali BNP Paribas Fortis w Brukseli — okrągły tekstylny klosz świetlny nad ladą.",
+    ogImage: "/images/projects/bnp-paribas-fortis-bruksela/og.jpg",
+    gallery: [
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/05-curved.jpg", alt: "Zakrzywione tekstylne klosze sufitowe nad strefami spotkań.", caption: "Zakrzywione formy tekstylne", note: "Tekstylia napinane na formach 3D" },
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/02-spanplafond.jpg", alt: "Sufit napinany w strefie gastronomicznej centrali banku.", caption: "Strefa gastronomiczna", note: "STRETCH Light — światło bez olśnienia" },
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/03-wnetrze.jpg", alt: "Wnętrze biurowe BNP Paribas Fortis z sufitem akustycznym.", caption: "Strefa pracy", note: "STRETCH Acoustic w przestrzeni open space" },
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/04-wnetrze-2.jpg", alt: "Strefa spotkań z tekstylnym sufitem świetlnym.", caption: "Strefa spotkań", note: "Światło i akustyka w jednej powłoce" },
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/06-curved-2.jpg", alt: "Boksy do pracy pod zakrzywionymi kloszami tekstylnymi.", caption: "Boksy do pracy", note: "Tłumienie pogłosu nad każdym boksem" },
+      { src: "/images/projects/bnp-paribas-fortis-bruksela/07-budynek.jpg", alt: "Budynek centrali BNP Paribas Fortis przy Warandeberg w Brukseli.", caption: "Siedziba przy Warandeberg", note: "Trzy kondygnacje stref wspólnych" },
+    ],
+    tags: ["stretch light", "stretch acoustic", "biuro", "bank", "belgia", "bruksela"],
+    cardImage: "/images/projects/bnp-paribas-fortis-bruksela/card.jpg",
+    cardSummary:
+      "2000 m² tekstylnych sufitów świetlnych i akustycznych w brukselskiej centrali banku. Projekt: Jaspers-Eyers Architects.",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // 2019–2023 — citizenM, prefabrykowane łazienki (USA + Europa)
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "citizenm-prefab-lazienki",
+    title: "citizenM",
+    subtitle: "Prefab z sufitem świetlnym w skali sieci hoteli",
+    client: "citizenM Hotels",
+    venue: "Miami, Nowy Jork, Chicago, Seattle, San Francisco, Los Angeles i inne",
+    country: "US",
+    year: 2023,
+    yearDisplay: "2019–2023",
+    surface_m2: 0,
+    product: "STRETCH Backlit — tekstylny sufit świetlny w prefabrykowanych unitach łazienkowych",
+    heroImage: "/images/projects/citizenm-prefab-lazienki/hero.jpg",
+    heroAlt:
+      "Pokój hotelowy citizenM z prefabrykowaną łazienką i podświetlanym sufitem tekstylnym w kabinie.",
+    ogImage: "/images/projects/citizenm-prefab-lazienki/og.jpg",
+    gallery: [
+      { src: "/images/projects/citizenm-prefab-lazienki/01-lazienka.jpg", alt: "Prefabrykowana łazienka citizenM z podświetlanym sufitem tekstylnym, w tle pokój hotelowy.", caption: "Unit łazienkowy w pokoju", note: "STRETCH Backlit — sufit jako oprawa świetlna" },
+      { src: "/images/projects/citizenm-prefab-lazienki/02-unit.jpg", alt: "Kabina prysznicowa prefabrykowanego unitu łazienkowego citizenM.", caption: "Kabina prefabrykowana", note: "Montaż powłoki poza placem budowy" },
+    ],
+    tags: ["prefab", "backlit", "hotel", "horeca", "usa", "citizenm"],
+    cardImage: "/images/projects/citizenm-prefab-lazienki/card.jpg",
+    cardSummary:
+      "Setki prefabrykowanych łazienek z tekstylnym sufitem świetlnym dla sieci citizenM — od Miami po San Francisco. Partner: Saniskill.",
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  // 2025 — Candor, Sint-Martens-Latem (Form Design + Goedele Perdu)
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "candor-sint-martens-latem",
+    title: "Candor",
+    subtitle: "Akustyka biura, której nie widać",
+    client: "Candor (deweloper)",
+    venue: "Kortrijksesteenweg 66-68, Sint-Martens-Latem",
+    country: "BE",
+    year: 2025,
+    surface_m2: 0,
+    product: "Akustyczny sufit napinany + LED + absorpcja w przestrzeni międzystropowej",
+    designStudio: {
+      name: "Form Design · Goedele Perdu",
+      url: "https://formdesign.be",
+      location: "Dendermonde, Belgia",
+    },
+    heroImage: "/images/projects/candor-sint-martens-latem/hero.jpg",
+    heroAlt:
+      "Kuchnia biura dewelopera Candor w Sint-Martens-Latem z gładkim akustycznym sufitem napinanym.",
+    ogImage: "/images/projects/candor-sint-martens-latem/og.jpg",
+    gallery: [
+      { src: "/images/projects/candor-sint-martens-latem/02.jpg", alt: "Open space biura Candor z akustycznym sufitem napinanym i zintegrowanym LED.", caption: "Open space", note: "RT60 poniżej 0,8 s" },
+      { src: "/images/projects/candor-sint-martens-latem/03.jpg", alt: "Sala spotkań z niewidoczną akustyką sufitową.", caption: "Sala spotkań", note: "RT60 poniżej 0,6 s" },
+      { src: "/images/projects/candor-sint-martens-latem/04.jpg", alt: "Strefa pracy cichej w biurze Candor.", caption: "Strefa pracy cichej", note: "Absorpcja ukryta w przestrzeni międzystropowej" },
+      { src: "/images/projects/candor-sint-martens-latem/05.jpg", alt: "Detal oświetlenia LED zintegrowanego w suficie napinanym.", caption: "Zintegrowane oświetlenie", note: "LED w płaszczyźnie powłoki" },
+      { src: "/images/projects/candor-sint-martens-latem/06.jpg", alt: "Strefa relaksu biura z sufitem akustycznym.", caption: "Strefa relaksu", note: "Projekt wnętrza: Goedele Perdu" },
+      { src: "/images/projects/candor-sint-martens-latem/07.jpg", alt: "Kuchnia biurowa z gładkim sufitem napinanym.", caption: "Kuchnia biurowa", note: "Estetyka bez widocznych paneli" },
+      { src: "/images/projects/candor-sint-martens-latem/08.jpg", alt: "Gabinet z akustycznym sufitem napinanym.", caption: "Gabinet", note: "Cisza w pomieszczeniach zamkniętych" },
+      { src: "/images/projects/candor-sint-martens-latem/09.jpg", alt: "Komunikacja biura Candor z jednolitym sufitem.", caption: "Komunikacja", note: "Jedna płaszczyzna przez całe piętro" },
+    ],
+    tags: ["akustyka", "biuro", "led", "belgia", "form design"],
+    cardImage: "/images/projects/candor-sint-martens-latem/card.jpg",
+    cardSummary:
+      "Renowacja biura dewelopera Candor — akustyka w pełni ukryta w sufitach napinanych z LED. RT60 < 0,8 s. Konsultacja: Form Design.",
   },
 ];
 

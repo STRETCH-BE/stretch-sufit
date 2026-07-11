@@ -107,7 +107,7 @@ export default function LondonChapelPage() {
           titleItalic="Tkanina Camira"
           titleTail=" na ścianach."
           subheadFactual="Akustyczny sufit napinany i napinane ściany pokryte tradycyjną tkaniną Camira w londyńskiej rezydencji utrzymanej w stylu kaplicy. Realizacja w wielu pomieszczeniach: salon, domowe kino, sypialnia."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — systemy napinanych ścian tekstylnych z tkaninami kontraktowymi dostarczamy również klientom rezydencjalnym w Polsce."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — systemy napinanych ścian tekstylnych z tkaninami kontraktowymi dostarczamy również klientom rezydencjalnym w Polsce."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",

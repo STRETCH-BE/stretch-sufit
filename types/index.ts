@@ -122,6 +122,8 @@ export type Project = {
   venue: string;
   country: string;
   year: number;
+  /** Optional display override, e.g. "2019\u20132023" for multi-year programmes. */
+  yearDisplay?: string;
   surface_m2: number;
   product: string;
   designStudio?: ProjectDesignStudio;

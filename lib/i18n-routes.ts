@@ -81,6 +81,9 @@ export const citySlugs: { pl: string; en?: string; ua?: string }[] = [
 /** Case-study pages under /realizacje — Polish only. */
 export const projectSlugs: string[] = [
   "afas-lounge-antwerpia",
+  "bnp-paribas-fortis-bruksela",
+  "citizenm-prefab-lazienki",
+  "candor-sint-martens-latem",
   "kancelaria-ampe-kruibeke",
   "london-chapel-londyn",
   "polette-antwerpia",

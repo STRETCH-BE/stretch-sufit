@@ -107,7 +107,7 @@ export default function PoletteAntwerpiaPage() {
           titleItalic="Sufit-pianino"
           titleTail=" w 60-metrowym sklepie."
           subheadFactual="Akustyczny sufit translucentny w kształcie wieka fortepianu, rozciągnięty na 20-metrowej głębokości sklepu Polette w Antwerpii. Powierzchnia 60 m², montaż w 1 dzień przez zespół 2 montażystów."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — ten projekt zrealizował belgijski dealer grupy w ramach konceptu retailowego Imagine biura zU-studio."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — ten projekt zrealizował belgijski dealer grupy w ramach konceptu retailowego Imagine biura zU-studio."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",
@@ -185,7 +185,7 @@ export default function PoletteAntwerpiaPage() {
             { strong: "Folia translucentna napinana", body: "przepuszcza światło z opraw schowanych nad sufitem, dając równomierną luminancję całej powierzchni." },
             { strong: "Perforacja akustyczna", body: "ta sama folia działa jako absorber — fala dźwiękowa wchodzi w mikroperforację i zostaje wytłumiona." },
             { strong: "Forma na zamówienie", body: "kształt otwartego wieka fortepianu wycięty fabrycznie pod plan zU-studio, montowany na ramach na wymiar." },
-            { strong: "Bezszwowość na 20 m głębokości", body: "produkcja Stretch Ceiling MSD pozwala na ciągłą powłokę bez widocznych łączeń." },
+            { strong: "Bezszwowość na 20 m głębokości", body: "produkcja Stretch Productions BV (Stretchgroup) pozwala na ciągłą powłokę bez widocznych łączeń." },
             { strong: "Demontowalność", body: "sufit można otworzyć dla serwisu oświetlenia i sensorów klawiszy bez wymiany folii." },
           ]}
           caption="Translucentność, akustyka i forma rzeźbiarska w jednej powłoce — pełen koncept Imagine został zbudowany wokół tej decyzji materiałowej."

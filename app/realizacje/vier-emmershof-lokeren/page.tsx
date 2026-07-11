@@ -107,7 +107,7 @@ export default function VierEmmershofLokerenPage() {
           titleItalic="Las wchodzi"
           titleTail=" do środka."
           subheadFactual="Akustyczny sufit napinany w prywatnej rezydencji 't Vier Emmershof w Lokeren. Otwarte wnętrze z pełnym przeszkleniem tylnej elewacji wchodzącej w zachowany las świerkowy — sufit utrzymuje akustyczny komfort mimo dużej ilości szkła i twardych posadzek."
-          subheadSecondary="Stretch Sufit jest częścią belgijskiej grupy Stretch Ceiling MSD — te same systemy akustyczne dostarczamy do prywatnych rezydencji w Polsce."
+          subheadSecondary="Stretch Sufit jest częścią belgijskiej Stretchgroup — te same systemy akustyczne dostarczamy do prywatnych rezydencji w Polsce."
           primaryCta={{
             label: "Bezpłatna wycena podobnej realizacji",
             href: "#wycena",
