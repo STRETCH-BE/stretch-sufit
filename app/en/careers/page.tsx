@@ -20,9 +20,10 @@ import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const HR_EMAIL = "info@stretch-sufit.pl";
 
@@ -39,11 +40,7 @@ export const metadata: Metadata = {
     "Work at Stretch Sufit — part of the Belgian Stretchgroup. Stretch-ceiling installer, surveyor, customer advisor, production. Permanent employment, company car, training in Belgium. Częstochowa and across Poland.",
   alternates: {
     canonical: "/en/careers",
-    languages: {
-      "pl-PL": "/kariera",
-      "en-US": "/en/careers",
-      "uk-UA": "/ua/kariera",
-    },
+    languages: languageAlternates(routes.careers),
   },
   openGraph: {
     title: "Careers at Stretch Sufit",

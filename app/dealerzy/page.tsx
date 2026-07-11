@@ -13,7 +13,7 @@
  *   → bg-soft stats → black (process) → red CTA.
  *
  * Lead capture: dedicated mailto: with subject tag — keeps inbound
- * partner-program leads visible in info@stretch-sufit.pl without adding
+ * partner-program leads visible in info@altodesign.pl without adding
  * a second API endpoint.
  */
 
@@ -29,19 +29,23 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const PARTNER_MAILTO =
-  "mailto:info@stretch-sufit.pl?subject=STRETCH%C2%AE%20Partner%20Program%20%E2%80%94%20zg%C5%82oszenie";
+  "mailto:info@altodesign.pl?subject=STRETCH%C2%AE%20Partner%20Program%20%E2%80%94%20zg%C5%82oszenie";
 
 export const metadata: Metadata = {
   title:
     "Zostań dealerem — Stretch Partner Program | Stretch Sufit",
   description:
     "Licencjonowana technologia sufitów napinanych Stretch dla firm wykonawczych. Szkolenie w Belgii lub Polsce, własne profile aluminiowe, narzędzia, wsparcie marketingowe. Wyłączność na region.",
-  alternates: { canonical: "/dealerzy" },
+  alternates: {
+    canonical: "/dealerzy",
+    languages: languageAlternates(routes.dealers),
+  },
   openGraph: {
     title: "Stretch Partner Program | Stretch Sufit",
     description:
@@ -85,7 +89,7 @@ const pillars = [
   {
     label: "Marka",
     title: "Wspólny standard",
-    body: "Identyfikacja wizualna, materiały marketingowe, profil w katalogu polskim i międzynarodowym. Twoje miasto / region oznaczone na stretch-sufit.pl i stretchplafond.be.",
+    body: "Identyfikacja wizualna, materiały marketingowe, profil w katalogu polskim i międzynarodowym. Twoje miasto / region oznaczone na altodesign.pl i stretchplafond.be.",
   },
   {
     label: "Wsparcie",

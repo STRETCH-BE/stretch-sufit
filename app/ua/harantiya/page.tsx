@@ -13,9 +13,10 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const LAST_UPDATED = "14 травня 2026";
 
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
   title: "Гарантія до 15 років — натяжні стелі | Stretch Sufit",
   description:
     "Повні умови гарантії Stretch на матеріал — 15 років на ПВХ з нашої фабрики в Польщі, 10 років на поліестер зі Stretch Productions BV у Бельгії. Що покривається, як подати заявку.",
-  alternates: { canonical: "/ua/harantiya" },
+  alternates: {
+    canonical: "/ua/harantiya",
+    languages: languageAlternates(routes.warranty),
+  },
 };
 
 const breadcrumbSchema = {

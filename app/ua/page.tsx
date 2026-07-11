@@ -11,6 +11,7 @@ import {
   buildFaqPage,
 } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 import { Nav } from "@/components/sections/ua/nav";
 import { Hero } from "@/components/sections/ua/hero";
@@ -34,11 +35,7 @@ export const metadata: Metadata = {
     "Натяжні стелі у Польщі. ПВХ виробляється на нашій фабриці в Польщі (безшовно до 6,50 м), поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, до 15 років гарантії. 17 міст у Польщі.",
   alternates: {
     canonical: "/ua",
-    languages: {
-      "pl-PL": "/",
-      "en-US": "/en",
-      "uk-UA": "/ua",
-    },
+    languages: languageAlternates(routes.home),
   },
   openGraph: {
     title: "Stretch Sufit — Нова стеля за один день",

@@ -22,15 +22,19 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { FaqGrid } from "@/components/sections/faq-grid";
 
 import { faqs, faqCategories, type FaqCategory } from "@/content/faq";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Pytania i odpowiedzi — sufity napinane | Stretch Sufit",
   description:
     "Odpowiedzi na najczęstsze pytania o sufity napinane Stretch Sufit. Cena, montaż, gwarancja, materiały, terminy. 28 wyczerpujących odpowiedzi.",
-  alternates: { canonical: "/pytania" },
+  alternates: {
+    canonical: "/pytania",
+    languages: languageAlternates(routes.faq),
+  },
   openGraph: {
     title: "Pytania o sufity napinane | Stretch Sufit",
     description:

@@ -12,10 +12,28 @@ export function buildOrganization() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     legalName: siteConfig.legalName,
+    description: siteConfig.description,
     url: siteConfig.url,
     logo: `${siteConfig.url}/images/logo.png`,
+    email: siteConfig.contact.email,
+    foundingDate: "2016",
+    founder: { "@type": "Person", name: "Roman Pliuta" },
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Stretchgroup",
+      url: "https://stretchplafond.be",
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.contact.address.street,
+      addressLocality: siteConfig.contact.address.city,
+      postalCode: siteConfig.contact.address.postalCode,
+      addressRegion: siteConfig.contact.address.region,
+      addressCountry: siteConfig.contact.address.country,
+    },
     sameAs: siteConfig.sameAs,
     contactPoint: [
       {
@@ -54,7 +72,7 @@ export function buildLocalBusiness(opts?: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     name: opts?.cityName
       ? `${siteConfig.name} — ${opts.cityName}`
       : siteConfig.name,
@@ -76,6 +94,15 @@ export function buildLocalBusiness(opts?: {
     email: siteConfig.contact.email,
     openingHours: siteConfig.contact.hours,
     priceRange: "$$",
+    sameAs: siteConfig.sameAs,
+    // Rating shown in the on-page testimonials section (Google profile: 5.0, 230+ reviews)
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "230",
+      bestRating: "5",
+    },
+    parentOrganization: { "@id": `${siteConfig.url}/#organization` },
     url: opts?.citySlug
       ? `${siteConfig.url}/sufity-napinane/${opts.citySlug}`
       : siteConfig.url,

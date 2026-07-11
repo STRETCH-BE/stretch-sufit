@@ -19,7 +19,7 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const LAST_UPDATED = "14 maja 2026";
 
@@ -54,14 +54,14 @@ const cookieCategories: CookieCategory[] = [
     cookies: [
       {
         name: "consent-state",
-        provider: "stretch-sufit.pl",
+        provider: "altodesign.pl",
         purpose:
           "Zapisuje Twoje decyzje dotyczące zgód na cookies analityczne i marketingowe.",
         duration: "12 miesięcy",
       },
       {
         name: "next-route-cache",
-        provider: "stretch-sufit.pl",
+        provider: "altodesign.pl",
         purpose:
           "Buforowanie odwiedzonych stron w pamięci przeglądarki dla szybszej nawigacji.",
         duration: "Sesja",
@@ -145,7 +145,7 @@ export default function PolitykaCookiesPage() {
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70">
                 Pełna lista cookies i podobnych technologii używanych w
-                serwisie stretchsufit.pl. Co to za pliki, do czego służą, jak
+                serwisie altodesign.pl. Co to za pliki, do czego służą, jak
                 długo są przechowywane i jak nimi zarządzać.
               </p>
             </div>
@@ -314,10 +314,10 @@ export default function PolitykaCookiesPage() {
                   </Link>
                   . W razie pytań — napisz na{" "}
                   <a
-                    href="mailto:info@stretch-sufit.pl"
+                    href="mailto:info@altodesign.pl"
                     className="text-red underline"
                   >
-                    info@stretch-sufit.pl
+                    info@altodesign.pl
                   </a>
                   .
                 </p>

@@ -33,16 +33,20 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 import { faqs, faqCategories, type FaqCategory } from "@/content/faq";
 import { products } from "@/content/products";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title:
     "Blog i FAQ — wiedza o sufitach napinanych | Stretch Sufit",
   description:
     "Notatnik i FAQ Stretch Sufit. Artykuły o materiałach, akustyce, oświetleniu LED, pielęgnacji sufitów napinanych + 28 odpowiedzi na najczęstsze pytania.",
-  alternates: { canonical: "/blog" },
+  alternates: {
+    canonical: "/blog",
+    languages: languageAlternates(routes.blog),
+  },
   openGraph: {
     title: "Blog i FAQ | Stretch Sufit",
     description:

@@ -33,6 +33,36 @@ const nextConfig: NextConfig = {
       // ─── Cookies path normalisation ───
       { source: "/cookies", destination: "/polityka-cookies", permanent: true },
 
+      // ─── Old WordPress site (altodesign.pl pre-July 2026) ───
+      // 301s preserve Google ranking signals from the indexed WP URLs.
+      // /kontakt, /o-nas and /sufity-napinane match the new routes already.
+      {
+        source: "/pytania-i-odpowiedzi",
+        destination: "/pytania",
+        permanent: true,
+      },
+      { source: "/services", destination: "/rozwiazania", permanent: true },
+      { source: "/uslugi", destination: "/rozwiazania", permanent: true },
+      { source: "/galeria", destination: "/realizacje", permanent: true },
+      { source: "/wspolpraca", destination: "/wspolpraca-b2b", permanent: true },
+      { source: "/kalkulator", destination: "/kontakt", permanent: true },
+      {
+        source: "/katalog-kolorow",
+        destination: "/rozwiazania/sufit-pvc",
+        permanent: true,
+      },
+      {
+        source: "/profil-aluminiowy",
+        destination: "/wspolpraca-b2b",
+        permanent: true,
+      },
+      // Old city pages were /sufity-napinane-<miasto>; new ones are nested.
+      {
+        source: "/sufity-napinane-:miasto",
+        destination: "/sufity-napinane/:miasto",
+        permanent: true,
+      },
+
       // ─── Legacy /uk spellings of the new routes (now /ua) ───
       // These are caught by the catch-all below but listed explicitly
       // first for clarity / to allow per-route overrides later.

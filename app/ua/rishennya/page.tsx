@@ -14,15 +14,19 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 
 import { products } from "@/content/ua/products";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Рішення — 6 продуктів Stretch | Stretch Sufit",
   description:
     "Повний каталог натяжних стель Stretch — ПВХ (виробляється в Польщі, безшовно до 6,50 м), поліестер (Бельгія), акустичні, LED, фотодрук, префаб. Частина Stretchgroup, до 15 років гарантії.",
-  alternates: { canonical: "/ua/rishennya" },
+  alternates: {
+    canonical: "/ua/rishennya",
+    languages: languageAlternates(routes.solutions),
+  },
   openGraph: {
     title: "6 продуктів Stretch — повний каталог | Stretch Sufit",
     description:

@@ -23,9 +23,10 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const LAST_UPDATED = "14 maja 2026";
 
@@ -33,7 +34,10 @@ export const metadata: Metadata = {
   title: "Gwarancja do 15 lat — sufity napinane Stretch | Stretch Sufit",
   description:
     "Pełne warunki gwarancji materiałowej Stretch — 15 lat na PVC produkowany w naszej fabryce w Polsce, 10 lat na polyester ze Stretch Productions BV w Belgii. Co obejmuje, jak zgłosić reklamację.",
-  alternates: { canonical: "/gwarancja" },
+  alternates: {
+    canonical: "/gwarancja",
+    languages: languageAlternates(routes.warranty),
+  },
 };
 
 const breadcrumbSchema = {

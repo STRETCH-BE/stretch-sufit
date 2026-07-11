@@ -14,6 +14,7 @@ import {
   buildFaqPage,
 } from "@/lib/schema";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 import { Nav } from "@/components/sections/en/nav";
 import { Hero } from "@/components/sections/en/hero";
@@ -37,11 +38,7 @@ export const metadata: Metadata = {
     "Stretch ceilings in Poland. PVC manufactured in our factory in Poland (seamless up to 6.50 m), polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. 17 cities in Poland.",
   alternates: {
     canonical: "/en",
-    languages: {
-      "pl-PL": "/",
-      "en-US": "/en",
-      "uk-UA": "/ua",
-    },
+    languages: languageAlternates(routes.home),
   },
   openGraph: {
     title: "Stretch Sufit — A new ceiling in one day",

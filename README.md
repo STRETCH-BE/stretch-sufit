@@ -8,7 +8,7 @@ All variables are optional — the app builds and runs without any of them. Add 
 
 | Variable | Purpose | Where to get it |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL | `https://stretchsufit.pl` |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL | `https://altodesign.pl` |
 | `NEXT_PUBLIC_POSTHOG_KEY` | Product analytics + session replay | posthog.com (EU cloud) |
 | `NEXT_PUBLIC_POSTHOG_HOST` | PostHog host | `https://eu.i.posthog.com` |
 | `NEXT_PUBLIC_CLARITY_ID` | Heatmaps + session replay (free) | clarity.microsoft.com |

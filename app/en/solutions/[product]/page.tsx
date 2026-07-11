@@ -18,9 +18,14 @@ import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/en/products";
+import {
+  findProduct,
+  languageAlternates,
+  productPaths,
+} from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 type ProductRouteParams = { product: string };
 
@@ -37,13 +42,20 @@ export async function generateMetadata({
   const product = products.find((p) => p.slug === productSlug);
   if (!product) return {};
 
+  const i18nEntry = findProduct("en", product.slug);
+
   const title = `${product.title} | Stretch Sufit`;
   const description = `${product.tagline}. ${product.description} Up to 15 years warranty (15 yr PVC · 10 yr polyester), installed in 1 day. Part of the Belgian Stretchgroup.`;
 
   return {
     title,
     description,
-    alternates: { canonical: `/en/solutions/${product.slug}` },
+    alternates: {
+      canonical: `/en/solutions/${product.slug}`,
+      languages: i18nEntry
+        ? languageAlternates(productPaths(i18nEntry))
+        : undefined,
+    },
     openGraph: {
       title,
       description,

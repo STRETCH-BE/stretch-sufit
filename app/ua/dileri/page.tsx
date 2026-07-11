@@ -18,12 +18,13 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const PARTNER_MAILTO =
-  "mailto:info@stretch-sufit.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0";
+  "mailto:info@altodesign.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0";
 
 export const metadata: Metadata = {
   title: "Стати дилером — Stretch Partner Program | Stretch Sufit",
@@ -31,11 +32,7 @@ export const metadata: Metadata = {
     "Ліцензована технологія натяжних стель Stretch для монтажних компаній. Навчання в Бельгії або Польщі, власні алюмінієві профілі, інструменти, маркетингова підтримка. Регіональна ексклюзивність.",
   alternates: {
     canonical: "/ua/dileri",
-    languages: {
-      "pl-PL": "/dealerzy",
-      "en-US": "/en/dealers",
-      "uk-UA": "/ua/dileri",
-    },
+    languages: languageAlternates(routes.dealers),
   },
   openGraph: {
     title: "Stretch Partner Program | Stretch Sufit",
@@ -80,7 +77,7 @@ const pillars = [
   {
     label: "Бренд",
     title: "Спільний стандарт",
-    body: "Візуальна ідентичність, маркетингові матеріали, профіль у польському та міжнародному каталозі. Ваше місто / регіон позначено на stretch-sufit.pl і stretchplafond.be.",
+    body: "Візуальна ідентичність, маркетингові матеріали, профіль у польському та міжнародному каталозі. Ваше місто / регіон позначено на altodesign.pl і stretchplafond.be.",
   },
   {
     label: "Підтримка",

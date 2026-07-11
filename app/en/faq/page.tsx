@@ -16,15 +16,19 @@ import { FaqGrid } from "@/components/sections/faq-grid";
 
 import { faqs, faqCategoriesEn } from "@/content/en/faq";
 import type { FaqCategory } from "@/content/faq";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Frequently asked questions — stretch ceilings | Stretch Sufit",
   description:
     "Answers to the most common questions about Stretch Sufit ceilings. Pricing, installation, warranty, materials, lead times. 28 thorough answers.",
-  alternates: { canonical: "/en/faq" },
+  alternates: {
+    canonical: "/en/faq",
+    languages: languageAlternates(routes.faq),
+  },
   openGraph: {
     title: "Stretch ceiling FAQ | Stretch Sufit",
     description:

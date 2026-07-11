@@ -18,15 +18,19 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 import { cities } from "@/content/cities";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Sufity napinane — 17 miast w Polsce | Stretch Sufit",
   description:
     "Sufity napinane w 17 miastach Polski — Warszawa, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice i więcej. PVC produkowany w Polsce, polyester z Belgii. Montaż w 1 dzień, do 15 lat gwarancji.",
-  alternates: { canonical: "/sufity-napinane" },
+  alternates: {
+    canonical: "/sufity-napinane",
+    languages: languageAlternates(routes.cities),
+  },
   openGraph: {
     title: "Sufity napinane w 17 miastach Polski | Stretch Sufit",
     description:

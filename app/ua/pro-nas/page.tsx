@@ -13,12 +13,16 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 export const metadata: Metadata = {
   title: "Про нас — Дві фабрики, одна група | Stretch Sufit",
   description:
     "Stretch Sufit — частина бельгійської Stretchgroup. ПВХ виробляється на нашій фабриці Alto Design у Польщі (з 2016 року), поліестер у Stretch Productions BV у Бельгії (з 2018 року). У 2024 році група придбала Alto Design — відтоді компанія публічно працює під брендом Stretch Sufit.",
-  alternates: { canonical: "/ua/pro-nas" },
+  alternates: {
+    canonical: "/ua/pro-nas",
+    languages: languageAlternates(routes.about),
+  },
   openGraph: {
     title: "Про нас — Stretch Sufit",
     description:

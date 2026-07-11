@@ -28,9 +28,10 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const B2B_MAILTO =
   "mailto:info@stretch-sufit.pl?subject=Wsp%C3%B3%C5%82praca%20B2B";
@@ -40,7 +41,10 @@ export const metadata: Metadata = {
     "Współpraca B2B — architekci, wykonawcy, deweloperzy | Stretch Sufit",
   description:
     "Współpraca B2B ze Stretch Sufit: dedykowany project manager, próbniki i pliki BIM/CAD, ceny projektowe, montaż po godzinach, faktura VAT, terminy gwarantowane. 15 lat gwarancji Stretch.",
-  alternates: { canonical: "/wspolpraca-b2b" },
+  alternates: {
+    canonical: "/wspolpraca-b2b",
+    languages: languageAlternates(routes.b2b),
+  },
   openGraph: {
     title: "Współpraca B2B | Stretch Sufit",
     description:

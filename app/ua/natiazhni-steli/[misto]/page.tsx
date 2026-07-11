@@ -22,9 +22,10 @@ import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
 
 import { citiesFull } from "@/content/ua/cities-full";
 import { products } from "@/content/ua/products";
+import { cityPaths, findCity, languageAlternates } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 type CityRouteParams = { misto: string };
 
@@ -41,10 +42,17 @@ export async function generateMetadata({
   const city = citiesFull.find((c) => c.slug === citySlug);
   if (!city) return {};
 
+  const i18nEntry = findCity("ua", city.slug);
+
   return {
     title: `Натяжні стелі ${city.locative} | Stretch Sufit ${city.name}`,
     description: `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір. ${city.populationDisplay}, повне покриття міста.`,
-    alternates: { canonical: `/ua/natiazhni-steli/${city.slug}` },
+    alternates: {
+      canonical: `/ua/natiazhni-steli/${city.slug}`,
+      languages: i18nEntry
+        ? languageAlternates(cityPaths(i18nEntry))
+        : undefined,
+    },
     openGraph: {
       title: `Натяжні стелі ${city.locative} | Stretch Sufit`,
       description: city.intro,

@@ -135,9 +135,16 @@ export default function RootLayout({
         <JsonLd data={buildWebsite()} />
 
         <ConsentProvider>
+          {/*
+            Children render OUTSIDE any Suspense/analytics wrapper so the
+            full page body is present in the prerendered HTML (critical for
+            AI crawlers that don't execute JavaScript).
+          */}
+          {children}
+
           {/* PostHog uses useSearchParams which requires a Suspense boundary in Next 15 */}
           <Suspense fallback={null}>
-            <PostHogProvider>{children}</PostHogProvider>
+            <PostHogProvider />
           </Suspense>
 
           <Suspense fallback={null}>

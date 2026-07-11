@@ -27,9 +27,10 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const HR_EMAIL = "info@stretch-sufit.pl";
 
@@ -44,7 +45,10 @@ export const metadata: Metadata = {
     "Kariera — praca w Stretch Sufit | Belgijska technologia, polska produkcja",
   description:
     "Pracuj w Stretch Sufit — części belgijskiej grupy Stretch. Monter sufitów napinanych, pomiarowiec, doradca klienta, produkcja. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
-  alternates: { canonical: "/kariera" },
+  alternates: {
+    canonical: "/kariera",
+    languages: languageAlternates(routes.careers),
+  },
   openGraph: {
     title: "Kariera w Stretch Sufit",
     description:

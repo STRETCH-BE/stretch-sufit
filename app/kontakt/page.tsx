@@ -19,15 +19,19 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Kontakt — zadzwoń, napisz lub przyjdź | Stretch Sufit",
   description:
     "Skontaktuj się ze Stretch Sufit — biuro w Częstochowie, ul. Legionów 59. Tel. +48 730 700 333. Bezpłatny pomiar w 17 miastach w Polsce. Oddzwonienie w 24 h.",
-  alternates: { canonical: "/kontakt" },
+  alternates: {
+    canonical: "/kontakt",
+    languages: languageAlternates(routes.contact),
+  },
   openGraph: {
     title: "Kontakt | Stretch Sufit",
     description:

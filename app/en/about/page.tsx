@@ -13,12 +13,16 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 export const metadata: Metadata = {
   title: "About — Two factories, one group | Stretch Sufit",
   description:
     "Stretch Sufit is part of the Belgian Stretchgroup. PVC is manufactured at our Alto Design factory in Poland (since 2016), polyester at Stretch Productions BV in Belgium (since 2018). In 2024 the group acquired Alto Design — operating since then under the Stretch Sufit brand.",
-  alternates: { canonical: "/en/about" },
+  alternates: {
+    canonical: "/en/about",
+    languages: languageAlternates(routes.about),
+  },
   openGraph: {
     title: "About — Stretch Sufit",
     description:

@@ -13,7 +13,7 @@ export const siteConfig = {
   description:
     "Stretch Sufit — sufity napinane PVC produkowane w Polsce, polyester z Belgii. Część belgijskiej Stretchgroup. Montaż w 1 dzień, bez kurzu, 25 lat żywotności, do 15 lat gwarancji.",
 
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.pl",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl",
 
   locales: ["pl", "en", "ua"] as const,
   defaultLocale: "pl" as const,

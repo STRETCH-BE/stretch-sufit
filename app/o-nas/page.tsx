@@ -24,12 +24,16 @@ import { FadeIn } from "@/components/ui/fade-in";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 export const metadata: Metadata = {
   title: "O nas — Dwie fabryki, jedna grupa | Stretch Sufit",
   description:
     "Stretch Sufit jest częścią belgijskiej Stretchgroup. PVC produkujemy w fabryce Alto Design w Polsce (od 2016), polyester w Stretch Productions BV w Belgii (od 2018). W 2024 grupa nabyła Alto Design — od tej pory działa pod marką Stretch Sufit.",
-  alternates: { canonical: "/o-nas" },
+  alternates: {
+    canonical: "/o-nas",
+    languages: languageAlternates(routes.about),
+  },
   openGraph: {
     title: "O nas — Stretch Sufit",
     description:

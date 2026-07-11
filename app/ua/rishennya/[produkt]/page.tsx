@@ -18,9 +18,10 @@ import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/ua/products";
+import { findProduct, languageAlternates, productPaths } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 type ProductRouteParams = { produkt: string };
 
@@ -40,10 +41,17 @@ export async function generateMetadata({
   const title = `${product.title} | Stretch Sufit`;
   const description = `${product.tagline}. ${product.description} Гарантія до 15 років (15 років ПВХ · 10 років поліестер), монтаж за 1 день. Частина бельгійської Stretchgroup.`;
 
+  const i18nEntry = findProduct("ua", product.slug);
+
   return {
     title,
     description,
-    alternates: { canonical: `/ua/rishennya/${product.slug}` },
+    alternates: {
+      canonical: `/ua/rishennya/${product.slug}`,
+      languages: i18nEntry
+        ? languageAlternates(productPaths(i18nEntry))
+        : undefined,
+    },
     openGraph: {
       title,
       description,

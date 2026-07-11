@@ -13,9 +13,10 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const LAST_UPDATED = "14 May 2026";
 
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
   title: "Warranty up to 15 years — Stretch ceilings | Stretch Sufit",
   description:
     "Full terms of the Stretch material warranty — 15 years on PVC manufactured in our factory in Poland, 10 years on polyester from Stretch Productions BV in Belgium. What's covered, how to claim.",
-  alternates: { canonical: "/en/warranty" },
+  alternates: {
+    canonical: "/en/warranty",
+    languages: languageAlternates(routes.warranty),
+  },
 };
 
 const breadcrumbSchema = {

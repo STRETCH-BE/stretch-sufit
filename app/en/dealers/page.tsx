@@ -19,12 +19,13 @@ import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const PARTNER_MAILTO =
-  "mailto:info@stretch-sufit.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20application";
+  "mailto:info@altodesign.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20application";
 
 export const metadata: Metadata = {
   title: "Become a dealer — Stretch Partner Program | Stretch Sufit",
@@ -32,11 +33,7 @@ export const metadata: Metadata = {
     "Licensed Stretch stretch-ceiling technology for installation companies. Training in Belgium or Poland, proprietary aluminium profiles, tools, marketing support. Regional exclusivity.",
   alternates: {
     canonical: "/en/dealers",
-    languages: {
-      "pl-PL": "/dealerzy",
-      "en-US": "/en/dealers",
-      "uk-UA": "/ua/dileri",
-    },
+    languages: languageAlternates(routes.dealers),
   },
   openGraph: {
     title: "Stretch Partner Program | Stretch Sufit",
@@ -81,7 +78,7 @@ const pillars = [
   {
     label: "Brand",
     title: "Shared standard",
-    body: "Visual identity, marketing materials, listing in the Polish and international catalogue. Your city / region marked on stretch-sufit.pl and stretchplafond.be.",
+    body: "Visual identity, marketing materials, listing in the Polish and international catalogue. Your city / region marked on altodesign.pl and stretchplafond.be.",
   },
   {
     label: "Support",

@@ -148,7 +148,7 @@ export async function POST(request: Request) {
 
   const refererDisplay = referer
     ? referer.replace(/^https?:\/\//, "").replace(/\/$/, "")
-    : "stretchsufit.pl";
+    : "altodesign.pl";
 
   const subject = `🔴 Nowy lead — ${name}${city ? ` · ${city}` : ""}`;
 
@@ -398,7 +398,7 @@ function buildLeadEmail(d: LeadEmailData): string {
       <!-- ════════ /Wrapper ════════ -->
 
       <div style="margin-top:16px; font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif; font-size:11px; color:#999; text-align:center;">
-        Automatyczna wiadomość z formularza na stretchsufit.pl<br>
+        Automatyczna wiadomość z formularza na altodesign.pl<br>
         <span style="color:#bbb;">Stretch Sufit — Część Stretchgroup · PVC made in Poland, polyester made in Belgium</span>
       </div>
 

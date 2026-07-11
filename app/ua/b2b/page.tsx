@@ -19,9 +19,10 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/lib/site-config";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 const B2B_MAILTO =
   "mailto:info@stretch-sufit.pl?subject=B2B%20%D1%81%D0%BF%D1%96%D0%B2%D0%BF%D1%80%D0%B0%D1%86%D1%8F";
@@ -33,11 +34,7 @@ export const metadata: Metadata = {
     "B2B співпраця зі Stretch Sufit: виділений project manager, зразки та файли BIM/CAD, проєктні ціни, монтаж після робочого часу, ПДВ-фактура, гарантовані терміни. Гарантія до 15 років на матеріал.",
   alternates: {
     canonical: "/ua/b2b",
-    languages: {
-      "pl-PL": "/wspolpraca-b2b",
-      "en-US": "/en/b2b",
-      "uk-UA": "/ua/b2b",
-    },
+    languages: languageAlternates(routes.b2b),
   },
   openGraph: {
     title: "B2B співпраця | Stretch Sufit",

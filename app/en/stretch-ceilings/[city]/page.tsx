@@ -22,9 +22,10 @@ import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
 
 import { citiesFull } from "@/content/en/cities-full";
 import { products } from "@/content/en/products";
+import { cityPaths, findCity, languageAlternates } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 type CityRouteParams = { city: string };
 
@@ -41,10 +42,17 @@ export async function generateMetadata({
   const city = citiesFull.find((c) => c.slug === citySlug);
   if (!city) return {};
 
+  const i18nEntry = findCity("en", city.slug);
+
   return {
     title: `Stretch ceilings ${city.locative} | Stretch Sufit ${city.name}`,
     description: `Stretch ceilings ${city.locative} — PVC manufactured in our factory in Poland, polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Free measurement. ${city.populationDisplay}, full city coverage.`,
-    alternates: { canonical: `/en/stretch-ceilings/${city.slug}` },
+    alternates: {
+      canonical: `/en/stretch-ceilings/${city.slug}`,
+      languages: i18nEntry
+        ? languageAlternates(cityPaths(i18nEntry))
+        : undefined,
+    },
     openGraph: {
       title: `Stretch ceilings ${city.locative} | Stretch Sufit`,
       description: city.intro,

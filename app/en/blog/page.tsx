@@ -23,9 +23,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { faqs, faqCategoriesEn } from "@/content/en/faq";
 import type { FaqCategory } from "@/content/faq";
 import { products } from "@/content/en/products";
+import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
   title: "Blog & FAQ — stretch ceiling knowledge | Stretch Sufit",
@@ -33,11 +34,7 @@ export const metadata: Metadata = {
     "Stretch Sufit notebook and FAQ. Articles on materials, acoustics, LED lighting, stretch-ceiling care + 28 answers to the most common questions.",
   alternates: {
     canonical: "/en/blog",
-    languages: {
-      "pl-PL": "/blog",
-      "en-US": "/en/blog",
-      "uk-UA": "/ua/blog",
-    },
+    languages: languageAlternates(routes.blog),
   },
   openGraph: {
     title: "Blog & FAQ | Stretch Sufit",
