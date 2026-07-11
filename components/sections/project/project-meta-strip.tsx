@@ -28,7 +28,7 @@ export function ProjectMetaStrip({ project }: Props) {
   }> = [
     { label: "Klient", value: project.client },
     { label: "Obiekt", value: project.venue },
-    { label: "Rok", value: String(project.year) },
+    { label: "Rok", value: project.yearDisplay ?? String(project.year) },
   ];
 
   if (project.surface_m2 && project.surface_m2 > 0) {
