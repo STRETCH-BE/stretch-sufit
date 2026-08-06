@@ -32,6 +32,7 @@ import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { faqs, faqCategories, type FaqCategory } from "@/content/faq";
+import { blogPosts } from "@/content/blog-posts";
 import { products } from "@/content/products";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
@@ -99,15 +100,6 @@ type EditorialEntry = {
 };
 
 const editorialPipeline: EditorialEntry[] = [
-  {
-    no: "01",
-    category: "Materiały",
-    title:
-      "PVC vs poliester — który materiał wybrać do nowoczesnego wnętrza?",
-    excerpt:
-      "Pełne porównanie dwóch flagowych membran Stretch. Estetyka, parametry techniczne, zachowanie w łazience, behawior przy zalaniu, sytuacje, w których jeden materiał jest jedyną sensowną opcją.",
-    readTime: "8 min",
-  },
   {
     no: "02",
     category: "Akustyka",
@@ -258,9 +250,9 @@ export default function BlogPage() {
                           href="#artykuly"
                           className="group flex items-baseline justify-between gap-3 border-b border-white/10 pb-3 text-sm text-white/75 hover:text-white"
                         >
-                          <span>Artykuły w przygotowaniu</span>
+                          <span>Opublikowane artykuły</span>
                           <span className="font-mono text-[11px] text-white/40 group-hover:text-red">
-                            {editorialPipeline.length}
+                            {blogPosts.length}
                           </span>
                         </a>
                       </li>
@@ -283,26 +275,81 @@ export default function BlogPage() {
           </Container>
         </section>
 
-        {/* ════════ Editorial pipeline ════════ */}
+        {/* ════════ Published articles ════════ */}
         <section id="artykuly" className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">
-                    Rozdział 01 · Notatnik (w przygotowaniu)
-                  </Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 01 · Artykuły</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">
-                    Sześć artykułów,{" "}
-                    <span className="it">na które warto poczekać.</span>
+                    Notatnik producenta.{" "}
+                    <span className="it">Bez wodolejstwa.</span>
                   </SectionTitle>
                 </FadeIn>
               </div>
               <div className="md:col-span-5">
                 <FadeIn delay={140}>
                   <p className="text-[17px] leading-[1.7] text-bg/75 md:text-lg">
+                    Każdy tekst piszą ludzie, którzy mierzą, produkują i
+                    montują — z liczbami z naszego cennika i praktyki
+                    serwisowej.
+                  </p>
+                </FadeIn>
+              </div>
+            </div>
+
+            <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+              {blogPosts.map((post, i) => (
+                <FadeIn delay={120 + i * 60} key={post.slug}>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="group flex h-full flex-col rounded border border-bg/10 bg-paper-2 p-7 transition-colors hover:border-red/40"
+                  >
+                    <div className="flex items-baseline justify-between">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-red">
+                        {post.category}
+                      </span>
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-bg/45">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-bg group-hover:text-red">
+                      {post.title}
+                    </h3>
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-bg/70">
+                      {post.excerpt}
+                    </p>
+                    <span className="mt-auto pt-6 font-mono text-[11px] uppercase tracking-[0.15em] text-red">
+                      Czytaj artykuł →
+                    </span>
+                  </Link>
+                </FadeIn>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* ════════ Editorial pipeline ════════ */}
+        <section id="wkrotce" className="text-bg bg-bg-soft py-24 md:py-32">
+          <Container>
+            <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
+              <div className="md:col-span-7">
+                <FadeIn>
+                  <Eyebrow>Rozdział 02 · W przygotowaniu</Eyebrow>
+                </FadeIn>
+                <FadeIn delay={80}>
+                  <SectionTitle className="mt-5 text-white">
+                    Kolejne artykuły{" "}
+                    <span className="it text-paper">w drodze.</span>
+                  </SectionTitle>
+                </FadeIn>
+              </div>
+              <div className="md:col-span-5">
+                <FadeIn delay={140}>
+                  <p className="text-[17px] leading-[1.7] text-white/70 md:text-lg">
                     Pierwsza fala publikacji startuje w 2026. Każdy tekst
                     pisany przez inżyniera lub PM-a, redagowany przez
                     redakcję — bez SEO-wodolejstwa.
@@ -314,23 +361,23 @@ export default function BlogPage() {
             <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
               {editorialPipeline.map((post, i) => (
                 <FadeIn delay={120 + i * 60} key={post.no}>
-                  <article className="flex h-full flex-col rounded border border-bg/10 bg-paper-2 p-7 transition-colors hover:border-red/40">
+                  <article className="flex h-full flex-col rounded border border-white/10 bg-bg-card/40 p-7 transition-colors hover:border-red/40">
                     <div className="flex items-baseline justify-between">
                       <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-red">
                         {post.no} · {post.category}
                       </span>
-                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-bg/45">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-white/45">
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-bg">
+                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-white">
                       {post.title}
                     </h3>
-                    <p className="mt-4 text-[14.5px] leading-relaxed text-bg/70">
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-white/65">
                       {post.excerpt}
                     </p>
                     <div className="mt-auto pt-6">
-                      <span className="inline-flex items-center gap-2 rounded-full border border-bg/15 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-bg/55">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-white/55">
                         ● W przygotowaniu
                       </span>
                     </div>
@@ -340,22 +387,22 @@ export default function BlogPage() {
             </div>
 
             <FadeIn delay={520}>
-              <div className="mt-14 flex flex-col items-start gap-5 rounded border border-bg/10 bg-paper p-8 md:flex-row md:items-center md:justify-between md:p-10">
+              <div className="mt-14 flex flex-col items-start gap-5 rounded border border-white/10 bg-bg-card/40 p-8 md:flex-row md:items-center md:justify-between md:p-10">
                 <div className="max-w-xl">
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
                     Newsletter
                   </div>
-                  <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-bg">
+                  <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-white">
                     Daj znać, gdy pierwszy artykuł wyjdzie.
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-bg/70">
+                  <p className="mt-3 text-[15px] leading-relaxed text-white/65">
                     Bez spamu — 1 mail kiedy publikujemy coś istotnego. Adres
                     wykorzystywany wyłącznie do tej komunikacji.
                   </p>
                 </div>
                 <a
                   href="mailto:info@stretch-sufit.pl?subject=Newsletter%20%E2%80%94%20zapis"
-                  className="inline-flex items-center gap-2 rounded-full bg-bg px-6 py-3 font-display text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 rounded-full bg-red px-6 py-3 font-display text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
                 >
                   Zapisz mnie →
                 </a>
@@ -370,7 +417,7 @@ export default function BlogPage() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow>Rozdział 02 · Najczęstsze pytania</Eyebrow>
+                  <Eyebrow>Rozdział 03 · Najczęstsze pytania</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-white">
@@ -441,7 +488,7 @@ export default function BlogPage() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-6">
                 <FadeIn>
-                  <Eyebrow>Rozdział 03 · Tematy</Eyebrow>
+                  <Eyebrow>Rozdział 04 · Tematy</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-white">
@@ -498,7 +545,7 @@ export default function BlogPage() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">Rozdział 04 · Katalog</Eyebrow>
+                  <Eyebrow tone="on-paper">Rozdział 05 · Katalog</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">

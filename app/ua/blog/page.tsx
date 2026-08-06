@@ -21,6 +21,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { faqs, faqCategoriesUk } from "@/content/ua/faq";
 import type { FaqCategory } from "@/content/faq";
 import { products } from "@/content/ua/products";
+import { blogPosts } from "@/content/ua/blog-posts";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
 
@@ -82,15 +83,6 @@ type EditorialEntry = {
 };
 
 const editorialPipeline: EditorialEntry[] = [
-  {
-    no: "01",
-    category: "Матеріали",
-    title:
-      "ПВХ чи поліестер — який матеріал обрати для сучасного інтер'єру?",
-    excerpt:
-      "Повне порівняння двох флагманських мембран Stretch. Естетика, технічні параметри, поведінка у ванній, при затопленні, ситуації, у яких один матеріал — єдиний розумний вибір.",
-    readTime: "8 хв",
-  },
   {
     no: "02",
     category: "Акустика",
@@ -236,9 +228,9 @@ export default function BlogPageUa() {
                           href="#articles"
                           className="group flex items-baseline justify-between gap-3 border-b border-white/10 pb-3 text-sm text-white/75 hover:text-white"
                         >
-                          <span>Статті у підготовці</span>
+                          <span>Опубліковані статті</span>
                           <span className="font-mono text-[11px] text-white/40 group-hover:text-red">
-                            {editorialPipeline.length}
+                            {blogPosts.length}
                           </span>
                         </a>
                       </li>
@@ -266,20 +258,74 @@ export default function BlogPageUa() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">
-                    Розділ 01 · Нотатник (у підготовці)
-                  </Eyebrow>
+                  <Eyebrow tone="on-paper">Розділ 01 · Статті</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">
-                    Шість статей,{" "}
-                    <span className="it">на які варто чекати.</span>
+                    Нотатник виробника.{" "}
+                    <span className="it">Без води.</span>
                   </SectionTitle>
                 </FadeIn>
               </div>
               <div className="md:col-span-5">
                 <FadeIn delay={140}>
                   <p className="text-[17px] leading-[1.7] text-bg/75 md:text-lg">
+                    Кожен текст пишуть люди, які замірюють, виробляють і монтують — із цифрами з нашого прайсу та сервісної практики.
+                  </p>
+                </FadeIn>
+              </div>
+            </div>
+
+            <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
+              {blogPosts.map((post, i) => (
+                <FadeIn delay={120 + i * 60} key={post.slug}>
+                  <Link
+                    href={`/ua/blog/${post.slug}`}
+                    className="group flex h-full flex-col rounded border border-bg/10 bg-paper-2 p-7 transition-colors hover:border-red/40"
+                  >
+                    <div className="flex items-baseline justify-between">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-red">
+                        {post.category}
+                      </span>
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-bg/45">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-bg group-hover:text-red">
+                      {post.title}
+                    </h3>
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-bg/70">
+                      {post.excerpt}
+                    </p>
+                    <span className="mt-auto pt-6 font-mono text-[11px] uppercase tracking-[0.15em] text-red">
+                      Читати статтю →
+                    </span>
+                  </Link>
+                </FadeIn>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        <section id="nezabarom" className="text-bg bg-bg-soft py-24 md:py-32">
+          <Container>
+            <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
+              <div className="md:col-span-7">
+                <FadeIn>
+                  <Eyebrow tone="on-paper">
+                    Розділ 02 · У підготовці
+                  </Eyebrow>
+                </FadeIn>
+                <FadeIn delay={80}>
+                  <SectionTitle className="mt-5 text-white">
+                    Наступні статті{" "}
+                    <span className="it text-paper">вже в дорозі.</span>
+                  </SectionTitle>
+                </FadeIn>
+              </div>
+              <div className="md:col-span-5">
+                <FadeIn delay={140}>
+                  <p className="text-[17px] leading-[1.7] text-white/70 md:text-lg">
                     Перша хвиля публікацій стартує у 2026. Кожен текст пише
                     інженер або PM, редагує редакція — без SEO-води.
                   </p>
@@ -290,23 +336,23 @@ export default function BlogPageUa() {
             <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
               {editorialPipeline.map((post, i) => (
                 <FadeIn delay={120 + i * 60} key={post.no}>
-                  <article className="flex h-full flex-col rounded border border-bg/10 bg-paper-2 p-7 transition-colors hover:border-red/40">
+                  <article className="flex h-full flex-col rounded border border-white/10 bg-bg-card/40 p-7 transition-colors hover:border-red/40">
                     <div className="flex items-baseline justify-between">
                       <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-red">
                         {post.no} · {post.category}
                       </span>
-                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-bg/45">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-white/45">
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-bg">
+                    <h3 className="mt-5 font-display text-lg font-semibold leading-[1.3] tracking-[-0.01em] text-white">
                       {post.title}
                     </h3>
-                    <p className="mt-4 text-[14.5px] leading-relaxed text-bg/70">
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-white/65">
                       {post.excerpt}
                     </p>
                     <div className="mt-auto pt-6">
-                      <span className="inline-flex items-center gap-2 rounded-full border border-bg/15 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-bg/55">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-white/55">
                         ● У підготовці
                       </span>
                     </div>
@@ -316,22 +362,22 @@ export default function BlogPageUa() {
             </div>
 
             <FadeIn delay={520}>
-              <div className="mt-14 flex flex-col items-start gap-5 rounded border border-bg/10 bg-paper p-8 md:flex-row md:items-center md:justify-between md:p-10">
+              <div className="mt-14 flex flex-col items-start gap-5 rounded border border-white/10 bg-bg-card/40 p-8 md:flex-row md:items-center md:justify-between md:p-10">
                 <div className="max-w-xl">
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
                     Розсилка
                   </div>
-                  <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-bg">
+                  <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.02em] text-white">
                     Сповістіть, коли вийде перша стаття.
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-bg/70">
+                  <p className="mt-3 text-[15px] leading-relaxed text-white/65">
                     Без спаму — 1 лист, коли публікуємо щось вагоме. Адреса
                     використовується виключно для цього.
                   </p>
                 </div>
                 <a
                   href="mailto:info@stretch-sufit.pl?subject=%D0%9F%D1%96%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D1%80%D0%BE%D0%B7%D1%81%D0%B8%D0%BB%D0%BA%D1%83"
-                  className="inline-flex items-center gap-2 rounded-full bg-bg px-6 py-3 font-display text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
+                  className="inline-flex items-center gap-2 rounded-full bg-red px-6 py-3 font-display text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
                 >
                   Підписати мене →
                 </a>
@@ -345,7 +391,7 @@ export default function BlogPageUa() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow>Розділ 02 · Найчастіші питання</Eyebrow>
+                  <Eyebrow>Розділ 03 · Найчастіші питання</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-white">
@@ -415,7 +461,7 @@ export default function BlogPageUa() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-6">
                 <FadeIn>
-                  <Eyebrow>Розділ 03 · Теми</Eyebrow>
+                  <Eyebrow>Розділ 04 · Теми</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-white">
@@ -471,7 +517,7 @@ export default function BlogPageUa() {
             <div className="grid items-end gap-10 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-7">
                 <FadeIn>
-                  <Eyebrow tone="on-paper">Розділ 04 · Каталог</Eyebrow>
+                  <Eyebrow tone="on-paper">Розділ 05 · Каталог</Eyebrow>
                 </FadeIn>
                 <FadeIn delay={80}>
                   <SectionTitle className="mt-5 text-bg">

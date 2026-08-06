@@ -15,8 +15,10 @@ import {
   productSlugs,
   citySlugs,
   projectSlugs,
+  blogPostSlugs,
   productPaths,
   cityPaths,
+  blogPostPaths,
   languageAlternates,
   type LocalePaths,
 } from "@/lib/i18n-routes";
@@ -90,6 +92,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     localized(cityPaths(c), lastModified, "monthly", 0.7)
   );
 
+  const blogPostEntries: MetadataRoute.Sitemap = blogPostSlugs.flatMap((b) =>
+    localized(blogPostPaths(b), lastModified, "monthly", 0.7)
+  );
+
   const projectEntries: MetadataRoute.Sitemap = projectSlugs.map((slug) => ({
     url: `${BASE_URL}/realizacje/${slug}`,
     lastModified,
@@ -97,5 +103,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticEntries, ...productEntries, ...cityEntries, ...projectEntries];
+  return [
+    ...staticEntries,
+    ...productEntries,
+    ...cityEntries,
+    ...blogPostEntries,
+    ...projectEntries,
+  ];
 }
