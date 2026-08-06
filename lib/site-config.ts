@@ -48,6 +48,25 @@ export const siteConfig = {
   ],
 
   ogImage: "/images/og/default.jpg",
+  ogImageAlt: "Stretch Sufit — sufity napinane premium",
 } as const;
 
 export type Locale = (typeof siteConfig.locales)[number];
+
+/**
+ * Default OpenGraph images array — import this into any page that
+ * defines its own `openGraph` block so we never ship an OG-less page.
+ *
+ * Next.js does NOT merge `images` from the layout when a page provides
+ * its own `openGraph` — the whole object is replaced. Paths are
+ * relative; `metadataBase` in the root layout resolves them to absolute
+ * URLs at build time.
+ */
+export const defaultOgImages = [
+  {
+    url: siteConfig.ogImage,
+    width: 1200,
+    height: 630,
+    alt: siteConfig.ogImageAlt,
+  },
+];
