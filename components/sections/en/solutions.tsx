@@ -74,7 +74,7 @@ function SolutionCard({ product }: { product: Product }) {
     >
       <div
         className={`font-display text-[13px] font-semibold uppercase tracking-[0.12em] ${
-          isFeatured ? "text-white/85" : "text-white/55"
+          isFeatured ? "text-white" : "text-white/55"
         }`}
       >
         <span className={isFeatured ? "text-white" : "text-red"}>
@@ -104,7 +104,7 @@ function SolutionCard({ product }: { product: Product }) {
 
       <p
         className={`mt-3 text-sm leading-[1.5] ${
-          isFeatured ? "text-white/85" : "text-white/55"
+          isFeatured ? "text-white" : "text-white/55"
         }`}
       >
         {product.description}

@@ -171,9 +171,9 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <h5 className="mb-5 font-display text-[13px] font-semibold uppercase tracking-[0.1em] text-red">
+      <h3 className="mb-5 font-display text-[13px] font-semibold uppercase tracking-[0.1em] text-[#ff5a63]">
         {title}
-      </h5>
+      </h3>
       <ul className="space-y-2.5">{children}</ul>
     </div>
   );

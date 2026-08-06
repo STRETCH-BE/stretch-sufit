@@ -38,7 +38,7 @@ export function Cities() {
                     <span className="block text-[15px] font-medium">
                       {city.name}
                     </span>
-                    <span className="mt-0.5 block text-[11px] uppercase tracking-[0.1em] text-bg/55 group-hover:text-white/60">
+                    <span className="mt-0.5 block text-[11px] uppercase tracking-[0.1em] text-bg/70 group-hover:text-white/60">
                       {city.region}
                     </span>
                   </Link>

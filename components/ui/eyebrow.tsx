@@ -10,12 +10,18 @@ import type { ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  tone?: "on-dark" | "on-paper";
+  tone?: "on-dark" | "on-paper" | "on-red";
   className?: string;
 };
 
 export function Eyebrow({ children, tone = "on-dark", className = "" }: Props) {
-  const textColor = tone === "on-paper" ? "text-bg/55" : "text-white/55";
+  const textColor =
+    tone === "on-paper"
+      ? "text-bg/70"
+      : tone === "on-red"
+        ? "text-white"
+        : "text-white/55";
+  const dashColor = tone === "on-red" ? "bg-white/80" : "bg-red";
 
   return (
     <div
@@ -23,7 +29,7 @@ export function Eyebrow({ children, tone = "on-dark", className = "" }: Props) {
     >
       <span
         aria-hidden="true"
-        className="block h-px w-8 bg-red"
+        className={`block h-px w-8 ${dashColor}`}
       />
       <span>{children}</span>
     </div>

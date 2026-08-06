@@ -48,7 +48,7 @@ export function ProjectHero({
       <Container className="grid gap-12 py-16 md:grid-cols-12 md:gap-10 md:py-24 lg:py-32">
         {/* LEFT — copy */}
         <div className="md:col-span-6">
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-white/70">
+          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-white">
             <span aria-hidden className="block h-px w-8 bg-red" />
             {eyebrow}
           </p>
@@ -61,9 +61,9 @@ export function ProjectHero({
             {titleTail}
           </h1>
 
-          <div className="mt-6 max-w-xl space-y-3 text-lg leading-relaxed text-white/85 md:text-xl">
+          <div className="mt-6 max-w-xl space-y-3 text-lg leading-relaxed text-white md:text-xl">
             <p>{subheadFactual}</p>
-            <p className="text-white/65">{subheadSecondary}</p>
+            <p className="text-white">{subheadSecondary}</p>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -99,7 +99,7 @@ export function ProjectHero({
               className="h-auto w-full object-cover"
             />
             {heroCaption && (
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/80">
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white">
                 {heroCaption}
               </figcaption>
             )}

@@ -115,7 +115,7 @@ export function CtaFinal({
             >
               {headingOverride ?? DEFAULT_HEADING}
             </h2>
-            <p className="mt-6 max-w-[460px] text-[18px] leading-[1.55] text-white/90">
+            <p className="mt-6 max-w-[460px] text-[18px] leading-[1.55] text-white">
               {subheadOverride ?? DEFAULT_SUBHEAD}
             </p>
 
@@ -167,7 +167,7 @@ export function CtaFinal({
                 <div className="font-display text-xl font-semibold text-white">
                   Thank you!
                 </div>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="mt-2 text-sm text-white">
                   We'll call you back within 24 hours to schedule a free measurement.
                 </p>
               </div>

@@ -49,7 +49,7 @@ export function ProjectCredit({
             <blockquote className="text-lg italic leading-relaxed text-bg/75">
               "..."
             </blockquote>
-            <figcaption className="mt-4 text-sm text-bg/55">
+            <figcaption className="mt-4 text-sm text-bg/70">
               — Imię Nazwisko, Stanowisko, Creneau International
             </figcaption>
           </figure>

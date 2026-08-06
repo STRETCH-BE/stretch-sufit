@@ -36,7 +36,7 @@ const DEFAULT_PARAGRAPH = (
   <>
     <strong className="font-semibold">Stretch Sufit</strong> jest częścią
     belgijskiej <strong className="font-semibold">Stretchgroup</strong>{" "}
-    <span className="text-bg/55">
+    <span className="text-bg/70">
       — producenta sufitów napinanych. Polyester powstaje w Belgii,
       PVC w naszej fabryce w Polsce.
     </span>
