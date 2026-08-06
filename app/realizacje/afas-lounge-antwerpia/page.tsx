@@ -35,7 +35,7 @@ const SLUG = "afas-lounge-antwerpia";
 
 export const metadata: Metadata = {
   title:
-    "AFAS Lounge, Antwerpia — sufit czarny połysk + akustyka | Stretch Sufit",
+    "AFAS Lounge, Antwerpia — sufit czarny połysk + akustyka",
   description:
     "Realizacja sufitu napinanego w wykończeniu czarny połysk z warstwą akustyczną w 250-metrowym VIP loungu AFAS Dome w Antwerpii. Projekt: Creneau International. Produkcja: Alto Design (Polska), montaż: nasz belgijski zespół, 3 dni.",
   alternates: {

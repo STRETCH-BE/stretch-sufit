@@ -27,7 +27,7 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -38,7 +38,7 @@ const B2B_MAILTO =
 
 export const metadata: Metadata = {
   title:
-    "Współpraca B2B — architekci, wykonawcy, deweloperzy | Stretch Sufit",
+    "Współpraca B2B — architekci, wykonawcy, deweloperzy",
   description:
     "Współpraca B2B ze Stretch Sufit: dedykowany project manager, próbniki i pliki BIM/CAD, ceny projektowe, montaż po godzinach, faktura VAT, terminy gwarantowane. 15 lat gwarancji Stretch.",
   alternates: {
@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/wspolpraca-b2b`,
     locale: "pl_PL",
+    images: defaultOgImages,
   },
 };
 

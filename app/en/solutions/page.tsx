@@ -16,12 +16,13 @@ import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 
 import { products } from "@/content/en/products";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Solutions — 6 Stretch products | Stretch Sufit",
+  title: "Solutions — 6 Stretch products",
   description:
     "The full Stretch stretch-ceiling catalogue — PVC (manufactured in Poland, seamless up to 6.50 m), polyester (Belgium), acoustic, LED light, photo print, prefab. Part of Stretchgroup, up to 15 years warranty.",
   alternates: {
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
       "Stretch ceilings in 6 variants. PVC from Poland, polyester from Belgium. Pick what fits your interior.",
     type: "website",
     url: `${BASE_URL}/en/solutions`,
+    images: defaultOgImages,
   },
 };
 

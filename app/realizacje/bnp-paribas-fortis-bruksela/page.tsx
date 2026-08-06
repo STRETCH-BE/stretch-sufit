@@ -35,7 +35,7 @@ const SLUG = "bnp-paribas-fortis-bruksela";
 
 export const metadata: Metadata = {
   title:
-    "BNP Paribas Fortis, Bruksela — tekstylne sufity świetlne i akustyczne | Stretch Sufit",
+    "BNP Paribas Fortis, Bruksela — tekstylne sufity świetlne i akustyczne",
   description:
     "2000 m² tekstylnych sufitów STRETCH Light + STRETCH Acoustic w centrali BNP Paribas Fortis w Brukseli. Projekt: Jaspers-Eyers Architects i NCBHAM. Membrany wyprodukowane w Belgii przez Stretch Productions BV, montaż: nasz belgijski zespół.",
   alternates: {

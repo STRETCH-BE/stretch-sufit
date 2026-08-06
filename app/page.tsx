@@ -39,7 +39,10 @@ import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 export const metadata: Metadata = {
-  title: "Stretch Sufit — Nowy sufit w 1 dzień | Sufity napinane premium",
+  title: {
+    absolute:
+      "Stretch Sufit — Nowy sufit w 1 dzień | Sufity napinane premium",
+  },
   description:
     "Sufity napinane Stretch w Polsce. PVC produkowany w naszej fabryce w Polsce (bezszwowo do 6,50 m), polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. 17 miast w Polsce.",
   alternates: {

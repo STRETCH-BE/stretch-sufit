@@ -25,9 +25,10 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "O nas — Dwie fabryki, jedna grupa | Stretch Sufit",
+  title: "O nas — Dwie fabryki, jedna grupa",
   description:
     "Stretch Sufit jest częścią belgijskiej Stretchgroup. PVC produkujemy w fabryce Alto Design w Polsce (od 2016), polyester w Stretch Productions BV w Belgii (od 2018). W 2024 grupa nabyła Alto Design — od tej pory działa pod marką Stretch Sufit.",
   alternates: {
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     description:
       "Dwie fabryki, jedna grupa. PVC z Polski, polyester z Belgii. Historia Stretchgroup, Alto Design i Stretch Productions.",
     type: "article",
+    images: defaultOgImages,
   },
 };
 
@@ -118,7 +120,7 @@ export default function AboutPage() {
                   <figure className="mt-10 overflow-hidden rounded">
                     <div className="relative aspect-[4/5] w-full bg-bg-soft">
                       <Image
-                        src="images/about/hala-czestochowa.jpg"
+                        src="/images/about/hala-czestochowa.jpg"
                         alt="Hala produkcyjna Alto Design (Stretch Sufit) w Częstochowie"
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"
@@ -214,7 +216,7 @@ export default function AboutPage() {
                   <figure className="mt-10 overflow-hidden rounded">
                     <div className="relative aspect-[4/5] w-full bg-bg-soft">
                       <Image
-                        src="images/about/michael-nicasens.jpg"
+                        src="/images/about/michael-nicasens.jpg"
                         alt="Michael Nicasens, założyciel Stretchgroup"
                         fill
                         sizes="(min-width: 768px) 40vw, 100vw"

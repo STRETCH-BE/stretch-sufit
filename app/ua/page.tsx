@@ -30,7 +30,10 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 
 export const metadata: Metadata = {
-  title: "Stretch Sufit — Нова стеля за один день | Преміум натяжні стелі",
+  title: {
+    absolute:
+      "Stretch Sufit — Нова стеля за один день | Преміум натяжні стелі",
+  },
   description:
     "Натяжні стелі у Польщі. ПВХ виробляється на нашій фабриці в Польщі (безшовно до 6,50 м), поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, до 15 років гарантії. 17 міст у Польщі.",
   alternates: {

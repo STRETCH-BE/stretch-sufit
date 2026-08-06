@@ -10,7 +10,7 @@ import { SectionTitle } from "@/components/ui/section-title";
 import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
-  title: "Realizacje sufitów napinanych | Stretch Sufit",
+  title: "Realizacje sufitów napinanych",
   description:
     "Wybrane realizacje sufitów napinanych Stretch Sufit — projekty komercyjne i prywatne w Polsce i Europie.",
   alternates: { canonical: "/realizacje" },

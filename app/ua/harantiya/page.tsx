@@ -21,7 +21,7 @@ const BASE_URL =
 const LAST_UPDATED = "14 травня 2026";
 
 export const metadata: Metadata = {
-  title: "Гарантія до 15 років — натяжні стелі | Stretch Sufit",
+  title: "Гарантія до 15 років — натяжні стелі",
   description:
     "Повні умови гарантії Stretch на матеріал — 15 років на ПВХ з нашої фабрики в Польщі, 10 років на поліестер зі Stretch Productions BV у Бельгії. Що покривається, як подати заявку.",
   alternates: {

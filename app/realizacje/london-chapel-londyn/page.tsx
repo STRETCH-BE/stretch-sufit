@@ -32,7 +32,7 @@ const SLUG = "london-chapel-londyn";
 
 export const metadata: Metadata = {
   title:
-    "London Chapel — napinane ściany z tkaniną Camira w rezydencji | Stretch Sufit",
+    "London Chapel — napinane ściany z tkaniną Camira w rezydencji",
   description:
     "Realizacja akustycznego sufitu napinanego i napinanych ścian pokrytych tkaniną Camira w londyńskiej rezydencji-kaplicy. Wykonanie: Upholster London. Rok: 2023.",
   alternates: { canonical: "/realizacje/london-chapel-londyn" },

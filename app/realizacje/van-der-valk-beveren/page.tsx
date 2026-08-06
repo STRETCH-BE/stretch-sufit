@@ -32,7 +32,7 @@ const SLUG = "van-der-valk-beveren";
 
 export const metadata: Metadata = {
   title:
-    "Van der Valk Beveren — akustyka aW 0,95 w sali bankietowej | Stretch Sufit",
+    "Van der Valk Beveren — akustyka aW 0,95 w sali bankietowej",
   description:
     "Sala bankietowa hotelu Van der Valk w Beveren miała wysokość zaledwie 255 cm i wieloletni problem akustyczny. System sufitowy o głębokości 50 mm dał aW 0,95 przy minimalnym obniżeniu sufitu.",
   alternates: { canonical: "/realizacje/van-der-valk-beveren" },

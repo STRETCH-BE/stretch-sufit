@@ -16,12 +16,13 @@ import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { cities } from "@/content/ua/cities";
 import { citiesFull } from "@/content/ua/cities-full";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Натяжні стелі — 17 міст у Польщі | Stretch Sufit",
+  title: "Натяжні стелі — 17 міст у Польщі",
   description:
     "Натяжні стелі у 17 польських містах — Варшава, Краків, Вроцлав, Познань, Ґданськ, Лодзь, Катовіце та інші. ПВХ виробляється в Польщі, поліестер з Бельгії. Монтаж за 1 день, до 15 років гарантії.",
   alternates: {
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
       "Частина бельгійської Stretchgroup. ПВХ виробляється в Польщі, поліестер у Бельгії. Монтаж по всій Польщі.",
     type: "website",
     url: `${BASE_URL}/ua/natiazhni-steli`,
+    images: defaultOgImages,
   },
 };
 

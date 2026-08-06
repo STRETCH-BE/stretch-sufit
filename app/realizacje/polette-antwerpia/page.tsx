@@ -32,7 +32,7 @@ const SLUG = "polette-antwerpia";
 
 export const metadata: Metadata = {
   title:
-    "Polette Antwerpia — sufit-pianino, koncept Imagine | Stretch Sufit",
+    "Polette Antwerpia — sufit-pianino, koncept Imagine",
   description:
     "Realizacja 60 m² akustycznego sufitu translucentnego w sklepie Polette w Antwerpii — rzeźba w kształcie wieka fortepianu na 20-metrowej głębokości showroomu. Projekt: zU-studio (Javier Zubiria). Montaż: 1 dzień.",
   alternates: { canonical: "/realizacje/polette-antwerpia" },

@@ -32,7 +32,7 @@ const SLUG = "rue-perree-paryz";
 
 export const metadata: Metadata = {
   title:
-    "Rue Perrée, Paryż — STRETCH Light Tunable White w concept storze | Stretch Sufit",
+    "Rue Perrée, Paryż — STRETCH Light Tunable White w concept storze",
   description:
     "Realizacja 45 m² sufitu STRETCH Light Tunable White w paryskim concept storze ART RECHERCHE INDUSTRIE przy Rue Perrée. Projekt: Ramdane Touchami. Rok: 2024.",
   alternates: { canonical: "/realizacje/rue-perree-paryz" },

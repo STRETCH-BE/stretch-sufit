@@ -21,7 +21,7 @@ const BASE_URL =
 const LAST_UPDATED = "14 May 2026";
 
 export const metadata: Metadata = {
-  title: "Warranty up to 15 years — Stretch ceilings | Stretch Sufit",
+  title: "Warranty up to 15 years — Stretch ceilings",
   description:
     "Full terms of the Stretch material warranty — 15 years on PVC manufactured in our factory in Poland, 10 years on polyester from Stretch Productions BV in Belgium. What's covered, how to claim.",
   alternates: {

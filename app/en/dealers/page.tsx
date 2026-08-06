@@ -18,7 +18,7 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -28,7 +28,7 @@ const PARTNER_MAILTO =
   "mailto:info@altodesign.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20application";
 
 export const metadata: Metadata = {
-  title: "Become a dealer — Stretch Partner Program | Stretch Sufit",
+  title: "Become a dealer — Stretch Partner Program",
   description:
     "Licensed Stretch stretch-ceiling technology for installation companies. Training in Belgium or Poland, proprietary aluminium profiles, tools, marketing support. Regional exclusivity.",
   alternates: {
@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/en/dealers`,
     locale: "en_US",
+    images: defaultOgImages,
   },
 };
 

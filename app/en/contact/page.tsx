@@ -14,12 +14,13 @@ import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Contact — call, write or visit | Stretch Sufit",
+  title: "Contact — call, write or visit",
   description:
     "Get in touch with Stretch Sufit — office in Częstochowa, ul. Legionów 59. Tel. +48 730 700 333. Free measurement in 17 Polish cities. We respond within 24 hours.",
   alternates: {
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/en/contact`,
     locale: "en_US",
+    images: defaultOgImages,
   },
 };
 

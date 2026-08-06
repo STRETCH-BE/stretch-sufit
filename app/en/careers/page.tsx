@@ -19,7 +19,7 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -34,8 +34,10 @@ function mailto(role: string) {
 }
 
 export const metadata: Metadata = {
-  title:
-    "Careers — work at Stretch Sufit | Belgian technology, Polish production",
+  title: {
+    absolute:
+      "Careers — work at Stretch Sufit | Belgian technology, Polish production",
+  },
   description:
     "Work at Stretch Sufit — part of the Belgian Stretchgroup. Stretch-ceiling installer, surveyor, customer advisor, production. Permanent employment, company car, training in Belgium. Częstochowa and across Poland.",
   alternates: {
@@ -49,6 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/en/careers`,
     locale: "en_US",
+    images: defaultOgImages,
   },
 };
 

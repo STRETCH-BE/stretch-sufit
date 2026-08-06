@@ -22,12 +22,13 @@ import { faqs, faqCategoriesUk } from "@/content/ua/faq";
 import type { FaqCategory } from "@/content/faq";
 import { products } from "@/content/ua/products";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Блог і FAQ — знання про натяжні стелі | Stretch Sufit",
+  title: "Блог і FAQ — знання про натяжні стелі",
   description:
     "Нотатник і FAQ Stretch Sufit. Статті про матеріали, акустику, LED-освітлення, догляд за натяжними стелями + 28 відповідей на найчастіші питання.",
   alternates: {
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/blog`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

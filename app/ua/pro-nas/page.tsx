@@ -14,9 +14,10 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Про нас — Дві фабрики, одна група | Stretch Sufit",
+  title: "Про нас — Дві фабрики, одна група",
   description:
     "Stretch Sufit — частина бельгійської Stretchgroup. ПВХ виробляється на нашій фабриці Alto Design у Польщі (з 2016 року), поліестер у Stretch Productions BV у Бельгії (з 2018 року). У 2024 році група придбала Alto Design — відтоді компанія публічно працює під брендом Stretch Sufit.",
   alternates: {
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     description:
       "Дві фабрики, одна група. ПВХ з Польщі, поліестер з Бельгії. Історія Stretchgroup, Alto Design і Stretch Productions.",
     type: "article",
+    images: defaultOgImages,
   },
 };
 

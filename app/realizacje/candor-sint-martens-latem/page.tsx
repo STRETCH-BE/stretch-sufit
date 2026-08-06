@@ -35,7 +35,7 @@ const SLUG = "candor-sint-martens-latem";
 
 export const metadata: Metadata = {
   title:
-    "Candor, Sint-Martens-Latem — niewidoczna akustyka biura | Stretch Sufit",
+    "Candor, Sint-Martens-Latem — niewidoczna akustyka biura",
   description:
     "Renowacja biura dewelopera Candor w Sint-Martens-Latem: akustyczne sufity napinane z zintegrowanym LED i absorpcją w przestrzeni międzystropowej. RT60 < 0,8 s bez ani jednego widocznego panelu. Koncepcja akustyczna: Form Design, wnętrza: Goedele Perdu, 2025.",
   alternates: {

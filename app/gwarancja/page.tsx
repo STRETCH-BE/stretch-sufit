@@ -31,7 +31,7 @@ const BASE_URL =
 const LAST_UPDATED = "14 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Gwarancja do 15 lat — sufity napinane Stretch | Stretch Sufit",
+  title: "Gwarancja do 15 lat — sufity napinane Stretch",
   description:
     "Pełne warunki gwarancji materiałowej Stretch — 15 lat na PVC produkowany w naszej fabryce w Polsce, 10 lat na polyester ze Stretch Productions BV w Belgii. Co obejmuje, jak zgłosić reklamację.",
   alternates: {

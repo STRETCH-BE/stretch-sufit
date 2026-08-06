@@ -23,6 +23,7 @@ import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
 import { citiesFull } from "@/content/ua/cities-full";
 import { products } from "@/content/ua/products";
 import { cityPaths, findCity, languageAlternates } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -45,7 +46,7 @@ export async function generateMetadata({
   const i18nEntry = findCity("ua", city.slug);
 
   return {
-    title: `Натяжні стелі ${city.locative} | Stretch Sufit ${city.name}`,
+    title: `Натяжні стелі ${city.locative}`,
     description: `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір. ${city.populationDisplay}, повне покриття міста.`,
     alternates: {
       canonical: `/ua/natiazhni-steli/${city.slug}`,
@@ -59,6 +60,7 @@ export async function generateMetadata({
       type: "website",
       url: `${BASE_URL}/ua/natiazhni-steli/${city.slug}`,
       locale: "uk_UA",
+      images: defaultOgImages,
     },
   };
 }

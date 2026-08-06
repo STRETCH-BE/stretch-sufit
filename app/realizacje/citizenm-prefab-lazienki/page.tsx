@@ -34,7 +34,7 @@ const SLUG = "citizenm-prefab-lazienki";
 
 export const metadata: Metadata = {
   title:
-    "citizenM — prefabrykowane łazienki z sufitem świetlnym | Stretch Sufit",
+    "citizenM — prefabrykowane łazienki z sufitem świetlnym",
   description:
     "Realizacja 2019–2023 dla sieci hoteli citizenM w USA i Europie: tekstylne sufity świetlne STRETCH Backlit zintegrowane w prefabrykowanych unitach łazienkowych partnera Saniskill. Produkcja membran w Belgii, montaż powłoki w fabryce — nie na budowie.",
   alternates: {

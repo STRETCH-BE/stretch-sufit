@@ -24,7 +24,7 @@ import { Footer } from "@/components/sections/footer";
 const LAST_UPDATED = "13 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Polityka prywatności | Stretch Sufit",
+  title: "Polityka prywatności",
   description:
     "Polityka prywatności i informacje o przetwarzaniu danych osobowych zgodnie z RODO. Administrator: Alto Design Sp. z o.o.",
   alternates: { canonical: "/polityka-prywatnosci" },

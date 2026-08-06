@@ -32,7 +32,7 @@ const SLUG = "vier-emmershof-lokeren";
 
 export const metadata: Metadata = {
   title:
-    "Vier Emmershof, Lokeren — akustyczny sufit w domu wkomponowanym w las | Stretch Sufit",
+    "Vier Emmershof, Lokeren — akustyczny sufit w domu wkomponowanym w las",
   description:
     "Realizacja akustycznego sufitu napinanego w prywatnej rezydencji 't Vier Emmershof w Lokeren — dom Inzicht Architecten z pełnym przeszkleniem na zachowany las świerkowy.",
   alternates: { canonical: "/realizacje/vier-emmershof-lokeren" },

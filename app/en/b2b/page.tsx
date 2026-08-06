@@ -19,7 +19,7 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -30,7 +30,7 @@ const B2B_MAILTO =
 
 export const metadata: Metadata = {
   title:
-    "B2B collaboration — architects, contractors, developers | Stretch Sufit",
+    "B2B collaboration — architects, contractors, developers",
   description:
     "B2B partnership with Stretch Sufit: dedicated project manager, BIM/CAD files and samples, project pricing, after-hours installation, VAT invoice, guaranteed timelines. Up to 15-year material warranty.",
   alternates: {
@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/en/b2b`,
     locale: "en_US",
+    images: defaultOgImages,
   },
 };
 

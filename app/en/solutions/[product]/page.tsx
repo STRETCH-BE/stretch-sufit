@@ -18,6 +18,7 @@ import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/en/products";
+import { defaultOgImages } from "@/lib/site-config";
 import {
   findProduct,
   languageAlternates,
@@ -44,7 +45,7 @@ export async function generateMetadata({
 
   const i18nEntry = findProduct("en", product.slug);
 
-  const title = `${product.title} | Stretch Sufit`;
+  const title = product.title;
   const description = `${product.tagline}. ${product.description} Up to 15 years warranty (15 yr PVC · 10 yr polyester), installed in 1 day. Part of the Belgian Stretchgroup.`;
 
   return {
@@ -57,11 +58,12 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title,
+      title: `${title} | Stretch Sufit`,
       description,
       type: "website",
       url: `${BASE_URL}/en/solutions/${product.slug}`,
       locale: "en_US",
+      images: defaultOgImages,
     },
   };
 }

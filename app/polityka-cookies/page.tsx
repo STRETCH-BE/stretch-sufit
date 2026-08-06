@@ -24,7 +24,7 @@ const BASE_URL =
 const LAST_UPDATED = "14 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Polityka cookies | Stretch Sufit",
+  title: "Polityka cookies",
   description:
     "Pełna informacja o plikach cookies wykorzystywanych w serwisie Stretch Sufit — kategorie, cele, okresy przechowywania, możliwość zarządzania.",
   alternates: { canonical: "/polityka-cookies" },

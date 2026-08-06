@@ -14,9 +14,10 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "About — Two factories, one group | Stretch Sufit",
+  title: "About — Two factories, one group",
   description:
     "Stretch Sufit is part of the Belgian Stretchgroup. PVC is manufactured at our Alto Design factory in Poland (since 2016), polyester at Stretch Productions BV in Belgium (since 2018). In 2024 the group acquired Alto Design — operating since then under the Stretch Sufit brand.",
   alternates: {
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
     description:
       "Two factories, one group. PVC from Poland, polyester from Belgium. The story of Stretchgroup, Alto Design and Stretch Productions.",
     type: "article",
+    images: defaultOgImages,
   },
 };
 

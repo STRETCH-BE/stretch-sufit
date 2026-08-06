@@ -14,12 +14,13 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Контакти — зателефонуйте, напишіть або приходьте | Stretch Sufit",
+  title: "Контакти — зателефонуйте, напишіть або приходьте",
   description:
     "Зв'яжіться зі Stretch Sufit — офіс у Ченстохові, вул. Лєгіонів 59. Тел. +48 455 444 475 (UA), +48 730 700 333 (PL/EN). Безкоштовний замір у 17 містах Польщі.",
   alternates: {
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/kontakty`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

@@ -19,6 +19,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/ua/products";
 import { findProduct, languageAlternates, productPaths } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -38,7 +39,7 @@ export async function generateMetadata({
   const product = products.find((p) => p.slug === productSlug);
   if (!product) return {};
 
-  const title = `${product.title} | Stretch Sufit`;
+  const title = product.title;
   const description = `${product.tagline}. ${product.description} Гарантія до 15 років (15 років ПВХ · 10 років поліестер), монтаж за 1 день. Частина бельгійської Stretchgroup.`;
 
   const i18nEntry = findProduct("ua", product.slug);
@@ -53,11 +54,12 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title,
+      title: `${title} | Stretch Sufit`,
       description,
       type: "website",
       url: `${BASE_URL}/ua/rishennya/${product.slug}`,
       locale: "uk_UA",
+      images: defaultOgImages,
     },
   };
 }

@@ -17,7 +17,7 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -27,7 +27,7 @@ const PARTNER_MAILTO =
   "mailto:info@altodesign.pl?subject=Stretch%20Partner%20Program%20%E2%80%94%20%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0";
 
 export const metadata: Metadata = {
-  title: "Стати дилером — Stretch Partner Program | Stretch Sufit",
+  title: "Стати дилером — Stretch Partner Program",
   description:
     "Ліцензована технологія натяжних стель Stretch для монтажних компаній. Навчання в Бельгії або Польщі, власні алюмінієві профілі, інструменти, маркетингова підтримка. Регіональна ексклюзивність.",
   alternates: {
@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/dileri`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

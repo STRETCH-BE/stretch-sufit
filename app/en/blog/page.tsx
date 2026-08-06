@@ -24,12 +24,13 @@ import { faqs, faqCategoriesEn } from "@/content/en/faq";
 import type { FaqCategory } from "@/content/faq";
 import { products } from "@/content/en/products";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Blog & FAQ — stretch ceiling knowledge | Stretch Sufit",
+  title: "Blog & FAQ — stretch ceiling knowledge",
   description:
     "Stretch Sufit notebook and FAQ. Articles on materials, acoustics, LED lighting, stretch-ceiling care + 28 answers to the most common questions.",
   alternates: {
@@ -43,6 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/en/blog`,
     locale: "en_US",
+    images: defaultOgImages,
   },
 };
 

@@ -18,7 +18,7 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -33,8 +33,10 @@ function mailto(role: string) {
 }
 
 export const metadata: Metadata = {
-  title:
-    "Кар'єра — робота в Stretch Sufit | Бельгійська технологія, польське виробництво",
+  title: {
+    absolute:
+      "Кар'єра — робота в Stretch Sufit | Бельгійська технологія, польське виробництво",
+  },
   description:
     "Працюйте у Stretch Sufit — частина бельгійської Stretchgroup. Монтажник натяжних стель, замірник, консультант, виробництво. Трудовий договір, службовий автомобіль, навчання в Бельгії. Ченстохова і вся Польща.",
   alternates: {
@@ -48,6 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/kariera`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

@@ -16,12 +16,13 @@ import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { cities } from "@/content/en/cities";
 import { citiesFull } from "@/content/en/cities-full";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Stretch ceilings — 17 cities across Poland | Stretch Sufit",
+  title: "Stretch ceilings — 17 cities across Poland",
   description:
     "Stretch ceilings in 17 Polish cities — Warsaw, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice and more. PVC manufactured in Poland, polyester from Belgium. Installed in 1 day, up to 15 years warranty.",
   alternates: {
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
       "Part of the Belgian Stretchgroup. PVC manufactured in Poland, polyester in Belgium. Installation across Poland.",
     type: "website",
     url: `${BASE_URL}/en/stretch-ceilings`,
+    images: defaultOgImages,
   },
 };
 

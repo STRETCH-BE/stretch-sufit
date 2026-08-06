@@ -27,7 +27,7 @@ const LAST_UPDATED = "14 maja 2026";
 const EFFECTIVE_DATE = "14 maja 2026";
 
 export const metadata: Metadata = {
-  title: "Ogólne Warunki Sprzedaży | Stretch Sufit",
+  title: "Ogólne Warunki Sprzedaży",
   description:
     "Ogólne Warunki Sprzedaży i Dostaw Alto Design Sp. z o.o. (Stretch Sufit). Pełna treść OWU regulujących umowy handlowe B2B.",
   alternates: { canonical: "/regulamin" },

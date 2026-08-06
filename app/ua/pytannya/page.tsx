@@ -17,12 +17,13 @@ import { FaqGrid } from "@/components/sections/faq-grid";
 import { faqs, faqCategoriesUk } from "@/content/ua/faq";
 import type { FaqCategory } from "@/content/faq";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Питання та відповіді — натяжні стелі | Stretch Sufit",
+  title: "Питання та відповіді — натяжні стелі",
   description:
     "Відповіді на найчастіші питання про натяжні стелі Stretch Sufit. Ціна, монтаж, гарантія, матеріали, терміни. 28 вичерпних відповідей.",
   alternates: {
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/pytannya`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

@@ -26,7 +26,7 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -41,8 +41,10 @@ function mailto(role: string) {
 }
 
 export const metadata: Metadata = {
-  title:
-    "Kariera — praca w Stretch Sufit | Belgijska technologia, polska produkcja",
+  title: {
+    absolute:
+      "Kariera — praca w Stretch Sufit | Belgijska technologia, polska produkcja",
+  },
   description:
     "Pracuj w Stretch Sufit — części belgijskiej grupy Stretch. Monter sufitów napinanych, pomiarowiec, doradca klienta, produkcja. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
   alternates: {
@@ -56,6 +58,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/kariera`,
     locale: "pl_PL",
+    images: defaultOgImages,
   },
 };
 

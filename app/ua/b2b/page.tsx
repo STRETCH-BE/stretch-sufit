@@ -18,7 +18,7 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -29,7 +29,7 @@ const B2B_MAILTO =
 
 export const metadata: Metadata = {
   title:
-    "B2B співпраця — архітектори, підрядники, забудовники | Stretch Sufit",
+    "B2B співпраця — архітектори, підрядники, забудовники",
   description:
     "B2B співпраця зі Stretch Sufit: виділений project manager, зразки та файли BIM/CAD, проєктні ціни, монтаж після робочого часу, ПДВ-фактура, гарантовані терміни. Гарантія до 15 років на матеріал.",
   alternates: {
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/ua/b2b`,
     locale: "uk_UA",
+    images: defaultOgImages,
   },
 };
 

@@ -19,12 +19,13 @@ import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 import { products } from "@/content/products";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Rozwiązania — 6 produktów Stretch | Stretch Sufit",
+  title: "Rozwiązania — 6 produktów Stretch",
   description:
     "Pełen katalog sufitów napinanych Stretch — PVC (produkowany w Polsce, bezszwowo do 6,50 m), poliester (Belgia), akustyczny, świetlny LED, fotodruk, prefab. Część Stretchgroup, do 15 lat gwarancji.",
   alternates: {
@@ -37,6 +38,7 @@ export const metadata: Metadata = {
       "Sufity napinane w 6 wariantach. PVC z Polski, polyester z Belgii. Wybierz to, co pasuje do Twojego wnętrza.",
     type: "website",
     url: `${BASE_URL}/rozwiazania`,
+    images: defaultOgImages,
   },
 };
 

@@ -28,7 +28,7 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/lib/site-config";
+import { siteConfig, defaultOgImages } from "@/lib/site-config";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 
 const BASE_URL =
@@ -39,7 +39,7 @@ const PARTNER_MAILTO =
 
 export const metadata: Metadata = {
   title:
-    "Zostań dealerem — Stretch Partner Program | Stretch Sufit",
+    "Zostań dealerem — Stretch Partner Program",
   description:
     "Licencjonowana technologia sufitów napinanych Stretch dla firm wykonawczych. Szkolenie w Belgii lub Polsce, własne profile aluminiowe, narzędzia, wsparcie marketingowe. Wyłączność na region.",
   alternates: {
@@ -53,6 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     url: `${BASE_URL}/dealerzy`,
     locale: "pl_PL",
+    images: defaultOgImages,
   },
 };
 

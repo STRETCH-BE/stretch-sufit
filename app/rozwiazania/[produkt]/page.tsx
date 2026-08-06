@@ -24,6 +24,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/products";
 import { findProduct, productPaths, languageAlternates } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -45,7 +46,7 @@ export async function generateMetadata({
 
   const i18nEntry = findProduct("pl", produkt);
 
-  const title = `${product.title} | Stretch Sufit`;
+  const title = product.title;
   const description = `${product.tagline}. ${product.description} Do 15 lat gwarancji (15 lat PVC · 10 lat polyester), montaż w 1 dzień. Część belgijskiej Stretchgroup.`;
 
   return {
@@ -58,11 +59,12 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title,
+      title: `${title} | Stretch Sufit`,
       description,
       type: "website",
       url: `${BASE_URL}/rozwiazania/${product.slug}`,
       locale: "pl_PL",
+      images: defaultOgImages,
     },
   };
 }

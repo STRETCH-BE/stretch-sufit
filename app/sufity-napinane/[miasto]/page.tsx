@@ -26,6 +26,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 import { cities } from "@/content/cities";
 import { findCity, cityPaths, languageAlternates } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -49,7 +50,7 @@ export async function generateMetadata({
 
   const i18nEntry = findCity("pl", miasto);
 
-  const title = `Sufity napinane ${city.locative} — montaż w 1 dzień | Stretch Sufit`;
+  const title = `Sufity napinane ${city.locative} — montaż w 1 dzień`;
   const description = `Sufity napinane ${city.locative} — PVC z naszej fabryki w Polsce, polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. Bezpłatny pomiar. ${city.populationDisplay}, pełna obsługa miasta.`;
 
   return {
@@ -62,11 +63,12 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title,
+      title: `${title} | Stretch Sufit`,
       description,
       type: "website",
       url: `${BASE_URL}/sufity-napinane/${city.slug}`,
       locale: "pl_PL",
+      images: defaultOgImages,
     },
   };
 }

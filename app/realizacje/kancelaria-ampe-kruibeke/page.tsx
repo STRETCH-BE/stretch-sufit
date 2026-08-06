@@ -35,7 +35,7 @@ const SLUG = "kancelaria-ampe-kruibeke";
 
 export const metadata: Metadata = {
   title:
-    "Kancelaria notarialna Ampe, Kruibeke — sufit akustyczny + polyester wool | Stretch Sufit",
+    "Kancelaria notarialna Ampe, Kruibeke — sufit akustyczny + polyester wool",
   description:
     "Realizacja sufitu napinanego akustycznego z wełną poliestrową D40/50 w 350-metrowej kancelarii notarialnej Ampe Anthony w Kruibeke (Belgia). Projekt: Ante Architecten. Czas pogłosu po montażu: 0,6 sekundy.",
   alternates: {

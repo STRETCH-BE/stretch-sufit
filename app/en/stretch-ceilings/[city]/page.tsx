@@ -23,6 +23,7 @@ import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
 import { citiesFull } from "@/content/en/cities-full";
 import { products } from "@/content/en/products";
 import { cityPaths, findCity, languageAlternates } from "@/lib/i18n-routes";
+import { defaultOgImages } from "@/lib/site-config";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -45,7 +46,7 @@ export async function generateMetadata({
   const i18nEntry = findCity("en", city.slug);
 
   return {
-    title: `Stretch ceilings ${city.locative} | Stretch Sufit ${city.name}`,
+    title: `Stretch ceilings ${city.locative}`,
     description: `Stretch ceilings ${city.locative} — PVC manufactured in our factory in Poland, polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Free measurement. ${city.populationDisplay}, full city coverage.`,
     alternates: {
       canonical: `/en/stretch-ceilings/${city.slug}`,
@@ -59,6 +60,7 @@ export async function generateMetadata({
       type: "website",
       url: `${BASE_URL}/en/stretch-ceilings/${city.slug}`,
       locale: "en_US",
+      images: defaultOgImages,
     },
   };
 }
