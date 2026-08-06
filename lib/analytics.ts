@@ -14,12 +14,14 @@
  *   analytics.phoneClick("footer");
  */
 
-import posthog from "posthog-js";
+import type { PostHog } from "posthog-js";
 
 type EventProps = Record<string, string | number | boolean | null | undefined>;
 
 declare global {
   interface Window {
+    /** Set by PostHogProvider after the SDK is lazy-loaded on consent. */
+    __ph?: PostHog;
     gtag?: (...args: unknown[]) => void;
     fbq?: (...args: unknown[]) => void;
     clarity?: (...args: unknown[]) => void;
@@ -30,11 +32,11 @@ declare global {
 export function track(eventName: string, props?: EventProps) {
   if (typeof window === "undefined") return;
 
-  // PostHog
+  // PostHog — instance is attached to window by PostHogProvider after
+  // consent-gated lazy load; a static import here would drag the ~55 KiB
+  // SDK back into the main bundle for every page.
   try {
-    if ((posthog as unknown as { __loaded?: boolean })?.__loaded) {
-      posthog.capture(eventName, props);
-    }
+    window.__ph?.capture(eventName, props);
   } catch {
     /* no-op */
   }
