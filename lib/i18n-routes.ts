@@ -92,6 +92,25 @@ export const projectSlugs: string[] = [
   "vier-emmershof-lokeren",
 ];
 
+/** Blog article slugs per locale. Same article, same array position. */
+export const blogPostSlugs: { pl: string; en: string; ua: string }[] = [
+  {
+    pl: "ile-kosztuje-sufit-napinany",
+    en: "stretch-ceiling-cost",
+    ua: "skilky-koshtuye-natyazhna-stelya",
+  },
+  {
+    pl: "sufit-pvc-czy-poliestrowy",
+    en: "pvc-vs-polyester-ceiling",
+    ua: "stelya-pvh-chy-poliester",
+  },
+  {
+    pl: "sufit-napinany-w-lazience",
+    en: "stretch-ceiling-bathroom",
+    ua: "natyazhna-stelya-u-vannii",
+  },
+];
+
 /* ─── Path builders ───────────────────────────────────────── */
 
 export function productPaths(entry: {
@@ -132,6 +151,26 @@ export function findCity(
   slug: string
 ): { pl: string; en?: string; ua?: string } | undefined {
   return citySlugs.find((c) => c[locale] === slug);
+}
+
+export function blogPostPaths(entry: {
+  pl: string;
+  en: string;
+  ua: string;
+}): LocalePaths {
+  return {
+    pl: `${routes.blog.pl}/${entry.pl}`,
+    en: `${routes.blog.en}/${entry.en}`,
+    ua: `${routes.blog.ua}/${entry.ua}`,
+  };
+}
+
+/** Look up a blog article entry by its slug in any locale. */
+export function findBlogPost(
+  locale: "pl" | "en" | "ua",
+  slug: string
+): { pl: string; en: string; ua: string } | undefined {
+  return blogPostSlugs.find((b) => b[locale] === slug);
 }
 
 /* ─── hreflang builder ────────────────────────────────────── */
