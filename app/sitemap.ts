@@ -73,6 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localized(routes.about, lastModified, "monthly", 0.8),
     ...localized(routes.faq, lastModified, "monthly", 0.8),
     ...localized(routes.projects, lastModified, "weekly", 0.8),
+    // /wycena/dziekujemy is intentionally absent — it's noindex
+    ...localized(routes.wycena, lastModified, "weekly", 0.9),
     ...localized(routes.blog, lastModified, "weekly", 0.7),
     ...localized(routes.dealers, lastModified, "monthly", 0.6),
     ...localized(routes.b2b, lastModified, "monthly", 0.6),
