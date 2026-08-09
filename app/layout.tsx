@@ -23,6 +23,10 @@ import { siteConfig } from "@/lib/site-config";
 import { buildOrganization, buildWebsite } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ConsentProvider } from "@/components/analytics/consent-provider";
+import {
+  GoogleConsentDefaults,
+  GoogleConsentUpdate,
+} from "@/components/analytics/google-consent-mode";
 import { CookieBanner } from "@/components/analytics/cookie-banner";
 import { PostHogProvider } from "@/components/analytics/posthog-provider";
 import { Clarity } from "@/components/analytics/clarity";
@@ -130,6 +134,9 @@ export default function RootLayout({
       className={`${bricolage.variable} ${instrument.variable} ${dmSans.variable}`}
     >
       <body className="bg-bg text-white antialiased">
+        {/* Consent Mode v2 defaults — must execute before any Google tag */}
+        <GoogleConsentDefaults />
+
         {/* Site-wide structured data */}
         <JsonLd data={buildOrganization()} />
         <JsonLd data={buildWebsite()} />
@@ -152,6 +159,7 @@ export default function RootLayout({
           </Suspense>
 
           {/* Third-party scripts — each is consent-gated and env-gated */}
+          <GoogleConsentUpdate />
           <Clarity />
           <GA4 />
           <MetaPixel />

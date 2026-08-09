@@ -58,6 +58,10 @@ export function track(eventName: string, props?: EventProps) {
       phone_click: "Contact",
       whatsapp_click: "Contact",
       quote_request: "Lead",
+      // Wycena funnel: only the completed form counts as a Meta "Lead" —
+      // funnel entry is a lighter signal so Ads optimization stays clean.
+      cta_wycena: "InitiateCheckout",
+      wycena_form_submit: "Lead",
     };
     if (typeof window.fbq === "function" && metaMap[eventName]) {
       window.fbq("track", metaMap[eventName], props || {});
