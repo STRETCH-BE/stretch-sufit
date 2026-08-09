@@ -35,6 +35,11 @@ export function Nav() {
       currentLocale="ua"
       labels={labels}
       ctaHref="/ua#cta"
+      ctaTracking={{
+        event: "cta_click",
+        desktopProps: { location: "nav", label: "bezplatna_wycena" },
+        mobileProps: { location: "nav_mobile", label: "bezplatna_wycena" },
+      }}
     />
   );
 }

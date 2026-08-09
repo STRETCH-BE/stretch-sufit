@@ -70,12 +70,12 @@ export function Hero() {
             <FadeIn delay={240}>
               <div className="flex flex-wrap items-center gap-3.5">
                 <TrackedCTA
-                  event="cta_click"
-                  props={{ location: "hero", label: "pomiar" }}
-                  href="/#cta"
+                  event="cta_wycena"
+                  props={{ location: "hero" }}
+                  href="/wycena"
                   className="group/btn inline-flex items-center gap-2.5 rounded-full border border-red bg-red px-[26px] py-4 text-sm font-semibold text-white transition-all duration-[250ms] hover:-translate-y-px hover:border-red-deep hover:bg-red-deep"
                 >
-                  Zamów bezpłatny pomiar
+                  Zamów bezpłatną wycenę
                   <span
                     aria-hidden="true"
                     className="transition-transform duration-[250ms] group-hover/btn:translate-x-1"

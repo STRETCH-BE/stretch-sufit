@@ -136,6 +136,16 @@ export function Footer() {
                 {siteConfig.contact.email}
               </a>
             </li>
+            <li className="pt-3">
+              <TrackedCTA
+                event="cta_wycena"
+                props={{ location: "footer" }}
+                href="/wycena"
+                className="text-sm font-semibold text-red transition-colors hover:text-white"
+              >
+                Bezpłatna wycena →
+              </TrackedCTA>
+            </li>
           </FooterColumn>
         </div>
 

@@ -37,6 +37,16 @@ export type NavProps = {
     cta: string;
   };
   ctaHref?: string;
+  /**
+   * Analytics config for the CTA button. Defaults to the PL funnel event;
+   * the EN/UA/UK wrappers pass their legacy cta_click config so their
+   * dashboards and the Meta Pixel Lead mapping stay unchanged.
+   */
+  ctaTracking?: {
+    event: string;
+    desktopProps: Record<string, string>;
+    mobileProps: Record<string, string>;
+  };
 };
 
 const DEFAULT_LINKS: NavLink[] = [
@@ -61,12 +71,19 @@ const DEFAULT_LABELS = {
   cta: "Bezpłatna wycena",
 };
 
+const DEFAULT_CTA_TRACKING = {
+  event: "cta_wycena",
+  desktopProps: { location: "header" },
+  mobileProps: { location: "header_mobile" },
+};
+
 export function Nav({
   navLinks = DEFAULT_LINKS,
   locales = DEFAULT_LOCALES,
   currentLocale = "pl",
   labels = DEFAULT_LABELS,
-  ctaHref = "/#cta",
+  ctaHref = "/wycena",
+  ctaTracking = DEFAULT_CTA_TRACKING,
 }: NavProps = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -143,8 +160,8 @@ export function Nav({
             </ul>
 
             <TrackedCTA
-              event="cta_click"
-              props={{ location: "nav", label: "bezplatna_wycena" }}
+              event={ctaTracking.event}
+              props={ctaTracking.desktopProps}
               href={ctaHref}
               className="rounded-full border border-red bg-red px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-red-deep hover:border-red-deep"
             >
@@ -217,10 +234,11 @@ export function Nav({
               ))}
             </ul>
             <TrackedCTA
-              event="cta_click"
-              props={{ location: "nav_mobile", label: "bezplatna_wycena" }}
+              event={ctaTracking.event}
+              props={ctaTracking.mobileProps}
               href={ctaHref}
               className="rounded-full bg-red px-6 py-4 text-center text-sm font-semibold text-white"
+              onClick={() => setOpen(false)}
             >
               {labels.cta}
             </TrackedCTA>

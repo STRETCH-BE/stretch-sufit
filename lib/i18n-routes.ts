@@ -37,6 +37,8 @@ export const routes = {
   careers: { pl: "/kariera", en: "/en/careers", ua: "/ua/kariera" },
   b2b: { pl: "/wspolpraca-b2b", en: "/en/b2b", ua: "/ua/b2b" },
   projects: { pl: "/realizacje" },
+  /** Google Ads quote funnel — PL only, no EN/UA versions planned. */
+  wycena: { pl: "/wycena" },
   terms: { pl: "/regulamin" },
   privacy: { pl: "/polityka-prywatnosci" },
   cookiesPolicy: { pl: "/polityka-cookies" },
