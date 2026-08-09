@@ -38,6 +38,11 @@ export function Nav() {
       currentLocale="en"
       labels={labels}
       ctaHref="/en#cta"
+      ctaTracking={{
+        event: "cta_click",
+        desktopProps: { location: "nav", label: "bezplatna_wycena" },
+        mobileProps: { location: "nav_mobile", label: "bezplatna_wycena" },
+      }}
     />
   );
 }
