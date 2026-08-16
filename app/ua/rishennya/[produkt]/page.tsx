@@ -18,6 +18,7 @@ import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/ua/products";
+import { priceRangeFor } from "@/content/product-prices";
 import { findProduct, languageAlternates, productPaths } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
 
@@ -74,6 +75,7 @@ export default async function ProductPageUk({
   if (!product) notFound();
 
   const otherProducts = products.filter((p) => p.slug !== product.slug);
+  const priceRange = priceRangeFor("ua", product.slug);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -91,6 +93,11 @@ export default async function ProductPageUk({
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "PLN",
+      // lowPrice is REQUIRED for a valid Product snippet. PLN netto per m².
+      ...(priceRange && {
+        lowPrice: priceRange.from,
+        highPrice: priceRange.to,
+      }),
       availability: "https://schema.org/InStock",
       seller: { "@type": "Organization", name: "Stretch Sufit" },
     },
