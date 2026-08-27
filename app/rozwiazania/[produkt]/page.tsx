@@ -23,6 +23,7 @@ import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/products";
+import { priceRangeFor } from "@/content/product-prices";
 import { findProduct, productPaths, languageAlternates } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
 
@@ -79,6 +80,7 @@ export default async function ProductPage({
   if (!product) notFound();
 
   const otherProducts = products.filter((p) => p.slug !== product.slug);
+  const priceRange = priceRangeFor("pl", product.slug);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -99,6 +101,12 @@ export default async function ProductPage({
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "PLN",
+      // lowPrice is REQUIRED for a valid Product snippet (Search Console
+      // flags the item as invalid without it). PLN netto per m².
+      ...(priceRange && {
+        lowPrice: priceRange.from,
+        highPrice: priceRange.to,
+      }),
       availability: "https://schema.org/InStock",
       seller: {
         "@type": "Organization",

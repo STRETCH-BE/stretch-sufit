@@ -18,6 +18,7 @@ import { MobileStickyCTA } from "@/components/sections/uk/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { products } from "@/content/uk/products";
+import { priceRangeFor } from "@/content/product-prices";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://stretch-sufit.vercel.app";
@@ -64,6 +65,8 @@ export default async function ProductPageUk({
   if (!product) notFound();
 
   const otherProducts = products.filter((p) => p.slug !== product.slug);
+  // The /uk tree reuses the "ua" slugs
+  const priceRange = priceRangeFor("ua", product.slug);
 
   const productSchema = {
     "@context": "https://schema.org",
@@ -81,6 +84,11 @@ export default async function ProductPageUk({
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "PLN",
+      // lowPrice is REQUIRED for a valid Product snippet. PLN netto per m².
+      ...(priceRange && {
+        lowPrice: priceRange.from,
+        highPrice: priceRange.to,
+      }),
       availability: "https://schema.org/InStock",
       seller: { "@type": "Organization", name: "Stretch Sufit" },
     },

@@ -4,8 +4,9 @@
  *
  * Recruitment page for the Polish operation. Open roles are described as
  * always-on talent pools rather than time-bound listings — the company is
- * scaling 17 cities of operations, so monter/pomiarowiec/doradca slots are
- * effectively always open.
+ * scaling 17 cities of operations, so the monter slot is effectively
+ * always open. (Pomiarowiec / doradca / produkcja roles were removed
+ * 2026-08 — re-add to the `roles` array when they reopen.)
  *
  * Each role card carries its own pre-tagged mailto: subject so HR can
  * filter inbound applications by role in info@stretch-sufit.pl. No new
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
       "Kariera — praca w Stretch Sufit | Belgijska technologia, polska produkcja",
   },
   description:
-    "Pracuj w Stretch Sufit — części belgijskiej grupy Stretch. Monter sufitów napinanych, pomiarowiec, doradca klienta, produkcja. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
+    "Pracuj w Stretch Sufit — części belgijskiej grupy Stretch. Monter sufitów napinanych. Umowa o pracę, samochód służbowy, szkolenia w Belgii. Częstochowa i cała Polska.",
   alternates: {
     canonical: "/kariera",
     languages: languageAlternates(routes.careers),
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kariera w Stretch Sufit",
     description:
-      "Otwarte stanowiska w Stretch Sufit — monterzy, pomiarowcy, doradcy klienta. UoP, samochód, szkolenia.",
+      "Otwarte stanowiska w Stretch Sufit — monterzy sufitów napinanych. UoP, samochód, szkolenia.",
     type: "website",
     url: `${BASE_URL}/kariera`,
     locale: "pl_PL",
@@ -106,62 +107,6 @@ const roles: Role[] = [
       "Gotowość do delegacji w obrębie Polski (1 – 3 noclegi miesięcznie)",
     ],
   },
-  {
-    no: "02",
-    title: "Pomiarowiec / Doradca techniczny",
-    type: "Pełny etat · UoP + premie",
-    location: "Wybrany region (PL)",
-    body: "Pierwszy kontakt klienta z firmą po telefonie. Przyjeżdżasz do mieszkania / biura / restauracji z próbnikami, mierzysz, doradzasz materiał, przedstawiasz ofertę.",
-    responsibilities: [
-      "Wizyty pomiarowe w domu klienta z pełnym próbnikiem materiałów",
-      "Doradztwo techniczne: typ membrany, oświetlenie, akustyka",
-      "Przygotowanie wyceny i ofertowanie w systemie CRM",
-      "Domykanie sprzedaży — premia od zaliczki i finalnej wartości kontraktu",
-    ],
-    requirements: [
-      "Umiejętność rozmowy z klientem premium-owym",
-      "Znajomość rynku wykończeń lub design wnętrz (mile widziane)",
-      "Prawo jazdy kat. B i komfort jeżdżenia służbowym SUV-em",
-      "Samodzielność — pracujesz w terenie, biuro odwiedzasz raz w tygodniu",
-    ],
-  },
-  {
-    no: "03",
-    title: "Doradca klienta — biuro / hotline",
-    type: "Pełny etat · UoP",
-    location: "Częstochowa · biuro",
-    body: "Pierwsza linia kontaktu telefonicznego i mailowego. Odbierasz zgłoszenia z formularza, kwalifikujesz lead, umawiasz pomiary, koordynujesz harmonogram pomiarowców.",
-    responsibilities: [
-      "Obsługa telefonu i maila info@ w godzinach 09:00 – 15:30",
-      "Kwalifikacja leadów i przydzielanie do pomiarowców",
-      "Wsparcie posprzedażowe i pierwsze rozmowy gwarancyjne",
-      "Aktualizacja CRM i prosta sprawozdawczość",
-    ],
-    requirements: [
-      "Bardzo dobry polski w mowie i piśmie",
-      "Komfort pracy w systemach CRM (uczymy konkretnego)",
-      "Mile widziane: angielski lub ukraiński / rosyjski",
-      "Cierpliwość i autentyczna ciekawość problemu klienta",
-    ],
-  },
-  {
-    no: "04",
-    title: "Operator produkcji membran",
-    type: "Pełny etat · UoP",
-    location: "Częstochowa · ul. Legionów 59",
-    body: "Praca na hali produkcyjnej. Cięcie i zgrzewanie membran PVC i poliestrowych zgodnie z arkuszami produkcyjnymi przygotowanymi po pomiarze.",
-    responsibilities: [
-      "Obsługa maszyn do cięcia i zgrzewania membran",
-      "Kontrola jakości materiału na każdym etapie",
-      "Pakowanie i przygotowanie do wysyłki na obiekt",
-      "Bezpieczna praca z materiałami i sprzętem",
-    ],
-    requirements: [
-      "Dokładność i odpowiedzialność za jakość produktu",
-      "Doświadczenie w produkcji (krój, szwalnia, druk wielkoformatowy) mile widziane",
-      "Gotowość do pracy w trybie 1-zmianowym (07:00 – 15:00)",
-    ],
-  },
 ];
 
 const benefits = [
@@ -173,7 +118,7 @@ const benefits = [
   {
     label: "Wynagrodzenie",
     title: "Podstawa + premie kwartalne",
-    body: "Stała podstawa adekwatna do roli + system premiowy zależny od stanowiska: monter — od zrealizowanych projektów, pomiarowiec — od domkniętej sprzedaży, biuro — od KPI zespołu.",
+    body: "Stała podstawa adekwatna do roli + system premiowy zależny od stanowiska. Monter — premie od zrealizowanych projektów.",
   },
   {
     label: "Sprzęt",
@@ -208,7 +153,7 @@ const values = [
   },
   {
     no: "Uczymy.",
-    yes: "Nowy monter spędza pierwsze 2 tygodnie na obiekcie z seniorem. Pomiarowiec uczy się sprzedawać bez agresji. Doradca biura uczy się rozmawiać z architektem. Inwestujemy w to.",
+    yes: "Nowy monter spędza pierwsze 2 tygodnie na obiekcie z seniorem. Inwestujemy w to.",
   },
 ];
 

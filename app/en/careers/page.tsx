@@ -3,9 +3,10 @@
  * File path: /app/en/careers/page.tsx
  *
  * English translation of /kariera. Open roles for the Polish operation —
- * the company is scaling 17 cities so installer/surveyor/advisor slots are
- * effectively always open. EN version targets bilingual candidates already
- * in Poland or those relocating for work.
+ * the company is scaling 17 cities so the installer slot is effectively
+ * always open (surveyor / advisor / production roles removed 2026-08 —
+ * re-add to `roles` when they reopen). EN version targets bilingual
+ * candidates already in Poland or those relocating for work.
  */
 
 import type { Metadata } from "next";
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
       "Careers — work at Stretch Sufit | Belgian technology, Polish production",
   },
   description:
-    "Work at Stretch Sufit — part of the Belgian Stretchgroup. Stretch-ceiling installer, surveyor, customer advisor, production. Permanent employment, company car, training in Belgium. Częstochowa and across Poland.",
+    "Work at Stretch Sufit — part of the Belgian Stretchgroup. Stretch-ceiling installer. Permanent employment, company car, training in Belgium. Częstochowa and across Poland.",
   alternates: {
     canonical: "/en/careers",
     languages: languageAlternates(routes.careers),
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Careers at Stretch Sufit",
     description:
-      "Open roles at Stretch Sufit — installers, surveyors, customer advisors. Permanent contract, company car, training.",
+      "Open roles at Stretch Sufit — stretch-ceiling installers. Permanent contract, company car, training.",
     type: "website",
     url: `${BASE_URL}/en/careers`,
     locale: "en_US",
@@ -99,62 +100,6 @@ const roles: Role[] = [
       "Willingness to travel within Poland (1–3 overnight stays per month)",
     ],
   },
-  {
-    no: "02",
-    title: "Surveyor / Technical advisor",
-    type: "Full-time · Permanent contract + bonus",
-    location: "Selected region (PL)",
-    body: "The client's first contact after the call. You drive to the apartment / office / restaurant with sample kits, measure, advise on materials, present the offer.",
-    responsibilities: [
-      "On-site survey visits with the full sample kit",
-      "Technical advice: membrane type, lighting, acoustics",
-      "Preparing quotes and offers in the CRM",
-      "Closing the sale — bonus on the deposit and final contract value",
-    ],
-    requirements: [
-      "Ability to hold a conversation with a premium client",
-      "Familiarity with the finishes market or interior design (welcome)",
-      "Category B driving licence and comfort driving a company SUV",
-      "Self-sufficiency — you work in the field, visit the office once a week",
-    ],
-  },
-  {
-    no: "03",
-    title: "Customer advisor — office / hotline",
-    type: "Full-time · Permanent contract",
-    location: "Częstochowa · office",
-    body: "First line of phone and email contact. You handle inbound enquiries from the form, qualify leads, schedule surveys, coordinate surveyors' calendars.",
-    responsibilities: [
-      "Handling the info@ phone and inbox during 09:00–15:30",
-      "Lead qualification and assignment to surveyors",
-      "Post-sale support and first-touch warranty conversations",
-      "CRM updates and simple reporting",
-    ],
-    requirements: [
-      "Very strong written and spoken Polish",
-      "Comfort with CRM systems (we'll train you on ours)",
-      "Welcome: English or Ukrainian / Russian",
-      "Patience and genuine curiosity about the client's problem",
-    ],
-  },
-  {
-    no: "04",
-    title: "Membrane production operator",
-    type: "Full-time · Permanent contract",
-    location: "Częstochowa · ul. Legionów 59",
-    body: "Production-floor work. Cutting and welding PVC and polyester membranes according to production sheets prepared after the survey.",
-    responsibilities: [
-      "Operating membrane cutting and welding machines",
-      "Quality control of the material at every stage",
-      "Packing and preparing for site delivery",
-      "Safe handling of materials and equipment",
-    ],
-    requirements: [
-      "Precision and accountability for product quality",
-      "Production experience welcome (tailoring, large-format print, similar)",
-      "Willingness to work a single 07:00–15:00 shift",
-    ],
-  },
 ];
 
 const benefits = [
@@ -166,7 +111,7 @@ const benefits = [
   {
     label: "Compensation",
     title: "Base + quarterly bonus",
-    body: "Solid base appropriate to the role + a bonus system tied to the position: installer — on delivered projects, surveyor — on closed sales, office — on team KPIs.",
+    body: "Solid base appropriate to the role + a bonus system tied to the position. Installer — bonuses on delivered projects.",
   },
   {
     label: "Equipment",
@@ -201,7 +146,7 @@ const values = [
   },
   {
     no: "We teach.",
-    yes: "A new installer spends the first 2 weeks on site with a senior. A surveyor learns to sell without pressure. An office advisor learns to talk to architects. We invest in that.",
+    yes: "A new installer spends the first 2 weeks on site with a senior. We invest in that.",
   },
 ];
 
