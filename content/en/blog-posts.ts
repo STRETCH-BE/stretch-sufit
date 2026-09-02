@@ -606,6 +606,200 @@ export const blogPosts: BlogPost[] = [
       { label: "Stretch ceilings Kraków", href: "/en/stretch-ceilings/krakow" },
     ],
   },
+
+  /* ── 06 · 8% VAT ───────────────────────────────────────── */
+  {
+    slug: "stretch-ceiling-vat-8-poland",
+    category: "Pricing",
+    title: "Stretch ceilings and 8% VAT — who pays less in 2026",
+    metaDescription:
+      "Installing a ceiling in a flat up to 150 m² or a house up to 300 m² can carry 8% VAT instead of 23% — a buyer's declaration is enough. A 6,000 PLN net living room: 900 PLN difference.",
+    excerpt:
+      "Almost nobody writes about the 8% rate on stretch-ceiling installation, yet for most private customers it means several hundred zlotys of difference on a single room. We explain who the preferential rate covers, which floor-area limits apply, what the declaration looks like and how much really stays in your pocket.",
+    datePublished: "2026-09-02",
+    readTime: "7 min",
+    intro: [
+      "Installing a stretch ceiling in housing covered by Poland's social housing programme — that is, flats with a usable area up to 150 m² and single-family houses up to 300 m² — can carry the 8% VAT rate instead of 23%. The basis is a buyer's declaration, which we prepare together with the contract. It applies to private individuals and to companies buying a ceiling for residential purposes alike. On a living room quoted at 6,000 PLN net, the difference is 900 PLN gross.",
+      "We write as the manufacturer and installer — our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium — so we describe exactly the procedure we apply with every private customer's contract. One reservation up front: this is general information about the rules we apply in practice, not tax advice. In an unusual situation it is worth asking a tax adviser.",
+    ],
+    sections: [
+      {
+        heading: "Where the 8% rate on a ceiling comes from",
+        paragraphs: [
+          "The Polish VAT Act provides a reduced 8% rate for construction works — building, renovation, modernisation and conversion — carried out in buildings covered by the social housing programme. The key word is works: the preference covers the service of installing the ceiling together with the material, performed in residential premises. Selling the film alone, without installation, is a supply of goods and carries 23%.",
+          "A stretch ceiling, as a finishing element permanently attached to the building, fits this definition just like a plasterboard build, plaster or flooring. That is why in our quotation the ceiling always appears as a complete service: measurement, made-to-measure membrane production, profiles and installation. That is not just tidiness in the offer — it is the condition for applying the lower rate.",
+        ],
+      },
+      {
+        heading: "Who pays 8% and who pays 23% — scenario table",
+        paragraphs: [
+          "Two things decide: the type of premises and their usable floor area. Below are the most common cases from our practice.",
+        ],
+        table: {
+          headers: ["Scenario", "VAT rate", "Condition"],
+          rows: [
+            ["Flat up to 150 m² — private individual", "8%", "buyer's declaration of floor area and residential use"],
+            ["Single-family house up to 300 m²", "8%", "buyer's declaration of floor area and residential use"],
+            ["Flat / house bought by a company for residential purposes", "8%", "an invoice to a company does not exclude the preference — the use of the premises decides"],
+            ["Flat above 150 m² or house above 300 m²", "8% proportionally", "the reduced rate covers the part corresponding to the limit, the rest at 23%"],
+            ["Office, commercial unit, restaurant, shop", "23%", "commercial premises — no preference"],
+            ["Film alone without installation (goods)", "23%", "the preference applies only to the installation service"],
+          ],
+        },
+      },
+      {
+        heading: "Gross example: a 25 m² living room",
+        paragraphs: [
+          "Take a project from our price guide: a 25 m² living room, PVC matte, an LED line along one wall, six light points — around 6,000 PLN net. At 23% the customer pays 7,380 PLN gross. At 8% — 6,480 PLN gross. The difference: 900 PLN on a single room, with no change whatsoever in the scope of work. For a whole flat, where the order value reaches well over ten thousand zlotys, we are talking about 2,000–3,000 PLN.",
+          "So when comparing offers, check whether a competing quote states a net or gross amount, and at which rate. We have seen offers where the cheaper net price ended up more expensive gross, because the contractor did not apply the reduced rate.",
+        ],
+      },
+      {
+        heading: "What the declaration looks like and what we do for you",
+        paragraphs: [
+          "The buyer's declaration is a one-page document in which you confirm that the premises are residential, state their usable floor area and declare that it falls within the limit. We prepare it together with the contract — you sign, we keep it in the order file, because it is our basis for issuing an invoice at 8%. You need no certificates from any office and no extracts; we take the floor area from the notarial deed, the lease or the design.",
+          "Payment works as with every project: a 30% deposit on order, the remaining 70% within 7 days after installation — both parts at the same rate. The quote after the free measurement is valid for 30 days and already shows the gross amount at the correct VAT rate, so there are no surprises on the invoice.",
+        ],
+      },
+      {
+        heading: "Three traps worth knowing about",
+        paragraphs: [
+          "First: usable floor area is not the same as the area of the ceiling we install. What counts is the floor area of the whole premises according to the documents, not the 20 m² of the living room. Second: commercial premises in a residential building — a surgery, a ground-floor shop — carry 23%, even if there are flats one floor up. Third: exceeding the limit does not cost you the whole preference — the reduced rate applies proportionally to the part of the floor area within the limit, and the rest is settled at 23%.",
+          "This is general information about the rules we apply in practice, not tax advice. If your situation is unusual — mixed-use premises, short-term rental, a building undergoing a change of use — mention it at the measurement and we will prepare the quote in both variants.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does the 8% rate apply only to private individuals?",
+        a: "No. The use of the premises decides, not the buyer's status. A company buying a ceiling for a flat used for residential purposes (for example staff accommodation) can also use the 8% rate on the basis of the declaration.",
+      },
+      {
+        q: "What if my house is larger than 300 m²?",
+        a: "You do not lose the whole preference. The 8% rate covers the part of the service value corresponding to the share of the limit in the total usable floor area, and the remaining part is settled at 23%. We prepare that split in the quote.",
+      },
+      {
+        q: "Does the material alone, without installation, also carry 8% VAT?",
+        a: "No. Selling the film alone as goods carries 23%. The preference applies only to the installation service together with the material, performed in residential premises — which is why in our offer the ceiling is always a complete service.",
+      },
+      {
+        q: "What documents do I need to prepare?",
+        a: "Only a signature on the buyer's declaration, which we prepare together with the contract. You state the usable floor area from the notarial deed, the lease or the design — no certificates from any office are needed.",
+      },
+      {
+        q: "Is renovating an existing ceiling also covered by the 8% rate?",
+        a: "Yes. The reduced rate covers building, renovation, modernisation and conversion in housing covered by the social housing programme, so installing a stretch ceiling in a renovated flat up to 150 m² qualifies just as in a new one.",
+      },
+      {
+        q: "Can a home office in a flat have a ceiling at 8% VAT?",
+        a: "If the premises formally remain residential and fall within the 150 m² limit, the buyer's declaration is the basis for the 8% rate. Commercial premises — a surgery or a shop separated within the building — carry 23%. In doubtful situations consult a tax adviser.",
+      },
+    ],
+    related: [
+      { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Stretch ceilings Warsaw", href: "/en/stretch-ceilings/warsaw" },
+    ],
+  },
+
+  /* ── 07 · Acoustic ceiling for offices ─────────────────── */
+  {
+    slug: "acoustic-ceiling-office",
+    category: "B2B",
+    title: "Acoustic ceilings for offices — how to really cut reverberation in open-space (2026)",
+    metaDescription:
+      "A micro-perforated membrane with an absorber: Class A absorption, up to 75% less reverberation. From 320 PLN/m²; a 100 m² office is around 32–38k PLN net, installed in 2–3 days.",
+    excerpt:
+      "Open-space offices boom because every surface reflects sound, and the ceiling is the largest of them. We show how a tensioned acoustic ceiling with an absorber brings reverberation time down to the design targets, what a 100 m² office costs and why installation does not require closing the company.",
+    datePublished: "2026-09-02",
+    readTime: "9 min",
+    intro: [
+      "A tensioned acoustic ceiling is a micro-perforated polyester membrane plus an absorber in the space above it — together they deliver absorption up to Class A and a reduction in reverberation of up to 75%. The design targets we work to: reverberation time RT60 below 0.8 s in open-space and below 0.6 s in conference rooms. Cost from around 320 PLN/m² net installed; a 100 m² office is around 32,000–38,000 PLN net, installed in 2–3 working days — including at the weekend, without closing the office.",
+      "We write as the manufacturer: the acoustic membranes are based on A2-class (non-combustible) polyester from the Stretch group's plant in Belgium, and the PVC film for the other zones of an office is made in our factory in Częstochowa. This text is for facility managers, architects and business owners who want numbers rather than promises.",
+    ],
+    sections: [
+      {
+        heading: "Why open-space booms — reverberation time in practice",
+        paragraphs: [
+          "Reverberation is sound that keeps bouncing between hard surfaces after the source has stopped. It is measured as RT60 — the number of seconds it takes the sound level to drop by 60 dB. In a typical office with a smooth slab, glass and a tiled floor, RT60 reaches 1.2–1.5 s: a conversation at the next desk is audible throughout the room, and every phone call makes the next person raise their voice. The target for open-space is below 0.8 s, for conference and meeting rooms below 0.6 s.",
+          "The largest reflecting surface in an office is the ceiling — which is why it gives the most when it changes from reflecting to absorbing. Wall panels and carpets help, but they will not replace several dozen square metres of absorption overhead.",
+        ],
+      },
+      {
+        heading: "How a tensioned acoustic ceiling works",
+        paragraphs: [
+          "The membrane is micro-perforated — thousands of openings per square metre, invisible from floor level. The sound wave passes through the perforation into the space above the ceiling, where the absorber (a layer of sound-absorbing material) turns its energy into heat. To the room, the membrane presents a smooth, uniform plane — no tile grid, no visible panels. The absorption achieved reaches Class A, which in practice means up to 75% less reverberation compared with a bare slab.",
+          "The material is A2-class polyester — non-combustible, which in office and public buildings is a requirement, not an option. Installation is cold, without a heat gun: no odour, no raised temperature, and the electronics and server rooms next door are safe.",
+        ],
+      },
+      {
+        heading: "Three ways to tackle reverberation — a comparison",
+        paragraphs: [
+          "Each solution makes sense in a different situation. The table sets them out honestly, including when a stretch ceiling is not the best choice.",
+        ],
+        table: {
+          headers: ["Criterion", "Wall panels", "Drywall + mineral wool", "Tensioned acoustic ceiling"],
+          rows: [
+            ["Effectiveness", "limited by wall area", "good, but unperforated board reflects", "up to Class A across the whole ceiling"],
+            ["Installation time (100 m²)", "1–2 days", "1–2 weeks with skim coat and painting", "2–3 days, weekends possible"],
+            ["Disruption to office work", "minor", "dust, noise, zone shut down", "no dust, installation outside working hours"],
+            ["Removability", "yes", "no — demolition", "yes — membrane comes down, profiles stay"],
+            ["Access to services", "n/a", "inspection hatches", "through the removable membrane"],
+            ["When to choose", "as a supplement, small rooms", "when the ceiling must also insulate", "open-space, meeting rooms, restaurants — when effect and time matter"],
+          ],
+        },
+      },
+      {
+        heading: "What it costs and how the schedule looks",
+        paragraphs: [
+          "The rate for a tensioned acoustic ceiling is from around 320 PLN/m² net installed, typically 320–450 PLN/m² depending on geometry, the number of cut-outs for fittings and sensors, and the required absorption class. At the scale of a 100 m² office the unit rate drops towards the bottom of the range: a realistic cost is around 32,000–38,000 PLN net. Any additional absorption in the space above the membrane is quoted after a reverberation measurement, because it depends on the room volume and the existing slab.",
+          "Schedule: measurement and a reverberation measurement on site, made-to-measure membrane production, installation in 2–3 working days. For working offices we plan the work outside office hours or at the weekend — the crew comes in on Friday afternoon, and on Monday morning the office works under its new ceiling. Furniture and workstations stay; it is enough to move them away from the walls. Payment is a 30% deposit and 70% within 7 days after installation; the quote is valid for 30 days.",
+        ],
+      },
+      {
+        heading: "What we check at the measurement and what we need from the client",
+        paragraphs: [
+          "Before quoting we measure the reverberation time as it stands — that is the reference point against which we compare the result after installation. We check the height, the services above the ceiling (air conditioning, sprinklers, cabling), the layout of fittings and sensors, because every cut-out is planned at the membrane production stage. From the client we need the lighting design, or a decision on which fittings stay, and information on the building's fire-safety requirements — we attach the material classification to the documentation.",
+          "If the office already has a suspended tile ceiling, we install the membrane below it or in place of the tiles — the height decides, and whether the existing structure is to remain. We carry out projects of this kind for hotels and restaurants as well; one example is the Candor project in Sint-Martens-Latem, Belgium, which you will find among our case studies.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "How much does an acoustic ceiling for an office cost?",
+        a: "From around 320 PLN/m² net installed, typically 320–450 PLN/m². A 100 m² open-space office is around 32,000–38,000 PLN net; additional absorption above the membrane is quoted after a reverberation measurement.",
+      },
+      {
+        q: "Does the office have to close during installation?",
+        a: "No. Installation takes 2–3 working days and we plan it outside office hours or at the weekend. There is no dust and no heating — the polyester membrane is installed cold — so the workstations stay in place.",
+      },
+      {
+        q: "How much will reverberation really drop?",
+        a: "The reduction reaches 75% compared with a bare slab. We design so that RT60 falls below 0.8 s in open-space and below 0.6 s in conference rooms. We verify the effect with a measurement before and after installation.",
+      },
+      {
+        q: "How does a tensioned acoustic ceiling differ from wall panels?",
+        a: "In area and uniformity. Panels absorb on a fragment of the walls; an acoustic ceiling works across the largest surface in the room and remains a smooth, uniform plane without visible tiles. Panels complement the ceiling well in small rooms.",
+      },
+      {
+        q: "Is the acoustic membrane non-combustible?",
+        a: "Yes. The acoustic membranes are based on A2-class (non-combustible) polyester, which meets the requirements for office and public buildings. We attach the material classification to the project documentation.",
+      },
+      {
+        q: "Can the ceiling be removed when the office moves?",
+        a: "Yes. The membrane comes down without damaging the profiles, so during a rearrangement or a move it can be taken down, and the space above the ceiling remains accessible for services throughout its life.",
+      },
+    ],
+    related: [
+      { label: "Acoustic ceiling — parameters and classes", href: "/en/solutions/acoustic-ceiling" },
+      { label: "B2B partnership — offices, hotels, restaurants", href: "/en/b2b" },
+      { label: "Case study: Candor, Sint-Martens-Latem (Polish page)", href: "/realizacje/candor-sint-martens-latem" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "Stretch ceilings Wrocław", href: "/en/stretch-ceilings/wroclaw" },
+      { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
+    ],
+  },
 ];
 
 export function findPost(slug: string): BlogPost | undefined {

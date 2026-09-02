@@ -88,23 +88,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "06",
-    category: "Pricing",
-    title: "Stretch ceilings and 8% VAT — who pays less in 2026",
-    excerpt:
-      "Flats up to 150 m² or houses up to 300 m²: installation may qualify for the 8% rate instead of 23% based on the buyer's declaration. Who benefits, how it works in the contract, and a gross example for a living room.",
-    readTime: "7 min",
-  },
-  {
-    no: "07",
-    category: "B2B",
-    title:
-      "Acoustic ceilings for offices — how to really cut reverberation in open-space",
-    excerpt:
-      "Micro-perforated membrane with an absorber, Class A absorption, RT60 targets for open-space and meeting rooms. The cost of a 100 m² office, installed in 2–3 days without closing the office.",
-    readTime: "9 min",
-  },
-  {
     no: "08",
     category: "Guides",
     title:

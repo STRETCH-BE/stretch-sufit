@@ -103,23 +103,6 @@ type EditorialEntry = {
 // here when its article moves to /content/blog-posts.ts.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "06",
-    category: "Ceny",
-    title: "Sufit napinany a VAT 8% — kto zapłaci mniej w 2026",
-    excerpt:
-      "Mieszkanie do 150 m² lub dom do 300 m²: montaż może być objęty stawką 8% zamiast 23% na podstawie oświadczenia nabywcy. Kto skorzysta, jak to wygląda w umowie i przykład brutto dla salonu.",
-    readTime: "7 min",
-  },
-  {
-    no: "07",
-    category: "B2B",
-    title:
-      "Sufit akustyczny do biura — jak realnie obniżyć pogłos w open-space",
-    excerpt:
-      "Mikroperforowana membrana z absorberem, klasa A pochłaniania, cele RT60 dla open-space i sal. Koszt biura 100 m², montaż w 2–3 dni bez zamykania biura.",
-    readTime: "9 min",
-  },
-  {
     no: "08",
     category: "Poradniki",
     title:
