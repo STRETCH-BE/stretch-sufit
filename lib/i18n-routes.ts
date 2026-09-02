@@ -111,6 +111,16 @@ export const blogPostSlugs: { pl: string; en: string; ua: string }[] = [
     en: "stretch-ceiling-bathroom",
     ua: "natyazhna-stelya-u-vannii",
   },
+  {
+    pl: "sufit-napinany-czy-podwieszany",
+    en: "stretch-ceiling-vs-drywall",
+    ua: "natyazhna-chy-pidvisna-stelya",
+  },
+  {
+    pl: "wady-sufitow-napinanych",
+    en: "stretch-ceiling-disadvantages",
+    ua: "nedoliky-natyazhnykh-stel",
+  },
 ];
 
 /* ─── Path builders ───────────────────────────────────────── */

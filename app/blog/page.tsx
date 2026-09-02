@@ -99,51 +99,51 @@ type EditorialEntry = {
   readTime: string;
 };
 
+// Mirrors the staged entries in /content/blog-drafts.ts — remove a tile
+// here when its article moves to /content/blog-posts.ts.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "02",
-    category: "Akustyka",
-    title:
-      "Sufit akustyczny w open-space: jak zmierzyć i o ile redukować pogłos",
+    no: "06",
+    category: "Ceny",
+    title: "Sufit napinany a VAT 8% — kto zapłaci mniej w 2026",
     excerpt:
-      "Praktyczny przewodnik dla architektów i facility managerów. RT60, klasa absorpcji A, kombinacje materiałów, błędy przy obliczaniu powierzchni absorbującej.",
-    readTime: "12 min",
-  },
-  {
-    no: "03",
-    category: "Oświetlenie",
-    title:
-      "Sufit świetlny LED — kiedy ma sens, a kiedy to overkill",
-    excerpt:
-      "Sufit świetlny wygląda spektakularnie, ale nie zawsze jest właściwym wyborem. Kompletny break-down kosztów, sytuacji domowych i komercyjnych, oraz alternatyw — linie LED i RGB.",
-    readTime: "10 min",
-  },
-  {
-    no: "04",
-    category: "Kamienice",
-    title:
-      "Sufit napinany w lokalu pod ochroną konserwatora — co jest legalne",
-    excerpt:
-      "Bezinwazyjność montażu sprawia, że sufit napinany jest często jedyną opcją w lokalach pod ochroną. Co konkretnie konsultować z konserwatorem, jakie dokumenty mieć przy odbiorze.",
+      "Mieszkanie do 150 m² lub dom do 300 m²: montaż może być objęty stawką 8% zamiast 23% na podstawie oświadczenia nabywcy. Kto skorzysta, jak to wygląda w umowie i przykład brutto dla salonu.",
     readTime: "7 min",
   },
   {
-    no: "05",
-    category: "Renowacje",
+    no: "07",
+    category: "B2B",
     title:
-      "Sufit napinany w domu zamieszkanym — krok po kroku przygotowanie",
+      "Sufit akustyczny do biura — jak realnie obniżyć pogłos w open-space",
     excerpt:
-      "Co dokładnie przygotować, jeśli nie chcesz wyprowadzać się z mieszkania na czas montażu. PVC vs poliester w kontekście domu zamieszkanego, zwierząt, roślin, mebli.",
-    readTime: "6 min",
+      "Mikroperforowana membrana z absorberem, klasa A pochłaniania, cele RT60 dla open-space i sal. Koszt biura 100 m², montaż w 2–3 dni bez zamykania biura.",
+    readTime: "9 min",
   },
   {
-    no: "06",
-    category: "Pielęgnacja",
+    no: "08",
+    category: "Poradniki",
     title:
-      "Jak czyścić i utrzymać sufit napinany przez 15 lat",
+      "Montaż sufitu napinanego krok po kroku — dlaczego naprawdę 1 dzień",
     excerpt:
-      "Czego używać, a czego nie. Drobne uszkodzenia mechaniczne — co naprawić samemu, kiedy zadzwonić do gwaranta. Zalanie z góry — protokół postępowania krok po kroku.",
-    readTime: "5 min",
+      "Etap po etapie: profile, podkonstrukcje, napinanie na ciepło lub na zimno, wykończenie. Co przygotować, kiedy montaż trwa 2 dni i czy PVC pachnie.",
+    readTime: "8 min",
+  },
+  {
+    no: "09",
+    category: "Poradniki",
+    title:
+      "Czy sufit napinany jest bezpieczny? Klasy ogniowe, atesty, zdrowie",
+    excerpt:
+      "Co oznaczają klasy A2 i B-s1,d0, gdzie dokumentacja jest wymagana prawnie, skąd pochodzi folia i jak wygląda recykling PVC.",
+    readTime: "8 min",
+  },
+  {
+    no: "10",
+    category: "Poradniki",
+    title: "Barrisol, sufit napinany, stretch ceiling — czy to to samo?",
+    excerpt:
+      "Skąd wzięła się potoczna nazwa, czym różnią się systemy i na co patrzeć przy wyborze: producent czy importer, pochodzenie folii, serwis po latach.",
+    readTime: "7 min",
   },
 ];
 

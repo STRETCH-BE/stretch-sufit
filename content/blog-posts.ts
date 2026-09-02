@@ -51,7 +51,7 @@ export const blogPosts: BlogPost[] = [
     category: "Ceny",
     title: "Ile kosztuje sufit napinany w 2026? Cennik od producenta",
     metaDescription:
-      "Sufit napinany kosztuje od ok. 170 zł/m² z montażem. Pełny cennik 2026 od producenta: PVC, poliester, akustyka, LED, fotodruk. Trzy przykładowe kosztorysy i to, co naprawdę wpływa na cenę.",
+      "Sufit napinany kosztuje od ok. 170 zł/m² z montażem. Cennik 2026 od producenta: PVC, poliester, akustyka, LED, fotodruk. Trzy kosztorysy i co naprawdę wpływa na cenę.",
     excerpt:
       "W internecie znajdziesz ceny od 80 do 300 zł/m² — pisane przez sklepy z pościelą i drzwiami. My produkujemy i montujemy sufity napinane, więc publikujemy realny cennik: z widełkami, przykładowymi kosztorysami i listą rzeczy, które naprawdę zmieniają cenę.",
     datePublished: "2026-08-06",
@@ -150,7 +150,9 @@ export const blogPosts: BlogPost[] = [
     related: [
       { label: "Sufit PVC — produkcja w Polsce", href: "/rozwiazania/sufit-pvc" },
       { label: "Sufit akustyczny", href: "/rozwiazania/sufit-akustyczny" },
-      { label: "Bezpłatny pomiar — formularz", href: "/#cta" },
+      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
+      { label: "Sufit napinany czy podwieszany — porównanie", href: "/blog/sufit-napinany-czy-podwieszany" },
+      { label: "Sufity napinane Warszawa", href: "/sufity-napinane/warszawa" },
     ],
   },
 
@@ -160,9 +162,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "sufit-pvc-czy-poliestrowy",
     category: "Materiały",
-    title: "Sufit PVC czy poliestrowy? Porównanie od producenta obu",
+    title: "Sufit PVC czy poliestrowy? Porównanie 2026 od producenta obu",
     metaDescription:
-      "PVC czy poliester — który sufit napinany wybrać? Porównanie od firmy, która produkuje oba: parametry, szerokości bezszwowe, zachowanie przy zalaniu, gwarancja 15 vs 10 lat i pięć scenariuszy dla każdego materiału.",
+      "PVC (od 170 zł/m², bezszwowo do 6,50 m, 15 lat gwarancji) czy poliester (od 220 zł/m², głęboki mat, na zimno, 10 lat)? Porównanie od producenta obu.",
     excerpt:
       "Jesteśmy jedyną firmą w Polsce, która produkuje oba materiały: PVC w Częstochowie, poliester w belgijskim zakładzie grupy Stretch. Dlatego to porównanie nie musi nikogo faworyzować — pokazujemy parametry i mówimy wprost, kiedy który materiał jest jedynym słusznym wyborem.",
     datePublished: "2026-08-06",
@@ -198,7 +200,9 @@ export const blogPosts: BlogPost[] = [
             ["Wilgoć i łazienka", "w pełni odporny", "odporny, ale nie do stref mokrych"],
             ["Produkcja", "Polska, 5 dni roboczych", "Belgia, 5–15 dni + transport"],
             ["Gwarancja", "15 lat", "10 lat"],
-            ["Cena", "najkorzystniejsza", "zwykle ok. 20–30% wyżej"],
+            ["Cena z montażem (netto)", "od 170 zł/m² (mat 170–220, połysk 185–240)", "od 220 zł/m² (220–290)"],
+            ["Sufity akustyczne", "—", "mikroperforowany poliester klasy A2"],
+            ["Typowy wybór do", "łazienki, kuchni, połysku, szerokich salonów", "sypialni i salonów premium, biur, sal"],
           ],
         },
       },
@@ -263,11 +267,17 @@ export const blogPosts: BlogPost[] = [
         q: "Który materiał jest bardziej matowy?",
         a: "Poliester. Jego powierzchnia ma najgłębszy mat dostępny w sufitach napinanych i wygląda jak idealna gładź malarska. Mat PVC jest bardzo dobry, ale przy bocznym świetle delikatnie ustępuje tkaninie.",
       },
+      {
+        q: "Czy sufit poliestrowy jest dostępny w połysku?",
+        a: "Nie. Poliester występuje wyłącznie w głębokim macie (także z fotodrukiem). Połysk, satyna, brokat i transparent istnieją tylko w folii PVC — to jedno z głównych kryteriów wyboru między materiałami.",
+      },
     ],
     related: [
       { label: "Sufit PVC recyklingowy", href: "/rozwiazania/sufit-pvc" },
       { label: "Sufit poliestrowy Stretch", href: "/rozwiazania/sufit-poliestrowy" },
       { label: "Ile kosztuje sufit napinany — cennik", href: "/blog/ile-kosztuje-sufit-napinany" },
+      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
+      { label: "Sufity napinane Wrocław", href: "/sufity-napinane/wroclaw" },
     ],
   },
 
@@ -277,9 +287,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "sufit-napinany-w-lazience",
     category: "Łazienka",
-    title: "Sufit napinany w łazience: wilgoć, pleśń i zalanie — fakty od serwisu",
+    title: "Sufit napinany w łazience — wilgoć, para i zalanie (2026)",
     metaDescription:
-      "Czy sufit napinany nadaje się do łazienki? Tak — PVC nie chłonie wilgoci i przy zalaniu z góry zatrzymuje wodę. Protokół postępowania przy zalaniu krok po kroku, prawda o wentylacji i pleśni — od ekipy, która takie awarie obsługuje.",
+      "Tak — PVC to najlepszy sufit do łazienki: nie chłonie wody, nie pleśnieje, przy zalaniu zatrzymuje wodę. Kosztorys łazienki 5 m² i protokół przy awarii.",
     excerpt:
       "Łazienka to najtrudniejsze pomieszczenie dla każdego sufitu: ciągła wilgoć plus ryzyko zalania z góry. Piszemy, jak naprawdę zachowuje się folia PVC przy parze i przy awarii u sąsiada — łącznie z protokołem serwisowym krok po kroku, którego nie znajdziesz w artykułach przepisywanych z materiałów prasowych.",
     datePublished: "2026-08-06",
@@ -302,6 +312,22 @@ export const blogPosts: BlogPost[] = [
           "PVC ma zerową nasiąkliwość. Para wodna po kąpieli skrapla się na powierzchni membrany w drobne krople, które po przewietrzeniu łazienki po prostu odparowują — dokładnie tak, jak z kafelków czy lustra. Membrana nie pęcznieje, nie łuszczy się, nie zmienia koloru i nie wymaga malowania. Na samej folii pleśń nie ma się czym żywić.",
           "Przestrzeń między membraną a stropem pozostaje sucha, bo wilgoć nie przenika przez folię. Nie potrzebujesz dodatkowej hydroizolacji sufitu — membrana sama jest barierą. W praktyce serwisowej najczęstszy zabieg pielęgnacyjny w łazience to przetarcie sufitu miękką ściereczką raz na kilka miesięcy.",
         ],
+      },
+      {
+        heading: "PVC, poliester czy malowany strop — co wybrać do łazienki",
+        paragraphs: [
+          "Produkujemy oba materiały napinane — PVC w Częstochowie, poliester w belgijskim zakładzie grupy Stretch — więc nie musimy faworyzować żadnego. W łazience wybór jest jednak jednoznaczny i tabela pokazuje dlaczego.",
+        ],
+        table: {
+          headers: ["Kryterium", "PVC mat / połysk", "Poliester", "Malowany strop"],
+          rows: [
+            ["Odporność na wilgoć i parę", "pełna — zerowa nasiąkliwość", "dobra w pomieszczeniach suchych, nie do stref mokrych", "słaba — farba łuszczy się z czasem"],
+            ["Zmywalność", "wilgotna ściereczka, bez chemii", "odkurzanie na sucho", "tylko ponowne malowanie"],
+            ["Zachowanie przy zalaniu z góry", "zatrzymuje wodę jak membrana", "przepuszcza wodę powoli", "zacieki, odpadający tynk"],
+            ["Pleśń na powierzchni", "brak pożywki — nie rozwija się", "brak pożywki przy sprawnej wentylacji", "częsta przy słabej wentylacji"],
+            ["Cena z montażem", "od 170 zł/m² (połysk od 185 zł/m²)", "od 220 zł/m²", "najtańsza, ale odnawiana co kilka lat"],
+          ],
+        },
       },
       {
         heading: "Uczciwie: sufit nie naprawi złej wentylacji",
@@ -331,10 +357,17 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "Ile kosztuje sufit napinany w łazience",
+        paragraphs: [
+          "Typowa łazienka w bloku ma 4–6 m². Ze stawki za metr (PVC mat od 170 zł/m², połysk od 185 zł/m²) wyszłoby mniej niż 1 000 zł — i tu wchodzi minimum zlecenia. Dojazd, pomiar, produkcja membrany na wymiar i dwuosobowa ekipa kosztują tyle samo przy 5 m², co przy 15 m², dlatego realny koszt pojedynczej łazienki to ok. 1 400–1 600 zł netto z montażem w jeden poranek. Jeśli w tym samym terminie robimy też kuchnię albo przedpokój, stawka wraca do zwykłych widełek za metr, bo koszty stałe rozkładają się na większą powierzchnię.",
+          "Dla lokali mieszkalnych do 150 m² montaż może być objęty stawką VAT 8% zamiast 23% — na podstawie oświadczenia nabywcy, które przygotowujemy razem z umową. Wycena po bezpłatnym pomiarze jest ważna 30 dni.",
+        ],
+      },
+      {
         heading: "Mat czy połysk, oświetlenie i inne decyzje łazienkowe",
         paragraphs: [
           "Połysk optycznie powiększa małe łazienki i pięknie odbija światło — to najczęstszy wybór przy metrażach do 6 m². Mat i satyna dają spokojniejszy, bardziej hotelowy charakter i lepiej maskują ewentualne ślady po kroplach w okolicy prysznica. W strefach mokrych stosujemy oprawy o stopniu ochrony min. IP44; ich rozmieszczenie planujemy na pomiarze, żeby wycięcia trafiły dokładnie tam, gdzie potrzebujesz światła — nad lustrem i w strefie kąpieli.",
-          "Standardowe obniżenie sufitu to ok. 3 cm przy samym profilu, a 5–7 cm przy oprawach wpuszczanych — w typowej łazience w bloku różnica jest niezauważalna, a zyskujesz idealnie równą, zmywalną powierzchnię na 15 lat gwarancji.",
+          "Minimalne obniżenie sufitu to 15 mm przy samym profilu, a 3–4 cm przy oprawach wpuszczanych — w typowej łazience w bloku różnica jest niezauważalna, a zyskujesz idealnie równą, zmywalną powierzchnię na 15 lat gwarancji.",
         ],
       },
     ],
@@ -353,7 +386,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "O ile sufit napinany obniży łazienkę?",
-        a: "Od ok. 3 cm przy samym profilu przyściennym do 5–7 cm, gdy montujemy oprawy wpuszczane. W typowej łazience w bloku ta różnica jest praktycznie niezauważalna.",
+        a: "Minimalnie 15 mm przy samym profilu przyściennym, a 3–4 cm, gdy montujemy oprawy wpuszczane. W typowej łazience w bloku ta różnica jest praktycznie niezauważalna.",
       },
       {
         q: "Mat czy połysk do małej łazienki?",
@@ -363,7 +396,260 @@ export const blogPosts: BlogPost[] = [
     related: [
       { label: "Sufit PVC — idealny do łazienki", href: "/rozwiazania/sufit-pvc" },
       { label: "PVC czy poliester — porównanie", href: "/blog/sufit-pvc-czy-poliestrowy" },
-      { label: "Gwarancja do 15 lat", href: "/gwarancja" },
+      { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
+      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
+      { label: "Sufity napinane Łódź", href: "/sufity-napinane/lodz" },
+    ],
+  },
+
+  /* ────────────────────────────────────────────────────────────
+   * 04 · Sufit napinany czy podwieszany — porównanie
+   * ──────────────────────────────────────────────────────────── */
+  {
+    slug: "sufit-napinany-czy-podwieszany",
+    category: "Porównania",
+    title: "Sufit napinany czy podwieszany? Porównanie 2026 od producenta",
+    metaDescription:
+      "G-K kosztuje ok. 70–150 zł/m², sufit napinany od 170 zł/m² — ale w 10 lat koszty się wyrównują. Porównujemy montaż, pył, obniżenie, wilgoć, LED i naprawy.",
+    excerpt:
+      "Płyta gipsowo-kartonowa jest tańsza na starcie, sufit napinany wygrywa czasem montażu i kosztami w dłuższym horyzoncie. Zamiast agitacji — uczciwa tabela dziewięciu parametrów, lista sytuacji, w których G-K jest lepszym wyborem, i wariant hybrydowy, o którym mało kto mówi.",
+    datePublished: "2026-09-02",
+    readTime: "9 min",
+    intro: [
+      "Krótka odpowiedź z liczbami: sufit podwieszany z płyt G-K kosztuje na starcie ok. 70–150 zł/m² z gładzią i malowaniem, sufit napinany — od 170 zł/m² z montażem. W perspektywie 10 lat koszty zwykle się wyrównują, bo zabudowę G-K trzeba odświeżać co 5–7 lat, a pierwsze rysy na łączeniach potrafią pojawić się już po 2–3 latach. Do tego sufit napinany montuje się w 1 dzień, bez pyłu, i zabiera minimalnie 15 mm wysokości (3–4 cm z oświetleniem).",
+      "Piszemy to porównanie jako producent sufitów napinanych — folia PVC powstaje w naszej fabryce w Częstochowie, poliester w belgijskim zakładzie grupy Stretch — więc uprzedzamy: mamy w tym sporze interes. Dlatego zamiast sloganów dostajesz tabelę parametrów i osobną sekcję o tym, kiedy płyta G-K jest po prostu lepszym wyborem. Takie porównanie łatwiej zweryfikować niż laurkę.",
+    ],
+    sections: [
+      {
+        heading: "Ile kosztuje jeden i drugi — dziś i za 10 lat",
+        paragraphs: [
+          "Koszt startowy wygrywa G-K: typowa zabudowa z płyt z gładzią i dwukrotnym malowaniem to ok. 70–150 zł/m², zależnie od regionu i skomplikowania. Sufit napinany zaczyna się od 170 zł/m² za PVC mat z montażem (połysk i satyna 185–240 zł/m², poliester od 220 zł/m²).",
+          "Rachunek zmienia się w czasie. Płyty pracują na łączeniach — mikropęknięcia wymagają szpachlowania i ponownego malowania, a pełne odświeżenie zabudowy wypada średnio co 5–7 lat. Każdy taki remont to koszt, wynoszenie mebli i kurz. Sufit napinany przez cały okres gwarancji — 15 lat na PVC, 10 lat na poliester — nie wymaga malowania ani poprawek; pielęgnacja ogranicza się do przetarcia ściereczką. Po dekadzie różnica w cenie startowej zwykle znika, a różnica w liczbie przeżytych remontów zostaje.",
+        ],
+      },
+      {
+        heading: "Porównanie parametrów — tabela",
+        paragraphs: [
+          "Dziewięć parametrów, które realnie decydują przy remoncie. Wiersze o pyle, czasie i obniżeniu warto czytać razem — to one opisują, jak remont wygląda w praktyce, a nie tylko na fakturze.",
+        ],
+        table: {
+          headers: ["Parametr", "Sufit napinany", "Sufit podwieszany G-K"],
+          rows: [
+            ["Koszt startowy", "od 170 zł/m²", "ok. 70–150 zł/m²"],
+            ["Koszt w 10 lat", "bez odświeżania (gwarancja do 15 lat)", "1–2 odświeżenia + naprawy rys"],
+            ["Czas montażu", "1 dzień do 50 m²", "realnie 3–7 dni z przerwami technologicznymi"],
+            ["Pył i remont", "bez pyłu, meble zostają", "szlifowanie gładzi = pył w całym mieszkaniu"],
+            ["Minimalne obniżenie", "od 15 mm (3–4 cm z oświetleniem)", "zwykle 5–12 cm, zależnie od rusztu i opraw"],
+            ["Wilgoć i łazienka", "PVC w pełni odporny", "płyta zielona odporna warunkowo, wymaga malowania"],
+            ["Naprawy i dostęp", "membrana demontowalna bez niszczenia profili", "naprawa = wycinanie i szpachlowanie"],
+            ["Oświetlenie LED", "linie LED, podświetlenia, gwiezdne niebo w systemie", "wymaga zaplanowania w konstrukcji, trudne zmiany"],
+            ["Formy wielopoziomowe", "pojedyncze poziomy i łuki", "dowolne nisze, półki i kaskady — tu G-K króluje"],
+          ],
+        },
+      },
+      {
+        heading: "Kiedy sufit podwieszany jest lepszym wyborem",
+        paragraphs: [
+          "Uczciwie: są scenariusze, w których doradzimy zabudowę G-K albo połączenie obu technologii, mimo że zarabiamy na napinanych.",
+        ],
+        list: [
+          "Wielopoziomowe formy dekoracyjne — nisze, półki z podświetleniem, kaskadowe uskoki. G-K formuje się dowolnie; sufit napinany gra na wielkich, idealnie gładkich płaszczyznach.",
+          "Docieplenie stropu — jeśli planujesz wełnę mineralną pod stropem (ostatnia kondygnacja, strop nad przejazdem), zabudowa G-K jest naturalnym nośnikiem izolacji.",
+          "Jednorazowo najniższy budżet — gdy liczy się wyłącznie cena na fakturze z remontu, a perspektywa odświeżania za kilka lat nie ma znaczenia, G-K pozostaje najtańszym rozwiązaniem.",
+          "Samodzielne wykonanie — płyty położy każda lokalna ekipa remontowa, a wprawny majsterkowicz sam. Sufit napinany wymaga produkcji membrany na wymiar i przeszkolonego zespołu.",
+        ],
+      },
+      {
+        heading: "Kiedy sufit napinany wygrywa bezdyskusyjnie",
+        paragraphs: [
+          "Po drugiej stronie są sytuacje, w których przewaga technologii napinanej jest obiektywna i mierzalna.",
+        ],
+        list: [
+          "Remont w zamieszkanym mieszkaniu — 1 dzień montażu, zero pyłu, meble zostają na miejscu. Przy G-K szlifowanie gładzi oznacza pył w każdym pomieszczeniu i kilka dni niedostępnej przestrzeni.",
+          "Niskie pomieszczenia — 15 mm obniżenia przy samym profilu to wartość, z którą żaden ruszt G-K nie konkuruje. W bloku z 2,50 m wysokości to argument rozstrzygający.",
+          "Łazienka i kuchnia — folia PVC nie chłonie wilgoci, nie wymaga malowania i przy zalaniu z góry zatrzymuje wodę. Płyta, nawet impregnowana, wilgoci długoterminowo nie lubi.",
+          "Zintegrowane oświetlenie — linie LED w profilach, podświetlane płaszczyzny i gwiezdne niebo są częścią systemu, z możliwością serwisu przez demontowalną membranę.",
+          "Dostęp do instalacji — membranę można zdjąć i założyć ponownie bez niszczenia czegokolwiek. Wycinanie otworów rewizyjnych w G-K to przy tym inna epoka.",
+        ],
+      },
+      {
+        heading: "Wariant hybrydowy: zabudowa G-K plus membrana",
+        paragraphs: [
+          "Ten wariant znika w większości porównań, a wybiera go coraz więcej architektów: obwodowa zabudowa G-K formuje nisze i uskoki, a centralną płaszczyznę wypełnia napinana membrana — gładka, podświetlana albo akustyczna. Profile sufitu napinanego montujemy bezpośrednio do konstrukcji G-K, więc obie technologie łączą się bez kompromisów. Efekt: dekoracyjność zabudowy tam, gdzie jej potrzeba, i wielka idealna płaszczyzna tam, gdzie płyta pokazuje każdą nierówność.",
+          "Jeśli rozważasz taki układ, przygotuj rysunek lub zdjęcie inspiracji przed bezpłatnym pomiarem — doradca od razu powie, jak podzielić strefy i co wyjdzie taniej.",
+        ],
+      },
+      {
+        heading: "Jak podjąć decyzję w praktyce",
+        paragraphs: [
+          "Zacznij od trzech pytań. Czy remontujesz w zamieszkanym lokalu? Jeśli tak — waga pyłu i czasu rośnie. Ile masz wysokości? Poniżej 2,60 m każdy centymetr obniżenia boli. Jaki jest horyzont? Mieszkanie na wynajem na 3 lata to inna matematyka niż dom na 20 lat. Odpowiedzi na te pytania zwykle rozstrzygają spór szybciej niż jakakolwiek tabela — a jeśli nie, na bezpłatnym pomiarze policzymy oba warianty dla Twojego metrażu, z wyceną ważną 30 dni.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Co jest tańsze — sufit napinany czy podwieszany?",
+        a: "Na starcie podwieszany: zabudowa G-K z gładzią i malowaniem to ok. 70–150 zł/m², sufit napinany od 170 zł/m² z montażem. W horyzoncie 10 lat koszty zwykle się wyrównują, bo G-K wymaga odświeżania co 5–7 lat, a sufit napinany przez okres gwarancji nie wymaga żadnych prac.",
+      },
+      {
+        q: "Który sufit zabiera mniej wysokości pomieszczenia?",
+        a: "Napinany: minimalne obniżenie to 15 mm przy samym profilu, a 3–4 cm przy oprawach wpuszczanych. Zabudowa G-K na ruszcie zabiera zwykle 5–12 cm.",
+      },
+      {
+        q: "Ile trwa montaż jednego i drugiego?",
+        a: "Sufit napinany do 50 m² montujemy w 1 dzień roboczy, zespołem dwuosobowym, bez pyłu. Zabudowa G-K z gładzią, szlifowaniem i malowaniem to realnie 3–7 dni z przerwami technologicznymi na schnięcie.",
+      },
+      {
+        q: "Co lepsze do łazienki — napinany czy G-K?",
+        a: "Napinany z folii PVC: zerowa nasiąkliwość, brak malowania, odporność na parę i zatrzymywanie wody przy zalaniu z góry. Płyta G-K, nawet impregnowana, wymaga malowania i długoterminowo gorzej znosi wilgoć.",
+      },
+      {
+        q: "Czy sufit napinany można zamontować na zabudowie G-K?",
+        a: "Tak — profile montujemy bezpośrednio do konstrukcji gipsowo-kartonowej. To popularny wariant hybrydowy: obwodowe nisze i uskoki z G-K, a centralna płaszczyzna z napinanej membrany, także podświetlanej.",
+      },
+      {
+        q: "Czy sufit napinany da się zdemontować i założyć ponownie?",
+        a: "Tak. Membranę można zdjąć — na przykład dla dostępu do instalacji — i ponownie napiąć bez wymiany profili. Przy G-K każda ingerencja oznacza cięcie płyty, szpachlowanie i malowanie.",
+      },
+    ],
+    related: [
+      { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
+      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
+      { label: "Sufit PVC — produkcja w Polsce", href: "/rozwiazania/sufit-pvc" },
+      { label: "Sufity napinane Warszawa", href: "/sufity-napinane/warszawa" },
+    ],
+  },
+
+  /* ────────────────────────────────────────────────────────────
+   * 05 · Wady sufitów napinanych — szczerze
+   * ──────────────────────────────────────────────────────────── */
+  {
+    slug: "wady-sufitow-napinanych",
+    category: "Poradniki",
+    title: "Wady sufitów napinanych — producent odpowiada szczerze",
+    metaDescription:
+      "Realne wady sufitów napinanych: ostre przedmioty, koszt startowy wyższy niż G-K, minimum zlecenia ok. 1 400–1 600 zł, dni produkcji. I mity, które prostujemy.",
+    excerpt:
+      "Artykuły o wadach sufitów napinanych piszą zwykle firmy od gipsu-kartonu albo portale, które sufitu nie widziały. My je produkujemy, więc znamy wady z pierwszej ręki — cztery są realne i opisujemy je z liczbami. Reszta krążących zarzutów to mity, które prostujemy punkt po punkcie.",
+    datePublished: "2026-09-02",
+    readTime: "8 min",
+    intro: [
+      "Tak, sufity napinane mają wady — i jako producent znamy je lepiej niż ktokolwiek. Cztery są realne: membranę można uszkodzić ostrym przedmiotem, koszt startowy (od 170 zł/m²) jest wyższy niż zabudowy G-K, przy małych metrażach obowiązuje minimum zlecenia ok. 1 400–1 600 zł, a produkcja na wymiar oznacza kilka dni oczekiwania zamiast montażu od ręki. Reszta zarzutów krążących po internecie to w większości mity — prostujemy je niżej.",
+      "Folia PVC powstaje w naszej fabryce w Częstochowie, poliester w zakładzie grupy Stretch w Belgii. Widzimy więc i produkcję, i serwis — także te zgłoszenia, w których coś poszło nie tak. Ten tekst pisze strona, która na sufitach zarabia, ale wolimy stracić część klientów przez szczerość niż zdobyć ich obietnicami bez pokrycia.",
+    ],
+    sections: [
+      {
+        heading: "Cztery realne wady — bez owijania",
+        paragraphs: [
+          "Zacznijmy od tego, co naprawdę bywa problemem — z realną skalą zjawiska, nie z katastroficznym nagłówkiem.",
+        ],
+        list: [
+          "Podatność na ostre przedmioty — napięta membrana to nie beton. Wnoszona szafa, karnisz niesiony na sztorc czy wystrzelony korek potrafią zostawić ślad. To najczęstsza przyczyna wezwań serwisowych niezwiązanych z instalacjami.",
+          "Wyższy koszt startowy — od 170 zł/m² wobec ok. 70–150 zł/m² za zabudowę G-K z malowaniem. Różnica zwraca się w kolejnych latach, ale na fakturze z remontu jest widoczna.",
+          "Minimum zlecenia — przy pojedynczej łazience czy WC obowiązuje minimalna wartość ok. 1 400–1 600 zł netto, bo dojazd, produkcja membrany i ekipa kosztują tyle samo przy 4 i przy 12 m².",
+          "Produkcja na wymiar — membrana powstaje pod konkretne pomieszczenie: PVC w ok. 5 dni roboczych w Polsce, poliester 5–15 dni w Belgii plus transport. Sufitu napinanego nie kupisz w markecie i nie zamontujesz tego samego dnia.",
+        ],
+      },
+      {
+        heading: "Wady w skali — tabela",
+        paragraphs: [
+          "Każdą z wad zestawiamy z realną skalą i sposobem, w jaki ją ograniczamy. Tak wygląda uczciwa wersja tabel strachu z portali.",
+        ],
+        table: {
+          headers: ["Wada", "Realna skala", "Jak ją ograniczamy"],
+          rows: [
+            [
+              "Uszkodzenia mechaniczne",
+              "pojedyncze zdarzenia przy przeprowadzkach i remontach",
+              "część uszkodzeń naprawialna serwisowo; membrana wymienialna bez demontażu profili",
+            ],
+            [
+              "Koszt startowy",
+              "ok. 20–100 zł/m² więcej niż G-K",
+              "brak kosztów odświeżania przez 15 lat gwarancji na PVC; VAT 8% dla lokali mieszkalnych",
+            ],
+            [
+              "Minimum zlecenia",
+              "dotyczy tylko małych metraży",
+              "łączenie pomieszczeń w jedno zlecenie (np. łazienka + kuchnia w tym samym terminie)",
+            ],
+            [
+              "Czas oczekiwania",
+              "ok. 5 dni roboczych dla PVC z naszej fabryki",
+              "produkcja w Polsce zamiast importu; termin potwierdzamy przy pomiarze",
+            ],
+            [
+              "Obniżenie sufitu",
+              "od 15 mm, z oświetleniem 3–4 cm",
+              "najniższy profil na rynku technologii sufitowych — mniejsze obniżenie niż jakikolwiek ruszt G-K",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "Mit 1: sufit napinany ma limit 20 m²",
+        paragraphs: [
+          "Ten mit powtarza się w rankingach od lat i jest po prostu nieprawdziwy. Realizujemy biura open-space o powierzchni 100 m² — jak w naszym cenniku, gdzie taka realizacja akustyczna kosztuje ok. 32 000–38 000 zł netto. Duże płaszczyzny dzieli się profilami pośrednimi na sekcje albo dobiera membranę o parametrach odpowiednich dla rozpiętości. Nasza folia PVC jest bezszwowa do 6,50 m szerokości — najszersza na rynku — a poliester do 5,15 m; powyżej tych wymiarów łączenia i podziały planuje się na etapie projektu.",
+        ],
+      },
+      {
+        heading: "Mit 2: montaż zawsze wymaga nagrzewania pomieszczenia",
+        paragraphs: [
+          "Prawda tylko połowicznie. Folię PVC napina się na ciepło — nagrzewnica podnosi temperaturę membrany, która po ostygnięciu naciąga się idealnie. Ale poliester montuje się całkowicie na zimno: bez nagrzewnicy, bez podnoszenia temperatury, co ma znaczenie przy antykach, instrumentach, dziełach sztuki czy serwerowniach. Jeśli ktoś mówi, że sufit napinany zawsze wymaga gorąca, opisuje tylko połowę technologii.",
+        ],
+      },
+      {
+        heading: "Mit 3: uszkodzenie oznacza wymianę całego sufitu",
+        paragraphs: [
+          "Najbardziej kosztowny mit, bo odstrasza od technologii, która akurat w naprawach jest wyjątkowo racjonalna. Po pierwsze: część uszkodzeń — drobne przebicia, ślady po punktowych naciskach — naprawiamy serwisowo, bez wymiany czegokolwiek. Po drugie: nawet gdy membrana wymaga wymiany, profile zostają na ścianach. Wymieniamy samą folię, w jeden dzień, bez remontu. Dla porównania: uszkodzona zabudowa G-K to wycinanie, szpachlowanie, szlifowanie i malowanie — zwykle całej płaszczyzny, żeby kolor się zgadzał.",
+        ],
+      },
+      {
+        heading: "Mit 4: poliester boi się wilgoci i nie da się go czyścić",
+        paragraphs: [
+          "Tu potrzebny jest niuans zamiast wyroku. Membrana poliestrowa jest odporna na wilgoć w normalnych warunkach domowych — nie pleśnieje i nie odkształca się od codziennej pary. Do stref mokrych (łazienka z prysznicem, pralnia) doradzamy jednak PVC, bo tkanina przepuszcza wodę powoli, więc przy zalaniu z góry nie ochroni pomieszczenia tak, jak szczelna folia. Czyszczenie: poliester odkurza się na sucho miękką końcówką, a folię PVC przeciera wilgotną ściereczką. Twierdzenie, że tkaniny nie da się utrzymać w czystości, jest przesadą — po prostu każdy materiał ma swoją metodę.",
+        ],
+      },
+      {
+        heading: "Czego sufit napinany nie zrobi — granice technologii",
+        paragraphs: [
+          "Dla pełnej uczciwości dopiszmy granice, o których marketing branży milczy. Sufit napinany nie zastąpi wentylacji — jest odporny na skutki wilgoci, ale nie usuwa jej przyczyny. Nie ociepli stropu — do izolacji termicznej potrzebna jest wełna, a jej nośnikiem bywa zabudowa G-K. Nie uformuje też wielopoziomowych nisz i kaskad — to domena płyty, dlatego w projektach dekoracyjnych często łączymy obie technologie: G-K po obwodzie, membrana w centralnej płaszczyźnie.",
+          "Jeśli po tej liście wad nadal rozważasz sufit napinany — na bezpłatnym pomiarze doradca pokaże próbniki, policzy Twój metraż i powie wprost, czy w Twoim wnętrzu któraś z tych wad będzie miała znaczenie. Wycena jest ważna 30 dni.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Jakie są największe wady sufitów napinanych?",
+        a: "Cztery realne: podatność membrany na ostre przedmioty, koszt startowy wyższy niż zabudowy G-K (od 170 zł/m² wobec ok. 70–150 zł/m²), minimum zlecenia ok. 1 400–1 600 zł przy małych metrażach oraz kilka dni oczekiwania na produkcję membrany na wymiar.",
+      },
+      {
+        q: "Czy sufit napinany łatwo uszkodzić?",
+        a: "Codzienna eksploatacja mu nie grozi — zagrożeniem są ostre przedmioty: wnoszone meble, karnisze, narzędzia przy remoncie. Część uszkodzeń naprawiamy serwisowo, a w razie potrzeby wymieniamy samą membranę bez demontażu profili.",
+      },
+      {
+        q: "Czy sufit napinany ma maksymalną powierzchnię 20 m²?",
+        a: "Nie — to mit. Realizujemy pomieszczenia o powierzchni 100 m² i większe. Duże płaszczyzny dzieli się profilami pośrednimi lub dobiera membranę o odpowiednich parametrach; folia PVC jest bezszwowa do 6,50 m szerokości.",
+      },
+      {
+        q: "Czy montaż zawsze odbywa się na gorąco?",
+        a: "Nie. Na ciepło napina się tylko folię PVC. Membrany poliestrowe montujemy całkowicie na zimno — bez nagrzewnicy, co jest bezpieczne dla antyków, instrumentów i wrażliwego wyposażenia.",
+      },
+      {
+        q: "Czy uszkodzona membrana oznacza wymianę całego sufitu?",
+        a: "Nie. Drobne uszkodzenia często naprawiamy serwisowo. Gdy wymiana jest konieczna, dotyczy samej membrany — profile zostają na ścianach, a nowa folia jest napinana w jeden dzień, bez remontu.",
+      },
+      {
+        q: "Czy sufit napinany żółknie po latach?",
+        a: "Certyfikowane folie z produkcji europejskiej zachowują kolor — dajemy na to pisemną gwarancję: 15 lat na PVC i 10 lat na poliester. Problem żółknięcia dotyczy folii niewiadomego pochodzenia, dlatego zawsze pytaj, skąd pochodzi membrana.",
+      },
+    ],
+    related: [
+      { label: "Sufit napinany czy podwieszany — porównanie", href: "/blog/sufit-napinany-czy-podwieszany" },
+      { label: "Sufit napinany w łazience — fakty", href: "/blog/sufit-napinany-w-lazience" },
+      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
+      { label: "Sufit poliestrowy — montaż na zimno", href: "/rozwiazania/sufit-poliestrowy" },
+      { label: "Sufity napinane Kraków", href: "/sufity-napinane/krakow" },
     ],
   },
 ];

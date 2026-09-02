@@ -84,51 +84,51 @@ type EditorialEntry = {
   readTime: string;
 };
 
+// Mirrors the staged entries in /content/blog-drafts.ts — remove a tile
+// here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "02",
-    category: "Acoustics",
-    title:
-      "Acoustic ceilings in open-space: how to measure and how much to reduce reverberation",
+    no: "06",
+    category: "Pricing",
+    title: "Stretch ceilings and 8% VAT — who pays less in 2026",
     excerpt:
-      "Practical guide for architects and facility managers. RT60, Class A absorption, material combinations, mistakes when calculating absorbent surface area.",
-    readTime: "12 min",
-  },
-  {
-    no: "03",
-    category: "Lighting",
-    title:
-      "LED light ceilings — when they make sense, when it's overkill",
-    excerpt:
-      "Light ceilings look spectacular, but they're not always the right choice. Full cost breakdown, residential and commercial scenarios, and alternatives — LED lines and RGB.",
-    readTime: "10 min",
-  },
-  {
-    no: "04",
-    category: "Heritage buildings",
-    title:
-      "Stretch ceilings in conservation-protected venues — what's legal",
-    excerpt:
-      "The non-invasive installation makes stretch ceilings often the only option in protected venues. What exactly to consult with the conservator, what documents to have at handover.",
+      "Flats up to 150 m² or houses up to 300 m²: installation may qualify for the 8% rate instead of 23% based on the buyer's declaration. Who benefits, how it works in the contract, and a gross example for a living room.",
     readTime: "7 min",
   },
   {
-    no: "05",
-    category: "Renovations",
+    no: "07",
+    category: "B2B",
     title:
-      "Stretch ceiling in an occupied home — step-by-step preparation",
+      "Acoustic ceilings for offices — how to really cut reverberation in open-space",
     excerpt:
-      "What to prepare if you don't want to move out for installation. PVC vs polyester in the context of an occupied home, pets, plants, furniture.",
-    readTime: "6 min",
+      "Micro-perforated membrane with an absorber, Class A absorption, RT60 targets for open-space and meeting rooms. The cost of a 100 m² office, installed in 2–3 days without closing the office.",
+    readTime: "9 min",
   },
   {
-    no: "06",
-    category: "Care",
+    no: "08",
+    category: "Guides",
     title:
-      "How to clean and maintain a stretch ceiling for 15 years",
+      "Stretch ceiling installation step by step — why it really takes 1 day",
     excerpt:
-      "What to use, what to avoid. Small mechanical damage — what to repair yourself, when to call the warranty. Leak from above — step-by-step protocol.",
-    readTime: "5 min",
+      "Stage by stage: profiles, substructures, hot or cold tensioning, finishing. What to prepare, when installation takes 2 days and whether PVC smells.",
+    readTime: "8 min",
+  },
+  {
+    no: "09",
+    category: "Guides",
+    title:
+      "Are stretch ceilings safe? Fire classes, certificates, health",
+    excerpt:
+      "What A2 and B-s1,d0 mean, where documentation is legally required, where the film comes from and how PVC recycling works.",
+    readTime: "8 min",
+  },
+  {
+    no: "10",
+    category: "Guides",
+    title: "Barrisol, stretch ceiling, tensioned ceiling — are they the same thing?",
+    excerpt:
+      "Where the colloquial name comes from, how systems differ and what to look at when choosing: manufacturer or importer, origin of the film, service after years.",
+    readTime: "7 min",
   },
 ];
 
