@@ -42,6 +42,8 @@ export const blogDrafts: BlogPost[] = [
    * DRAFT · Sufit napinany a VAT 8%
    * Release: mid-September 2026
    * Locale slugs: en "stretch-ceiling-vat-8-poland", ua "natyazhna-stelya-pdv-8"
+   * Proportional-rate rule for lokale above the 150/300 m² limit confirmed
+   * by Michael 2026-09-02 as matching actual invoicing practice.
    * ──────────────────────────────────────────────────────────── */
   {
     slug: "sufit-napinany-vat-8",
@@ -350,21 +352,23 @@ export const blogDrafts: BlogPost[] = [
    * Release: October 2026
    * Locale slugs: en "are-stretch-ceilings-safe", ua "chy-bezpechna-natyazhna-stelya"
    *
-   * !!! CONTAINS [DO UZUPEŁNIENIA] PLACEHOLDERS — must be resolved with
-   * !!! real document IDs from Michael before this entry goes live.
+   * Document IDs filled 2026-09-02 (source: Michael): PVC fire class
+   * B-s1,d0 per CNBOP-PIB classification report 449/BW/20; emissions
+   * examination report MAIC-2018-2563 (Fraunhofer-Institut). No
+   * placeholders remain — ready to go live.
    * ──────────────────────────────────────────────────────────── */
   {
     slug: "czy-sufit-napinany-jest-bezpieczny",
     category: "Poradniki",
     title: "Czy sufit napinany jest bezpieczny? Klasy ogniowe, atesty, zdrowie",
     metaDescription:
-      "Tak — certyfikowane membrany z UE: poliester klasy A2 (niepalny), folie PVC w klasach niezapalnych, atesty higieniczne. Co oznaczają klasy i gdzie są wymagane.",
+      "Tak — membrany z UE: poliester klasy A2 (niepalny), folia PVC B-s1,d0 wg raportu CNBOP-PIB, badania emisji Fraunhofer. Co oznaczają klasy i gdzie są wymagane.",
     excerpt:
-      "Pytania o toksyczność i palność sufitów napinanych wracają w każdej rozmowie z klientem, który czytał fora. Odpowiadamy jako producent: co naprawdę oznaczają klasy ogniowe, jakie dokumenty ma nasz materiał, gdzie prawo ich wymaga i czym różni się folia z UE od folii niewiadomego pochodzenia.",
+      "Pytania o toksyczność i palność sufitów napinanych wracają w każdej rozmowie z klientem, który czytał fora. Odpowiadamy jako producent — z numerami raportów: co naprawdę oznaczają klasy ogniowe, jakie dokumenty ma nasz materiał, gdzie prawo ich wymaga i czym różni się folia z UE od folii niewiadomego pochodzenia.",
     datePublished: "2026-10-15",
     readTime: "8 min",
     intro: [
-      "Tak — sufit napinany z certyfikowanych membran produkowanych w Unii Europejskiej jest bezpieczny dla zdrowia i spełnia wymagania przeciwpożarowe stawiane wnętrzom. Nasze membrany poliestrowe mają klasę reakcji na ogień A2 (materiał niepalny), a folie PVC klasyfikację w klasach niezapalnych [DO UZUPEŁNIENIA: dokładna klasa ogniowa naszej folii PVC + numery certyfikatów/atestów]. Przy certyfikowanych materiałach nie ma emisji substancji szkodliwych w trakcie użytkowania — a to jest właściwe pytanie, bo mieszkasz pod sufitem przez 15 lat, nie przez godzinę montażu.",
+      "Tak — sufit napinany z certyfikowanych membran produkowanych w Unii Europejskiej jest bezpieczny dla zdrowia i spełnia wymagania przeciwpożarowe stawiane wnętrzom. Nasze membrany poliestrowe mają klasę reakcji na ogień A2 (materiał niepalny), a folia PVC klasę B-s1,d0 — niezapalna, o małej emisji dymu, bez płonących kropli — potwierdzoną raportem klasyfikacyjnym nr 449/BW/20 wydanym przez CNBOP-PIB. Emisje folii PVC zbadał Fraunhofer-Institut (raport z badań nr MAIC-2018-2563): przy certyfikowanych materiałach nie ma emisji substancji szkodliwych w trakcie użytkowania — a to jest właściwe pytanie, bo mieszkasz pod sufitem przez 15 lat, nie przez godzinę montażu.",
       "Piszemy jako producent: folia PVC powstaje w naszej fabryce w Częstochowie, poliester w zakładzie grupy Stretch w Belgii. Poniżej tłumaczymy oznaczenia, które znajdziesz w dokumentach, mówimy, gdzie są wymagane prawnie, a gdzie tylko warto je mieć, i wyjaśniamy, dlaczego pochodzenie folii jest ważniejsze niż jej cena.",
     ],
     sections: [
@@ -378,7 +382,7 @@ export const blogDrafts: BlogPost[] = [
         heading: "Co oznaczają klasy ogniowe A2 i B-s1,d0",
         paragraphs: [
           "Europejska klasyfikacja reakcji na ogień (euroklasy) opisuje, jak materiał zachowuje się w kontakcie z ogniem. Litera to główna klasa: A1 i A2 oznaczają materiały niepalne, B — materiały niezapalne, które nie podtrzymują ognia, C i niżej — coraz łatwiej palne. Dodatkowe oznaczenia dotyczą dymu (s1 — mała ilość, s2 — ograniczona, s3 — bez ograniczeń) i płonących kropli (d0 — brak, d1 — krople gasnące, d2 — bez ograniczeń). Zapis B-s1,d0 czyta się więc: niezapalny, o małej emisji dymu, bez płonących kropli.",
-          "Nasz poliester ma klasę A2 — jest niepalny, co w obiektach użyteczności publicznej bywa warunkiem dopuszczenia materiału. Folia PVC: [DO UZUPEŁNIENIA: klasa reakcji na ogień folii PVC wg raportu klasyfikacyjnego, np. B-s1,d0 lub B-s2,d0 — wpisać dokładnie z dokumentu].",
+          "Nasz poliester ma klasę A2 — jest niepalny, co w obiektach użyteczności publicznej bywa warunkiem dopuszczenia materiału. Nasza folia PVC ma klasę B-s1,d0 według raportu klasyfikacyjnego nr 449/BW/20, wydanego przez Centrum Naukowo-Badawcze Ochrony Przeciwpożarowej im. Józefa Tuliszkowskiego — Państwowy Instytut Badawczy (CNBOP-PIB) w Józefowie, czyli laboratorium akredytowane (PCA AB 1280), które w Polsce klasyfikuje materiały budowlane pod kątem reakcji na ogień.",
         ],
       },
       {
@@ -390,9 +394,9 @@ export const blogDrafts: BlogPost[] = [
           headers: ["Dokument / oznaczenie", "Co potwierdza", "Gdzie wymagany"],
           rows: [
             ["Klasa A2 — poliester", "materiał niepalny wg euroklas", "obiekty użyteczności publicznej, hotele, szkoły, biura"],
-            ["Klasa ogniowa folii PVC", "[DO UZUPEŁNIENIA: klasa]", "lokale usługowe i publiczne; w mieszkaniach nie wymagana prawnie"],
-            ["Raport klasyfikacyjny reakcji na ogień", "numer i laboratorium: [DO UZUPEŁNIENIA: nr raportu + jednostka]", "dokumentacja odbiorowa obiektów z wymaganiami ppoż."],
-            ["Atest higieniczny folii PVC", "dopuszczenie do pomieszczeń mieszkalnych: [DO UZUPEŁNIENIA: nr atestu + jednostka]", "warto mieć zawsze; wymagany w placówkach oświaty i ochrony zdrowia"],
+            ["Klasa B-s1,d0 — folia PVC", "niezapalna, mała emisja dymu, bez płonących kropli", "lokale usługowe i publiczne; w mieszkaniach nie wymagana prawnie"],
+            ["Raport klasyfikacyjny reakcji na ogień", "nr 449/BW/20, CNBOP-PIB Józefów (laboratorium akredytowane PCA AB 1280)", "dokumentacja odbiorowa obiektów z wymaganiami ppoż."],
+            ["Badanie emisji folii PVC", "raport z badań nr MAIC-2018-2563, Fraunhofer-Institut — brak szkodliwych emisji w użytkowaniu", "warto mieć zawsze; wymagany w placówkach oświaty i ochrony zdrowia"],
             ["Deklaracja właściwości użytkowych / karta produktu", "parametry membrany zgodne z deklaracją producenta", "dokumentacja odbiorowa, przetargi"],
           ],
         },
@@ -401,13 +405,13 @@ export const blogDrafts: BlogPost[] = [
         heading: "Gdzie dokumentacja jest wymagana prawnie, a gdzie warto ją mieć",
         paragraphs: [
           "W obiektach użyteczności publicznej — szkołach, przedszkolach, hotelach, gastronomii, biurach, sklepach — wymagania przeciwpożarowe wobec materiałów wykończeniowych są formalne: rzeczoznawca lub inspektor przy odbiorze poprosi o klasyfikację reakcji na ogień, a bez niej sufit może nie zostać dopuszczony. Dlatego do realizacji komercyjnych dołączamy raport klasyfikacyjny i kartę produktu standardowo, bez proszenia.",
-          "W mieszkaniach i domach jednorodzinnych prawo nie wymaga od Ciebie dokumentów na sufit. Mimo to warto je mieć — z dwóch powodów. Przy sprzedaży mieszkania lub wynajmie kupujący coraz częściej pytają o materiały wykończeniowe. A przede wszystkim: atest higieniczny jest jedynym dowodem, że materiał nad Twoją głową został przebadany pod kątem emisji. Jeśli wykonawca nie potrafi go pokazać, to sygnał ostrzegawczy niezależnie od ceny.",
+          "W mieszkaniach i domach jednorodzinnych prawo nie wymaga od Ciebie dokumentów na sufit. Mimo to warto je mieć — z dwóch powodów. Przy sprzedaży mieszkania lub wynajmie kupujący coraz częściej pytają o materiały wykończeniowe. A przede wszystkim: raport z badań emisji — dla naszej folii PVC wykonany przez Fraunhofer-Institut, nr MAIC-2018-2563 — jest jedynym dowodem, że materiał nad Twoją głową został przebadany. Jeśli wykonawca nie potrafi pokazać takiego dokumentu, to sygnał ostrzegawczy niezależnie od ceny.",
         ],
       },
       {
         heading: "Zdrowie: emisje, zapach i pochodzenie folii",
         paragraphs: [
-          "Certyfikowana membrana w użytkowaniu nie emituje substancji szkodliwych — to właśnie potwierdza atest higieniczny. Krótkotrwały zapach po montażu PVC na ciepło jest efektem podgrzania tworzywa i znika po przewietrzeniu; poliester montowany na zimno nie pachnie wcale. Pytaj o pochodzenie folii: nasza PVC powstaje w Częstochowie, poliester w Belgii, obie w zakładach grupy Stretch, z pełną dokumentacją. Folia z nieznanego źródła może być tańsza o kilkadziesiąt złotych na metrze — i to jedyne, co o niej wiadomo na pewno.",
+          "Certyfikowana membrana w użytkowaniu nie emituje substancji szkodliwych — dla naszej folii PVC potwierdza to raport z badań Fraunhofer-Institut nr MAIC-2018-2563. Krótkotrwały zapach po montażu PVC na ciepło jest efektem podgrzania tworzywa i znika po przewietrzeniu; poliester montowany na zimno nie pachnie wcale. Pytaj o pochodzenie folii: nasza PVC powstaje w Częstochowie, poliester w Belgii, obie w zakładach grupy Stretch, z pełną dokumentacją. Folia z nieznanego źródła może być tańsza o kilkadziesiąt złotych na metrze — i to jedyne, co o niej wiadomo na pewno.",
           "Recykling: PVC jest tworzywem w pełni podlegającym recyklingowi, a nasza folia PVC powstaje z udziałem materiału z odzysku — stąd nazwa sufitu PVC recyklingowego w naszej ofercie. Zdemontowana membrana po latach użytkowania nie trafia na składowisko jako odpad niemożliwy do przetworzenia.",
         ],
       },
@@ -415,7 +419,7 @@ export const blogDrafts: BlogPost[] = [
     faq: [
       {
         q: "Czy sufit napinany jest toksyczny?",
-        a: "Certyfikowany — nie. Membrany z produkcji europejskiej mają atesty higieniczne dopuszczające je do pomieszczeń mieszkalnych i w użytkowaniu nie emitują substancji szkodliwych. Ryzyko dotyczy folii niewiadomego pochodzenia bez dokumentów.",
+        a: "Certyfikowany — nie. Nasza folia PVC ma raport z badań emisji Fraunhofer-Institut (nr MAIC-2018-2563) i w użytkowaniu nie emituje substancji szkodliwych; membrany poliestrowe są niepalne (klasa A2). Ryzyko dotyczy folii niewiadomego pochodzenia bez dokumentów.",
       },
       {
         q: "Co oznacza klasa ogniowa A2?",
@@ -423,7 +427,7 @@ export const blogDrafts: BlogPost[] = [
       },
       {
         q: "Co oznacza B-s1,d0?",
-        a: "B — materiał niezapalny, niepodtrzymujący ognia; s1 — mała emisja dymu; d0 — brak płonących kropli. To oznaczenie spotykane przy folii PVC; dokładną klasę naszej folii podajemy w raporcie klasyfikacyjnym dołączanym do realizacji.",
+        a: "B — materiał niezapalny, niepodtrzymujący ognia; s1 — mała emisja dymu; d0 — brak płonących kropli. Taką klasę ma nasza folia PVC — potwierdza ją raport klasyfikacyjny nr 449/BW/20 wydany przez CNBOP-PIB, który dołączamy do realizacji.",
       },
       {
         q: "Czy do szkoły lub hotelu potrzebne są dokumenty na sufit?",
