@@ -86,14 +86,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "06",
-    category: "Ціни",
-    title: "Натяжна стеля і ПДВ 8% — хто заплатить менше у 2026",
-    excerpt:
-      "Квартира до 150 м² або будинок до 300 м²: монтаж може підпадати під ставку 8% замість 23% на підставі заяви покупця. Хто скористається, як це виглядає в договорі та приклад брутто для вітальні.",
-    readTime: "7 хв",
-  },
-  {
     no: "07",
     category: "B2B",
     title:

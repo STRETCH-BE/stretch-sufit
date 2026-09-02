@@ -606,6 +606,102 @@ export const blogPosts: BlogPost[] = [
       { label: "Stretch ceilings Kraków", href: "/en/stretch-ceilings/krakow" },
     ],
   },
+
+  /* ── 06 · 8% VAT ───────────────────────────────────────── */
+  {
+    slug: "stretch-ceiling-vat-8-poland",
+    category: "Pricing",
+    title: "Stretch ceilings and 8% VAT — who pays less in 2026",
+    metaDescription:
+      "Installing a ceiling in a flat up to 150 m² or a house up to 300 m² can carry 8% VAT instead of 23% — a buyer's declaration is enough. A 6,000 PLN net living room: 900 PLN difference.",
+    excerpt:
+      "Almost nobody writes about the 8% rate on stretch-ceiling installation, yet for most private customers it means several hundred zlotys of difference on a single room. We explain who the preferential rate covers, which floor-area limits apply, what the declaration looks like and how much really stays in your pocket.",
+    datePublished: "2026-09-02",
+    readTime: "7 min",
+    intro: [
+      "Installing a stretch ceiling in housing covered by Poland's social housing programme — that is, flats with a usable area up to 150 m² and single-family houses up to 300 m² — can carry the 8% VAT rate instead of 23%. The basis is a buyer's declaration, which we prepare together with the contract. It applies to private individuals and to companies buying a ceiling for residential purposes alike. On a living room quoted at 6,000 PLN net, the difference is 900 PLN gross.",
+      "We write as the manufacturer and installer — our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium — so we describe exactly the procedure we apply with every private customer's contract. One reservation up front: this is general information about the rules we apply in practice, not tax advice. In an unusual situation it is worth asking a tax adviser.",
+    ],
+    sections: [
+      {
+        heading: "Where the 8% rate on a ceiling comes from",
+        paragraphs: [
+          "The Polish VAT Act provides a reduced 8% rate for construction works — building, renovation, modernisation and conversion — carried out in buildings covered by the social housing programme. The key word is works: the preference covers the service of installing the ceiling together with the material, performed in residential premises. Selling the film alone, without installation, is a supply of goods and carries 23%.",
+          "A stretch ceiling, as a finishing element permanently attached to the building, fits this definition just like a plasterboard build, plaster or flooring. That is why in our quotation the ceiling always appears as a complete service: measurement, made-to-measure membrane production, profiles and installation. That is not just tidiness in the offer — it is the condition for applying the lower rate.",
+        ],
+      },
+      {
+        heading: "Who pays 8% and who pays 23% — scenario table",
+        paragraphs: [
+          "Two things decide: the type of premises and their usable floor area. Below are the most common cases from our practice.",
+        ],
+        table: {
+          headers: ["Scenario", "VAT rate", "Condition"],
+          rows: [
+            ["Flat up to 150 m² — private individual", "8%", "buyer's declaration of floor area and residential use"],
+            ["Single-family house up to 300 m²", "8%", "buyer's declaration of floor area and residential use"],
+            ["Flat / house bought by a company for residential purposes", "8%", "an invoice to a company does not exclude the preference — the use of the premises decides"],
+            ["Flat above 150 m² or house above 300 m²", "8% proportionally", "the reduced rate covers the part corresponding to the limit, the rest at 23%"],
+            ["Office, commercial unit, restaurant, shop", "23%", "commercial premises — no preference"],
+            ["Film alone without installation (goods)", "23%", "the preference applies only to the installation service"],
+          ],
+        },
+      },
+      {
+        heading: "Gross example: a 25 m² living room",
+        paragraphs: [
+          "Take a project from our price guide: a 25 m² living room, PVC matte, an LED line along one wall, six light points — around 6,000 PLN net. At 23% the customer pays 7,380 PLN gross. At 8% — 6,480 PLN gross. The difference: 900 PLN on a single room, with no change whatsoever in the scope of work. For a whole flat, where the order value reaches well over ten thousand zlotys, we are talking about 2,000–3,000 PLN.",
+          "So when comparing offers, check whether a competing quote states a net or gross amount, and at which rate. We have seen offers where the cheaper net price ended up more expensive gross, because the contractor did not apply the reduced rate.",
+        ],
+      },
+      {
+        heading: "What the declaration looks like and what we do for you",
+        paragraphs: [
+          "The buyer's declaration is a one-page document in which you confirm that the premises are residential, state their usable floor area and declare that it falls within the limit. We prepare it together with the contract — you sign, we keep it in the order file, because it is our basis for issuing an invoice at 8%. You need no certificates from any office and no extracts; we take the floor area from the notarial deed, the lease or the design.",
+          "Payment works as with every project: a 30% deposit on order, the remaining 70% within 7 days after installation — both parts at the same rate. The quote after the free measurement is valid for 30 days and already shows the gross amount at the correct VAT rate, so there are no surprises on the invoice.",
+        ],
+      },
+      {
+        heading: "Three traps worth knowing about",
+        paragraphs: [
+          "First: usable floor area is not the same as the area of the ceiling we install. What counts is the floor area of the whole premises according to the documents, not the 20 m² of the living room. Second: commercial premises in a residential building — a surgery, a ground-floor shop — carry 23%, even if there are flats one floor up. Third: exceeding the limit does not cost you the whole preference — the reduced rate applies proportionally to the part of the floor area within the limit, and the rest is settled at 23%.",
+          "This is general information about the rules we apply in practice, not tax advice. If your situation is unusual — mixed-use premises, short-term rental, a building undergoing a change of use — mention it at the measurement and we will prepare the quote in both variants.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Does the 8% rate apply only to private individuals?",
+        a: "No. The use of the premises decides, not the buyer's status. A company buying a ceiling for a flat used for residential purposes (for example staff accommodation) can also use the 8% rate on the basis of the declaration.",
+      },
+      {
+        q: "What if my house is larger than 300 m²?",
+        a: "You do not lose the whole preference. The 8% rate covers the part of the service value corresponding to the share of the limit in the total usable floor area, and the remaining part is settled at 23%. We prepare that split in the quote.",
+      },
+      {
+        q: "Does the material alone, without installation, also carry 8% VAT?",
+        a: "No. Selling the film alone as goods carries 23%. The preference applies only to the installation service together with the material, performed in residential premises — which is why in our offer the ceiling is always a complete service.",
+      },
+      {
+        q: "What documents do I need to prepare?",
+        a: "Only a signature on the buyer's declaration, which we prepare together with the contract. You state the usable floor area from the notarial deed, the lease or the design — no certificates from any office are needed.",
+      },
+      {
+        q: "Is renovating an existing ceiling also covered by the 8% rate?",
+        a: "Yes. The reduced rate covers building, renovation, modernisation and conversion in housing covered by the social housing programme, so installing a stretch ceiling in a renovated flat up to 150 m² qualifies just as in a new one.",
+      },
+      {
+        q: "Can a home office in a flat have a ceiling at 8% VAT?",
+        a: "If the premises formally remain residential and fall within the 150 m² limit, the buyer's declaration is the basis for the 8% rate. Commercial premises — a surgery or a shop separated within the building — carry 23%. In doubtful situations consult a tax adviser.",
+      },
+    ],
+    related: [
+      { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Stretch ceilings Warsaw", href: "/en/stretch-ceilings/warsaw" },
+    ],
+  },
 ];
 
 export function findPost(slug: string): BlogPost | undefined {
