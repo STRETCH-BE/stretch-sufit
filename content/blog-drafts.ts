@@ -10,6 +10,7 @@
  * Release cadence (2 articles / month, each publish = separate commit +
  * GSC "Request indexing"):
  *   mid-September 2026  → sufit-napinany-vat-8, sufit-akustyczny-do-biura
+ *                         (both PUBLISHED 2026-09-02)
  *   October 2026        → montaz-sufitu-napinanego-krok-po-kroku,
  *                         czy-sufit-napinany-jest-bezpieczny
  *   November 2026       → barrisol-a-sufit-napinany
@@ -38,108 +39,6 @@
 import type { BlogPost } from "@/content/blog-posts";
 
 export const blogDrafts: BlogPost[] = [
-  /* ────────────────────────────────────────────────────────────
-   * DRAFT · Sufit akustyczny do biura
-   * Release: mid-September 2026
-   * Locale slugs: en "acoustic-ceiling-office", ua "akustychna-stelya-ofis"
-   * ──────────────────────────────────────────────────────────── */
-  {
-    slug: "sufit-akustyczny-do-biura",
-    category: "B2B",
-    title: "Sufit akustyczny do biura — jak realnie obniżyć pogłos w open-space (2026)",
-    metaDescription:
-      "Mikroperforowana membrana z absorberem: klasa A pochłaniania, redukcja pogłosu do 75%. Od 320 zł/m²; biuro 100 m² to ok. 32–38 tys. zł netto, montaż 2–3 dni.",
-    excerpt:
-      "Open-space huczy, bo wszystkie powierzchnie odbijają dźwięk, a sufit jest największą z nich. Pokazujemy, jak napinany sufit akustyczny z absorberem obniża czas pogłosu do celów projektowych, ile kosztuje biuro 100 m² i dlaczego montaż nie wymaga zamykania firmy.",
-    datePublished: "2026-09-15",
-    readTime: "9 min",
-    intro: [
-      "Napinany sufit akustyczny to mikroperforowana membrana poliestrowa plus absorber w przestrzeni nad nią — razem dają pochłanianie do klasy A i redukcję pogłosu do 75%. Cele projektowe, do których dążymy: czas pogłosu RT60 poniżej 0,8 s w open-space i poniżej 0,6 s w salach konferencyjnych. Koszt od ok. 320 zł/m² netto z montażem; biuro 100 m² to ok. 32 000–38 000 zł netto, montaż w 2–3 dni robocze — także w weekend, bez zamykania biura.",
-      "Piszemy jako producent: membrany akustyczne bazują na poliestrze klasy A2 (niepalnym) z zakładu grupy Stretch w Belgii, a folię PVC do pozostałych stref biura produkujemy w naszej fabryce w Częstochowie. Ten tekst jest dla facility managerów, architektów i właścicieli firm, którzy chcą liczb zamiast obietnic.",
-    ],
-    sections: [
-      {
-        heading: "Dlaczego open-space huczy — czas pogłosu w praktyce",
-        paragraphs: [
-          "Pogłos to dźwięk, który po ustaniu źródła nadal odbija się między twardymi powierzchniami. Mierzy się go czasem RT60 — ile sekund trwa spadek poziomu dźwięku o 60 dB. W typowym biurze z gładkim stropem, szkłem i podłogą z płytek RT60 sięga 1,2–1,5 s: rozmowa przy biurku obok jest słyszalna w całym pomieszczeniu, a każda rozmowa telefoniczna podnosi głos kolejnej osoby. Cel dla open-space to poniżej 0,8 s, dla sal konferencyjnych i pokojów spotkań poniżej 0,6 s.",
-          "Największą powierzchnią odbijającą w biurze jest sufit — dlatego to on daje najwięcej, gdy zmienia się z odbijającego w pochłaniający. Panele ścienne i dywany pomagają, ale nie zastąpią kilkudziesięciu metrów kwadratowych absorpcji nad głowami.",
-        ],
-      },
-      {
-        heading: "Jak działa napinany sufit akustyczny",
-        paragraphs: [
-          "Membrana ma mikroperforację — tysiące otworów na metr kwadratowy, niewidocznych z poziomu podłogi. Fala dźwiękowa przechodzi przez perforację do przestrzeni nad sufitem, gdzie absorber (warstwa materiału pochłaniającego) zamienia jej energię w ciepło. Membrana wraca do pomieszczenia jako gładka, jednolita płaszczyzna — bez rastra kasetonów, bez widocznych paneli. Uzyskiwane pochłanianie sięga klasy A, a w praktyce oznacza to redukcję pogłosu do 75% względem gołego stropu.",
-          "Materiał to poliester klasy A2 — niepalny, co w obiektach biurowych i użyteczności publicznej jest wymogiem, a nie opcją. Montaż odbywa się na zimno, bez nagrzewnicy: nie ma zapachu, nie ma podnoszenia temperatury, elektronika i serwerownie obok są bezpieczne.",
-        ],
-      },
-      {
-        heading: "Trzy sposoby na pogłos — porównanie",
-        paragraphs: [
-          "Każde z rozwiązań ma sens w innej sytuacji. Tabela zestawia je uczciwie, łącznie z tym, kiedy sufit napinany nie jest najlepszym wyborem.",
-        ],
-        table: {
-          headers: ["Kryterium", "Panele ścienne", "G-K + wełna", "Napinany sufit akustyczny"],
-          rows: [
-            ["Skuteczność", "ograniczona powierzchnią ścian", "dobra, ale bez perforacji płyta odbija", "do klasy A na całej powierzchni sufitu"],
-            ["Czas montażu (100 m²)", "1–2 dni", "1–2 tygodnie z gładzią i malowaniem", "2–3 dni, także w weekend"],
-            ["Ingerencja w pracę biura", "niewielka", "pył, hałas, wyłączenie strefy", "brak pyłu, montaż poza godzinami pracy"],
-            ["Demontowalność", "tak", "nie — rozbiórka", "tak — membrana zdejmowana, profile zostają"],
-            ["Dostęp do instalacji", "nie dotyczy", "klapy rewizyjne", "przez zdejmowaną membranę"],
-            ["Kiedy wybrać", "uzupełnienie, małe sale", "gdy sufit ma pełnić też funkcję izolacji", "open-space, sale, restauracje — gdy liczy się efekt i czas"],
-          ],
-        },
-      },
-      {
-        heading: "Ile to kosztuje i jak wygląda harmonogram",
-        paragraphs: [
-          "Stawka za napinany sufit akustyczny to od ok. 320 zł/m² netto z montażem, typowo 320–450 zł/m² zależnie od geometrii, liczby wycięć pod oprawy i czujniki oraz wymaganej klasy pochłaniania. Przy skali biura 100 m² stawka jednostkowa spada w dół widełek: realny koszt to ok. 32 000–38 000 zł netto. Ewentualną dodatkową absorpcję w przestrzeni nad membraną wyceniamy po pomiarze pogłosu, bo zależy od kubatury i istniejącego stropu.",
-          "Harmonogram: pomiar i pomiar pogłosu na miejscu, produkcja membrany na wymiar, montaż w 2–3 dni robocze. Dla działających biur planujemy prace poza godzinami pracy lub w weekend — zespół wchodzi w piątek po południu, w poniedziałek rano biuro pracuje pod nowym sufitem. Meble i stanowiska zostają, wystarczy odsunąć je od ścian. Płatność 30% zaliczki i 70% do 7 dni po montażu; wycena ważna 30 dni.",
-        ],
-      },
-      {
-        heading: "Co sprawdzamy na pomiarze i czego wymagamy od inwestora",
-        paragraphs: [
-          "Przed wyceną mierzymy czas pogłosu w obecnym stanie — to punkt odniesienia, do którego porównujemy efekt po montażu. Sprawdzamy wysokość, instalacje nad sufitem (klimatyzacja, tryskacze, kable), rozmieszczenie opraw i czujników, bo każde wycięcie planujemy na etapie produkcji membrany. Potrzebujemy od inwestora projektu oświetlenia lub decyzji, które oprawy zostają, oraz informacji o wymaganiach ppoż. obiektu — do dokumentacji dołączamy klasyfikację materiału.",
-          "Jeśli biuro ma już strop podwieszany z kasetonów, membranę montujemy pod nim lub w miejsce kasetonów — decyduje wysokość i to, czy istniejąca konstrukcja ma zostać. Realizacje tego typu wykonujemy również dla hoteli i gastronomii; przykładem jest realizacja Candor w Sint-Martens-Latem w Belgii, którą znajdziesz w naszych realizacjach.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        q: "Ile kosztuje sufit akustyczny do biura?",
-        a: "Od ok. 320 zł/m² netto z montażem, typowo 320–450 zł/m². Biuro open-space 100 m² to ok. 32 000–38 000 zł netto; dodatkową absorpcję nad membraną wyceniamy po pomiarze pogłosu.",
-      },
-      {
-        q: "Czy trzeba zamykać biuro na czas montażu?",
-        a: "Nie. Montaż trwa 2–3 dni robocze i planujemy go poza godzinami pracy lub w weekend. Nie ma pyłu ani nagrzewania — membrana poliestrowa montowana jest na zimno — więc stanowiska pracy zostają na miejscu.",
-      },
-      {
-        q: "O ile realnie spadnie pogłos?",
-        a: "Redukcja sięga 75% względem gołego stropu. Projektujemy tak, aby czas pogłosu RT60 spadł poniżej 0,8 s w open-space i poniżej 0,6 s w salach konferencyjnych. Efekt weryfikujemy pomiarem przed i po montażu.",
-      },
-      {
-        q: "Czym napinany sufit akustyczny różni się od paneli ściennych?",
-        a: "Powierzchnią i jednolitością. Panele pochłaniają na fragmencie ścian; sufit akustyczny pracuje na całej największej powierzchni pomieszczenia i pozostaje gładką, jednolitą płaszczyzną bez widocznych kasetonów. Panele dobrze uzupełniają sufit w małych salach.",
-      },
-      {
-        q: "Czy membrana akustyczna jest niepalna?",
-        a: "Tak. Membrany akustyczne bazują na poliestrze klasy A2 (niepalnym), co spełnia wymagania stawiane obiektom biurowym i użyteczności publicznej. Klasyfikację materiału dołączamy do dokumentacji realizacji.",
-      },
-      {
-        q: "Czy sufit można zdemontować przy zmianie biura?",
-        a: "Tak. Membrana jest zdejmowana bez niszczenia profili, więc przy rearanżacji lub przeprowadzce można ją zdjąć, a przestrzeń nad sufitem pozostaje dostępna dla instalacji przez cały czas użytkowania.",
-      },
-    ],
-    related: [
-      { label: "Sufit akustyczny — parametry i klasy", href: "/rozwiazania/sufit-akustyczny" },
-      { label: "Współpraca B2B — biura, hotele, gastronomia", href: "/wspolpraca-b2b" },
-      { label: "Realizacja: Candor, Sint-Martens-Latem", href: "/realizacje/candor-sint-martens-latem" },
-      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
-      { label: "Sufity napinane Gliwice", href: "/sufity-napinane/gliwice" },
-      { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
-    ],
-  },
-
   /* ────────────────────────────────────────────────────────────
    * DRAFT · Montaż krok po kroku
    * Release: October 2026

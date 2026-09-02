@@ -103,15 +103,6 @@ type EditorialEntry = {
 // here when its article moves to /content/blog-posts.ts.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "07",
-    category: "B2B",
-    title:
-      "Sufit akustyczny do biura — jak realnie obniżyć pogłos w open-space",
-    excerpt:
-      "Mikroperforowana membrana z absorberem, klasa A pochłaniania, cele RT60 dla open-space i sal. Koszt biura 100 m², montaż w 2–3 dni bez zamykania biura.",
-    readTime: "9 min",
-  },
-  {
     no: "08",
     category: "Poradniki",
     title:

@@ -126,6 +126,11 @@ export const blogPostSlugs: { pl: string; en: string; ua: string }[] = [
     en: "stretch-ceiling-vat-8-poland",
     ua: "natyazhna-stelya-pdv-8",
   },
+  {
+    pl: "sufit-akustyczny-do-biura",
+    en: "acoustic-ceiling-office",
+    ua: "akustychna-stelya-ofis",
+  },
 ];
 
 /* ─── Path builders ───────────────────────────────────────── */

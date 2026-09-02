@@ -86,15 +86,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "07",
-    category: "B2B",
-    title:
-      "Акустична стеля для офісу — як реально знизити реверберацію в open-space",
-    excerpt:
-      "Мікроперфорована мембрана з абсорбером, клас поглинання A, цілі RT60 для open-space і залів. Вартість офісу 100 м², монтаж за 2–3 дні без закриття офісу.",
-    readTime: "9 хв",
-  },
-  {
     no: "08",
     category: "Поради",
     title:
