@@ -122,9 +122,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "pvc-vs-polyester-ceiling",
     category: "Materials",
-    title: "PVC or polyester stretch ceiling? A comparison from the maker of both",
+    title: "PVC or polyester stretch ceiling? A 2026 comparison from the maker of both",
     metaDescription:
-      "PVC or polyester — which stretch ceiling to choose? A comparison from the company that manufactures both: parameters, seamless widths, behaviour in a flood, 15 vs 10 year warranty and five scenarios for each material.",
+      "PVC (from 170 PLN/m², seamless to 6.50 m, 15-year warranty) or polyester (from 220 PLN/m², deep matte, cold installation, 10 years)? A comparison from the maker of both.",
     excerpt:
       "We are the only company in Poland manufacturing both materials: PVC in Częstochowa, polyester at the Stretch group's Belgian plant. This comparison does not need to favour anyone — we show the parameters and say plainly when each material is the only right choice.",
     datePublished: "2026-08-06",
@@ -160,7 +160,9 @@ export const blogPosts: BlogPost[] = [
             ["Humidity and bathrooms", "fully resistant", "resistant, but not for wet zones"],
             ["Production", "Poland, 5 working days", "Belgium, 5–15 days + transport"],
             ["Warranty", "15 years", "10 years"],
-            ["Price", "most cost-effective", "usually approx. 20–30% higher"],
+            ["Price installed (net)", "from 170 PLN/m² (matte 170–220, gloss 185–240)", "from 220 PLN/m² (220–290)"],
+            ["Acoustic ceilings", "—", "micro-perforated A2-class polyester"],
+            ["Typical choice for", "bathrooms, kitchens, gloss finishes, wide living rooms", "premium bedrooms and living rooms, offices, halls"],
           ],
         },
       },
@@ -225,11 +227,17 @@ export const blogPosts: BlogPost[] = [
         q: "Which material is more matte?",
         a: "Polyester. Its surface has the deepest matte available in stretch ceilings and looks like a perfect painted finish. PVC matte is very good, but in side light it yields slightly to the fabric.",
       },
+      {
+        q: "Is a polyester ceiling available in gloss?",
+        a: "No. Polyester comes only in deep matte (also with photo print). Gloss, satin, sparkle and translucent finishes exist only in PVC film — one of the main criteria when choosing between the materials.",
+      },
     ],
     related: [
       { label: "Recyclable PVC ceiling", href: "/en/solutions/pvc-ceiling" },
       { label: "Polyester stretch ceiling", href: "/en/solutions/polyester-ceiling" },
       { label: "How much does a stretch ceiling cost", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "Stretch ceilings Wrocław", href: "/en/stretch-ceilings/wroclaw" },
     ],
   },
 
@@ -237,9 +245,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "stretch-ceiling-bathroom",
     category: "Bathroom",
-    title: "A stretch ceiling in the bathroom: humidity, mould and floods — facts from the service crew",
+    title: "A stretch ceiling in the bathroom — humidity, steam and floods (2026)",
     metaDescription:
-      "Is a stretch ceiling right for a bathroom? Yes — PVC absorbs no moisture and holds water in a flood from above. A step-by-step flood protocol, the truth about ventilation and mould — from the crew that handles these call-outs.",
+      "Yes — PVC is the best bathroom ceiling: it absorbs no water, never moulds, and holds water in a flood from above. A 5 m² bathroom estimate and the flood protocol.",
     excerpt:
       "The bathroom is the hardest room for any ceiling: constant humidity plus the risk of flooding from above. We describe how PVC film really behaves with steam and during a neighbour's leak — including the step-by-step service protocol you will not find in articles rewritten from press releases.",
     datePublished: "2026-08-06",
@@ -262,6 +270,22 @@ export const blogPosts: BlogPost[] = [
           "PVC has zero water absorption. After a bath, steam condenses on the membrane into fine droplets that simply evaporate once the bathroom is aired — exactly as on tiles or a mirror. The membrane does not swell, peel, discolour or need painting. On the film itself, mould has nothing to feed on.",
           "The space between the membrane and the slab stays dry, because moisture does not pass through the film. You do not need additional ceiling waterproofing — the membrane itself is the barrier. In service practice, the most common bathroom maintenance is wiping the ceiling with a soft cloth every few months.",
         ],
+      },
+      {
+        heading: "PVC, polyester or a painted slab — what to choose for the bathroom",
+        paragraphs: [
+          "We manufacture both stretch materials — PVC in Częstochowa, polyester at the Stretch group's Belgian plant — so we have no reason to favour either. In the bathroom, however, the choice is unambiguous, and the table shows why.",
+        ],
+        table: {
+          headers: ["Criterion", "PVC matte / gloss", "Polyester", "Painted slab"],
+          rows: [
+            ["Resistance to humidity and steam", "full — zero water absorption", "good in dry rooms, not for wet zones", "poor — paint peels over time"],
+            ["Washability", "damp cloth, no chemicals", "dry vacuuming", "repainting only"],
+            ["Behaviour in a flood from above", "holds water like a membrane", "lets water through slowly", "stains, plaster falling off"],
+            ["Surface mould", "nothing to feed on — does not grow", "nothing to feed on with working ventilation", "common with poor ventilation"],
+            ["Price installed", "from 170 PLN/m² (gloss from 185 PLN/m²)", "from 220 PLN/m²", "cheapest, but redone every few years"],
+          ],
+        },
       },
       {
         heading: "Honestly: a ceiling will not fix bad ventilation",
@@ -291,10 +315,17 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
+        heading: "How much a stretch ceiling in the bathroom costs",
+        paragraphs: [
+          "A typical apartment-block bathroom is 4–6 m². The per-metre rate alone (PVC matte from 170 PLN/m², gloss from 185 PLN/m²) would give less than 1,000 PLN — and that is where the minimum order comes in. Travel, measurement, made-to-measure membrane production and a two-person crew cost the same at 5 m² as at 15 m², so the realistic cost of a single bathroom is around 1,400–1,600 PLN net, installed in one morning. If we do the kitchen or hallway in the same visit, the rate returns to the normal per-metre range, because the fixed costs spread over a larger area.",
+          "For residential premises up to 150 m² the installation may qualify for the 8% VAT rate instead of 23% — based on the buyer's declaration, which we prepare together with the contract. The quote after the free measurement stays valid for 30 days.",
+        ],
+      },
+      {
         heading: "Matte or gloss, lighting and other bathroom decisions",
         paragraphs: [
           "Gloss visually enlarges small bathrooms and reflects light beautifully — the most common choice up to 6 m². Matte and satin give a calmer, more hotel-like character and mask droplet marks near the shower better. In wet zones we use fittings rated at least IP44; we plan their layout at the measurement so the cut-outs land exactly where you need light — over the mirror and in the bathing zone.",
-          "The standard drop is about 3 cm at the profile alone, and 5–7 cm with recessed fittings — in a typical apartment-block bathroom the difference is unnoticeable, and you gain a perfectly even, washable surface with a 15-year warranty.",
+          "The minimum drop is 15 mm at the profile alone, and 3–4 cm with recessed fittings — in a typical apartment-block bathroom the difference is unnoticeable, and you gain a perfectly even, washable surface with a 15-year warranty.",
         ],
       },
     ],
@@ -313,7 +344,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         q: "How much height does a stretch ceiling take in a bathroom?",
-        a: "From about 3 cm at the wall profile alone up to 5–7 cm with recessed fittings. In a typical apartment-block bathroom the difference is practically unnoticeable.",
+        a: "A minimum of 15 mm at the wall profile alone, and 3–4 cm with recessed fittings. In a typical apartment-block bathroom the difference is practically unnoticeable.",
       },
       {
         q: "Matte or gloss for a small bathroom?",
@@ -323,7 +354,256 @@ export const blogPosts: BlogPost[] = [
     related: [
       { label: "PVC ceiling — ideal for bathrooms", href: "/en/solutions/pvc-ceiling" },
       { label: "PVC vs polyester — comparison", href: "/en/blog/pvc-vs-polyester-ceiling" },
-      { label: "Warranty up to 15 years", href: "/en/warranty" },
+      { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "Stretch ceilings Warsaw", href: "/en/stretch-ceilings/warsaw" },
+    ],
+  },
+
+  /* ── 04 · Stretch ceiling vs drywall ───────────────────── */
+  {
+    slug: "stretch-ceiling-vs-drywall",
+    category: "Comparisons",
+    title: "Stretch ceiling or drywall? A 2026 comparison from the manufacturer",
+    metaDescription:
+      "Drywall costs about 70–150 PLN/m², a stretch ceiling from 170 PLN/m² — but over 10 years the costs even out. We compare installation, dust, drop, humidity, LED and repairs.",
+    excerpt:
+      "Plasterboard is cheaper on day one; a stretch ceiling wins on installation time and cost over the long run. Instead of a sales pitch — an honest table of nine parameters, a list of situations where drywall is the better choice, and the hybrid option hardly anyone mentions.",
+    datePublished: "2026-09-02",
+    readTime: "9 min",
+    intro: [
+      "The short answer, with numbers: a suspended plasterboard (drywall) ceiling costs around 70–150 PLN/m² at the outset with skim coat and painting, a stretch ceiling from 170 PLN/m² installed. Over 10 years the costs usually even out, because drywall needs refreshing every 5–7 years and the first cracks at the joints can appear after just 2–3 years. On top of that, a stretch ceiling goes in within 1 day, without dust, and takes as little as 15 mm of height (3–4 cm with lighting).",
+      "We write this comparison as a stretch-ceiling manufacturer — our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's Belgian plant — so fair warning: we have a stake in this debate. That is why instead of slogans you get a parameter table and a separate section on when plasterboard is simply the better choice. A comparison like that is easier to verify than a eulogy.",
+    ],
+    sections: [
+      {
+        heading: "What each one costs — today and in 10 years",
+        paragraphs: [
+          "Drywall wins on the initial cost: a typical plasterboard build with skim coat and two coats of paint is around 70–150 PLN/m², depending on region and complexity. A stretch ceiling starts at 170 PLN/m² for PVC matte installed (gloss and satin 185–240 PLN/m², polyester from 220 PLN/m²).",
+          "The maths changes over time. Plasterboard moves at the joints — micro-cracks need filling and repainting, and a full refresh of the build falls due on average every 5–7 years. Each such renovation means cost, moving furniture out and dust. A stretch ceiling needs no painting or touch-ups for the whole warranty period — 15 years for PVC, 10 for polyester; maintenance is limited to a wipe with a cloth. After a decade the difference in the starting price usually disappears, while the difference in renovations endured remains.",
+        ],
+      },
+      {
+        heading: "Parameter comparison — the table",
+        paragraphs: [
+          "Nine parameters that genuinely matter in a renovation. Read the rows on dust, time and drop together — they describe what the renovation looks like in practice, not just on the invoice.",
+        ],
+        table: {
+          headers: ["Parameter", "Stretch ceiling", "Drywall suspended ceiling"],
+          rows: [
+            ["Initial cost", "from 170 PLN/m²", "approx. 70–150 PLN/m²"],
+            ["Cost over 10 years", "no refreshing (warranty up to 15 years)", "1–2 refreshes + crack repairs"],
+            ["Installation time", "1 day up to 50 m²", "realistically 3–7 days with drying breaks"],
+            ["Dust and disruption", "no dust, furniture stays", "sanding the skim coat = dust throughout the flat"],
+            ["Minimum drop", "from 15 mm (3–4 cm with lighting)", "usually 5–12 cm, depending on grid and fittings"],
+            ["Humidity and bathrooms", "PVC fully resistant", "green board conditionally resistant, needs painting"],
+            ["Repairs and access", "membrane removable without damaging profiles", "repair = cutting out and re-plastering"],
+            ["LED lighting", "LED lines, backlighting, starry sky within the system", "must be planned into the structure, hard to change"],
+            ["Multi-level forms", "single levels and curves", "any niches, shelves and cascades — drywall rules here"],
+          ],
+        },
+      },
+      {
+        heading: "When a drywall ceiling is the better choice",
+        paragraphs: [
+          "Honestly: there are scenarios where we will recommend plasterboard, or a combination of the two, even though we earn on stretch ceilings.",
+        ],
+        list: [
+          "Multi-level decorative forms — niches, backlit shelves, cascading steps. Drywall can be shaped at will; a stretch ceiling excels on large, perfectly smooth planes.",
+          "Insulating the slab — if you plan mineral wool under the ceiling (top floor, slab above a passageway), a drywall build is the natural carrier for the insulation.",
+          "The lowest one-off budget — when only the price on the renovation invoice matters and refreshing in a few years is irrelevant, drywall remains the cheapest solution.",
+          "Doing it yourself — any local renovation crew can hang boards, and a skilled DIYer can do it alone. A stretch ceiling needs a made-to-measure membrane and a trained team.",
+        ],
+      },
+      {
+        heading: "When a stretch ceiling wins beyond dispute",
+        paragraphs: [
+          "On the other side are situations where the advantage of the stretch technology is objective and measurable.",
+        ],
+        list: [
+          "Renovating an occupied flat — 1 day of installation, zero dust, furniture stays put. With drywall, sanding the skim coat means dust in every room and several days of unusable space.",
+          "Low rooms — 15 mm of drop at the profile alone is a figure no drywall grid can compete with. In a block with 2.50 m ceilings that is the decisive argument.",
+          "Bathroom and kitchen — PVC film absorbs no moisture, needs no painting and holds water in a flood from above. Plasterboard, even impregnated, does not like moisture in the long run.",
+          "Integrated lighting — LED lines in profiles, backlit planes and starry skies are part of the system, serviceable through the removable membrane.",
+          "Access to services — the membrane can be taken down and re-tensioned without destroying anything. Cutting inspection hatches into drywall belongs to another era.",
+        ],
+      },
+      {
+        heading: "The hybrid option: drywall build plus membrane",
+        paragraphs: [
+          "This option vanishes from most comparisons, yet more and more architects choose it: a perimeter drywall build forms the niches and steps, and the central plane is filled by a tensioned membrane — smooth, backlit or acoustic. We fix the stretch-ceiling profiles directly to the drywall structure, so the two technologies join without compromise. The result: the decorative freedom of a build where it is needed, and one large perfect plane where plasterboard would show every imperfection.",
+          "If you are considering this layout, prepare a drawing or an inspiration photo before the free measurement — the advisor will tell you right away how to split the zones and what works out cheaper.",
+        ],
+      },
+      {
+        heading: "How to decide in practice",
+        paragraphs: [
+          "Start with three questions. Are you renovating an occupied flat? If so, dust and time weigh more. How much height do you have? Below 2.60 m every centimetre of drop hurts. What is the horizon? A rental flat for 3 years is different maths from a house for 20. The answers usually settle the debate faster than any table — and if not, at the free measurement we will price both options for your area, with a quote valid for 30 days.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Which is cheaper — a stretch ceiling or drywall?",
+        a: "At the outset, drywall: a plasterboard build with skim coat and painting is around 70–150 PLN/m², a stretch ceiling from 170 PLN/m² installed. Over 10 years the costs usually even out, because drywall needs refreshing every 5–7 years while a stretch ceiling needs no work during its warranty period.",
+      },
+      {
+        q: "Which ceiling takes less room height?",
+        a: "The stretch ceiling: the minimum drop is 15 mm at the profile alone, and 3–4 cm with recessed fittings. A drywall build on a grid usually takes 5–12 cm.",
+      },
+      {
+        q: "How long does each one take to install?",
+        a: "We install a stretch ceiling up to 50 m² in 1 working day, with a two-person crew, without dust. A drywall build with skim coat, sanding and painting realistically takes 3–7 days including drying breaks.",
+      },
+      {
+        q: "Which is better for the bathroom — stretch or drywall?",
+        a: "A PVC stretch ceiling: zero water absorption, no painting, resistance to steam and holding water in a flood from above. Plasterboard, even impregnated, needs painting and tolerates humidity worse over the long run.",
+      },
+      {
+        q: "Can a stretch ceiling be installed on a drywall build?",
+        a: "Yes — we fix the profiles directly to the plasterboard structure. It is a popular hybrid: perimeter niches and steps in drywall, and a central plane of tensioned membrane, backlit if you like.",
+      },
+      {
+        q: "Can a stretch ceiling be taken down and reinstalled?",
+        a: "Yes. The membrane can be removed — for access to services, for instance — and re-tensioned without replacing the profiles. With drywall, every intervention means cutting the board, plastering and painting.",
+      },
+    ],
+    related: [
+      { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Stretch ceilings Warsaw", href: "/en/stretch-ceilings/warsaw" },
+    ],
+  },
+
+  /* ── 05 · Disadvantages, honestly ──────────────────────── */
+  {
+    slug: "stretch-ceiling-disadvantages",
+    category: "Guides",
+    title: "Disadvantages of stretch ceilings — a manufacturer answers honestly",
+    metaDescription:
+      "The real disadvantages of stretch ceilings: vulnerability to sharp objects, higher initial cost than drywall, a minimum order of about 1,400–1,600 PLN, a few days of production. And the myths, corrected.",
+    excerpt:
+      "Articles about the disadvantages of stretch ceilings are usually written by drywall companies or portals that have never seen one. We manufacture them, so we know the flaws first-hand — four are real and we describe them with numbers. The rest of the circulating claims are myths, which we correct point by point.",
+    datePublished: "2026-09-02",
+    readTime: "8 min",
+    intro: [
+      "Yes, stretch ceilings have disadvantages — and as a manufacturer we know them better than anyone. Four are real: the membrane can be damaged by a sharp object, the initial cost (from 170 PLN/m²) is higher than a drywall build, small areas are subject to a minimum order of about 1,400–1,600 PLN, and made-to-measure production means a few days of waiting rather than same-day installation. The rest of the claims circulating online are mostly myths — we correct them below.",
+      "Our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium. So we see both production and service — including the call-outs where something went wrong. This text is written by the side that earns on ceilings, but we would rather lose some customers through honesty than win them with promises we cannot keep.",
+    ],
+    sections: [
+      {
+        heading: "Four real disadvantages — no sugar-coating",
+        paragraphs: [
+          "Let us start with what genuinely can be a problem — with the real scale of the phenomenon, not a catastrophic headline.",
+        ],
+        list: [
+          "Vulnerability to sharp objects — a tensioned membrane is not concrete. A wardrobe being carried in, a curtain rod held upright or a popped champagne cork can leave a mark. This is the most common cause of service call-outs unrelated to plumbing.",
+          "Higher initial cost — from 170 PLN/m² versus around 70–150 PLN/m² for a painted drywall build. The difference pays back over the following years, but it is visible on the renovation invoice.",
+          "Minimum order — for a single bathroom or WC a minimum value of about 1,400–1,600 PLN net applies, because travel, membrane production and the crew cost the same at 4 m² as at 12 m².",
+          "Made-to-measure production — the membrane is made for a specific room: PVC in about 5 working days in Poland, polyester in 5–15 days in Belgium plus transport. You cannot buy a stretch ceiling in a DIY store and install it the same day.",
+        ],
+      },
+      {
+        heading: "Disadvantages in scale — the table",
+        paragraphs: [
+          "We set each disadvantage against its real scale and the way we limit it. This is what the honest version of the portals' fear tables looks like.",
+        ],
+        table: {
+          headers: ["Disadvantage", "Real scale", "How we limit it"],
+          rows: [
+            [
+              "Mechanical damage",
+              "isolated incidents during moves and renovations",
+              "some damage is repairable on site; the membrane is replaceable without removing the profiles",
+            ],
+            [
+              "Initial cost",
+              "about 20–100 PLN/m² more than drywall",
+              "no refreshing costs during the 15-year PVC warranty; 8% VAT for residential premises",
+            ],
+            [
+              "Minimum order",
+              "applies only to small areas",
+              "combining rooms into one order (e.g. bathroom + kitchen on the same date)",
+            ],
+            [
+              "Waiting time",
+              "about 5 working days for PVC from our factory",
+              "production in Poland instead of import; the date is confirmed at the measurement",
+            ],
+            [
+              "Ceiling drop",
+              "from 15 mm, 3–4 cm with lighting",
+              "the lowest profile among ceiling technologies — less drop than any drywall grid",
+            ],
+          ],
+        },
+      },
+      {
+        heading: "Myth 1: a stretch ceiling has a 20 m² limit",
+        paragraphs: [
+          "This myth has been repeated in rankings for years and is simply untrue. We install open-plan offices of 100 m² — as in our price guide, where such an acoustic project costs around 32,000–38,000 PLN net. Large planes are divided into sections with intermediate profiles, or a membrane with parameters suited to the span is selected. Our PVC film is seamless up to 6.50 m in width — the widest on the market — and polyester up to 5.15 m; beyond those dimensions, joins and divisions are planned at the design stage.",
+        ],
+      },
+      {
+        heading: "Myth 2: installation always means heating the room",
+        paragraphs: [
+          "Only half true. PVC film is tensioned hot — a heat gun raises the temperature of the membrane, which tensions perfectly as it cools. But polyester is installed entirely cold: no heat gun, no raised temperature, which matters around antiques, instruments, artworks or server rooms. Anyone who says a stretch ceiling always needs heat is describing only half the technology.",
+        ],
+      },
+      {
+        heading: "Myth 3: damage means replacing the whole ceiling",
+        paragraphs: [
+          "The most costly myth, because it scares people away from a technology that is exceptionally rational precisely when it comes to repairs. First: some damage — small punctures, marks from point pressure — we repair on site, without replacing anything. Second: even when the membrane does need replacing, the profiles stay on the walls. We replace the film alone, in one day, without a renovation. For comparison: a damaged drywall build means cutting out, filling, sanding and painting — usually the whole plane, so the colour matches.",
+        ],
+      },
+      {
+        heading: "Myth 4: polyester fears moisture and cannot be cleaned",
+        paragraphs: [
+          "Here nuance is needed instead of a verdict. A polyester membrane is moisture-resistant under normal domestic conditions — it does not mould or deform from everyday steam. For wet zones (a bathroom with a shower, a laundry room) we nevertheless recommend PVC, because the fabric lets water through slowly, so in a flood from above it will not protect the room the way a sealed film does. Cleaning: polyester is vacuumed dry with a soft brush, PVC film is wiped with a damp cloth. The claim that fabric cannot be kept clean is an exaggeration — each material simply has its own method.",
+        ],
+      },
+      {
+        heading: "What a stretch ceiling will not do — the limits of the technology",
+        paragraphs: [
+          "For full honesty, let us add the limits the industry's marketing stays silent about. A stretch ceiling will not replace ventilation — it resists the effects of moisture but does not remove its cause. It will not insulate the slab — thermal insulation needs mineral wool, and its carrier is often a drywall build. Nor will it form multi-level niches and cascades — that is plasterboard's domain, which is why in decorative projects we often combine both technologies: drywall around the perimeter, membrane in the central plane.",
+          "If after this list of disadvantages you are still considering a stretch ceiling — at the free measurement the advisor will show you samples, price your area and tell you plainly whether any of these flaws will matter in your interior. The quote is valid for 30 days.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "What are the biggest disadvantages of stretch ceilings?",
+        a: "Four real ones: the membrane's vulnerability to sharp objects, an initial cost higher than a drywall build (from 170 PLN/m² versus about 70–150 PLN/m²), a minimum order of about 1,400–1,600 PLN for small areas, and a few days of waiting for made-to-measure membrane production.",
+      },
+      {
+        q: "Is a stretch ceiling easy to damage?",
+        a: "Everyday use poses no threat — the risk comes from sharp objects: furniture being carried in, curtain rods, tools during renovation. Some damage we repair on site, and if necessary we replace the membrane alone without removing the profiles.",
+      },
+      {
+        q: "Is a stretch ceiling limited to 20 m²?",
+        a: "No — that is a myth. We install rooms of 100 m² and larger. Large planes are divided with intermediate profiles or a membrane with suitable parameters is selected; PVC film is seamless up to 6.50 m in width.",
+      },
+      {
+        q: "Is installation always done hot?",
+        a: "No. Only PVC film is tensioned hot. Polyester membranes are installed entirely cold — without a heat gun, which is safe for antiques, instruments and sensitive furnishings.",
+      },
+      {
+        q: "Does a damaged membrane mean replacing the whole ceiling?",
+        a: "No. Minor damage is often repaired on site. When a replacement is necessary, it concerns the membrane alone — the profiles stay on the walls, and the new film is tensioned in one day, without a renovation.",
+      },
+      {
+        q: "Does a stretch ceiling yellow over the years?",
+        a: "Certified films from European production keep their colour — we give a written warranty on that: 15 years for PVC and 10 years for polyester. Yellowing affects films of unknown origin, so always ask where the membrane comes from.",
+      },
+    ],
+    related: [
+      { label: "Stretch ceiling vs drywall — comparison", href: "/en/blog/stretch-ceiling-vs-drywall" },
+      { label: "A stretch ceiling in the bathroom — facts", href: "/en/blog/stretch-ceiling-bathroom" },
+      { label: "Free quote — contact form", href: "/en#cta" },
+      { label: "Polyester ceiling — cold installation", href: "/en/solutions/polyester-ceiling" },
+      { label: "Stretch ceilings Kraków", href: "/en/stretch-ceilings/krakow" },
     ],
   },
 ];
