@@ -42,6 +42,10 @@ const MIN_DISTRICTS = 6;
 const MIN_DISTRICTS_BIG = 10;
 const MIN_NEARBY_TOWNS = 4;
 const SHINGLE = 8;
+/** Share of a page's 8-word sequences that may also appear on another city page. */
+const MAX_SHARED_SHINGLE_RATIO = 0.02;
+/** A shared run this long is a copied sentence, not a repeated product fact. */
+const MAX_SHARED_RUN_WORDS = 12;
 const BIG_CITY_POPULATION = 250_000;
 
 const BANNED_PHRASES = [
@@ -226,19 +230,49 @@ export function runCityGate(input: GateInput): GateProblem[] {
         add(c.slug, "image", `shared photo captioned as a local job ("${c.imageCaption}")`);
     }
 
-    // cross-city shingles
+    // cross-city shingles: a few shared product-fact phrases are fine,
+    // a copied sentence or a templated page is not
     const seenHere = new Set<string>();
+    let shared = 0;
+    let total = 0;
+    let runStart = -1;
+    let runOwner = "";
+    const flushRun = (end: number) => {
+      if (runStart >= 0) {
+        const len = end - runStart + SHINGLE - 1;
+        if (len >= MAX_SHARED_RUN_WORDS)
+          add(
+            c.slug,
+            "unique",
+            `${len}-word run shared with ${runOwner}: "${w.slice(runStart, runStart + len).join(" ")}"`
+          );
+      }
+      runStart = -1;
+    };
     for (let i = 0; i + SHINGLE <= w.length; i++) {
       const sh = w.slice(i, i + SHINGLE).join(" ");
-      if (seenHere.has(sh)) continue;
-      seenHere.add(sh);
+      total += 1;
       const owner = shingleOwner.get(sh);
       if (owner && owner !== c.slug) {
-        add(c.slug, "unique", `8-word sequence shared with ${owner}: "${sh}"`);
-      } else if (!owner) {
-        shingleOwner.set(sh, c.slug);
+        shared += 1;
+        if (runStart < 0 || owner !== runOwner) {
+          flushRun(i);
+          runStart = i;
+          runOwner = owner;
+        }
+      } else {
+        flushRun(i);
+        if (!owner && !seenHere.has(sh)) shingleOwner.set(sh, c.slug);
       }
+      seenHere.add(sh);
     }
+    flushRun(w.length - SHINGLE + 1);
+    if (total > 0 && shared / total > MAX_SHARED_SHINGLE_RATIO)
+      add(
+        c.slug,
+        "unique",
+        `${shared} of ${total} 8-word sequences (${(100 * shared / total).toFixed(1)}%) also appear on other city pages, limit ${MAX_SHARED_SHINGLE_RATIO * 100}%`
+      );
   }
 
   // city-only FAQ questions (normalized question not used by any other city)
