@@ -173,7 +173,7 @@ export default function VanDerValkBeverenPage() {
             "Dodatkowo: integracja oświetlenia, czujników i efektu gwiezdnego nieba — wszystko bez zwiększania głębokości sufitu.",
           ]}
           image="/images/projects/van-der-valk-beveren/brief.jpg"
-          imageAlt="Sala bankietowa hotelu Van der Valk Beveren — wnętrze z ograniczoną wysokością wymagające rozwiązania akustycznego."
+          imageAlt="Sala bankietowa Van der Valk Beveren w trakcie montażu — czarny absorber akustyczny na stropie przed naciągnięciem folii."
         />
 
         <ProjectSolution

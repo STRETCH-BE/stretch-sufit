@@ -1,0 +1,17 @@
+{
+  "project": "london-chapel-londyn",
+  "originals": "SharePoint (Michael) › old mail drive › … › Marketing › Chapel home London - Upholster London",
+  "notes": "Position = which part of the original to keep when cover-cropping (sharp 'position').",
+  "files": {
+    "hero.jpg": { "from": "Fabric walling London 3.jpg", "position": "centre" },
+    "card.jpg": { "from": "Fabric walling London 3.jpg", "position": "centre" },
+    "og.jpg": { "from": "Fabric walling London 3.jpg", "position": "centre" },
+    "brief.jpg": { "from": "Fabric walling London 9.jpg", "position": "centre" },
+    "01-vaulted-ceiling.jpg": { "from": "Fabric walling London 5 ceiling.jpg", "position": "centre" },
+    "02-home-cinema.jpg": { "from": "Fabric walling London 8 home cinema.jpg", "position": "centre" },
+    "03-stained-glass.jpg": { "from": "Fabric walling London 6.jpg", "position": "centre" },
+    "04-textile-detail.jpg": { "from": "Fabric walling London 10.jpg", "position": "centre" },
+    "05-perimeter.jpg": { "from": "Fabric walling London 4.jpg", "position": "centre" },
+    "06-chapel-feel.jpg": { "from": "Fabric walling London 3.jpg", "position": "centre" }
+  }
+}
