@@ -86,15 +86,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "08",
-    category: "Поради",
-    title:
-      "Монтаж натяжної стелі крок за кроком — чому справді 1 день",
-    excerpt:
-      "Етап за етапом: профілі, підконструкції, натягування гарячим або холодним способом, оздоблення. Що підготувати, коли монтаж триває 2 дні і чи пахне ПВХ.",
-    readTime: "8 хв",
-  },
-  {
     no: "09",
     category: "Поради",
     title:

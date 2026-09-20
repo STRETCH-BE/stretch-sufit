@@ -11,7 +11,8 @@
  * GSC "Request indexing"):
  *   mid-September 2026  → sufit-napinany-vat-8, sufit-akustyczny-do-biura
  *                         (both PUBLISHED 2026-09-02)
- *   October 2026        → montaz-sufitu-napinanego-krok-po-kroku,
+ *   October 2026        → montaz-sufitu-napinanego-krok-po-kroku
+ *                         (PUBLISHED 2026-09-20),
  *                         czy-sufit-napinany-jest-bezpieczny
  *   November 2026       → barrisol-a-sufit-napinany
  *
@@ -39,111 +40,6 @@
 import type { BlogPost } from "@/content/blog-posts";
 
 export const blogDrafts: BlogPost[] = [
-  /* ────────────────────────────────────────────────────────────
-   * DRAFT · Montaż krok po kroku
-   * Release: October 2026
-   * Locale slugs: en "stretch-ceiling-installation-steps", ua "montazh-natyazhnoi-steli"
-   * ──────────────────────────────────────────────────────────── */
-  {
-    slug: "montaz-sufitu-napinanego-krok-po-kroku",
-    category: "Poradniki",
-    title: "Montaż sufitu napinanego krok po kroku — dlaczego naprawdę 1 dzień",
-    metaDescription:
-      "Sufit napinany do 50 m² montuje 2-osobowy zespół w 1 dzień: profile, podkonstrukcje, napinanie (PVC na ciepło, poliester na zimno), wykończenie. Bez kurzu.",
-    excerpt:
-      "Obietnica montażu w jeden dzień brzmi jak slogan, dopóki nie rozłoży się jej na etapy z czasami. Robimy to poniżej: co dzieje się od wejścia ekipy do odbioru, co musisz przygotować, kiedy montaż trwa dwa dni i czy PVC naprawdę pachnie.",
-    datePublished: "2026-10-01",
-    readTime: "8 min",
-    intro: [
-      "Standardowy montaż sufitu napinanego do 50 m² trwa 1 dzień roboczy i wykonuje go zespół dwuosobowy. Etapy: profile obwodowe na ścianach, podkonstrukcje i pierścienie pod oprawy, napinanie membrany — PVC na ciepło, poliester na zimno — i wykończenie krawędzi. Nie ma kurzu, meble zostają w pomieszczeniu, a z sufitu można korzystać od razu po wyjściu ekipy.",
-      "Piszemy to jako producent i wykonawca: folia PVC powstaje w naszej fabryce w Częstochowie, poliester w zakładzie grupy Stretch w Belgii, a montują ją nasze własne, przeszkolone zespoły według jednego protokołu. Poniżej ten protokół rozpisany na godziny — bez skrótów i bez upiększania.",
-    ],
-    sections: [
-      {
-        heading: "Skąd bierze się jeden dzień",
-        paragraphs: [
-          "Cała praca wymagająca precyzji — pomiar, projekt wycięć, produkcja membrany na wymiar — dzieje się przed montażem, w hali produkcyjnej. Na obiekt przyjeżdża gotowa membrana skrojona pod konkretne pomieszczenie, z fabrycznie przygotowanymi miejscami na oprawy. Ekipa nie tnie, nie szlifuje i nie czeka na schnięcie czegokolwiek. To dlatego montaż trwa godziny, a nie dni, i dlatego zabudowa G-K z gładzią i malowaniem nigdy nie zejdzie poniżej kilku dni: tam przerwy technologiczne są wpisane w technologię.",
-          "Pomiar wykonujemy po wykończeniu ścian, bo membrana musi pasować do ostatecznych wymiarów. Od pomiaru do montażu mija zwykle ok. 5 dni roboczych dla PVC z naszej produkcji; dla poliestru z Belgii 5–15 dni plus transport.",
-        ],
-      },
-      {
-        heading: "Etapy montażu — czas i co się dzieje",
-        paragraphs: [
-          "Poniższe czasy dotyczą typowego pokoju 20–30 m² z kilkoma punktami świetlnymi. W małej łazience wszystko skraca się o połowę; przy 50 m² i rozbudowanym oświetleniu wydłuża do pełnego dnia.",
-        ],
-        table: {
-          headers: ["Etap", "Czas", "Co się dzieje"],
-          rows: [
-            ["Przygotowanie i ochrona", "ok. 30 min", "folia na meble i podłogę, sprawdzenie wymiarów i instalacji"],
-            ["Profile obwodowe", "ok. 1,5–2,5 h", "aluminiowy profil montowany do ścian po obwodzie, poziomowany laserem"],
-            ["Podkonstrukcje i pierścienie", "ok. 1–2 h", "platformy pod oprawy, wzmocnione pierścienie pod wycięcia, prowadzenie kabli"],
-            ["Napinanie membrany", "ok. 1,5–3 h", "PVC: nagrzewnica i wpięcie w profil; poliester: wpięcie na zimno, bez nagrzewania"],
-            ["Wykończenie i oprawy", "ok. 1 h", "maskownica krawędzi, wycięcia, montaż opraw, test oświetlenia"],
-            ["Sprzątanie i odbiór", "ok. 30 min", "zdjęcie folii ochronnej, protokół odbioru, karta gwarancyjna"],
-          ],
-        },
-      },
-      {
-        heading: "PVC na ciepło, poliester na zimno — co to zmienia w mieszkaniu",
-        paragraphs: [
-          "Folię PVC napina się nagrzewnicą: membrana podgrzana staje się elastyczna, wpina się w profil, a po ostygnięciu naciąga idealnie gładko. W pomieszczeniu przez kilkadziesiąt minut jest cieplej, a bezpośrednio po montażu bywa wyczuwalny delikatny zapach, który znika po przewietrzeniu — zwykle w ciągu 24–48 godzin. Rośliny i zwierzęta warto na czas napinania przenieść do innego pokoju, wyłącznie ze względu na temperaturę.",
-          "Poliester montuje się bez nagrzewnicy: membrana wpinana jest na zimno i napina się mechanicznie. Zero zapachu, zero podnoszenia temperatury — to rozwiązanie do pomieszczeń z antykami, instrumentami, obrazami czy sprzętem elektronicznym. Oba warianty montuje ten sam zespół, tym samym profilem.",
-        ],
-      },
-      {
-        heading: "Co przygotować przed przyjazdem ekipy",
-        paragraphs: [
-          "Ściany muszą być wykończone — otynkowane, pomalowane lub wyłożone płytkami — bo profil montujemy do gotowej powierzchni, a membrana odwzorowuje ostateczny obrys pomieszczenia. Instalacja elektryczna pod oprawy powinna być wyprowadzona z sufitu przed montażem; ekipa podłącza oprawy, ale nie prowadzi nowych obwodów. Meble mogą zostać w pomieszczeniu, ale środek powinien być wolny na drabiny — zwykle wystarczy odsunąć je od ścian o metr. Potrzebujemy dostępu do prądu i miejsca na rozłożenie membrany.",
-        ],
-      },
-      {
-        heading: "Kiedy montaż trwa dwa dni",
-        paragraphs: [
-          "Uczciwie: jeden dzień to standard do 50 m², nie obietnica dla każdego zlecenia. Na dwa dni planujemy realizacje powyżej 50 m², całe mieszkania z kilkoma pomieszczeniami, sufity z rozbudowanym oświetleniem LED (linie w profilach, gwiezdne niebo, pełne podświetlenie) oraz pomieszczenia powyżej 3,5 m wysokości, gdzie praca odbywa się z rusztowania. Biura akustyczne 100 m² to zwykle 2–3 dni, możliwe w weekend. Termin i liczbę dni potwierdzamy na wycenie, która jest bezpłatna i ważna 30 dni.",
-        ],
-      },
-      {
-        heading: "Po montażu — co dalej",
-        paragraphs: [
-          "Z pomieszczenia korzystasz od razu po wyjściu ekipy: nie ma schnięcia, wietrzenia pyłu ani czekania na malowanie. Przy folii PVC warto przewietrzyć pokój w ciągu pierwszej doby, żeby pozbyć się delikatnego zapachu po napinaniu; przy poliestrze nawet to odpada. Otrzymujesz protokół odbioru i kartę gwarancyjną — 15 lat na PVC, 10 lat na poliester — a pozostałe 70% płatności rozliczasz w ciągu 7 dni. Pielęgnacja przez kolejne lata to przetarcie membrany miękką ściereczką; w razie zalania, uszkodzenia lub wymiany oświetlenia dzwonisz do naszego serwisu, który zdejmie i ponownie napnie membranę bez wymiany profili.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        q: "Ile trwa montaż sufitu napinanego?",
-        a: "Standardowo 1 dzień roboczy dla pomieszczeń do 50 m², zespołem dwuosobowym. Mała łazienka zajmuje pół dnia; całe mieszkanie, rozbudowane oświetlenie LED lub wysokość powyżej 3,5 m to dwa dni, a biura akustyczne 100 m² — 2–3 dni.",
-      },
-      {
-        q: "Czy sufit PVC pachnie po montażu?",
-        a: "Bezpośrednio po napinaniu na ciepło bywa wyczuwalny delikatny zapach, który znika po przewietrzeniu, zwykle w ciągu 24–48 godzin. Poliester montowany na zimno nie pachnie wcale.",
-      },
-      {
-        q: "Czy muszę wynosić meble?",
-        a: "Nie. Meble zostają w pomieszczeniu — wystarczy odsunąć je od ścian, żeby ekipa miała dostęp do obwodu i miejsce na drabiny. Zabezpieczamy je folią na czas prac.",
-      },
-      {
-        q: "Na jakim etapie remontu zamawiać sufit napinany?",
-        a: "Pomiar wykonujemy po wykończeniu ścian (tynki, malowanie, płytki), bo membrana musi odpowiadać ostatecznym wymiarom. Instalacja elektryczna pod oprawy powinna być wyprowadzona wcześniej. Montaż to ostatni etap remontu.",
-      },
-      {
-        q: "Ile czasu mija od zamówienia do montażu?",
-        a: "Dla folii PVC z naszej fabryki w Częstochowie zwykle ok. 5 dni roboczych od pomiaru. Dla poliestru z Belgii 5–15 dni plus ok. 3 dni transportu. Termin potwierdzamy przy zamówieniu.",
-      },
-      {
-        q: "Czy podczas montażu powstaje kurz?",
-        a: "Nie. Nie ma cięcia płyt, szlifowania ani gładzi — profil mocujemy do ścian, a gotową membranę napinamy. Jedyne wiercenie to otwory pod profil obwodowy, wykonywane z odkurzaczem.",
-      },
-    ],
-    related: [
-      { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
-      { label: "Sufit PVC — produkcja w Polsce", href: "/rozwiazania/sufit-pvc" },
-      { label: "Sufit napinany czy podwieszany — porównanie", href: "/blog/sufit-napinany-czy-podwieszany" },
-      { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
-      { label: "Sufity napinane Częstochowa", href: "/sufity-napinane/czestochowa" },
-    ],
-  },
-
   /* ────────────────────────────────────────────────────────────
    * DRAFT · Czy sufit napinany jest bezpieczny
    * Release: October 2026

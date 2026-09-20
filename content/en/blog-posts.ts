@@ -800,6 +800,107 @@ export const blogPosts: BlogPost[] = [
       { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
     ],
   },
+
+  /* ── 08 · Installation step by step ──────────────────── */
+  {
+    slug: "stretch-ceiling-installation-steps",
+    category: "Guides",
+    title: "Stretch ceiling installation step by step — why it really is 1 day",
+    metaDescription:
+      "A stretch ceiling up to 50 m² is installed by a 2-person crew in 1 day: profiles, substructures, tensioning (PVC hot, polyester cold), finishing. No dust.",
+    excerpt:
+      "The promise of one-day installation sounds like a slogan until you break it down into stages with times. We do that below: what happens from the moment the crew walks in to handover, what you need to prepare, when installation takes two days, and whether PVC really smells.",
+    datePublished: "2026-09-20",
+    readTime: "8 min",
+    intro: [
+      "A standard stretch ceiling installation up to 50 m² takes 1 working day and is carried out by a two-person crew. The stages: perimeter profiles on the walls, substructures and rings for the light fittings, tensioning the membrane — PVC hot, polyester cold — and finishing the edges. There is no dust, the furniture stays in the room, and the ceiling is ready to use the moment the crew leaves.",
+      "We write this as the manufacturer and the installer: our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium, and both are installed by our own trained crews following a single protocol. Below is that protocol broken down hour by hour — no shortcuts and no embellishment.",
+    ],
+    sections: [
+      {
+        heading: "Where the one day comes from",
+        paragraphs: [
+          "All the work that demands precision — the measurement, the cut-out design, producing the membrane to size — happens before installation, on the production floor. What arrives on site is a finished membrane cut for that specific room, with the positions for the light fittings prepared at the factory. The crew does not cut, does not sand and does not wait for anything to dry. That is why installation takes hours rather than days, and why a plasterboard build with skim coat and painting will never get below several days: there, the drying breaks are built into the technology.",
+          "We take the measurement after the walls are finished, because the membrane has to match the final dimensions. From measurement to installation usually takes around 5 working days for PVC from our own production; for polyester from Belgium, 5–15 days plus transport.",
+        ],
+      },
+      {
+        heading: "Installation stages — timing and what happens",
+        paragraphs: [
+          "The times below apply to a typical 20–30 m² room with a few light points. In a small bathroom everything takes half as long; at 50 m² with extensive lighting it stretches to a full day.",
+        ],
+        table: {
+          headers: ["Stage", "Time", "What happens"],
+          rows: [
+            ["Preparation and protection", "approx. 30 min", "protective film on furniture and floor, checking dimensions and wiring"],
+            ["Perimeter profiles", "approx. 1.5–2.5 h", "aluminium profile fixed to the walls around the perimeter, levelled with a laser"],
+            ["Substructures and rings", "approx. 1–2 h", "platforms for light fittings, reinforced rings for the cut-outs, cable routing"],
+            ["Tensioning the membrane", "approx. 1.5–3 h", "PVC: heat gun and clipping into the profile; polyester: clipped in cold, no heating"],
+            ["Finishing and light fittings", "approx. 1 h", "edge trim, cut-outs, fitting the lights, lighting test"],
+            ["Clean-up and handover", "approx. 30 min", "removing the protective film, handover report, warranty card"],
+          ],
+        },
+      },
+      {
+        heading: "PVC hot, polyester cold — what that means in your home",
+        paragraphs: [
+          "PVC film is tensioned with a heat gun: the heated membrane becomes elastic, is clipped into the profile, and as it cools it tensions perfectly smooth. The room is warmer for a few tens of minutes, and directly after installation a faint smell may be noticeable, which disappears after airing — usually within 24–48 hours. Plants and pets are best moved to another room for the tensioning, purely because of the temperature.",
+          "Polyester is installed without a heat gun: the membrane is clipped in cold and tensions mechanically. Zero smell, zero rise in temperature — this is the solution for rooms with antiques, instruments, paintings or electronic equipment. Both variants are installed by the same crew, with the same profile.",
+        ],
+      },
+      {
+        heading: "What to prepare before the crew arrives",
+        paragraphs: [
+          "The walls must be finished — plastered, painted or tiled — because we fix the profile to the finished surface and the membrane reproduces the room's final outline. The electrical wiring for the light fittings should be brought out of the ceiling before installation; the crew connects the fittings but does not run new circuits. Furniture can stay in the room, but the middle should be clear for the ladders — usually it is enough to move it a metre away from the walls. We need access to power and space to lay out the membrane.",
+        ],
+      },
+      {
+        heading: "When installation takes two days",
+        paragraphs: [
+          "Honestly: one day is the standard up to 50 m², not a promise for every job. We plan two days for projects above 50 m², whole flats with several rooms, ceilings with extensive LED lighting (lines in profiles, starry sky, full backlighting) and rooms above 3.5 m high, where the work is done from scaffolding. Acoustic offices of 100 m² usually take 2–3 days, weekends possible. We confirm the date and the number of days in the quote, which is free and valid for 30 days.",
+        ],
+      },
+      {
+        heading: "After installation — what next",
+        paragraphs: [
+          "You use the room the moment the crew leaves: there is no drying, no airing out dust and no waiting for paint. With PVC film it is worth airing the room during the first day to get rid of the faint smell from tensioning; with polyester even that falls away. You receive the handover report and the warranty card — 15 years on PVC, 10 years on polyester — and settle the remaining 70% of the payment within 7 days. Care over the following years means wiping the membrane with a soft cloth; in the event of a flood, damage or a lighting change you call our service team, which takes the membrane down and re-tensions it without replacing the profiles.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "How long does stretch ceiling installation take?",
+        a: "As standard, 1 working day for rooms up to 50 m², with a two-person crew. A small bathroom takes half a day; a whole flat, extensive LED lighting or a height above 3.5 m means two days, and acoustic offices of 100 m² — 2–3 days.",
+      },
+      {
+        q: "Does a PVC ceiling smell after installation?",
+        a: "Directly after hot tensioning a faint smell may be noticeable; it disappears after airing, usually within 24–48 hours. Polyester, installed cold, does not smell at all.",
+      },
+      {
+        q: "Do I have to move the furniture out?",
+        a: "No. The furniture stays in the room — it is enough to move it away from the walls so the crew has access to the perimeter and room for the ladders. We cover it with protective film for the duration of the work.",
+      },
+      {
+        q: "At what stage of a renovation should I order a stretch ceiling?",
+        a: "We take the measurement after the walls are finished (plaster, paint, tiles), because the membrane has to match the final dimensions. The electrical wiring for the light fittings should be brought out beforehand. Installation is the last stage of the renovation.",
+      },
+      {
+        q: "How long is it from order to installation?",
+        a: "For PVC film from our factory in Częstochowa, usually around 5 working days from the measurement. For polyester from Belgium, 5–15 days plus around 3 days of transport. We confirm the date when you order.",
+      },
+      {
+        q: "Is there any dust during installation?",
+        a: "No. There is no board cutting, sanding or skim coat — we fix the profile to the walls and tension the finished membrane. The only drilling is the holes for the perimeter profile, done with a vacuum cleaner.",
+      },
+    ],
+    related: [
+      { label: "Free quote within 24 h — form", href: "/en#cta" },
+      { label: "PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Stretch ceiling vs drywall — comparison", href: "/en/blog/stretch-ceiling-vs-drywall" },
+      { label: "How much does a stretch ceiling cost — 2026 price list", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Stretch ceilings — cities we serve", href: "/en/stretch-ceilings" },
+    ],
+  },
 ];
 
 export function findPost(slug: string): BlogPost | undefined {

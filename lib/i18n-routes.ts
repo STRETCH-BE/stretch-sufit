@@ -131,6 +131,11 @@ export const blogPostSlugs: { pl: string; en: string; ua: string }[] = [
     en: "acoustic-ceiling-office",
     ua: "akustychna-stelya-ofis",
   },
+  {
+    pl: "montaz-sufitu-napinanego-krok-po-kroku",
+    en: "stretch-ceiling-installation-steps",
+    ua: "montazh-natyazhnoi-steli",
+  },
 ];
 
 /* ─── Path builders ───────────────────────────────────────── */

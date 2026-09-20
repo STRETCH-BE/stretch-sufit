@@ -88,15 +88,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "08",
-    category: "Guides",
-    title:
-      "Stretch ceiling installation step by step — why it really takes 1 day",
-    excerpt:
-      "Stage by stage: profiles, substructures, hot or cold tensioning, finishing. What to prepare, when installation takes 2 days and whether PVC smells.",
-    readTime: "8 min",
-  },
-  {
     no: "09",
     category: "Guides",
     title:
