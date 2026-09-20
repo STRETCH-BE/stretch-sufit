@@ -18,7 +18,8 @@ import { Nav } from "@/components/sections/en/nav";
 import { Footer } from "@/components/sections/en/footer";
 import { MobileStickyCTA } from "@/components/sections/en/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
+import { buildBreadcrumbs, buildCityService } from "@/lib/schema";
+import { CITY_PRICE_FROM_PLN } from "@/lib/cities";
 
 import { citiesFull } from "@/content/en/cities-full";
 import { products } from "@/content/en/products";
@@ -80,9 +81,16 @@ export default async function CityPageEn({
     { name: city.name, url: `${BASE_URL}/en/stretch-ceilings/${city.slug}` },
   ]);
 
-  const localBusinessSchema = buildLocalBusiness({
-    citySlug: city.slug,
-    cityName: city.name,
+  // Service offered in this city; the business itself is the single
+  // organization node emitted by the root layout.
+  const localBusinessSchema = buildCityService({
+    url: `${BASE_URL}/en/stretch-ceilings/${city.slug}`,
+    name: `Stretch ceilings ${city.locative}`,
+    serviceType: "Stretch ceiling installation",
+    description: `Stretch ceilings ${city.locative}: PVC made in our Częstochowa factory, polyester from Belgium. Installed in 1 day, no dust, up to 15 years warranty.`,
+    areaServed: [city.name],
+    priceFromPLN: CITY_PRICE_FROM_PLN,
+    inLanguage: "en",
   });
 
   const faqSchema = {

@@ -13,6 +13,7 @@ import { Logo } from "@/components/ui/logo";
 import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { siteConfig } from "@/lib/site-config";
 import { products } from "@/content/products";
+import { cities } from "@/content/cities";
 
 const company = [
   { href: "/o-nas", label: "O nas" },
@@ -30,6 +31,20 @@ const policies = [
   { href: "/gwarancja", label: "Gwarancja" },
 ];
 
+const FOOTER_CITY_SLUGS = [
+  "czestochowa",
+  "katowice",
+  "sosnowiec",
+  "gliwice",
+  "bielsko-biala",
+  "warszawa",
+  "krakow",
+  "wroclaw",
+];
+const footerCities = FOOTER_CITY_SLUGS.map((slug) =>
+  cities.find((c) => c.slug === slug)
+).filter((c) => c !== undefined);
+
 const socials = [
   { href: siteConfig.social.facebook, label: "Facebook", glyph: "f" },
   { href: siteConfig.social.instagram, label: "Instagram", glyph: "ig" },
@@ -41,7 +56,7 @@ export function Footer() {
   return (
     <footer className="border-t border-white/8 bg-bg py-20 pb-8 text-white">
       <Container>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-16">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] lg:gap-12">
           {/* Brand */}
           <div>
             <Logo tone="on-dark" size={28} />
@@ -96,17 +111,52 @@ export function Footer() {
             ))}
           </FooterColumn>
 
+          {/* Miasta — home region first, then the biggest markets */}
+          <FooterColumn title="Sufity napinane w Twoim mieście">
+            {footerCities.map((c) => (
+              <li key={c.slug}>
+                <Link
+                  href={`/sufity-napinane/${c.slug}`}
+                  className="text-sm text-white/55 transition-colors hover:text-white"
+                >
+                  Sufity napinane {c.name}
+                  {c.isHq ? " (showroom)" : ""}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href="/sufity-napinane/slask"
+                className="text-sm text-white/55 transition-colors hover:text-white"
+              >
+                Cały Śląsk →
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/sufity-napinane"
+                className="text-sm font-semibold text-white/70 transition-colors hover:text-white"
+              >
+                Wszystkie miasta →
+              </Link>
+            </li>
+          </FooterColumn>
+
           {/* Kontakt */}
           <FooterColumn title="Kontakt">
             <li className="text-sm font-semibold text-white">
               {siteConfig.legalName}
             </li>
-            <li className="text-sm text-white/55">
-              {siteConfig.contact.address.street}
-            </li>
-            <li className="text-sm text-white/55">
-              {siteConfig.contact.address.postalCode}{" "}
-              {siteConfig.contact.address.city}
+            <li>
+              <Link
+                href="/sufity-napinane/czestochowa"
+                className="block text-sm text-white/55 transition-colors hover:text-white"
+              >
+                {siteConfig.contact.address.street}
+                <br />
+                {siteConfig.contact.address.postalCode}{" "}
+                {siteConfig.contact.address.city}
+              </Link>
             </li>
             <li className="pt-3">
               <TrackedCTA
@@ -167,6 +217,17 @@ export function Footer() {
             Stretchgroup · PVC made in Poland, polyester made in Belgium
           </div>
         </div>
+        {/* Art. 206 §1 KSH — company identifiers on every page; also the
+            canonical NAP string Polish business aggregators match on. */}
+        <p className="mt-4 text-[11px] leading-relaxed text-white/40">
+          {siteConfig.legalName} ({siteConfig.name}) ·{" "}
+          {siteConfig.contact.address.street},{" "}
+          {siteConfig.contact.address.postalCode}{" "}
+          {siteConfig.contact.address.city}, woj. śląskie · KRS{" "}
+          {siteConfig.legal.krs} · NIP {siteConfig.legal.nip} · REGON{" "}
+          {siteConfig.legal.regon} · {siteConfig.legal.court} · kapitał
+          zakładowy {siteConfig.legal.shareCapital}
+        </p>
       </Container>
     </footer>
   );

@@ -15,6 +15,7 @@ import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
+import { organizationRef } from "@/lib/schema";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -37,36 +38,17 @@ export const metadata: Metadata = {
   },
 };
 
+// The business itself (address, geo, hours) is the single organization
+// node emitted by the root layout — this page only says "this is the
+// contact page of that organization".
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${BASE_URL}/ua/kontakty#business`,
-  name: "Stretch Sufit",
-  legalName: "Alto Design Sp. z o.o.",
-  url: BASE_URL,
-  telephone: "+48730700333",
-  email: "info@stretch-sufit.pl",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "ul. Legionów 59",
-    addressLocality: "Częstochowa",
-    postalCode: "42-200",
-    addressCountry: "PL",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 50.8074338,
-    longitude: 19.1585487,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "15:30",
-    },
-  ],
-  priceRange: "$$",
+  "@type": "ContactPage",
+  "@id": `${BASE_URL}/ua/kontakty`,
+  url: `${BASE_URL}/ua/kontakty`,
+  name: "Контакти — Stretch Sufit",
+  about: organizationRef,
+  mainEntity: organizationRef,
 };
 
 const breadcrumbSchema = {

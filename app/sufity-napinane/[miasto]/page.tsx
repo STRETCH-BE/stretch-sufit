@@ -3,11 +3,12 @@
  * File path: /app/sufity-napinane/[miasto]/page.tsx
  *
  * Renders one landing page per Polish city using data from /content/cities.ts.
- * Statically generated at build time via generateStaticParams — all 17 pages
- * ship as pre-rendered HTML, so they're fast and SEO-friendly.
+ * Statically generated at build time via generateStaticParams. Every entry
+ * must pass the uniqueness gate (scripts/city-gate.ts, run in `prebuild`)
+ * before a build succeeds — thin or templated clones are rejected.
  *
- * To add a new city: add an entry to /content/cities.ts. This file doesn't need
- * to change.
+ * To add a new city: add an entry to /content/cities.ts AND to `citySlugs`
+ * in /lib/i18n-routes.ts (sitemap + hreflang). This file doesn't change.
  */
 
 import type { Metadata } from "next";
@@ -19,23 +20,43 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
+import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 
 import { cities } from "@/content/cities";
-import { findCity, cityPaths, languageAlternates } from "@/lib/i18n-routes";
-import { defaultOgImages } from "@/lib/site-config";
+import {
+  CITY_PRICE_FROM_PLN,
+  formatTravel,
+  isSilesian,
+  nearbyCities,
+} from "@/lib/cities";
+import {
+  findCity,
+  cityPaths,
+  languageAlternates,
+  routes,
+} from "@/lib/i18n-routes";
+import { buildBreadcrumbs, buildCityService, buildFaqPage } from "@/lib/schema";
+import { defaultOgImages, siteConfig } from "@/lib/site-config";
+import { miastaCount } from "@/lib/plural";
+import { ensureCityGate } from "@/lib/city-gate-input";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
+const BASE_URL = siteConfig.url;
 
 type CityRouteParams = { miasto: string };
 
 // Statically generate one page per city at build time
 export function generateStaticParams(): CityRouteParams[] {
+  // Fails `next build` when any city entry is thin, templated or unregistered.
+  ensureCityGate();
   return cities.map((city) => ({ miasto: city.slug }));
+}
+
+function fallbackDescription(locative: string): string {
+  return `Sufity napinane ${locative}: PVC z naszej fabryki w Częstochowie, poliester z Belgii. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. Bezpłatny pomiar i wycena.`;
 }
 
 // Per-city metadata for SEO
@@ -49,12 +70,18 @@ export async function generateMetadata({
   if (!city) return {};
 
   const i18nEntry = findCity("pl", miasto);
-
-  const title = `Sufity napinane ${city.locative} — montaż w 1 dzień`;
-  const description = `Sufity napinane ${city.locative} — PVC z naszej fabryki w Polsce, polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. Bezpłatny pomiar. ${city.populationDisplay}, pełna obsługa miasta.`;
+  const title =
+    city.metaTitle ?? `Sufity napinane ${city.name} — montaż w 1 dzień`;
+  const description =
+    city.metaDescription ?? fallbackDescription(city.locative);
+  const ogImages = city.image.startsWith("/")
+    ? [{ url: city.image, alt: city.imageAlt }]
+    : defaultOgImages;
 
   return {
-    title,
+    // Absolute: the per-city title already carries the search phrase and
+    // the " | Stretch Sufit" suffix would push it past 60 characters.
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `/sufity-napinane/${city.slug}`,
@@ -63,12 +90,12 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title: `${title} | Stretch Sufit`,
+      title,
       description,
       type: "website",
       url: `${BASE_URL}/sufity-napinane/${city.slug}`,
       locale: "pl_PL",
-      images: defaultOgImages,
+      images: ogImages,
     },
   };
 }
@@ -82,69 +109,45 @@ export default async function CityPage({
   const city = cities.find((c) => c.slug === miasto);
   if (!city) notFound();
 
-  const otherCities = cities.filter((c) => c.slug !== city.slug).slice(0, 6);
+  const silesian = isSilesian(city);
+  const genitive = city.genitive ?? city.name;
+  const otherCities = nearbyCities(city, cities, 8);
+  const pageUrl = `${BASE_URL}/sufity-napinane/${city.slug}`;
+  const wycenaHref = `/wycena?miasto=${city.slug}`;
+  const ctaProps = { city: city.slug, region: city.region };
+  const description =
+    city.metaDescription ?? fallbackDescription(city.locative);
 
-  // JSON-LD: LocalBusiness for this city + BreadcrumbList + FAQPage
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${BASE_URL}/sufity-napinane/${city.slug}#business`,
-    name: `Stretch Sufit — ${city.name}`,
-    description: `Sufity napinane ${city.locative}. Belgijska technologia, polska produkcja.`,
-    url: `${BASE_URL}/sufity-napinane/${city.slug}`,
-    telephone: "+48730700333",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "ul. Legionów 59",
-      addressLocality: "Częstochowa",
-      postalCode: "42-200",
-      addressCountry: "PL",
-    },
-    areaServed: {
-      "@type": "City",
-      name: city.name,
-    },
-    priceRange: "$$",
-  };
+  // JSON-LD: Service offered in this city (provider = the single
+  // organization node from the root layout) + BreadcrumbList + FAQPage
+  const serviceSchema = buildCityService({
+    url: pageUrl,
+    name: `Sufity napinane ${city.locative}`,
+    serviceType: "Montaż sufitów napinanych",
+    description,
+    areaServed: [city.name, ...(city.nearbyTowns ?? [])],
+    priceFromPLN: CITY_PRICE_FROM_PLN,
+  });
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Strona główna",
-        item: BASE_URL,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Sufity napinane",
-        item: `${BASE_URL}/sufity-napinane`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: city.name,
-        item: `${BASE_URL}/sufity-napinane/${city.slug}`,
-      },
-    ],
-  };
+  const breadcrumbSchema = buildBreadcrumbs([
+    { name: "Strona główna", url: BASE_URL },
+    { name: "Sufity napinane", url: `${BASE_URL}/sufity-napinane` },
+    ...(silesian
+      ? [{ name: "Śląsk", url: `${BASE_URL}${routes.slask.pl}` }]
+      : []),
+    { name: city.name, url: pageUrl },
+  ]);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: city.faq.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
+  const faqSchema = buildFaqPage(
+    city.faq.map((item) => ({ question: item.q, answer: item.a }))
+  );
+
+  const sections = city.sections ?? [];
+  const nearbyTowns = city.nearbyTowns ?? [];
 
   return (
     <>
-      <JsonLd data={localBusinessSchema} />
+      <JsonLd data={serviceSchema} />
       <JsonLd data={breadcrumbSchema} />
       <JsonLd data={faqSchema} />
 
@@ -165,13 +168,20 @@ export default async function CityPage({
               </li>
               <li aria-hidden="true">·</li>
               <li>
-                <Link
-                  href="/sufity-napinane"
-                  className="hover:text-white"
-                >
+                <Link href="/sufity-napinane" className="hover:text-white">
                   Sufity napinane
                 </Link>
               </li>
+              {silesian && (
+                <>
+                  <li aria-hidden="true">·</li>
+                  <li>
+                    <Link href={routes.slask.pl} className="hover:text-white">
+                      Śląsk
+                    </Link>
+                  </li>
+                </>
+              )}
               <li aria-hidden="true">·</li>
               <li className="text-white" aria-current="page">
                 {city.name}
@@ -180,7 +190,8 @@ export default async function CityPage({
           </Container>
         </nav>
 
-        {/* ════════ Hero ════════ */}
+        {/* ════════ Hero — rendered without FadeIn so the H1 and the
+            priority image are real LCP candidates ════════ */}
         <section className="relative isolate overflow-hidden bg-bg pb-20 pt-12 md:pb-28 md:pt-16">
           <div
             aria-hidden="true"
@@ -193,61 +204,56 @@ export default async function CityPage({
           <Container>
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-7">
-                <FadeIn>
-                  <Eyebrow>
-                    {city.region} · {city.populationDisplay}
-                  </Eyebrow>
-                </FadeIn>
-                <FadeIn delay={80}>
-                  <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
-                    Sufity napinane{" "}
-                    <span className="it text-paper">{city.locative}.</span>
-                    <br />
-                    <span className="text-red">Montaż w 1 dzień.</span>
-                  </h1>
-                </FadeIn>
-                <FadeIn delay={160}>
-                  <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                    {city.intro}
-                  </p>
-                </FadeIn>
-                <FadeIn delay={220}>
-                  <div className="mt-10 flex flex-wrap items-center gap-4">
-                    <Link
-                      href="/#cta"
-                      className="inline-flex items-center gap-2 rounded-full bg-red px-7 py-4 font-display text-base font-semibold text-white transition-transform hover:scale-[1.02]"
-                    >
-                      Zamów bezpłatny pomiar →
-                    </Link>
-                    <a
-                      href="tel:+48730700333"
-                      className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/5"
-                    >
-                      +48 730 700 333
-                    </a>
-                  </div>
-                </FadeIn>
+                <Eyebrow>
+                  {city.isHq ? "Centrala · Śląskie" : city.region} ·{" "}
+                  {city.populationDisplay}
+                </Eyebrow>
+                <h1 className="mt-6 font-display text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
+                  Sufity napinane{" "}
+                  <span className="it text-paper">{city.locative}.</span>
+                  <br />
+                  <span className="text-red">Montaż w 1 dzień.</span>
+                </h1>
+                <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
+                  {city.intro}
+                </p>
+                <div className="mt-10 flex flex-wrap items-center gap-4">
+                  <TrackedCTA
+                    event="cta_wycena"
+                    props={{ location: "city_hero", ...ctaProps }}
+                    href={wycenaHref}
+                    className="inline-flex items-center gap-2 rounded-full bg-red px-7 py-4 font-display text-base font-semibold text-white transition-transform hover:scale-[1.02]"
+                  >
+                    Bezpłatna wycena w 24 h →
+                  </TrackedCTA>
+                  <TrackedCTA
+                    event="phone_click"
+                    props={{ location: "city_hero", ...ctaProps }}
+                    href={`tel:${siteConfig.contact.phonePL}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/5"
+                  >
+                    +48 730 700 333
+                  </TrackedCTA>
+                </div>
               </div>
               <div className="md:col-span-5">
-                <FadeIn delay={120}>
-                  <figure className="relative isolate aspect-[4/5] overflow-hidden rounded bg-bg-soft">
-                    <Image
-                      src={city.image}
-                      alt={city.imageAlt}
-                      fill
-                      priority
-                      sizes="(min-width: 768px) 40vw, 100vw"
-                      className="object-cover"
-                    />
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
-                    />
-                    <figcaption className="absolute bottom-4 left-4 z-10 font-serif text-sm italic text-white">
-                      — Realizacja, {city.name}
-                    </figcaption>
-                  </figure>
-                </FadeIn>
+                <figure className="relative isolate aspect-[4/5] overflow-hidden rounded bg-bg-soft">
+                  <Image
+                    src={city.image}
+                    alt={city.imageAlt}
+                    fill
+                    priority
+                    sizes="(min-width: 768px) 40vw, 100vw"
+                    className="object-cover"
+                  />
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
+                  />
+                  <figcaption className="absolute bottom-4 left-4 right-4 z-10 font-serif text-sm italic text-white">
+                    — {city.imageCaption ?? "Sufit napinany — realizacja Stretch Sufit"}
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </Container>
@@ -277,27 +283,44 @@ export default async function CityPage({
                   </div>
                   <div className="mt-3 text-sm text-white/60">
                     Gwarancja{" "}
-                    <span className="it text-white/40">— 15 lat PVC · 10 lat polyester</span>
+                    <span className="it text-white/40">
+                      — 15 lat PVC · 10 lat poliester
+                    </span>
                   </div>
                 </div>
               </FadeIn>
               <FadeIn delay={160}>
-                <div>
-                  <div className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-none tracking-[-0.02em] text-white">
-                    {city.distanceFromHq === 0
-                      ? "0 km"
-                      : `${city.distanceFromHq} km`}
+                {city.isHq ? (
+                  <div>
+                    <div className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-none tracking-[-0.02em] text-white">
+                      0 km
+                    </div>
+                    <div className="mt-3 text-sm text-white/60">
+                      Fabryka i showroom{" "}
+                      <span className="it text-white/40">
+                        — ul. Legionów 59
+                      </span>
+                    </div>
                   </div>
-                  <div className="mt-3 text-sm text-white/60">
-                    {city.distanceFromHq === 0 ? "Centrala" : "Od centrali"}{" "}
-                    <span className="it text-white/40">
-                      —{" "}
-                      {city.distanceFromHq === 0
-                        ? "tutaj jesteśmy"
-                        : "Częstochowa"}
-                    </span>
-                  </div>
-                </div>
+                ) : (
+                  <Link
+                    href="/sufity-napinane/czestochowa"
+                    className="group block"
+                  >
+                    <div className="font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-none tracking-[-0.02em] text-white">
+                      {city.distanceFromHq} km
+                    </div>
+                    <div className="mt-3 text-sm text-white/60 group-hover:text-white">
+                      Od fabryki w Częstochowie{" "}
+                      {city.travel && (
+                        <span className="it text-white/40">
+                          — {formatTravel(city.travel.minutes)}
+                          {city.travel.route ? ` · ${city.travel.route}` : ""}
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                )}
               </FadeIn>
             </div>
           </Container>
@@ -340,9 +363,55 @@ export default async function CityPage({
           </Container>
         </section>
 
-        {/* ════════ Districts (only for top 3 cities) ════════ */}
-        {city.districts.length > 0 && (
+        {/* ════════ Long-form sections (long-tail: łazienka, biuro, cennik, LED …) ════════ */}
+        {sections.length > 0 && (
           <section className="bg-bg py-24 md:py-32">
+            <Container>
+              <div className="mx-auto max-w-3xl">
+                <FadeIn>
+                  <Eyebrow>Sufity napinane {city.locative} — w praktyce</Eyebrow>
+                </FadeIn>
+                <div className="mt-10 space-y-16 md:space-y-20">
+                  {sections.map((section, i) => (
+                    <FadeIn delay={60 + i * 40} key={section.heading}>
+                      <article>
+                        <h2 className="font-display text-2xl font-semibold leading-tight tracking-[-0.02em] text-white md:text-3xl">
+                          {section.heading}
+                        </h2>
+                        {section.body.split(/\n\n+/).map((paragraph, pi) => (
+                          <p
+                            key={pi}
+                            className="mt-5 text-[16px] leading-relaxed text-white/70 md:text-[17px]"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                        {section.links && section.links.length > 0 && (
+                          <ul className="mt-6 flex flex-wrap gap-2">
+                            {section.links.map((link) => (
+                              <li key={link.href}>
+                                <Link
+                                  href={link.href}
+                                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 font-display text-sm text-white/85 transition-colors hover:border-red/60 hover:text-white"
+                                >
+                                  {link.label} →
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </article>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+        {/* ════════ Districts ════════ */}
+        {city.districts.length > 0 && (
+          <section className="bg-bg-soft py-24 md:py-32">
             <Container>
               <div className="grid gap-12 md:grid-cols-12 md:gap-16">
                 <div className="md:col-span-5">
@@ -357,9 +426,8 @@ export default async function CityPage({
                   </FadeIn>
                   <FadeIn delay={140}>
                     <p className="mt-6 text-lg leading-relaxed text-white/70">
-                      Montujemy w każdej dzielnicy {city.name}
-                      {city.slug === "warszawa" ? " i okolicach" : ""} — od
-                      apartamentowców po historyczne kamienice.
+                      Montujemy w każdej dzielnicy {genitive} — od nowych
+                      apartamentowców po starsze kamienice i bloki.
                     </p>
                   </FadeIn>
                 </div>
@@ -374,6 +442,52 @@ export default async function CityPage({
                         >
                           <span className="text-red">●</span>
                           {district}
+                        </li>
+                      ))}
+                    </ul>
+                  </FadeIn>
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+        {/* ════════ Nearby towns (served from this city, no own page) ════════ */}
+        {nearbyTowns.length > 0 && (
+          <section className="text-bg bg-paper-2 py-20 md:py-24">
+            <Container>
+              <div className="grid gap-10 md:grid-cols-12 md:gap-16">
+                <div className="md:col-span-5">
+                  <FadeIn>
+                    <Eyebrow tone="on-paper">Dojazd</Eyebrow>
+                  </FadeIn>
+                  <FadeIn delay={80}>
+                    <h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em] text-bg md:text-3xl">
+                      {silesian && !city.isHq
+                        ? "Aglomeracja śląska — "
+                        : `Okolice ${genitive} — `}
+                      <span className="it">dojeżdżamy też do:</span>
+                    </h2>
+                  </FadeIn>
+                  {city.travel?.noTravelFee && (
+                    <FadeIn delay={140}>
+                      <p className="mt-6 text-[15px] leading-relaxed text-bg/70">
+                        Bez osobnej opłaty za dojazd — {city.name}{" "}
+                        {city.isHq ? "to siedziba naszej fabryki" : "leży w strefie do 100 km od naszej fabryki w Częstochowie"}
+                        . Pomiar i wycena są bezpłatne.
+                      </p>
+                    </FadeIn>
+                  )}
+                </div>
+                <div className="md:col-span-7">
+                  <FadeIn delay={120}>
+                    <ul className="flex flex-wrap gap-2">
+                      {nearbyTowns.map((town) => (
+                        <li
+                          key={town}
+                          className="rounded-full border border-bg/15 bg-white/60 px-4 py-2 font-display text-sm text-bg/85"
+                        >
+                          {town}
                         </li>
                       ))}
                     </ul>
@@ -430,8 +544,19 @@ export default async function CityPage({
             </FadeIn>
             <FadeIn delay={80}>
               <h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em] text-white md:text-3xl">
-                Inne miasta —{" "}
-                <span className="it text-paper">17 lokalizacji w Polsce.</span>
+                {silesian ? (
+                  <>
+                    Sufity napinane na Śląsku —{" "}
+                    <span className="it text-paper">inne miasta.</span>
+                  </>
+                ) : (
+                  <>
+                    Inne miasta —{" "}
+                    <span className="it text-paper">
+                      {miastaCount(cities.length)} w Polsce.
+                    </span>
+                  </>
+                )}
               </h2>
             </FadeIn>
             <FadeIn delay={120}>
@@ -442,9 +567,17 @@ export default async function CityPage({
                     href={`/sufity-napinane/${other.slug}`}
                     className="rounded-full border border-white/15 px-4 py-2 font-display text-sm text-white/80 transition-colors hover:border-red/60 hover:text-white"
                   >
-                    {other.name}
+                    Sufity napinane {other.name}
                   </Link>
                 ))}
+                {silesian && (
+                  <Link
+                    href={routes.slask.pl}
+                    className="rounded-full border border-white/15 px-4 py-2 font-display text-sm text-white/80 transition-colors hover:border-red/60 hover:text-white"
+                  >
+                    Cały Śląsk →
+                  </Link>
+                )}
                 <Link
                   href="/sufity-napinane"
                   className="rounded-full border border-red bg-red/10 px-4 py-2 font-display text-sm text-red transition-colors hover:bg-red hover:text-white"
@@ -468,27 +601,61 @@ export default async function CityPage({
           />
           <Container>
             <div className="mx-auto max-w-3xl text-center">
-              <Eyebrow tone="on-dark">Zamów pomiar</Eyebrow>
+              <Eyebrow tone="on-dark">
+                {silesian ? "Showroom w Częstochowie" : "Zamów pomiar"}
+              </Eyebrow>
               <h2 className="mt-6 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.05] tracking-[-0.025em] text-white">
-                Nowy sufit{" "}
-                <span className="it">{city.locative}.</span>
+                Nowy sufit <span className="it">{city.locative}.</span>
                 <br />
-                <span className="text-white/85">Bezpłatny pomiar,</span>{" "}
-                <span className="it">oddzwonienie w 24 h.</span>
+                {silesian ? (
+                  city.isHq ? (
+                    <>
+                      <span className="text-white/85">Fabryka i showroom</span>{" "}
+                      <span className="it">przy ul. Legionów 59.</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-white/85">Showroom</span>{" "}
+                      <span className="it">
+                        {city.distanceFromHq} km od {genitive}.
+                      </span>
+                    </>
+                  )
+                ) : (
+                  <>
+                    <span className="text-white/85">Bezpłatny pomiar,</span>{" "}
+                    <span className="it">oddzwonienie w 24 h.</span>
+                  </>
+                )}
               </h2>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Link
-                  href="/#cta"
+                <TrackedCTA
+                  event="cta_wycena"
+                  props={{ location: "city_final", ...ctaProps }}
+                  href={wycenaHref}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-display text-base font-semibold text-bg transition-transform hover:scale-[1.02]"
                 >
-                  Zamów bezpłatny pomiar →
-                </Link>
-                <a
-                  href="tel:+48730700333"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
-                >
-                  +48 730 700 333
-                </a>
+                  Bezpłatna wycena w 24 h →
+                </TrackedCTA>
+                {silesian ? (
+                  <TrackedCTA
+                    event="showroom_click"
+                    props={{ location: "city_final", ...ctaProps }}
+                    href="/kontakt#showroom"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
+                  >
+                    Umów wizytę w showroomie →
+                  </TrackedCTA>
+                ) : (
+                  <TrackedCTA
+                    event="phone_click"
+                    props={{ location: "city_final", ...ctaProps }}
+                    href={`tel:${siteConfig.contact.phonePL}`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
+                  >
+                    +48 730 700 333
+                  </TrackedCTA>
+                )}
               </div>
             </div>
           </Container>
@@ -496,7 +663,7 @@ export default async function CityPage({
       </main>
 
       <Footer />
-      <MobileStickyCTA />
+      <MobileStickyCTA city={city.slug} />
     </>
   );
 }

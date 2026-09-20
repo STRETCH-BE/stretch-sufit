@@ -84,19 +84,65 @@ export type CityFaq = {
   a: string;
 };
 
+export type CitySection = {
+  /** H2 of the block — must be unique across cities (uniqueness gate). */
+  heading: string;
+  /** 110–180 words; one optional blank line ("\n\n") splits paragraphs. */
+  body: string;
+  /** 1–3 internal links rendered as chips under the block. */
+  links?: { label: string; href: string }[];
+};
+
+export type CityTravel = {
+  /** Typical drive time from the Częstochowa factory, in minutes. */
+  minutes: number;
+  /** Road summary shown next to the distance, e.g. "A1 i A4". */
+  route: string;
+  /** True inside the 100 km no-travel-fee radius. */
+  noTravelFee: boolean;
+};
+
+export type CitySubregion =
+  | "czestochowski"
+  | "aglomeracja-katowicka"
+  | "zaglebie"
+  | "row"
+  | "podbeskidzie";
+
 export type City = {
   slug: string;
   name: string;
+  /** Genitive form ("Katowic") — "w każdej dzielnicy Katowic". */
+  genitive?: string;
   region: string;
+  /** Silesian pages only — drives the /sufity-napinane/slask grouping. */
+  subregion?: CitySubregion;
   locative: string;
   populationDisplay: string;
   distanceFromHq: number;
+  travel?: CityTravel;
+  /** The factory city (Częstochowa). Replaces the old "Centrala" pseudo-region. */
+  isHq?: boolean;
   districts: string[];
   intro: string;
   trustBlocks: CityTrustBlock[];
+  /** Long-form H2 blocks between the trust blocks and the FAQ. */
+  sections?: CitySection[];
   faq: CityFaq[];
+  /** Cities with their own page, linked first in "Inne miasta". */
+  nearbySlugs?: string[];
+  /** Towns served from this city that have no page (plain-text list + Service.areaServed). */
+  nearbyTowns?: string[];
   image: string;
   imageAlt: string;
+  /** Honest figcaption — shared photos must not claim to be a local job. */
+  imageCaption?: string;
+  /** ≤ 60 chars, rendered as an absolute <title>. */
+  metaTitle?: string;
+  /** ≤ 155 chars. */
+  metaDescription?: string;
+  /** ISO date of the last content change — feeds sitemap lastmod. */
+  updatedAt?: string;
 };
 
 /* ─── REALIZACJE (project case studies) ───────────────────────────────────── */

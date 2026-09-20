@@ -6,7 +6,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
-  buildLocalBusiness,
   buildBreadcrumbs,
   buildFaqPage,
 } from "@/lib/schema";
@@ -136,7 +135,6 @@ const stats = [
 export default function HomePageUk() {
   return (
     <>
-      <JsonLd data={buildLocalBusiness()} />
       <JsonLd
         data={buildBreadcrumbs([{ name: "Головна", url: `${siteConfig.url}/uk` }])}
       />

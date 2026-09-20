@@ -153,6 +153,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufit napinany czy podwieszany — porównanie", href: "/blog/sufit-napinany-czy-podwieszany" },
       { label: "Sufity napinane Warszawa", href: "/sufity-napinane/warszawa" },
+      { label: "Cena sufitu napinanego w Katowicach — od 170 zł/m²", href: "/sufity-napinane/katowice" },
     ],
   },
 
@@ -278,6 +279,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Ile kosztuje sufit napinany — cennik", href: "/blog/ile-kosztuje-sufit-napinany" },
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufity napinane Wrocław", href: "/sufity-napinane/wroclaw" },
+      { label: "Sufity napinane Jastrzębie-Zdrój", href: "/sufity-napinane/jastrzebie-zdroj" },
     ],
   },
 
@@ -399,6 +401,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufity napinane Łódź", href: "/sufity-napinane/lodz" },
+      { label: "Sufity napinane Bielsko-Biała", href: "/sufity-napinane/bielsko-biala" },
     ],
   },
 
@@ -517,6 +520,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufit PVC — produkcja w Polsce", href: "/rozwiazania/sufit-pvc" },
       { label: "Sufity napinane Warszawa", href: "/sufity-napinane/warszawa" },
+      { label: "Sufity napinane Gliwice", href: "/sufity-napinane/gliwice" },
     ],
   },
 
@@ -650,6 +654,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufit poliestrowy — montaż na zimno", href: "/rozwiazania/sufit-poliestrowy" },
       { label: "Sufity napinane Kraków", href: "/sufity-napinane/krakow" },
+      { label: "Sufity napinane Sosnowiec", href: "/sufity-napinane/sosnowiec" },
     ],
   },
 
@@ -748,6 +753,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufit PVC — produkcja w Polsce", href: "/rozwiazania/sufit-pvc" },
       { label: "Sufity napinane Katowice", href: "/sufity-napinane/katowice" },
+      { label: "Showroom i fabryka w Częstochowie", href: "/sufity-napinane/czestochowa" },
     ],
   },
 
@@ -848,6 +854,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Sufity napinane Gliwice", href: "/sufity-napinane/gliwice" },
       { label: "Ile kosztuje sufit napinany — cennik 2026", href: "/blog/ile-kosztuje-sufit-napinany" },
+      { label: "Sufity akustyczne do biur w Katowicach", href: "/sufity-napinane/katowice" },
     ],
   },
 
@@ -1048,6 +1055,7 @@ export const blogPosts: BlogPost[] = [
       { label: "Bezpłatna wycena w 24 h — formularz", href: "/wycena" },
       { label: "Gwarancja do 15 lat", href: "/gwarancja" },
       { label: "Sufity napinane Gdańsk", href: "/sufity-napinane/gdansk" },
+      { label: "Sufity napinane Katowice — biura i lokale", href: "/sufity-napinane/katowice" },
     ],
   },
 ];

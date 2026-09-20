@@ -2,9 +2,10 @@
  * Cities hub page — /sufity-napinane
  * File path: /app/sufity-napinane/page.tsx
  *
- * Lists all 17 cities. Helps SEO with an authoritative hub page that
- * Google's crawler can use as a directory. Also useful for users who
- * want to browse available locations.
+ * Lists every city with a landing page, grouped by voivodeship. The home
+ * region (Śląskie, with the Częstochowa factory) comes first and links to
+ * the regional hub /sufity-napinane/slask. Counts are derived from
+ * content/cities.ts — never hard-code the number of cities.
  */
 
 import type { Metadata } from "next";
@@ -13,45 +14,45 @@ import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
+import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 
 import { cities } from "@/content/cities";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
-import { defaultOgImages } from "@/lib/site-config";
+import { defaultOgImages, siteConfig } from "@/lib/site-config";
+import { miastaCount } from "@/lib/plural";
 
-const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
+const BASE_URL = siteConfig.url;
+const COUNT = miastaCount(cities.length);
 
 export const metadata: Metadata = {
-  title: "Sufity napinane — 17 miast w Polsce",
-  description:
-    "Sufity napinane w 17 miastach Polski — Warszawa, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice i więcej. PVC produkowany w Polsce, polyester z Belgii. Montaż w 1 dzień, do 15 lat gwarancji.",
+  title: `Sufity napinane — ${COUNT} w Polsce, producent z Częstochowy`,
+  description: `Sufity napinane w ${cities.length} miastach: Śląsk (Katowice, Częstochowa, Gliwice, Sosnowiec), Warszawa, Kraków, Wrocław i więcej. PVC z własnej fabryki, poliester z Belgii. Montaż w 1 dzień.`,
   alternates: {
     canonical: "/sufity-napinane",
     languages: languageAlternates(routes.cities),
   },
   openGraph: {
-    title: "Sufity napinane w 17 miastach Polski | Stretch Sufit",
+    title: `Sufity napinane w ${cities.length} miastach Polski | Stretch Sufit`,
     description:
-      "Część belgijskiej Stretchgroup. PVC produkowany w Polsce, polyester w Belgii. Montaż w całej Polsce.",
+      "Producent z Częstochowy, część belgijskiej Stretchgroup. PVC z własnej fabryki, poliester z Belgii. Montaż w całej Polsce.",
     type: "website",
     url: `${BASE_URL}/sufity-napinane`,
     images: defaultOgImages,
   },
 };
 
-// Group cities by region for the hub page
+// Group cities by region for the hub page — home region first
 const regionOrder = [
-  "Centrala",
+  "Śląskie",
   "Mazowieckie",
   "Małopolskie",
   "Dolnośląskie",
   "Wielkopolskie",
   "Pomorskie",
   "Łódzkie",
-  "Śląskie",
   "Opolskie",
   "Świętokrzyskie",
 ];
@@ -60,7 +61,14 @@ export default function CitiesHubPage() {
   const citiesByRegion = regionOrder
     .map((region) => ({
       region,
-      cities: cities.filter((c) => c.region === region),
+      cities: cities
+        .filter((c) => c.region === region)
+        // factory city first, then by distance from it
+        .sort(
+          (a, b) =>
+            Number(Boolean(b.isHq)) - Number(Boolean(a.isHq)) ||
+            a.distanceFromHq - b.distanceFromHq
+        ),
     }))
     .filter((group) => group.cities.length > 0);
 
@@ -102,7 +110,7 @@ export default function CitiesHubPage() {
           <Container>
             <div className="mx-auto max-w-4xl">
               <FadeIn>
-                <Eyebrow>17 miast · jedna ekipa</Eyebrow>
+                <Eyebrow>{COUNT} · jedna ekipa · fabryka w Częstochowie</Eyebrow>
               </FadeIn>
               <FadeIn delay={80}>
                 <h1 className="mt-6 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
@@ -112,9 +120,10 @@ export default function CitiesHubPage() {
               </FadeIn>
               <FadeIn delay={160}>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                  Działamy w 17 miastach — od Warszawy i Krakowa po Brzeg i
-                  Jastrzębie-Zdrój. Wybierz swoje miasto, aby zobaczyć szczegóły
-                  obsługi, ceny i odpowiedzi na lokalne pytania.
+                  Produkujemy folię PVC w Częstochowie i montujemy własnymi
+                  ekipami w {COUNT} — od aglomeracji śląskiej, przez Warszawę i
+                  Kraków, po Gdańsk. Wybierz swoje miasto, aby zobaczyć czas
+                  dojazdu, ceny i odpowiedzi na lokalne pytania.
                 </p>
               </FadeIn>
             </div>
@@ -125,55 +134,78 @@ export default function CitiesHubPage() {
         <section className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="space-y-16 md:space-y-20">
-              {citiesByRegion.map((group, gi) => (
-                <FadeIn delay={gi * 60} key={group.region}>
-                  <div>
-                    <div className="mb-8 flex items-baseline gap-4">
-                      <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
-                        {group.region === "Centrala"
-                          ? "● Centrala"
-                          : `Województwo ${group.region.toLowerCase()}`}
-                      </h2>
-                      <div className="h-px flex-1 bg-bg/10" />
-                      <span className="font-mono text-xs text-bg/45">
-                        {group.cities.length}{" "}
-                        {group.cities.length === 1 ? "miasto" : "miast"}
-                      </span>
-                    </div>
-                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                      {group.cities.map((city) => (
-                        <Link
-                          key={city.slug}
-                          href={`/sufity-napinane/${city.slug}`}
-                          className="group rounded border border-bg/10 bg-paper-2 p-6 transition-all hover:border-red/40 hover:bg-white"
-                        >
-                          <div className="flex items-start justify-between gap-4">
-                            <div>
-                              <div className="font-display text-xl font-semibold tracking-[-0.01em] text-bg">
-                                {city.name}
+              {citiesByRegion.map((group, gi) => {
+                const home = group.region === "Śląskie";
+                return (
+                  <FadeIn delay={gi * 60} key={group.region}>
+                    <div>
+                      <div className="mb-8 flex items-baseline gap-4">
+                        <h2 className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
+                          {home
+                            ? "● Śląsk i Częstochowa — nasz region"
+                            : `Województwo ${group.region.toLowerCase()}`}
+                        </h2>
+                        <div className="h-px flex-1 bg-bg/10" />
+                        <span className="font-mono text-xs text-bg/45">
+                          {miastaCount(group.cities.length)}
+                        </span>
+                      </div>
+                      {home && (
+                        <p className="mb-8 max-w-3xl text-[15px] leading-relaxed text-bg/70">
+                          Fabryka i showroom przy ul. Legionów 59 w
+                          Częstochowie, aglomeracja katowicka 60–95 km dalej,
+                          Rybnik i Bielsko-Biała nieco ponad godzinę drogi.
+                          W strefie do 100 km nie doliczamy osobnej opłaty za
+                          dojazd, pomiar w aglomeracji zwykle w 3–5 dni
+                          roboczych.{" "}
+                          <Link
+                            href={routes.slask.pl}
+                            className="font-semibold text-red underline-offset-4 hover:underline"
+                          >
+                            Sufity napinane na Śląsku →
+                          </Link>
+                        </p>
+                      )}
+                      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {group.cities.map((city) => (
+                          <Link
+                            key={city.slug}
+                            href={`/sufity-napinane/${city.slug}`}
+                            className="group rounded border border-bg/10 bg-paper-2 p-6 transition-all hover:border-red/40 hover:bg-white"
+                          >
+                            <div className="flex items-start justify-between gap-4">
+                              <div>
+                                <div className="font-display text-xl font-semibold tracking-[-0.01em] text-bg">
+                                  {city.name}
+                                  {city.isHq && (
+                                    <span className="ml-2 align-middle rounded-full border border-red/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.14em] text-red">
+                                      Centrala
+                                    </span>
+                                  )}
+                                </div>
+                                <div className="mt-2 text-sm text-bg/60">
+                                  {city.populationDisplay}
+                                </div>
+                                <div className="mt-1 text-xs text-bg/45">
+                                  {city.isHq
+                                    ? "Fabryka i showroom"
+                                    : `${city.distanceFromHq} km od Częstochowy`}
+                                </div>
                               </div>
-                              <div className="mt-2 text-sm text-bg/60">
-                                {city.populationDisplay}
-                              </div>
-                              <div className="mt-1 text-xs text-bg/45">
-                                {city.distanceFromHq === 0
-                                  ? "Centrala"
-                                  : `${city.distanceFromHq} km od Częstochowy`}
-                              </div>
+                              <span
+                                aria-hidden="true"
+                                className="text-red transition-transform group-hover:translate-x-1"
+                              >
+                                →
+                              </span>
                             </div>
-                            <span
-                              aria-hidden="true"
-                              className="text-red transition-transform group-hover:translate-x-1"
-                            >
-                              →
-                            </span>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </FadeIn>
-              ))}
+                  </FadeIn>
+                );
+              })}
             </div>
           </Container>
         </section>
@@ -188,22 +220,26 @@ export default function CitiesHubPage() {
                 <span className="it">sprawdzimy, czy dojedziemy.</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-white/85">
-                Działamy też poza listą 17 miast — przy większych projektach
+                Działamy też poza listą miast — przy większych projektach
                 dojeżdżamy w całej Polsce.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a
-                  href="tel:+48730700333"
+                <TrackedCTA
+                  event="phone_click"
+                  props={{ location: "cities_hub" }}
+                  href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-display text-base font-semibold text-bg transition-transform hover:scale-[1.02]"
                 >
                   +48 730 700 333
-                </a>
-                <Link
-                  href="/#cta"
+                </TrackedCTA>
+                <TrackedCTA
+                  event="cta_wycena"
+                  props={{ location: "cities_hub" }}
+                  href="/wycena"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  Wyślij formularz →
-                </Link>
+                  Bezpłatna wycena →
+                </TrackedCTA>
               </div>
             </div>
           </Container>

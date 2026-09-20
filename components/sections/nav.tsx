@@ -54,6 +54,7 @@ const DEFAULT_LINKS: NavLink[] = [
   { href: "/#process", label: "Realizacja" },
   { href: "/#showcase", label: "Galeria" },
   { href: "/#why", label: "Dlaczego my" },
+  { href: "/sufity-napinane", label: "Miasta" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

@@ -35,7 +35,14 @@ import { useRouter } from "next/navigation";
 import { track } from "@/lib/analytics";
 import { siteConfig } from "@/lib/site-config";
 
-export type WycenaCity = { slug: string; name: string };
+export type WycenaCity = {
+  slug: string;
+  name: string;
+  /** Voivodeship — Silesian prefills get the showroom line under the H1. */
+  region?: string;
+  /** Road km from the Częstochowa factory. */
+  distanceFromHq?: number;
+};
 
 const ROOMS = [
   { value: "salon", label: "Salon", icon: "🛋️" },
@@ -74,6 +81,8 @@ const ATTRIBUTION_STORAGE_KEY = "wycena_attribution";
 /** Read by nothing today — stamped so /wycena/dziekujemy (or future
  *  tracking there) can verify a real submission preceded the visit. */
 const LEAD_FLAG_STORAGE_KEY = "wycena_lead_submitted";
+/** City slug of the last submitted lead — read by the thank-you page. */
+const LEAD_CITY_STORAGE_KEY = "wycena_lead_city";
 
 type Attribution = Partial<Record<(typeof ATTRIBUTION_KEYS)[number], string>>;
 type Status = "idle" | "submitting" | "error";
@@ -107,6 +116,8 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
   const [prefillCity, setPrefillCity] = useState<WycenaCity | null>(null);
 
   const mountedAt = useRef<number | null>(null);
+  /** Same-origin referrer path (e.g. /sufity-napinane/katowice) — GA4 funnel by city page. */
+  const entryPath = useRef<string>("direct");
   const startFired = useRef(false);
   /** Steps already reported — back-and-forth must not re-fire events. */
   const stepsFired = useRef<Set<number>>(new Set());
@@ -115,6 +126,15 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
 
   useEffect(() => {
     mountedAt.current = Date.now();
+
+    try {
+      const ref = document.referrer;
+      if (ref && ref.startsWith(window.location.origin)) {
+        entryPath.current = new URL(ref).pathname.slice(0, 120);
+      }
+    } catch {
+      /* keep "direct" */
+    }
 
     const params = new URLSearchParams(window.location.search);
 
@@ -162,14 +182,20 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
   const markStarted = () => {
     if (startFired.current) return;
     startFired.current = true;
-    track("wycena_form_start");
+    track("wycena_form_start", {
+      prefill_city: prefillCity?.slug ?? "none",
+      entry_path: entryPath.current,
+    });
   };
 
   /** Advance after completing `completed` — fires the step event once. */
   const completeStep = (completed: 1 | 2 | 3, next: 2 | 3 | 4) => {
     if (!stepsFired.current.has(completed)) {
       stepsFired.current.add(completed);
-      track("wycena_form_step", { step: completed });
+      track("wycena_form_step", {
+        step: completed,
+        prefill_city: prefillCity?.slug ?? "none",
+      });
     }
     setStep(next);
   };
@@ -224,6 +250,9 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
       // track() fans out to GA4 (Google Ads conversion import), PostHog,
       // and Meta Pixel "Lead" (marketing-consent-gated in lib/analytics).
       track("wycena_form_submit", {
+        prefill_city: prefillCity?.slug ?? "none",
+        city_slug: citySlug || "none",
+        entry_path: entryPath.current,
         room,
         area,
         led: led || "nie-podano",
@@ -232,6 +261,7 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
       });
       try {
         sessionStorage.setItem(LEAD_FLAG_STORAGE_KEY, "1");
+        sessionStorage.setItem(LEAD_CITY_STORAGE_KEY, citySlug || "");
       } catch {
         /* ignore */
       }
@@ -280,6 +310,14 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
                 </>
               )}
             </h1>
+
+            {prefillCity?.region === "Śląskie" && (
+              <p className="mt-4 text-[15px] leading-relaxed text-white/75">
+                {prefillCity.distanceFromHq
+                  ? `Showroom i fabryka w Częstochowie — ${prefillCity.distanceFromHq} km od Ciebie. Pomiar zwykle w 3–5 dni roboczych.`
+                  : "Showroom i fabryka przy ul. Legionów 59 — pomiar zwykle w 1–3 dni robocze."}
+              </p>
+            )}
 
             <p className="mt-3 text-[13px] font-medium uppercase tracking-[0.14em] text-white/55 md:mt-5">
               Producent z Polski · Gwarancja do 15 lat · Bezszwowe do 6,5 m

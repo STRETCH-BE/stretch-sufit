@@ -2,7 +2,7 @@
  * JSON-LD structured data component.
  * File path: /components/seo/json-ld.tsx
  *
- *   <JsonLd data={buildLocalBusiness()} />
+ *   <JsonLd data={buildOrganization()} />
  */
 
 type Props = {

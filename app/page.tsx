@@ -3,7 +3,7 @@
  * File path: /app/page.tsx
  *
  * Composes the section components in narrative order. Schema rendered:
- *   - LocalBusiness (HomeAndConstructionBusiness with aggregate rating)
+ *   - the single Organization/LocalBusiness node comes from the root layout
  *   - BreadcrumbList (single-level for the home root)
  *   - FAQPage with 4 quotable Polish Q&A entries for AEO
  *
@@ -15,7 +15,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
-  buildLocalBusiness,
   buildBreadcrumbs,
   buildFaqPage,
 } from "@/lib/schema";
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
       "Stretch Sufit — Nowy sufit w 1 dzień | Sufity napinane premium",
   },
   description:
-    "Sufity napinane Stretch w Polsce. PVC produkowany w naszej fabryce w Polsce (bezszwowo do 6,50 m), polyester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji. 17 miast w Polsce.",
+    "Sufity napinane Stretch — producent z Częstochowy (Śląskie). PVC z własnej fabryki (bezszwowo do 6,50 m), poliester z Belgii. Część Stretchgroup. Montaż w 1 dzień, bez kurzu, do 15 lat gwarancji.",
   alternates: {
     canonical: "/",
     languages: languageAlternates(routes.home),
@@ -94,7 +93,6 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={buildLocalBusiness()} />
       <JsonLd
         data={buildBreadcrumbs([{ name: "Strona główna", url: siteConfig.url }])}
       />
