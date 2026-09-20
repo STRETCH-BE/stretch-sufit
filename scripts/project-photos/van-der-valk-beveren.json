@@ -1,0 +1,17 @@
+{
+  "project": "van-der-valk-beveren",
+  "originals": "SharePoint (Michael) › Macbook downloads › Foto website › Van der valk",
+  "notes": "Position = which part of the original to keep when cover-cropping (sharp 'position'). Portrait phone photos keep the ceiling with 'top'.",
+  "files": {
+    "hero.jpg": { "from": "IMG_0670-scaled.jpg", "position": "top" },
+    "card.jpg": { "from": "IMG_0670-scaled.jpg", "position": "top" },
+    "og.jpg": { "from": "IMG_0670-scaled.jpg", "position": "centre" },
+    "brief.jpg": { "from": "IMG_0758-scaled.jpg", "position": "top" },
+    "01-hall-overview.jpg": { "from": "IMG_0670-scaled.jpg", "position": "top" },
+    "02-perimeter.jpg": { "from": "IMG_0271-1-scaled.jpg", "position": "top" },
+    "03-tech-hatches.jpg": { "from": "IMG_0913-scaled.jpg", "position": "top" },
+    "04-starry-sky.jpg": { "from": "4F16EA97-6610-451B-B085-3406FC6AB497_1_102_a-3.jpeg", "position": "top" },
+    "05-acoustic-layer.jpg": { "from": "IMG_0786-scaled.jpg", "position": "top" },
+    "06-pole-detail.jpg": { "from": "IMG_0272-scaled.jpg", "position": "centre" }
+  }
+}

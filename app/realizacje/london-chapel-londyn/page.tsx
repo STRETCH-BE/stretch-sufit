@@ -176,7 +176,7 @@ export default function LondonChapelPage() {
             "Spójność wizualna w całym domu mimo różnych funkcji pomieszczeń.",
           ]}
           image="/images/projects/london-chapel-londyn/brief.jpg"
-          imageAlt="Wnętrze londyńskiej rezydencji-kaplicy w trakcie konfiguracji — tradycyjny, ciepły charakter wymagający dopasowanego rozwiązania tekstylnego."
+          imageAlt="Korytarz rezydencji London Chapel — obraz i ławka na tle napinanej ściany z tkaniny Camira."
         />
 
         <ProjectSolution

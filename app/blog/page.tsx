@@ -103,24 +103,6 @@ type EditorialEntry = {
 // here when its article moves to /content/blog-posts.ts.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "08",
-    category: "Poradniki",
-    title:
-      "Montaż sufitu napinanego krok po kroku — dlaczego naprawdę 1 dzień",
-    excerpt:
-      "Etap po etapie: profile, podkonstrukcje, napinanie na ciepło lub na zimno, wykończenie. Co przygotować, kiedy montaż trwa 2 dni i czy PVC pachnie.",
-    readTime: "8 min",
-  },
-  {
-    no: "09",
-    category: "Poradniki",
-    title:
-      "Czy sufit napinany jest bezpieczny? Klasy ogniowe, atesty, zdrowie",
-    excerpt:
-      "Co oznaczają klasy A2 i B-s1,d0, gdzie dokumentacja jest wymagana prawnie, skąd pochodzi folia i jak wygląda recykling PVC.",
-    readTime: "8 min",
-  },
-  {
     no: "10",
     category: "Poradniki",
     title: "Barrisol, sufit napinany, stretch ceiling — czy to to samo?",

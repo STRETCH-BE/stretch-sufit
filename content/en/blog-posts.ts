@@ -800,6 +800,202 @@ export const blogPosts: BlogPost[] = [
       { label: "How much does a stretch ceiling cost — 2026 prices", href: "/en/blog/stretch-ceiling-cost" },
     ],
   },
+
+  /* ── 08 · Installation step by step ──────────────────── */
+  {
+    slug: "stretch-ceiling-installation-steps",
+    category: "Guides",
+    title: "Stretch ceiling installation step by step — why it really is 1 day",
+    metaDescription:
+      "A stretch ceiling up to 50 m² is installed by a 2-person crew in 1 day: profiles, substructures, tensioning (PVC hot, polyester cold), finishing. No dust.",
+    excerpt:
+      "The promise of one-day installation sounds like a slogan until you break it down into stages with times. We do that below: what happens from the moment the crew walks in to handover, what you need to prepare, when installation takes two days, and whether PVC really smells.",
+    datePublished: "2026-09-20",
+    readTime: "8 min",
+    intro: [
+      "A standard stretch ceiling installation up to 50 m² takes 1 working day and is carried out by a two-person crew. The stages: perimeter profiles on the walls, substructures and rings for the light fittings, tensioning the membrane — PVC hot, polyester cold — and finishing the edges. There is no dust, the furniture stays in the room, and the ceiling is ready to use the moment the crew leaves.",
+      "We write this as the manufacturer and the installer: our PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium, and both are installed by our own trained crews following a single protocol. Below is that protocol broken down hour by hour — no shortcuts and no embellishment.",
+    ],
+    sections: [
+      {
+        heading: "Where the one day comes from",
+        paragraphs: [
+          "All the work that demands precision — the measurement, the cut-out design, producing the membrane to size — happens before installation, on the production floor. What arrives on site is a finished membrane cut for that specific room, with the positions for the light fittings prepared at the factory. The crew does not cut, does not sand and does not wait for anything to dry. That is why installation takes hours rather than days, and why a plasterboard build with skim coat and painting will never get below several days: there, the drying breaks are built into the technology.",
+          "We take the measurement after the walls are finished, because the membrane has to match the final dimensions. From measurement to installation usually takes around 5 working days for PVC from our own production; for polyester from Belgium, 5–15 days plus transport.",
+        ],
+      },
+      {
+        heading: "Installation stages — timing and what happens",
+        paragraphs: [
+          "The times below apply to a typical 20–30 m² room with a few light points. In a small bathroom everything takes half as long; at 50 m² with extensive lighting it stretches to a full day.",
+        ],
+        table: {
+          headers: ["Stage", "Time", "What happens"],
+          rows: [
+            ["Preparation and protection", "approx. 30 min", "protective film on furniture and floor, checking dimensions and wiring"],
+            ["Perimeter profiles", "approx. 1.5–2.5 h", "aluminium profile fixed to the walls around the perimeter, levelled with a laser"],
+            ["Substructures and rings", "approx. 1–2 h", "platforms for light fittings, reinforced rings for the cut-outs, cable routing"],
+            ["Tensioning the membrane", "approx. 1.5–3 h", "PVC: heat gun and clipping into the profile; polyester: clipped in cold, no heating"],
+            ["Finishing and light fittings", "approx. 1 h", "edge trim, cut-outs, fitting the lights, lighting test"],
+            ["Clean-up and handover", "approx. 30 min", "removing the protective film, handover report, warranty card"],
+          ],
+        },
+      },
+      {
+        heading: "PVC hot, polyester cold — what that means in your home",
+        paragraphs: [
+          "PVC film is tensioned with a heat gun: the heated membrane becomes elastic, is clipped into the profile, and as it cools it tensions perfectly smooth. The room is warmer for a few tens of minutes, and directly after installation a faint smell may be noticeable, which disappears after airing — usually within 24–48 hours. Plants and pets are best moved to another room for the tensioning, purely because of the temperature.",
+          "Polyester is installed without a heat gun: the membrane is clipped in cold and tensions mechanically. Zero smell, zero rise in temperature — this is the solution for rooms with antiques, instruments, paintings or electronic equipment. Both variants are installed by the same crew, with the same profile.",
+        ],
+      },
+      {
+        heading: "What to prepare before the crew arrives",
+        paragraphs: [
+          "The walls must be finished — plastered, painted or tiled — because we fix the profile to the finished surface and the membrane reproduces the room's final outline. The electrical wiring for the light fittings should be brought out of the ceiling before installation; the crew connects the fittings but does not run new circuits. Furniture can stay in the room, but the middle should be clear for the ladders — usually it is enough to move it a metre away from the walls. We need access to power and space to lay out the membrane.",
+        ],
+      },
+      {
+        heading: "When installation takes two days",
+        paragraphs: [
+          "Honestly: one day is the standard up to 50 m², not a promise for every job. We plan two days for projects above 50 m², whole flats with several rooms, ceilings with extensive LED lighting (lines in profiles, starry sky, full backlighting) and rooms above 3.5 m high, where the work is done from scaffolding. Acoustic offices of 100 m² usually take 2–3 days, weekends possible. We confirm the date and the number of days in the quote, which is free and valid for 30 days.",
+        ],
+      },
+      {
+        heading: "After installation — what next",
+        paragraphs: [
+          "You use the room the moment the crew leaves: there is no drying, no airing out dust and no waiting for paint. With PVC film it is worth airing the room during the first day to get rid of the faint smell from tensioning; with polyester even that falls away. You receive the handover report and the warranty card — 15 years on PVC, 10 years on polyester — and settle the remaining 70% of the payment within 7 days. Care over the following years means wiping the membrane with a soft cloth; in the event of a flood, damage or a lighting change you call our service team, which takes the membrane down and re-tensions it without replacing the profiles.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "How long does stretch ceiling installation take?",
+        a: "As standard, 1 working day for rooms up to 50 m², with a two-person crew. A small bathroom takes half a day; a whole flat, extensive LED lighting or a height above 3.5 m means two days, and acoustic offices of 100 m² — 2–3 days.",
+      },
+      {
+        q: "Does a PVC ceiling smell after installation?",
+        a: "Directly after hot tensioning a faint smell may be noticeable; it disappears after airing, usually within 24–48 hours. Polyester, installed cold, does not smell at all.",
+      },
+      {
+        q: "Do I have to move the furniture out?",
+        a: "No. The furniture stays in the room — it is enough to move it away from the walls so the crew has access to the perimeter and room for the ladders. We cover it with protective film for the duration of the work.",
+      },
+      {
+        q: "At what stage of a renovation should I order a stretch ceiling?",
+        a: "We take the measurement after the walls are finished (plaster, paint, tiles), because the membrane has to match the final dimensions. The electrical wiring for the light fittings should be brought out beforehand. Installation is the last stage of the renovation.",
+      },
+      {
+        q: "How long is it from order to installation?",
+        a: "For PVC film from our factory in Częstochowa, usually around 5 working days from the measurement. For polyester from Belgium, 5–15 days plus around 3 days of transport. We confirm the date when you order.",
+      },
+      {
+        q: "Is there any dust during installation?",
+        a: "No. There is no board cutting, sanding or skim coat — we fix the profile to the walls and tension the finished membrane. The only drilling is the holes for the perimeter profile, done with a vacuum cleaner.",
+      },
+    ],
+    related: [
+      { label: "Free quote within 24 h — form", href: "/en#cta" },
+      { label: "PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Stretch ceiling vs drywall — comparison", href: "/en/blog/stretch-ceiling-vs-drywall" },
+      { label: "How much does a stretch ceiling cost — 2026 price list", href: "/en/blog/stretch-ceiling-cost" },
+      { label: "Stretch ceilings — cities we serve", href: "/en/stretch-ceilings" },
+    ],
+  },
+
+  /* ── 09 · Are stretch ceilings safe? ─────────────────── */
+  {
+    slug: "are-stretch-ceilings-safe",
+    category: "Guides",
+    title: "Are stretch ceilings safe? Fire classes, certificates, health",
+    metaDescription:
+      "Yes — EU membranes: polyester A2 (non-combustible), PVC film B-s1,d0 per CNBOP-PIB report, Fraunhofer emission tests. What the classes mean and where required.",
+    excerpt:
+      "Questions about the toxicity and flammability of stretch ceilings come up in every conversation with a customer who has read the forums. We answer as the manufacturer — with report numbers: what fire classes really mean, which documents our material has, where the law requires them, and how EU-made film differs from film of unknown origin.",
+    datePublished: "2026-09-20",
+    readTime: "8 min",
+    intro: [
+      "Yes — a stretch ceiling made from certified membranes produced in the European Union is safe for your health and meets the fire-safety requirements set for interiors. Our polyester membranes have reaction-to-fire class A2 (a non-combustible material), and the PVC film class B-s1,d0 — non-flammable, low smoke emission, no flaming droplets — confirmed by classification report no. 449/BW/20 issued by CNBOP-PIB. The emissions of the PVC film were tested by the Fraunhofer-Institut (test report no. MAIC-2018-2563): with certified materials there is no emission of harmful substances during use — and that is the right question, because you live under the ceiling for 15 years, not for the hour of installation.",
+      "We write as the manufacturer: the PVC film is made in our factory in Częstochowa, the polyester at the Stretch group's plant in Belgium. Below we explain the markings you will find in the documents, say where they are required by law and where they are simply worth having, and explain why the origin of the film matters more than its price.",
+    ],
+    sections: [
+      {
+        heading: "Where the fears about toxicity come from",
+        paragraphs: [
+          "Two sources. The first: the odour after hot installation of PVC film — real, but short-lived; it disappears after airing within 24–48 hours and has nothing to do with emissions during use. The second: films of unknown origin, sold by the metre without documents, installed by companies that can show neither a hygiene certificate nor a fire classification. These are what give the whole category a bad name. The difference between a certified EU-made membrane and such a film is exactly the difference between certified paint and paint from a market stall.",
+        ],
+      },
+      {
+        heading: "What fire classes A2 and B-s1,d0 mean",
+        paragraphs: [
+          "The European reaction-to-fire classification (Euroclasses) describes how a material behaves in contact with fire. The letter is the main class: A1 and A2 mean non-combustible materials, B — non-flammable materials that do not sustain fire, C and below — increasingly combustible. The additional markings cover smoke (s1 — low, s2 — limited, s3 — no limit) and flaming droplets (d0 — none, d1 — droplets that extinguish, d2 — no limit). So B-s1,d0 reads: non-flammable, low smoke emission, no flaming droplets.",
+          "Our polyester has class A2 — it is non-combustible, which in public buildings is sometimes a condition for the material being approved at all. Our PVC film has class B-s1,d0 according to classification report no. 449/BW/20, issued by the Józef Tuliszkowski Scientific and Research Centre for Fire Protection — National Research Institute (CNBOP-PIB) in Józefów, an accredited laboratory (PCA AB 1280) that classifies construction materials for reaction to fire in Poland.",
+        ],
+      },
+      {
+        heading: "Which documents our material has",
+        paragraphs: [
+          "We can attach a complete set of documents to every project. The table below shows what each document confirms and where it is required.",
+        ],
+        table: {
+          headers: ["Document / marking", "What it confirms", "Where required"],
+          rows: [
+            ["Class A2 — polyester", "non-combustible material under the Euroclasses", "public buildings, hotels, schools, offices"],
+            ["Class B-s1,d0 — PVC film", "non-flammable, low smoke emission, no flaming droplets", "commercial and public premises; not required by law in homes"],
+            ["Reaction-to-fire classification report", "no. 449/BW/20, CNBOP-PIB Józefów (accredited laboratory PCA AB 1280)", "handover documentation for buildings with fire-safety requirements"],
+            ["PVC film emission test", "test report no. MAIC-2018-2563, Fraunhofer-Institut — no harmful emissions during use", "always worth having; required in education and healthcare facilities"],
+            ["Declaration of performance / product data sheet", "membrane parameters consistent with the manufacturer's declaration", "handover documentation, tenders"],
+          ],
+        },
+      },
+      {
+        heading: "Where documentation is required by law and where it is worth having",
+        paragraphs: [
+          "In public buildings — schools, nurseries, hotels, restaurants, offices, shops — the fire-safety requirements for finishing materials are formal: the fire-safety expert or inspector at handover will ask for the reaction-to-fire classification, and without it the ceiling may not be approved. That is why we attach the classification report and the product data sheet to commercial projects as standard, without being asked.",
+          "In flats and detached houses the law does not require you to have documents for the ceiling. It is still worth having them — for two reasons. When selling or letting a flat, buyers increasingly ask about finishing materials. And above all: the emission test report — for our PVC film carried out by the Fraunhofer-Institut, no. MAIC-2018-2563 — is the only proof that the material above your head has been tested. If a contractor cannot show such a document, that is a warning sign regardless of the price.",
+        ],
+      },
+      {
+        heading: "Health: emissions, odour and the origin of the film",
+        paragraphs: [
+          "A certified membrane emits no harmful substances during use — for our PVC film this is confirmed by Fraunhofer-Institut test report no. MAIC-2018-2563. The short-lived odour after hot installation of PVC is the effect of heating the plastic and disappears after airing; cold-installed polyester does not smell at all. Ask where the film comes from: our PVC is made in Częstochowa, the polyester in Belgium, both at the Stretch group's plants, with full documentation. Film from an unknown source may be a few dozen PLN per metre cheaper — and that is the only thing known about it for certain.",
+          "Recycling: PVC is a fully recyclable plastic, and our PVC film is made with a share of recovered material — hence the name recyclable PVC ceiling in our range. A membrane taken down after years of use does not go to landfill as waste that cannot be processed.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Are stretch ceilings toxic?",
+        a: "Certified ones — no. Our PVC film has a Fraunhofer-Institut emission test report (no. MAIC-2018-2563) and emits no harmful substances during use; polyester membranes are non-combustible (class A2). The risk concerns films of unknown origin without documents.",
+      },
+      {
+        q: "What does fire class A2 mean?",
+        a: "A non-combustible material under the European reaction-to-fire classification. Our polyester membranes have this class, which meets the requirements set for public buildings, hotels and schools.",
+      },
+      {
+        q: "What does B-s1,d0 mean?",
+        a: "B — a non-flammable material that does not sustain fire; s1 — low smoke emission; d0 — no flaming droplets. Our PVC film has this class — confirmed by classification report no. 449/BW/20 issued by CNBOP-PIB, which we attach to projects.",
+      },
+      {
+        q: "Are ceiling documents needed for a school or hotel?",
+        a: "Yes. In public buildings the reaction-to-fire classification is required at handover. We attach the classification report and the product data sheet to commercial projects as standard.",
+      },
+      {
+        q: "Does a PVC ceiling smell after installation?",
+        a: "Briefly — the odour after hot tensioning disappears after airing within 24–48 hours and has nothing to do with emissions during use. Cold-installed polyester does not smell at all.",
+      },
+      {
+        q: "Can a stretch ceiling be recycled?",
+        a: "Yes. PVC is a fully recyclable plastic, and our film is made with a share of recovered material. A dismantled membrane is suitable for reprocessing.",
+      },
+    ],
+    related: [
+      { label: "Recyclable PVC ceiling — made in Poland", href: "/en/solutions/pvc-ceiling" },
+      { label: "Acoustic ceiling — A2-class polyester", href: "/en/solutions/acoustic-ceiling" },
+      { label: "Free quote within 24 h — form", href: "/en#cta" },
+      { label: "Warranty up to 15 years", href: "/en/warranty" },
+      { label: "Stretch ceilings — cities we serve", href: "/en/stretch-ceilings" },
+    ],
+  },
 ];
 
 export function findPost(slug: string): BlogPost | undefined {
