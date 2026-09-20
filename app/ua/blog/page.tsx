@@ -86,15 +86,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "09",
-    category: "Поради",
-    title:
-      "Чи безпечна натяжна стеля? Класи горючості, сертифікати, здоров'я",
-    excerpt:
-      "Що означають класи A2 і B-s1,d0, де документація вимагається законом, звідки походить плівка та як виглядає переробка ПВХ.",
-    readTime: "8 хв",
-  },
-  {
     no: "10",
     category: "Поради",
     title: "Barrisol, натяжна стеля, stretch ceiling — чи це те саме?",

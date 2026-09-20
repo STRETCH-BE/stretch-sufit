@@ -88,15 +88,6 @@ type EditorialEntry = {
 // here when its article moves live.
 const editorialPipeline: EditorialEntry[] = [
   {
-    no: "09",
-    category: "Guides",
-    title:
-      "Are stretch ceilings safe? Fire classes, certificates, health",
-    excerpt:
-      "What A2 and B-s1,d0 mean, where documentation is legally required, where the film comes from and how PVC recycling works.",
-    readTime: "8 min",
-  },
-  {
     no: "10",
     category: "Guides",
     title: "Barrisol, stretch ceiling, tensioned ceiling — are they the same thing?",

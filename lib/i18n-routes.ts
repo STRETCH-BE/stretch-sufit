@@ -136,6 +136,11 @@ export const blogPostSlugs: { pl: string; en: string; ua: string }[] = [
     en: "stretch-ceiling-installation-steps",
     ua: "montazh-natyazhnoi-steli",
   },
+  {
+    pl: "czy-sufit-napinany-jest-bezpieczny",
+    en: "are-stretch-ceilings-safe",
+    ua: "chy-bezpechna-natyazhna-stelya",
+  },
 ];
 
 /* ─── Path builders ───────────────────────────────────────── */
