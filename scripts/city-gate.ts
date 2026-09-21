@@ -1,4 +1,4 @@
-#!/usr/bin/env node --experimental-strip-types
+#!/usr/bin/env -S node --experimental-strip-types
 /**
  * Standalone city gate runner (local use; the build runs the same check).
  * File path: /scripts/city-gate.ts

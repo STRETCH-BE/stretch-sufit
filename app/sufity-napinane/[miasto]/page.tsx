@@ -4,8 +4,9 @@
  *
  * Renders one landing page per Polish city using data from /content/cities.ts.
  * Statically generated at build time via generateStaticParams. Every entry
- * must pass the uniqueness gate (scripts/city-gate.ts, run in `prebuild`)
- * before a build succeeds — thin or templated clones are rejected.
+ * must pass the uniqueness gate (lib/city-gate.ts, run from
+ * generateStaticParams below and via `npm run gate:cities`) before a build
+ * succeeds — thin or templated clones are rejected.
  *
  * To add a new city: add an entry to /content/cities.ts AND to `citySlugs`
  * in /lib/i18n-routes.ts (sitemap + hreflang). This file doesn't change.

@@ -22,15 +22,15 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Stretch ceilings — 17 cities across Poland",
+  title: `Stretch ceilings — ${cities.length} cities across Poland`,
   description:
-    "Stretch ceilings in 17 Polish cities — Warsaw, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice and more. PVC manufactured in Poland, polyester from Belgium. Installed in 1 day, up to 15 years warranty.",
+    `Stretch ceilings in ${cities.length} Polish cities — Silesia (Katowice, Częstochowa, Gliwice, Sosnowiec), Warsaw, Kraków, Wrocław and more. PVC manufactured in Poland, polyester from Belgium. Installed in 1 day, up to 15 years warranty.`,
   alternates: {
     canonical: "/en/stretch-ceilings",
     languages: languageAlternates(routes.cities),
   },
   openGraph: {
-    title: "Stretch ceilings in 17 Polish cities | Stretch Sufit",
+    title: `Stretch ceilings in ${cities.length} Polish cities | Stretch Sufit`,
     description:
       "Part of the Belgian Stretchgroup. PVC manufactured in Poland, polyester in Belgium. Installation across Poland.",
     type: "website",
@@ -72,7 +72,7 @@ export default function CitiesHubPageEn() {
           <Container>
             <div className="mx-auto max-w-4xl">
               <FadeIn>
-                <Eyebrow>17 cities · one team · one standard</Eyebrow>
+                <Eyebrow>{cities.length} cities · one team · one standard</Eyebrow>
               </FadeIn>
               <FadeIn delay={80}>
                 <h1 className="mt-6 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
@@ -82,7 +82,7 @@ export default function CitiesHubPageEn() {
               </FadeIn>
               <FadeIn delay={160}>
                 <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
-                  Based in Częstochowa, we serve 17 Polish cities directly with our in-house installation teams. For larger projects (&gt; 200 m²) we travel anywhere in Poland. Free measurement, no travel surcharges — wherever you are.
+                  Based in Częstochowa, we serve {cities.length} Polish cities directly with our in-house installation teams. For larger projects (&gt; 200 m²) we travel anywhere in Poland. Free measurement, no travel surcharges — wherever you are.
                 </p>
               </FadeIn>
             </div>
@@ -138,7 +138,7 @@ export default function CitiesHubPageEn() {
             </FadeIn>
             <FadeIn delay={80}>
               <SectionTitle className="mt-5 text-white">
-                All 17 cities{" "}
+                All {cities.length} cities{" "}
                 <span className="it text-paper">we serve.</span>
               </SectionTitle>
             </FadeIn>

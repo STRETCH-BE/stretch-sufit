@@ -19,6 +19,11 @@ export function pluralPl(
   return forms[2];
 }
 
+/** Ukrainian: "26 міст", "3 міста", "1 місто". */
+export function mistCountUk(n: number): string {
+  return `${n} ${pluralPl(n, ["місто", "міста", "міст"])}`;
+}
+
 /** "26 miast", "3 miasta", "1 miasto". */
 export function miastaCount(n: number): string {
   return `${n} ${pluralPl(n, ["miasto", "miasta", "miast"])}`;

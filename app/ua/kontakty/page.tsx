@@ -23,7 +23,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Контакти — зателефонуйте, напишіть або приходьте",
   description:
-    "Зв'яжіться зі Stretch Sufit — офіс у Ченстохові, вул. Лєгіонів 59. Тел. +48 455 444 475 (UA), +48 730 700 333 (PL/EN). Безкоштовний замір у 17 містах Польщі.",
+    "Зв'яжіться зі Stretch Sufit — офіс у Ченстохові, вул. Лєгіонів 59. Тел. +48 455 444 475 (UA), +48 730 700 333 (PL/EN). Фабрика і шоурум у Ченстохові, монтаж у Сілезії та по всій Польщі.",
   alternates: {
     canonical: "/ua/kontakty",
     languages: languageAlternates(routes.contact),
@@ -261,7 +261,7 @@ export default function ContactPageUk() {
               <FadeIn><Eyebrow>Зона обслуговування</Eyebrow></FadeIn>
               <FadeIn delay={80}>
                 <SectionTitle className="mt-5 text-white">
-                  17 міст у Польщі.{" "}
+                  Ченстохова, Сілезія, вся Польща.{" "}
                   <span className="it text-paper">Одна команда.</span>
                 </SectionTitle>
               </FadeIn>

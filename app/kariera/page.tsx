@@ -4,7 +4,7 @@
  *
  * Recruitment page for the Polish operation. Open roles are described as
  * always-on talent pools rather than time-bound listings — the company is
- * scaling 17 cities of operations, so the monter slot is effectively
+ * scaling its city coverage, so the monter slot is effectively
  * always open. (Pomiarowiec / doradca / produkcja roles were removed
  * 2026-08 — re-add to the `roles` array when they reopen.)
  *

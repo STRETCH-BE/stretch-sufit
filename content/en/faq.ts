@@ -7,6 +7,7 @@
  */
 
 import type { FaqEntry, FaqCategory } from "@/content/faq";
+import { cities } from "@/content/en/cities";
 
 export const faqCategoriesEn: Record<
   FaqCategory,
@@ -184,7 +185,7 @@ export const faqs: FaqEntry[] = [
     slug: "service-coverage",
     category: "logistyka",
     q: "Which cities do you cover?",
-    a: "We actively serve 17 cities: Warsaw, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice, Częstochowa, Bielsko-Biała, Gliwice, Opole, Kielce, Płock, Piotrków Trybunalski, Radomsko, Brzeg, Jastrzębie-Zdrój. For larger projects (>200 m²) we travel anywhere in Poland — call us, we'll discuss.",
+    a: `We actively serve ${cities.length} cities: ${cities.map((c) => c.name).join(", ")}. For larger projects (>200 m²) we travel anywhere in Poland — call us, we'll discuss.`,
   },
 
   // SPECIFIC APPLICATIONS

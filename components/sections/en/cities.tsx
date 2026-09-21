@@ -1,5 +1,5 @@
 /**
- * Cities — 17 Polish service locations. English.
+ * Cities — every service location (count derived from content). English.
  * File path: /components/sections/en/cities.tsx
  */
 
@@ -9,6 +9,10 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
 import { cities } from "@/content/en/cities";
+import { citiesFull } from "@/content/en/cities-full";
+
+// Only cities with a full EN page get their own URL; the rest link to the hub.
+const fullPages = new Set(citiesFull.map((c) => c.slug));
 
 export function Cities() {
   return (
@@ -18,7 +22,7 @@ export function Cities() {
           <FadeIn>
             <Eyebrow tone="on-paper">Where you'll find us</Eyebrow>
             <SectionTitle className="mt-5 text-bg" size="section">
-              17 cities.
+              {cities.length} cities.
               <br />
               <span className="it">One team.</span>
             </SectionTitle>
@@ -32,7 +36,7 @@ export function Cities() {
               {cities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    href={`/en/stretch-ceilings/${city.slug}`}
+                    href={fullPages.has(city.slug) ? `/en/stretch-ceilings/${city.slug}` : "/en/stretch-ceilings"}
                     className="group block rounded border border-bg/10 p-4 transition-colors hover:border-bg hover:bg-bg hover:text-white"
                   >
                     <span className="block text-[15px] font-medium">

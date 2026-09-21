@@ -23,7 +23,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Contact — call, write or visit",
   description:
-    "Get in touch with Stretch Sufit — office in Częstochowa, ul. Legionów 59. Tel. +48 730 700 333. Free measurement in 17 Polish cities. We respond within 24 hours.",
+    "Get in touch with Stretch Sufit — office in Częstochowa, ul. Legionów 59. Tel. +48 730 700 333. Factory and showroom in Częstochowa, installation across Silesia and Poland. We respond within 24 hours.",
   alternates: {
     canonical: "/en/contact",
     languages: languageAlternates(routes.contact),
@@ -317,7 +317,7 @@ export default function ContactPageEn() {
               </FadeIn>
               <FadeIn delay={80}>
                 <SectionTitle className="mt-5 text-white">
-                  17 cities across Poland.{" "}
+                  Częstochowa, Silesia, all of Poland.{" "}
                   <span className="it text-paper">One team.</span>
                 </SectionTitle>
               </FadeIn>

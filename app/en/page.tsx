@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       "Stretch Sufit — A new ceiling in one day | Premium stretch ceilings",
   },
   description:
-    "Stretch ceilings in Poland. PVC manufactured in our factory in Poland (seamless up to 6.50 m), polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. 17 cities in Poland.",
+    "Stretch ceilings in Poland. PVC manufactured in our factory in Poland (seamless up to 6.50 m), polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Made in Częstochowa (Silesia), installed across Poland.",
   alternates: {
     canonical: "/en",
     languages: languageAlternates(routes.home),

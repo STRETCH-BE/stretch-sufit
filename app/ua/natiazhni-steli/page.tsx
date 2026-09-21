@@ -14,6 +14,7 @@ import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 
 import { cities } from "@/content/ua/cities";
+import { mistCountUk } from "@/lib/plural";
 import { citiesFull } from "@/content/ua/cities-full";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
@@ -22,7 +23,7 @@ const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
 export const metadata: Metadata = {
-  title: "Натяжні стелі — 17 міст у Польщі",
+  title: `Натяжні стелі — ${mistCountUk(cities.length)} у Польщі`,
   description:
     "Натяжні стелі у 17 польських містах — Варшава, Краків, Вроцлав, Познань, Ґданськ, Лодзь, Катовіце та інші. ПВХ виробляється в Польщі, поліестер з Бельгії. Монтаж за 1 день, до 15 років гарантії.",
   alternates: {
@@ -68,7 +69,7 @@ export default function CitiesHubPageUk() {
           />
           <Container>
             <div className="mx-auto max-w-4xl">
-              <FadeIn><Eyebrow>17 міст · одна команда · один стандарт</Eyebrow></FadeIn>
+              <FadeIn><Eyebrow>{mistCountUk(cities.length)} · одна команда · один стандарт</Eyebrow></FadeIn>
               <FadeIn delay={80}>
                 <h1 className="mt-6 font-display text-[clamp(2.75rem,7vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
                   Натяжні стелі{" "}
@@ -129,7 +130,7 @@ export default function CitiesHubPageUk() {
             <FadeIn><Eyebrow>Усі міста обслуговування</Eyebrow></FadeIn>
             <FadeIn delay={80}>
               <SectionTitle className="mt-5 text-white">
-                Усі 17 міст,{" "}
+                Усі {cities.length} міст,{" "}
                 <span className="it text-paper">які ми обслуговуємо.</span>
               </SectionTitle>
             </FadeIn>
