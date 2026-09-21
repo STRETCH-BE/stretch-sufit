@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "project-photos": "node scripts/project-photos.mjs"
+    "project-photos": "node scripts/project-photos.mjs",
+    "gate:cities": "node --experimental-strip-types scripts/city-gate.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.0",

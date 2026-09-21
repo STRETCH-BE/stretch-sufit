@@ -21,6 +21,9 @@ import { MobileStickyCTA } from "@/components/sections/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages } from "@/lib/site-config";
+import { miastaCount } from "@/lib/plural";
+import { cities } from "@/content/cities";
+import { organizationRef } from "@/lib/schema";
 
 const BASE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
@@ -28,7 +31,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Kontakt — zadzwoń, napisz lub przyjdź",
   description:
-    "Skontaktuj się ze Stretch Sufit — biuro w Częstochowie, ul. Legionów 59. Tel. +48 730 700 333. Bezpłatny pomiar w 17 miastach w Polsce. Oddzwonienie w 24 h.",
+    "Skontaktuj się ze Stretch Sufit — biuro w Częstochowie, ul. Legionów 59. Tel. +48 730 700 333. Fabryka i showroom w Częstochowie, montaż na Śląsku i w całej Polsce. Oddzwonienie w 24 h.",
   alternates: {
     canonical: "/kontakt",
     languages: languageAlternates(routes.contact),
@@ -44,36 +47,17 @@ export const metadata: Metadata = {
   },
 };
 
+// The business itself (address, geo, hours) is the single organization
+// node emitted by the root layout — this page only says "this is the
+// contact page of that organization".
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": `${BASE_URL}/kontakt#business`,
-  name: "Stretch Sufit",
-  legalName: "Alto Design Sp. z o.o.",
-  url: BASE_URL,
-  telephone: "+48730700333",
-  email: "info@stretch-sufit.pl",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "ul. Legionów 59",
-    addressLocality: "Częstochowa",
-    postalCode: "42-200",
-    addressCountry: "PL",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 50.8074338,
-    longitude: 19.1585487,
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "15:30",
-    },
-  ],
-  priceRange: "$$",
+  "@type": "ContactPage",
+  "@id": `${BASE_URL}/kontakt`,
+  url: `${BASE_URL}/kontakt`,
+  name: "Kontakt — Stretch Sufit",
+  about: organizationRef,
+  mainEntity: organizationRef,
 };
 
 const breadcrumbSchema = {
@@ -255,7 +239,7 @@ export default function KontaktPage() {
         </section>
 
         {/* ════════ Office + hours ════════ */}
-        <section className="text-bg bg-paper py-24 md:py-32">
+        <section id="showroom" className="text-bg bg-paper py-24 md:py-32">
           <Container>
             <div className="grid gap-12 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
@@ -358,16 +342,31 @@ export default function KontaktPage() {
               </FadeIn>
               <FadeIn delay={80}>
                 <SectionTitle className="mt-5 text-white">
-                  17 miast w Polsce.{" "}
+                  {miastaCount(cities.length)} w Polsce.{" "}
                   <span className="it text-paper">Jedna ekipa.</span>
                 </SectionTitle>
               </FadeIn>
               <FadeIn delay={140}>
                 <p className="mt-6 text-lg leading-relaxed text-white/70">
-                  Realizujemy montaże w całej Polsce — bazujemy w Częstochowie,
-                  obsługujemy między innymi: Warszawę, Kraków, Wrocław, Poznań,
-                  Gdańsk, Łódź, Katowice. Pełna lista miast na stronie obsługi
-                  lokalnej.
+                  Bazujemy w{" "}
+                  <Link
+                    href="/sufity-napinane/czestochowa"
+                    className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-red"
+                  >
+                    Częstochowie
+                  </Link>{" "}
+                  i obsługujemy całe województwo śląskie z dojazdem do
+                  1,5 h —{" "}
+                  <Link
+                    href="/sufity-napinane/katowice"
+                    className="text-white underline decoration-white/30 underline-offset-4 hover:decoration-red"
+                  >
+                    Katowice
+                  </Link>
+                  , Sosnowiec, Gliwice, Zabrze, Bytom, Chorzów, Tychy,
+                  Mysłowice, Dąbrowę Górniczą, Rybnik i Bielsko-Białą — oraz
+                  Warszawę, Kraków, Wrocław, Poznań, Gdańsk i Łódź. Pełna
+                  lista miast na stronie obsługi lokalnej.
                 </p>
               </FadeIn>
               <FadeIn delay={200}>

@@ -28,6 +28,11 @@ import { TrackedCTA } from "@/components/ui/tracked-cta";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { siteConfig } from "@/lib/site-config";
+import { cities } from "@/content/cities";
+import {
+  ShowroomHint,
+  type ShowroomCity,
+} from "@/components/sections/wycena/showroom-hint";
 
 export const metadata: Metadata = {
   title: "Dziękujemy — zgłoszenie przyjęte",
@@ -40,6 +45,10 @@ export const metadata: Metadata = {
 };
 
 const WHATSAPP_HREF = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent('Dzień dobry, właśnie wysłałem/am formularz wyceny. Chciałbym/Chciałabym dodać szczegóły.')}`;
+
+const silesianCities: ShowroomCity[] = cities
+  .filter((c) => c.region === "Śląskie")
+  .map((c) => ({ slug: c.slug, name: c.name, distanceFromHq: c.distanceFromHq }));
 
 export default function DziekujemyPage() {
   return (
@@ -111,6 +120,8 @@ export default function DziekujemyPage() {
                   </TrackedCTA>
                 </div>
               </FadeIn>
+
+              <ShowroomHint cities={silesianCities} />
 
               <FadeIn delay={320}>
                 <div className="mt-14 border-t border-white/10 pt-10">

@@ -35,7 +35,7 @@ const reasons = [
     badge: "D",
     title: "Cała Polska",
     body:
-      "17 lokalizacji od Gdańska po Kraków. Pomiar i montaż realizowany przez nasz zespół, nie franczyzę.",
+      "Kilkadziesiąt lokalizacji od Gdańska po Bielsko-Białą. Pomiar i montaż realizowany przez nasz zespół, nie franczyzę.",
   },
   {
     badge: "E",

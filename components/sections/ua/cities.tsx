@@ -9,6 +9,11 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
 import { cities } from "@/content/ua/cities";
+import { citiesFull } from "@/content/ua/cities-full";
+import { mistCountUk } from "@/lib/plural";
+
+// Only cities with a full UA page get their own URL; the rest link to the hub.
+const fullPages = new Set(citiesFull.map((c) => c.slug));
 
 export function Cities() {
   return (
@@ -18,7 +23,7 @@ export function Cities() {
           <FadeIn>
             <Eyebrow tone="on-paper">Де нас знайти</Eyebrow>
             <SectionTitle className="mt-5 text-bg" size="section">
-              17 міст.
+              {mistCountUk(cities.length)}.
               <br />
               <span className="it">Одна команда.</span>
             </SectionTitle>
@@ -32,7 +37,7 @@ export function Cities() {
               {cities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    href={`/ua/natiazhni-steli/${city.slug}`}
+                    href={fullPages.has(city.slug) ? `/ua/natiazhni-steli/${city.slug}` : "/ua/natiazhni-steli"}
                     className="group block rounded border border-bg/10 p-4 transition-colors hover:border-bg hover:bg-bg hover:text-white"
                   >
                     <span className="block text-[15px] font-medium">

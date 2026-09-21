@@ -3,7 +3,7 @@
  * File path: /app/en/careers/page.tsx
  *
  * English translation of /kariera. Open roles for the Polish operation —
- * the company is scaling 17 cities so the installer slot is effectively
+ * the company keeps adding cities so the installer slot is effectively
  * always open (surveyor / advisor / production roles removed 2026-08 —
  * re-add to `roles` when they reopen). EN version targets bilingual
  * candidates already in Poland or those relocating for work.
@@ -201,7 +201,7 @@ export default function CareersPageEn() {
             <FadeIn delay={160}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
                 Stretch Sufit is the Polish pillar of the Belgian Stretchgroup.
-                We're scaling across 17 Polish cities, producing in Częstochowa,
+                We're scaling across Poland from our factory in Częstochowa,
                 installing in homes, offices, restaurants. We look for people
                 who like work with a measurable outcome.
               </p>
@@ -258,7 +258,7 @@ export default function CareersPageEn() {
                       <span className="font-serif italic">we are part of an international group,</span>{" "}
                       where the Polish entity — Alto Design Sp. z o.o.,
                       operating under the Stretch Sufit brand — runs PVC
-                      production and installation across 17 Polish cities.
+                      production and installation across Poland.
                       Operational decisions happen in Częstochowa, strategic
                       decisions — jointly with HQ in Belgium.
                     </p>

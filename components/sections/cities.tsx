@@ -1,5 +1,5 @@
 /**
- * Cities — 17 Polish service locations.
+ * Cities — every service location with a landing page (count derived from content).
  * File path: /components/sections/cities.tsx
  *
  * Local-SEO block — each tile links to /sufity-napinane/[slug]. Those pages
@@ -13,6 +13,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionTitle } from "@/components/ui/section-title";
 import { FadeIn } from "@/components/ui/fade-in";
 import { cities } from "@/content/cities";
+import { miastaCount } from "@/lib/plural";
 
 export function Cities() {
   return (
@@ -25,7 +26,7 @@ export function Cities() {
               className="mt-5 text-bg"
               size="section"
             >
-              17 miast.
+              {miastaCount(cities.length)}.
               <br />
               <span className="it">Jedna ekipa.</span>
             </SectionTitle>
@@ -47,7 +48,7 @@ export function Cities() {
                       {city.name}
                     </span>
                     <span className="mt-0.5 block text-[11px] uppercase tracking-[0.1em] text-bg/70 group-hover:text-white/60">
-                      {city.region}
+                      {city.isHq ? "Śląskie · Centrala" : city.region}
                     </span>
                   </Link>
                 </li>

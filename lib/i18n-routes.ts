@@ -29,6 +29,8 @@ export const routes = {
     en: "/en/stretch-ceilings",
     ua: "/ua/natiazhni-steli",
   },
+  /** Regional hub for the Silesian voivodeship — PL only. */
+  slask: { pl: "/sufity-napinane/slask" },
   faq: { pl: "/pytania", en: "/en/faq", ua: "/ua/pytannya" },
   contact: { pl: "/kontakt", en: "/en/contact", ua: "/ua/kontakty" },
   warranty: { pl: "/gwarancja", en: "/en/warranty", ua: "/ua/harantiya" },
@@ -58,7 +60,11 @@ export const productSlugs: { pl: string; en: string; ua: string }[] = [
 
 /**
  * City slugs per locale. Only Warsaw / Kraków / Wrocław have full EN + UA
- * landing pages today — the remaining 14 exist only in Polish.
+ * landing pages today — the remaining cities exist only in Polish.
+ *
+ * Every entry in content/cities.ts MUST be listed here: the sitemap and the
+ * hreflang alternates iterate this array, not `cities` (the city gate
+ * asserts the two stay in sync).
  */
 export const citySlugs: { pl: string; en?: string; ua?: string }[] = [
   { pl: "warszawa", en: "warsaw", ua: "varshava" },
@@ -67,8 +73,8 @@ export const citySlugs: { pl: string; en?: string; ua?: string }[] = [
   { pl: "poznan" },
   { pl: "gdansk" },
   { pl: "lodz" },
-  { pl: "katowice" },
-  { pl: "czestochowa" },
+  { pl: "katowice", en: "katowice", ua: "katovitse" },
+  { pl: "czestochowa", en: "czestochowa", ua: "chenstokhova" },
   { pl: "bielsko-biala" },
   { pl: "gliwice" },
   { pl: "opole" },
@@ -78,6 +84,16 @@ export const citySlugs: { pl: string; en?: string; ua?: string }[] = [
   { pl: "radomsko" },
   { pl: "brzeg" },
   { pl: "jastrzebie-zdroj" },
+  // Silesian agglomeration — added 2026-09 (Wave 1 + Wave 2)
+  { pl: "sosnowiec" },
+  { pl: "tychy" },
+  { pl: "myslowice" },
+  { pl: "rybnik" },
+  { pl: "zabrze" },
+  { pl: "bytom" },
+  { pl: "ruda-slaska" },
+  { pl: "dabrowa-gornicza" },
+  { pl: "chorzow" },
 ];
 
 /** Case-study pages under /realizacje — Polish only. */

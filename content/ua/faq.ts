@@ -4,6 +4,8 @@
  */
 
 import type { FaqEntry, FaqCategory } from "@/content/faq";
+import { cities } from "@/content/ua/cities";
+import { mistCountUk } from "@/lib/plural";
 
 export const faqCategoriesUk: Record<
   FaqCategory,
@@ -181,7 +183,7 @@ export const faqs: FaqEntry[] = [
     slug: "service-coverage",
     category: "logistyka",
     q: "Які міста ви обслуговуєте?",
-    a: "Активно обслуговуємо 17 міст: Варшава, Краків, Вроцлав, Познань, Ґданськ, Лодзь, Катовіце, Ченстохова, Бєльсько-Бяла, Глівіце, Ополе, Кельце, Плоцьк, Пьотркув-Трибунальський, Радомсько, Бжег, Ястшембе-Здруй. Для більших проєктів (>200 м²) виїжджаємо в будь-яку точку Польщі — телефонуйте, обговоримо.",
+    a: `Активно обслуговуємо ${mistCountUk(cities.length)}: ${cities.map((c) => c.name).join(", ")}. Для більших проєктів (>200 м²) виїжджаємо в будь-яку точку Польщі — телефонуйте, обговоримо.`,
   },
 
   // APPLICATIONS

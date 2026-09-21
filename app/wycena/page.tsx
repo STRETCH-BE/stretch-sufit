@@ -35,13 +35,14 @@ import { buildBreadcrumbs, buildFaqPage } from "@/lib/schema";
 import { languageAlternates, routes } from "@/lib/i18n-routes";
 import { defaultOgImages, siteConfig } from "@/lib/site-config";
 import { cities } from "@/content/cities";
+import { CITY_PRICE_FROM_PLN } from "@/lib/cities";
 import { projects } from "@/content/projects";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl";
 
-// TODO: Michael — uzupełnij cenę od / m² (np. 165). Sekcja z ceną pokaże
-// się automatycznie, gdy wartość nie będzie null.
-const PRICE_FROM_PLN: number | null = null;
+// Published price floor — the same constant the city pages and the blog
+// cennik use (content/product-prices.ts), so /wycena never contradicts them.
+const PRICE_FROM_PLN: number | null = CITY_PRICE_FROM_PLN;
 
 export const metadata: Metadata = {
   // Root layout template renders this as
@@ -97,6 +98,11 @@ const whyUs = [
     body: "Najszersza folia PVC na rynku. Jedno pomieszczenie to jedna gładka tafla — bez widocznych łączeń.",
   },
   {
+    badge: "S",
+    title: "Showroom w Częstochowie",
+    body: "Próbki folii, profile i oświetlenie LED obejrzysz na żywo przy ul. Legionów 59 (pn–pt 9:00–15:30). Ze Śląska — do 100 km bez opłaty za dojazd.",
+  },
+  {
     badge: "E",
     title: "Montaż zwykle w 1 dzień",
     body: "Bez remontu, bez kurzu, bez wynoszenia mebli. Możesz zostać w domu w trakcie prac — sufit gotowy od razu.",
@@ -140,6 +146,8 @@ export default function WycenaPage() {
   const cityOptions: WycenaCity[] = cities.map((c) => ({
     slug: c.slug,
     name: c.name,
+    region: c.region,
+    distanceFromHq: c.distanceFromHq,
   }));
 
   const featuredProjects = FEATURED_PROJECT_SLUGS.map((slug) =>

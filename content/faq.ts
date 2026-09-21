@@ -1,3 +1,5 @@
+import { cities } from "@/content/cities";
+import { miastaCount } from "@/lib/plural";
 /**
  * FAQ data — comprehensive Q&A organized into 6 categories.
  * File path: /content/faq.ts
@@ -220,7 +222,7 @@ export const faqs: FaqEntry[] = [
     slug: "obsluga-w-polsce",
     category: "logistyka",
     q: "W jakich miastach jesteście obecni?",
-    a: "Aktywnie obsługujemy 17 miast: Warszawa, Kraków, Wrocław, Poznań, Gdańsk, Łódź, Katowice, Częstochowa, Bielsko-Biała, Gliwice, Opole, Kielce, Płock, Piotrków Trybunalski, Radomsko, Brzeg, Jastrzębie-Zdrój. Dla większych projektów (>200 m²) dojeżdżamy w całej Polsce — zadzwoń, omówimy.",
+    a: `Aktywnie obsługujemy ${miastaCount(cities.length)}: ${cities.map((c) => c.name).join(", ")}. Dla większych projektów (>200 m²) dojeżdżamy w całej Polsce — zadzwoń, omówimy.`,
   },
 
   // ═══════════════════════════════════════════════════════════

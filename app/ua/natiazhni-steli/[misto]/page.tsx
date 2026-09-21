@@ -18,7 +18,8 @@ import { Nav } from "@/components/sections/ua/nav";
 import { Footer } from "@/components/sections/ua/footer";
 import { MobileStickyCTA } from "@/components/sections/ua/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
+import { buildBreadcrumbs, buildCityService } from "@/lib/schema";
+import { CITY_PRICE_FROM_PLN } from "@/lib/cities";
 
 import { citiesFull } from "@/content/ua/cities-full";
 import { products } from "@/content/ua/products";
@@ -46,8 +47,8 @@ export async function generateMetadata({
   const i18nEntry = findCity("ua", city.slug);
 
   return {
-    title: `Натяжні стелі ${city.locative}`,
-    description: `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір. ${city.populationDisplay}, повне покриття міста.`,
+    title: city.metaTitle ? { absolute: city.metaTitle } : `Натяжні стелі ${city.locative}`,
+    description: city.metaDescription ?? `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір.`,
     alternates: {
       canonical: `/ua/natiazhni-steli/${city.slug}`,
       languages: i18nEntry
@@ -55,8 +56,8 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title: `Натяжні стелі ${city.locative} | Stretch Sufit`,
-      description: city.intro,
+      title: city.metaTitle ?? `Натяжні стелі ${city.locative} | Stretch Sufit`,
+      description: city.metaDescription ?? city.intro,
       type: "website",
       url: `${BASE_URL}/ua/natiazhni-steli/${city.slug}`,
       locale: "uk_UA",
@@ -80,9 +81,16 @@ export default async function CityPageUk({
     { name: city.name, url: `${BASE_URL}/ua/natiazhni-steli/${city.slug}` },
   ]);
 
-  const localBusinessSchema = buildLocalBusiness({
-    citySlug: city.slug,
-    cityName: city.name,
+  // Service offered in this city; the business itself is the single
+  // organization node emitted by the root layout.
+  const localBusinessSchema = buildCityService({
+    url: `${BASE_URL}/ua/natiazhni-steli/${city.slug}`,
+    name: `Натяжні стелі ${city.locative}`,
+    serviceType: "Монтаж натяжних стель",
+    description: `Натяжні стелі ${city.locative}: ПВХ з нашої фабрики в Ченстохові, поліестер з Бельгії. Монтаж за 1 день, без пилу, гарантія до 15 років.`,
+    areaServed: [city.name],
+    priceFromPLN: CITY_PRICE_FROM_PLN,
+    inLanguage: "uk",
   });
 
   const faqSchema = {
@@ -163,6 +171,11 @@ export default async function CityPageUk({
                       className="object-cover"
                     />
                     <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                  {city.imageCaption && (
+                      <figcaption className="absolute bottom-4 left-4 right-4 z-10 font-serif text-sm italic text-white">
+                        — {city.imageCaption}
+                      </figcaption>
+                    )}
                   </figure>
                 </FadeIn>
               </div>
@@ -241,6 +254,93 @@ export default async function CityPageUk({
             </div>
           </Container>
         </section>
+
+        {/* ════════ Long-form sections (only cities that carry them) ════════ */}
+        {(city.sections ?? []).length > 0 && (
+          <section className="bg-bg py-24 md:py-32">
+            <Container>
+              <div className="mx-auto max-w-3xl">
+                <FadeIn>
+                  <Eyebrow>Натяжні стелі {city.locative} — на практиці</Eyebrow>
+                </FadeIn>
+                <div className="mt-10 space-y-16 md:space-y-20">
+                  {(city.sections ?? []).map((section, i) => (
+                    <FadeIn delay={60 + i * 40} key={section.heading}>
+                      <article>
+                        <h2 className="font-display text-2xl font-semibold leading-tight tracking-[-0.02em] text-white md:text-3xl">
+                          {section.heading}
+                        </h2>
+                        {section.body.split(/\n\n+/).map((paragraph, pi) => (
+                          <p
+                            key={pi}
+                            className="mt-5 text-[16px] leading-relaxed text-white/70 md:text-[17px]"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                        {section.links && section.links.length > 0 && (
+                          <ul className="mt-6 flex flex-wrap gap-2">
+                            {section.links.map((link) => (
+                              <li key={link.href}>
+                                <Link
+                                  href={link.href}
+                                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 font-display text-sm text-white/85 transition-colors hover:border-red/60 hover:text-white"
+                                >
+                                  {link.label} →
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </article>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
+
+        {/* ════════ Nearby towns served from this city ════════ */}
+        {(city.nearbyTowns ?? []).length > 0 && (
+          <section className="text-bg bg-paper-2 py-20 md:py-24">
+            <Container>
+              <div className="grid gap-10 md:grid-cols-12 md:gap-16">
+                <div className="md:col-span-5">
+                  <FadeIn>
+                    <Eyebrow tone="on-paper">Виїзд</Eyebrow>
+                  </FadeIn>
+                  <FadeIn delay={80}>
+                    <h2 className="mt-5 font-display text-2xl font-semibold tracking-[-0.02em] text-bg md:text-3xl">
+                      Сусідні міста — <span className="it">також обслуговуємо:</span>
+                    </h2>
+                  </FadeIn>
+                  {city.travel?.noTravelFee && (
+                    <FadeIn delay={140}>
+                      <p className="mt-6 text-[15px] leading-relaxed text-bg/70">
+                        Без окремої плати за виїзд — {city.name} у радіусі 100 км від нашої фабрики в Ченстохові. Замір і розрахунок безкоштовні.
+                      </p>
+                    </FadeIn>
+                  )}
+                </div>
+                <div className="md:col-span-7">
+                  <FadeIn delay={120}>
+                    <ul className="flex flex-wrap gap-2">
+                      {(city.nearbyTowns ?? []).map((town) => (
+                        <li
+                          key={town}
+                          className="rounded-full border border-bg/15 bg-white/60 px-4 py-2 font-display text-sm text-bg/85"
+                        >
+                          {town}
+                        </li>
+                      ))}
+                    </ul>
+                  </FadeIn>
+                </div>
+              </div>
+            </Container>
+          </section>
+        )}
 
         {city.districts.length > 0 && (
           <section className="text-bg bg-paper py-24 md:py-32">

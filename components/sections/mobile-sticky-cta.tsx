@@ -35,8 +35,9 @@ function WhatsAppIcon({ className = "" }: { className?: string }) {
   );
 }
 
-export function MobileStickyCTA() {
+export function MobileStickyCTA({ city }: { city?: string } = {}) {
   const [show, setShow] = useState(false);
+  const wycenaHref = city ? `/wycena?miasto=${city}` : "/wycena";
 
   useEffect(() => {
     const onScroll = () => setShow(window.scrollY > 600);
@@ -71,8 +72,8 @@ export function MobileStickyCTA() {
           </TrackedCTA>
           <TrackedCTA
             event="cta_wycena"
-            props={{ location: "sticky" }}
-            href="/wycena"
+            props={{ location: "sticky", city }}
+            href={wycenaHref}
             className="flex flex-1 items-center justify-center rounded-full bg-red px-4 py-3.5 text-center text-sm font-semibold text-white shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           >
             Bezpłatna wycena

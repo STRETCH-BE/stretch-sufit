@@ -9,7 +9,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
-  buildLocalBusiness,
   buildBreadcrumbs,
   buildFaqPage,
 } from "@/lib/schema";
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
       "Stretch Sufit — A new ceiling in one day | Premium stretch ceilings",
   },
   description:
-    "Stretch ceilings in Poland. PVC manufactured in our factory in Poland (seamless up to 6.50 m), polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. 17 cities in Poland.",
+    "Stretch ceilings in Poland. PVC manufactured in our factory in Poland (seamless up to 6.50 m), polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Made in Częstochowa (Silesia), installed across Poland.",
   alternates: {
     canonical: "/en",
     languages: languageAlternates(routes.home),
@@ -142,7 +141,6 @@ const stats = [
 export default function HomePageEn() {
   return (
     <>
-      <JsonLd data={buildLocalBusiness()} />
       <JsonLd
         data={buildBreadcrumbs([{ name: "Home", url: `${siteConfig.url}/en` }])}
       />

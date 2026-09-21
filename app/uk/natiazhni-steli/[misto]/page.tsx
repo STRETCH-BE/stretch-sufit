@@ -18,7 +18,8 @@ import { Nav } from "@/components/sections/uk/nav";
 import { Footer } from "@/components/sections/uk/footer";
 import { MobileStickyCTA } from "@/components/sections/uk/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
-import { buildLocalBusiness, buildBreadcrumbs } from "@/lib/schema";
+import { buildBreadcrumbs, buildCityService } from "@/lib/schema";
+import { CITY_PRICE_FROM_PLN } from "@/lib/cities";
 
 import { citiesFull } from "@/content/uk/cities-full";
 import { products } from "@/content/uk/products";
@@ -70,9 +71,16 @@ export default async function CityPageUk({
     { name: city.name, url: `${BASE_URL}/uk/natiazhni-steli/${city.slug}` },
   ]);
 
-  const localBusinessSchema = buildLocalBusiness({
-    citySlug: city.slug,
-    cityName: city.name,
+  // Service offered in this city; the business itself is the single
+  // organization node emitted by the root layout.
+  const localBusinessSchema = buildCityService({
+    url: `${BASE_URL}/uk/natiazhni-steli/${city.slug}`,
+    name: `Натяжні стелі ${city.locative}`,
+    serviceType: "Монтаж натяжних стель",
+    description: `Натяжні стелі ${city.locative}: ПВХ з нашої фабрики в Ченстохові, поліестер з Бельгії. Монтаж за 1 день, без пилу, гарантія до 15 років.`,
+    areaServed: [city.name],
+    priceFromPLN: CITY_PRICE_FROM_PLN,
+    inLanguage: "uk",
   });
 
   const faqSchema = {

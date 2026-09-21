@@ -11,7 +11,7 @@ export const siteConfig = {
   parent: "Stretchgroup",
   tagline: "Nowy sufit w 1 dzień. Bez kurzu.",
   description:
-    "Stretch Sufit — sufity napinane PVC produkowane w Polsce, polyester z Belgii. Część belgijskiej Stretchgroup. Montaż w 1 dzień, bez kurzu, 25 lat żywotności, do 15 lat gwarancji.",
+    "Stretch Sufit — producent sufitów napinanych z Częstochowy (Śląskie): PVC z własnej fabryki, poliester z Belgii. Część belgijskiej Stretchgroup. Montaż w 1 dzień, bez kurzu, 25 lat żywotności, do 15 lat gwarancji.",
 
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://altodesign.pl",
 
@@ -41,10 +41,25 @@ export const siteConfig = {
     tiktok: "https://www.tiktok.com/@stretchsufit",
   },
 
+  /** Google Business Profile (Maps CID) — the same listing the /kontakt map embeds. */
+  mapsUrl: "https://www.google.com/maps?cid=18157771598918706504",
+
+  legal: {
+    nip: "5732911703",
+    krs: "0000786996",
+    regon: "383390837",
+    court:
+      "Sąd Rejonowy w Częstochowie, XVII Wydział Gospodarczy KRS",
+    shareCapital: "5 000 zł",
+  },
+
+  /** Own profiles only — the parent company is expressed as parentOrganization. */
   sameAs: [
-    "https://stretchplafond.be",
     "https://www.facebook.com/StretchSufit",
-    "https://www.instagram.com/stretch_sufit?igsh=bXFlNXFvcTBtOGk0",
+    "https://www.instagram.com/stretch_sufit",
+    "https://www.youtube.com/@stretchsufit",
+    "https://www.tiktok.com/@stretchsufit",
+    "https://www.google.com/maps?cid=18157771598918706504",
   ],
 
   ogImage: "/images/og/default.jpg",
