@@ -47,8 +47,8 @@ export async function generateMetadata({
   const i18nEntry = findCity("en", city.slug);
 
   return {
-    title: `Stretch ceilings ${city.locative}`,
-    description: `Stretch ceilings ${city.locative} — PVC manufactured in our factory in Poland, polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Free measurement. ${city.populationDisplay}, full city coverage.`,
+    title: city.metaTitle ? { absolute: city.metaTitle } : `Stretch ceilings ${city.locative}`,
+    description: city.metaDescription ?? `Stretch ceilings ${city.locative} — PVC manufactured in our factory in Poland, polyester from Belgium. Part of Stretchgroup. Installed in 1 day, no dust, up to 15 years warranty. Free measurement.`,
     alternates: {
       canonical: `/en/stretch-ceilings/${city.slug}`,
       languages: i18nEntry
@@ -56,8 +56,8 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title: `Stretch ceilings ${city.locative} | Stretch Sufit`,
-      description: city.intro,
+      title: city.metaTitle ?? `Stretch ceilings ${city.locative} | Stretch Sufit`,
+      description: city.metaDescription ?? city.intro,
       type: "website",
       url: `${BASE_URL}/en/stretch-ceilings/${city.slug}`,
       locale: "en_US",

@@ -47,8 +47,8 @@ export async function generateMetadata({
   const i18nEntry = findCity("ua", city.slug);
 
   return {
-    title: `Натяжні стелі ${city.locative}`,
-    description: `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір. ${city.populationDisplay}, повне покриття міста.`,
+    title: city.metaTitle ? { absolute: city.metaTitle } : `Натяжні стелі ${city.locative}`,
+    description: city.metaDescription ?? `Натяжні стелі ${city.locative} — ПВХ виробляється на нашій фабриці в Польщі, поліестер з Бельгії. Частина Stretchgroup. Монтаж за 1 день, без пилу, гарантія до 15 років. Безкоштовний замір.`,
     alternates: {
       canonical: `/ua/natiazhni-steli/${city.slug}`,
       languages: i18nEntry
@@ -56,8 +56,8 @@ export async function generateMetadata({
         : undefined,
     },
     openGraph: {
-      title: `Натяжні стелі ${city.locative} | Stretch Sufit`,
-      description: city.intro,
+      title: city.metaTitle ?? `Натяжні стелі ${city.locative} | Stretch Sufit`,
+      description: city.metaDescription ?? city.intro,
       type: "website",
       url: `${BASE_URL}/ua/natiazhni-steli/${city.slug}`,
       locale: "uk_UA",
