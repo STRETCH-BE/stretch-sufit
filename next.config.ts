@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
     // AVIF first (20–30% smaller than WebP for photos — direct LCP gain),
     // WebP as fallback for browsers without AVIF support.
     formats: ["image/avif", "image/webp"],
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-    ],
   },
 
   /**

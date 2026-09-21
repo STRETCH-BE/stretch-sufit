@@ -66,9 +66,9 @@ export const citiesFull: City[] = [
         a: "Yes. Warsaw is our largest B2B market — we install A2-rated acoustic ceilings in open-plan offices in Wilanów, Mokotów and Służewiec, restaurants in Śródmieście, and studios in Praga. Reverberation reduction up to 75%.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=80",
-    imageAlt: "Stretch ceiling in a Mokotów apartment, Warsaw",
+    image: "/images/gallery/sufit-swietlny-okragly-biuro.jpg",
+    imageAlt: "Office meeting area with a round backlit stretch ceiling",
+    imageCaption: "Round backlit stretch ceiling in an office meeting area — a Stretch project",
   },
   {
     slug: "krakow",
@@ -120,9 +120,9 @@ export const citiesFull: City[] = [
         a: "Standard 2–3 weeks from enquiry: measurement within 3–5 days, membrane production 5–10 days, installation 1 day. Tight deadline? We can usually accelerate.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1573599852326-2d4da0bbe613?w=1600&q=80",
-    imageAlt: "Stretch ceiling in a Kazimierz tenement, Kraków",
+    image: "/images/gallery/wellness-sauna-van-der-valk.jpg",
+    imageAlt: "Sauna corridor at the Van der Valk Beveren wellness with an LED-lit stretch ceiling",
+    imageCaption: "Van der Valk Beveren wellness — stretch ceiling with LED cove lighting, a Stretch project",
   },
   {
     slug: "wroclaw",
@@ -172,9 +172,9 @@ export const citiesFull: City[] = [
         a: "Yes. Full-apartment programs are our core deliverable for Wrocław developers — typical scope of 60–90 m² per unit, installation in 1 working day. We coordinate directly with site managers.",
       },
     ],
-    image:
-      "https://images.unsplash.com/photo-1567016526105-22da7c13161a?w=1600&q=80",
-    imageAlt: "Stretch ceiling in a Wrocław premium apartment",
+    image: "/images/gallery/sala-konferencyjna-akustyczna.jpg",
+    imageAlt: "Conference room with a white acoustic stretch ceiling and a linear LED fixture",
+    imageCaption: "Conference room with an acoustic stretch ceiling — a Stretch project in Belgium",
   },
 
   // Silesian home region — added 2026-09 (full pages)
@@ -296,9 +296,9 @@ export const citiesFull: City[] = [
         a: "Yes. Siemianowice Śląskie, Świętochłowice, Piekary Śląskie, Czeladź, Będzin, Jaworzno, Mikołów and Tarnowskie Góry are served on the same terms and the same lead times as Katowice. Chorzów, Sosnowiec, Tychy, Mysłowice, Ruda Śląska and Gliwice each have a page of their own in the Polish part of the site, with prices, districts and measurement lead times — just pick the city from the list below or enter it in the quote form.",
       },
     ],
-    image: "/images/gallery/openspace-katowice.jpg",
-    imageAlt: "Open-plan office with a class A2 acoustic stretch ceiling, Katowice",
-    imageCaption: "Open-plan office with an acoustic stretch ceiling — project in Katowice",
+    image: "/images/gallery/biuro-open-space.jpg",
+    imageAlt: "Open-plan office with a white stretch ceiling and track lighting",
+    imageCaption: "Open-plan office with a stretch ceiling and track lighting — a Stretch project in Belgium",
     updatedAt: "2026-09-20",
   },
   {

@@ -28,8 +28,8 @@ export const products: Product[] = [
     italicAccent: "Stretch",
     description:
       "Bezszwowo do 5,15 m. Montaż na zimno. Bardzo matowa, naturalna powierzchnia — wygląda jak idealna gładź.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-    imageAlt: "Sufit poliestrowy — matowa, naturalna powierzchnia",
+    image: "/images/products/poliester.jpg",
+    imageAlt: "Matowy sufit poliestrowy w salonie domu jednorodzinnego — realizacja Stretch",
     linkLabel: "Sufit poliestrowy",
 
     tagline: "Tkana membrana poliestrowa z powłoką poliuretanową",
@@ -113,8 +113,8 @@ export const products: Product[] = [
     italicAccent: "recyklingowy",
     description:
       "Bezszwowo do 6,50 m. Produkcja w naszej fabryce w Polsce. Łatwo demontowalny i w 100% recyklingowy. Doskonały do łazienek, kuchni i salonów.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-    imageAlt: "Sufit napinany PVC w nowoczesnej łazience",
+    image: "/images/products/pvc.jpg",
+    imageAlt: "Sufit napinany PVC czarny połysk w AFAS Lounge w Antwerpii — realizacja Stretch",
     linkLabel: "Sufit PVC",
     featured: true,
 
@@ -206,8 +206,8 @@ export const products: Product[] = [
     italicAccent: "akustyczny",
     description:
       "Redukuje pogłos do 75%. Idealny dla biur, restauracji, sal konferencyjnych, kin domowych i studiów.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
-    imageAlt: "Akustyczny sufit napinany w sali konferencyjnej",
+    image: "/images/products/akustyczny.jpg",
+    imageAlt: "Akustyczny sufit napinany w sali konferencyjnej — realizacja Stretch",
     linkLabel: "Akustyka",
 
     tagline: "Mikroperforowana membrana z absorberem akustycznym",
@@ -295,8 +295,8 @@ export const products: Product[] = [
     italicAccent: "świetlny",
     description:
       "Cała powierzchnia podświetlona równomiernie. LED-y liniowe, gwiezdne niebo, RGB — kontrola przez smartfon.",
-    image: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=800&q=80",
-    imageAlt: "Podświetlany sufit LED w sypialni",
+    image: "/images/products/swietlny.jpg",
+    imageAlt: "Podświetlany sufit napinany w butiku przy rue Perrée w Paryżu — realizacja Stretch",
     linkLabel: "Light system",
 
     tagline: "Translucentna membrana + system LED za sufitem",
@@ -384,8 +384,8 @@ export const products: Product[] = [
     italicAccent: "fotodrukiem",
     description:
       "Dowolny obraz w jakości foto. Dla hoteli, restauracji, sklepów i wnętrz prywatnych. Bez ograniczeń.",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
-    imageAlt: "Sufit z fotodrukiem w restauracji",
+    image: "/images/products/fotodruk.jpg",
+    imageAlt: "Podświetlany sufit napinany z fotodrukiem w salonie łazienkowym — realizacja Stretch",
     linkLabel: "Print",
 
     tagline: "Druk UV o wysokiej rozdzielczości na membranie napinanej",
@@ -473,8 +473,8 @@ export const products: Product[] = [
     italicAccent: "prefabrykowany",
     description:
       "Gotowe moduły dla budownictwa modułowego, hoteli i obiektów seryjnych. Montaż na placu w godzinach.",
-    image: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80",
-    imageAlt: "Prefabrykowane moduły sufitów napinanych",
+    image: "/images/products/prefab.jpg",
+    imageAlt: "Prefabrykowany moduł łazienkowy citizenM z sufitem napinanym — projekt Stretch",
     linkLabel: "Prefab",
 
     tagline: "Moduły gotowe do montażu — produkcja w hali, instalacja na miejscu",

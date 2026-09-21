@@ -18,8 +18,8 @@ export const products: Product[] = [
     italicAccent: "Поліестер",
     description:
       "Безшовна до 5,15 м. Холодний монтаж. Глибоко матова, природна поверхня — виглядає як ідеальна гладь.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-    imageAlt: "Поліестерова стеля — матова, природна поверхня",
+    image: "/images/products/poliester.jpg",
+    imageAlt: "Матова поліестерова натяжна стеля у вітальні приватного будинку — реалізація Stretch",
     linkLabel: "Поліестерова стеля",
 
     tagline: "Тканина з поліестру з поліуретановим покриттям",
@@ -102,8 +102,8 @@ export const products: Product[] = [
     italicAccent: "з рециклінгом",
     description:
       "Безшовна до 6,50 м. Виробляється на нашій фабриці в Польщі. Демонтовна, 100% переробна. Чудова для ванних, кухонь і вітальнь.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-    imageAlt: "ПВХ натяжна стеля в сучасній ванній",
+    image: "/images/products/pvc.jpg",
+    imageAlt: "ПВХ натяжна стеля чорний глянець в AFAS Lounge, Антверпен — реалізація Stretch",
     linkLabel: "ПВХ стеля",
     featured: true,
 
@@ -193,8 +193,8 @@ export const products: Product[] = [
     italicAccent: "Акустична",
     description:
       "Зменшує реверберацію до 75%. Ідеально для офісів, ресторанів, конференц-залів, домашніх кінотеатрів і студій.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
-    imageAlt: "Акустична натяжна стеля у конференц-залі",
+    image: "/images/products/akustyczny.jpg",
+    imageAlt: "Акустична натяжна стеля у конференц-залі — реалізація Stretch",
     linkLabel: "Акустика",
 
     tagline: "Мікроперфорована мембрана з акустичним поглиначем",
@@ -280,8 +280,8 @@ export const products: Product[] = [
     italicAccent: "Світло",
     description:
       "Вся поверхня рівномірно підсвічена. LED-лінії, зоряне небо, RGB — керування зі смартфона.",
-    image: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=800&q=80",
-    imageAlt: "Підсвічена LED стеля у спальні",
+    image: "/images/products/swietlny.jpg",
+    imageAlt: "Підсвічена натяжна стеля в бутику на rue Perrée, Париж — реалізація Stretch",
     linkLabel: "Світлова система",
 
     tagline: "Напівпрозора мембрана + LED-система за стелею",
@@ -367,8 +367,8 @@ export const products: Product[] = [
     italicAccent: "Фотодрук",
     description:
       "Будь-яке зображення у фотографічній якості. Для готелів, ресторанів, рітейлу та приватних інтер'єрів. Без обмежень.",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
-    imageAlt: "Натяжна стеля з фотодруком у ресторані",
+    image: "/images/products/fotodruk.jpg",
+    imageAlt: "Підсвічена натяжна стеля з фотодруком у шоурумі ванних кімнат — реалізація Stretch",
     linkLabel: "Фотодрук",
 
     tagline: "UV-друк високої роздільної здатності на натяжній мембрані",
@@ -454,8 +454,8 @@ export const products: Product[] = [
     italicAccent: "Префабрикована",
     description:
       "Готові модулі для модульного будівництва, готелів і серійних об'єктів. Монтаж на місці за години.",
-    image: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80",
-    imageAlt: "Префабриковані модулі натяжної стелі",
+    image: "/images/products/prefab.jpg",
+    imageAlt: "Префабрикований санвузол citizenM з натяжною стелею — проєкт Stretch",
     linkLabel: "Префаб",
 
     tagline: "Модулі готові до встановлення — вироблені на фабриці, монтаж на об'єкті",

@@ -93,8 +93,8 @@ export function Hero() {
             <div className="flex flex-col gap-5 pb-5">
               <figure className="relative isolate aspect-[4/3] overflow-hidden rounded bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a]">
                 <Image
-                  src="/images/hero/salon-warszawa.jpg"
-                  alt="Stretch ceiling in a modern living room — Warsaw project"
+                  src="/images/hero/afas-lounge-czarny-polysk.jpg"
+                  alt="Black gloss stretch ceiling at AFAS Lounge, Antwerp — a Stretch project"
                   fill
                   priority
                   sizes="(min-width: 1024px) 40vw, 100vw"

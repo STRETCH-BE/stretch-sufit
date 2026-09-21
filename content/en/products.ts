@@ -20,8 +20,8 @@ export const products: Product[] = [
     italicAccent: "Polyester",
     description:
       "Seamless up to 5.15 m. Cold install. A deeply matte, natural finish — looks like flawless plaster.",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
-    imageAlt: "Polyester ceiling — matte, natural surface",
+    image: "/images/products/poliester.jpg",
+    imageAlt: "Matte polyester stretch ceiling in a family-home living room — a Stretch project",
     linkLabel: "Polyester ceiling",
 
     tagline: "Woven polyester membrane with a polyurethane coating",
@@ -104,8 +104,8 @@ export const products: Product[] = [
     italicAccent: "recyclable",
     description:
       "Seamless up to 6.50 m. Manufactured in our factory in Poland. Removable and 100% recyclable. Excellent for bathrooms, kitchens and living rooms.",
-    image: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80",
-    imageAlt: "PVC stretch ceiling in a modern bathroom",
+    image: "/images/products/pvc.jpg",
+    imageAlt: "Black gloss PVC stretch ceiling at AFAS Lounge, Antwerp — a Stretch project",
     linkLabel: "PVC ceiling",
     featured: true,
 
@@ -195,8 +195,8 @@ export const products: Product[] = [
     italicAccent: "Acoustic",
     description:
       "Reduces reverberation by up to 75%. Ideal for offices, restaurants, conference rooms, home cinemas and studios.",
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
-    imageAlt: "Acoustic stretch ceiling in a conference room",
+    image: "/images/products/akustyczny.jpg",
+    imageAlt: "Acoustic stretch ceiling in a conference room — a Stretch project",
     linkLabel: "Acoustic",
 
     tagline: "Micro-perforated membrane with an acoustic absorber",
@@ -282,8 +282,8 @@ export const products: Product[] = [
     italicAccent: "Light",
     description:
       "The whole surface evenly backlit. Linear LEDs, starry skies, RGB — smartphone-controlled.",
-    image: "https://images.unsplash.com/photo-1616137422495-1e9e46e2aa77?w=800&q=80",
-    imageAlt: "Backlit LED ceiling in a bedroom",
+    image: "/images/products/swietlny.jpg",
+    imageAlt: "Backlit stretch ceiling in the rue Perrée boutique, Paris — a Stretch project",
     linkLabel: "Light system",
 
     tagline: "Translucent membrane + LED system behind the ceiling",
@@ -369,8 +369,8 @@ export const products: Product[] = [
     italicAccent: "Photo-print",
     description:
       "Any image at photographic quality. For hotels, restaurants, retail and private interiors. No limits.",
-    image: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
-    imageAlt: "Photo-printed stretch ceiling in a restaurant",
+    image: "/images/products/fotodruk.jpg",
+    imageAlt: "Backlit photo-printed stretch ceiling in a bathroom showroom — a Stretch project",
     linkLabel: "Print",
 
     tagline: "High-resolution UV print on a stretch membrane",
@@ -456,8 +456,8 @@ export const products: Product[] = [
     italicAccent: "Prefabricated",
     description:
       "Ready-made modules for modular construction, hotels and series builds. On-site installation in hours.",
-    image: "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80",
-    imageAlt: "Prefabricated stretch ceiling modules",
+    image: "/images/products/prefab.jpg",
+    imageAlt: "Prefabricated citizenM bathroom module with a stretch ceiling — a Stretch project",
     linkLabel: "Prefab",
 
     tagline: "Modules ready to install — produced in the factory, installed on site",
