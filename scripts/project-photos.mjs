@@ -18,8 +18,9 @@
  *   NN-*.jpg     1600×1200  ProjectGallery tiles (4:3)
  *
  * Every output is auto-rotated (EXIF orientation), centre/positioned
- * cover-cropped, re-encoded as progressive JPEG and stripped of metadata
- * (no GPS or camera EXIF leaks to the public site).
+ * cover-cropped (never upscaled — a smaller original yields a smaller,
+ * still sharp file), re-encoded as progressive JPEG and stripped of
+ * metadata (no GPS or camera EXIF leaks to the public site).
  */
 
 import sharp from "sharp";
@@ -71,17 +72,23 @@ for (const [target, spec] of Object.entries(mapping.files)) {
     console.error(`✗ ${target}: original "${spec.from}" not found in ${sourceDir}`);
     continue;
   }
-  const { width, height } = SIZES[kindOf(target)];
-  await sharp(src)
-    .rotate()
-    .resize(width, height, {
-      fit: "cover",
-      position: spec.position ?? "centre",
-      withoutEnlargement: false,
-    })
+  const size = SIZES[kindOf(target)];
+  const image = sharp(src).rotate();
+  // Never upscale: when the original is smaller than the target, keep the
+  // target aspect ratio but shrink the box to what the original can fill —
+  // a smaller, sharp file beats a blurred 1600 px one.
+  const meta = await image.metadata();
+  const srcW = meta.width ?? size.width;
+  const srcH = meta.height ?? size.height;
+  const scale = Math.min(1, srcW / size.width, srcH / size.height);
+  const width = Math.round(size.width * scale);
+  const height = Math.round(size.height * scale);
+  await image
+    .resize(width, height, { fit: "cover", position: spec.position ?? "centre" })
     .jpeg({ quality: 82, progressive: true, mozjpeg: true })
     .toFile(path.join(outDir, target));
-  console.log(`✓ ${target}  ←  ${path.basename(src)}  (${width}×${height})`);
+  const note = scale < 1 ? ` — original ${srcW}×${srcH}, not upscaled` : "";
+  console.log(`✓ ${target}  ←  ${path.basename(src)}  (${width}×${height}${note})`);
 }
 
 if (failed) {
