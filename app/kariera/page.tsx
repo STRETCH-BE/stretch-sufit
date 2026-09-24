@@ -514,7 +514,7 @@ export default function KarieraPage() {
                   href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  Zadzwoń: +32 485 48 30 35
+                  Zadzwoń: +48 730 700 333
                 </a>
               </div>
               <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.15em] text-white/65">

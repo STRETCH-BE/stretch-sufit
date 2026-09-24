@@ -222,10 +222,10 @@ export default function WspolpracaB2BPage() {
                       ● Linia B2B
                     </div>
                     <a
-                      href="tel:+32485483035"
+                      href="tel:+48730700333"
                       className="mt-4 block font-display text-2xl font-semibold tracking-[-0.02em] text-white hover:text-red"
                     >
-                      +32 485 48 30 35
+                      +48 730 700 333
                     </a>
                     <p className="mt-3 text-sm leading-relaxed text-white/60">
                       Pon – Pt 09:00 – 15:30. Poza godzinami zostaw wiadomość —
@@ -522,7 +522,7 @@ export default function WspolpracaB2BPage() {
                   href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +32 485 48 30 35
+                  +48 730 700 333
                 </a>
               </div>
               <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.15em] text-white/65">

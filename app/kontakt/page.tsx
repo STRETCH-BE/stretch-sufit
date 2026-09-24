@@ -31,7 +31,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Kontakt — zadzwoń, napisz lub przyjdź",
   description:
-    "Skontaktuj się ze Stretch Sufit — biuro w Częstochowie, ul. Legionów 59. Tel. +32 485 48 30 35. Fabryka i showroom w Częstochowie, montaż na Śląsku i w całej Polsce. Oddzwonienie w 24 h.",
+    "Skontaktuj się ze Stretch Sufit — biuro w Częstochowie, ul. Legionów 59. Tel. +48 730 700 333. Fabryka i showroom w Częstochowie, montaż na Śląsku i w całej Polsce. Oddzwonienie w 24 h.",
   alternates: {
     canonical: "/kontakt",
     languages: languageAlternates(routes.contact),
@@ -137,14 +137,14 @@ export default function KontaktPage() {
               {/* Phone */}
               <FadeIn>
                 <a
-                  href="tel:+32485483035"
+                  href="tel:+48730700333"
                   className="group block rounded border border-white/10 bg-bg-card/40 p-8 transition-all hover:border-red hover:bg-bg-card"
                 >
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
                     Telefon · PL / EN
                   </div>
                   <div className="mt-5 font-display text-3xl font-semibold tracking-[-0.02em] text-white md:text-4xl">
-                    +32 485 48 30 35
+                    +48 730 700 333
                   </div>
                   <p className="mt-4 text-[15px] leading-relaxed text-white/65">
                     Najszybszy kontakt. Odbieramy od poniedziałku do piątku —
@@ -165,7 +165,7 @@ export default function KontaktPage() {
               {/* WhatsApp */}
               <FadeIn delay={80}>
                 <a
-                  href="https://wa.me/32485483035"
+                  href="https://wa.me/48730700333"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block rounded border border-white/10 bg-bg-card/40 p-8 transition-all hover:border-[#25d366] hover:bg-bg-card"
@@ -403,10 +403,10 @@ export default function KontaktPage() {
                   Zamów bezpłatny pomiar →
                 </Link>
                 <a
-                  href="tel:+32485483035"
+                  href="tel:+48730700333"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +32 485 48 30 35
+                  +48 730 700 333
                 </a>
               </div>
             </div>

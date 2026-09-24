@@ -146,7 +146,7 @@ export const slask: SlaskContent = {
     },
     {
       q: "Ile trwa dojazd z Częstochowy na Śląsk i czy przed zamówieniem można obejrzeć materiały?",
-      a: "Do Bytomia i Katowic jedziemy autostradą A1 około 55 minut, do Gliwic, Zabrza i Rudy Śląskiej trasą A1 i A4 nieco ponad godzinę, do Dąbrowy Górniczej i Sosnowca drogą DK1 około 50–55 minut. Bielsko-Biała to około 85 minut przez A1 i S1, Rybnik i Jastrzębie-Zdrój 85–95 minut po A1. Jeśli wolisz zobaczyć folię przed decyzją, showroom przy fabryce jest otwarty od poniedziałku do piątku w godzinach 9:00–15:30 — wcześniej zadzwoń pod +32 485 48 30 35.",
+      a: "Do Bytomia i Katowic jedziemy autostradą A1 około 55 minut, do Gliwic, Zabrza i Rudy Śląskiej trasą A1 i A4 nieco ponad godzinę, do Dąbrowy Górniczej i Sosnowca drogą DK1 około 50–55 minut. Bielsko-Biała to około 85 minut przez A1 i S1, Rybnik i Jastrzębie-Zdrój 85–95 minut po A1. Jeśli wolisz zobaczyć folię przed decyzją, showroom przy fabryce jest otwarty od poniedziałku do piątku w godzinach 9:00–15:30 — wcześniej zadzwoń pod +48 730 700 333.",
     },
     {
       q: "Czy za sufit napinany w mieszkaniu na Śląsku zapłacę 8% VAT?",

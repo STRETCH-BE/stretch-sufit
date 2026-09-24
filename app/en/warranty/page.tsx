@@ -297,7 +297,7 @@ export default function WarrantyPageEn() {
             </div>
 
             <div className="mt-16 grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
-              <ProcessStep number="01" title="Get in touch" body="Email info@stretch-sufit.pl or call +32 485 48 30 35. Describe the problem and attach photos." />
+              <ProcessStep number="01" title="Get in touch" body="Email info@stretch-sufit.pl or call +48 730 700 333. Describe the problem and attach photos." />
               <ProcessStep number="02" title="Initial assessment" body="Within 3 working days we respond — whether the case qualifies for warranty or needs on-site inspection." />
               <ProcessStep number="03" title="Inspection or repair" body="If needed — we dispatch a team. Timeline: up to 14 days from notification, usually sooner." />
               <ProcessStep number="04" title="Resolution" body="Repair or replacement (if covered) at no cost to you. Standard within 30 days of notification." />
@@ -338,10 +338,10 @@ export default function WarrantyPageEn() {
                   Write email
                 </a>
                 <a
-                  href="tel:+32485483035"
+                  href="tel:+48730700333"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +32 485 48 30 35
+                  +48 730 700 333
                 </a>
               </div>
             </div>

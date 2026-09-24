@@ -187,10 +187,10 @@ export default function ProductsHubPageEn() {
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <a
-                  href="tel:+32485483035"
+                  href="tel:+48730700333"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-display text-base font-semibold text-bg transition-transform hover:scale-[1.02]"
                 >
-                  +32 485 48 30 35
+                  +48 730 700 333
                 </a>
                 <Link
                   href="/en#cta"

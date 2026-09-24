@@ -156,7 +156,7 @@ export default function SlaskPage() {
                   href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/5"
                 >
-                  +32 485 48 30 35
+                  +48 730 700 333
                 </TrackedCTA>
               </div>
             </div>

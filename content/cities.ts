@@ -174,7 +174,7 @@ export const cities: City[] = [
       },
       {
         title: "Infolinia po polsku i ukraińsku",
-        body: "Zadzwoń pod +32 485 48 30 35 albo, jeśli wolisz rozmawiać po ukraińsku, pod +48 455 444 475 — odbiera nasze biuro w Częstochowie. Umawiamy wizytę w showroomie, pomiar albo wstępną wycenę, jeśli prześlesz rzut pomieszczenia z wymiarami. Formularz na stronie działa tak samo, a oddzwaniamy najpóźniej następnego dnia roboczego.",
+        body: "Zadzwoń pod +48 730 700 333 albo, jeśli wolisz rozmawiać po ukraińsku, pod +48 455 444 475 — odbiera nasze biuro w Częstochowie. Umawiamy wizytę w showroomie, pomiar albo wstępną wycenę, jeśli prześlesz rzut pomieszczenia z wymiarami. Formularz na stronie działa tak samo, a oddzwaniamy najpóźniej następnego dnia roboczego.",
       },
     ],
     sections: [
@@ -580,7 +580,7 @@ export const cities: City[] = [
       },
       {
         q: "Skąd przyjeżdża ekipa i czy przed zamówieniem można zobaczyć folię na żywo?",
-        a: "Ekipa pomiarowa i montażowa wyjeżdża z naszej fabryki w Częstochowie przy ul. Legionów 59, gdzie działa też showroom, który przyjmuje w dni powszednie w godzinach 9:00–15:30 — można w nim porównać mat, satynę i połysk PVC, poliester oraz próbki akustyczne. Z Jastrzębia to około półtorej godziny autostradą A1. Telefon: +32 485 48 30 35, dla klientów ukraińskojęzycznych +48 455 444 475; na zgłoszenie z formularza oddzwaniamy w ciągu 24 godzin.",
+        a: "Ekipa pomiarowa i montażowa wyjeżdża z naszej fabryki w Częstochowie przy ul. Legionów 59, gdzie działa też showroom, który przyjmuje w dni powszednie w godzinach 9:00–15:30 — można w nim porównać mat, satynę i połysk PVC, poliester oraz próbki akustyczne. Z Jastrzębia to około półtorej godziny autostradą A1. Telefon: +48 730 700 333, dla klientów ukraińskojęzycznych +48 455 444 475; na zgłoszenie z formularza oddzwaniamy w ciągu 24 godzin.",
       },
     ],
     image: "/images/gallery/sufit-matowy-led-liniowy.jpg",
@@ -845,7 +845,7 @@ export const cities: City[] = [
       },
       {
         title: "Showroom i linia ukraińska",
-        body: "Próbki folii i tkaniny można obejrzeć w showroomie przy fabryce w Częstochowie, od poniedziałku do piątku między 9:00 a 15:30; z Mysłowic to nieco ponad godzina autostradą. Umawiamy się pod numerem +32 485 48 30 35, a osoby, które wolą rozmawiać po ukraińsku, obsługujemy pod numerem +48 455 444 475.",
+        body: "Próbki folii i tkaniny można obejrzeć w showroomie przy fabryce w Częstochowie, od poniedziałku do piątku między 9:00 a 15:30; z Mysłowic to nieco ponad godzina autostradą. Umawiamy się pod numerem +48 730 700 333, a osoby, które wolą rozmawiać po ukraińsku, obsługujemy pod numerem +48 455 444 475.",
       },
     ],
     sections: [
@@ -1491,7 +1491,7 @@ export const cities: City[] = [
       },
       {
         q: "Czy z Dąbrowy Górniczej warto pojechać do showroomu przy fabryce w Częstochowie?",
-        a: "Warto, zwłaszcza przed wyborem wykończenia: godzina jazdy DK1 wystarczy, żeby zobaczyć na dużych próbkach różnicę między matem, satyną a połyskiem oraz jak wygląda poliester obok folii. Showroom przy ul. Legionów 59 działa w dni robocze od 9:00 do 15:30; przed przyjazdem zadzwoń pod +32 485 48 30 35, a infolinia w języku ukraińskim działa pod +48 455 444 475. Pokażemy też profile i gotowe fragmenty sufitów z oświetleniem.",
+        a: "Warto, zwłaszcza przed wyborem wykończenia: godzina jazdy DK1 wystarczy, żeby zobaczyć na dużych próbkach różnicę między matem, satyną a połyskiem oraz jak wygląda poliester obok folii. Showroom przy ul. Legionów 59 działa w dni robocze od 9:00 do 15:30; przed przyjazdem zadzwoń pod +48 730 700 333, a infolinia w języku ukraińskim działa pod +48 455 444 475. Pokażemy też profile i gotowe fragmenty sufitów z oświetleniem.",
       },
     ],
     image: "/images/gallery/biuro-open-space.jpg",
@@ -2392,7 +2392,7 @@ export const cities: City[] = [
       },
       {
         q: "Gdzie w okolicy Opola można obejrzeć folię przed zamówieniem?",
-        a: "Najbliżej w naszym showroomie przy fabryce w Częstochowie, ul. Legionów 59 — z Opola to niecałe półtorej godziny drogą DK46. Otwieramy od poniedziałku do piątku w godzinach 9:00–15:30; na miejscu pokazujemy folie PVC w macie, satynie i połysku, poliester, próbki akustyczne i oprawy LED. Wizytę warto zapowiedzieć telefonicznie pod numerem +32 485 48 30 35.",
+        a: "Najbliżej w naszym showroomie przy fabryce w Częstochowie, ul. Legionów 59 — z Opola to niecałe półtorej godziny drogą DK46. Otwieramy od poniedziałku do piątku w godzinach 9:00–15:30; na miejscu pokazujemy folie PVC w macie, satynie i połysku, poliester, próbki akustyczne i oprawy LED. Wizytę warto zapowiedzieć telefonicznie pod numerem +48 730 700 333.",
       },
     ],
     image: "/images/gallery/salon-dom-matowy.jpg",
@@ -2706,7 +2706,7 @@ export const cities: City[] = [
       },
       {
         q: "Jadę do Częstochowy po A1 — czy mogę najpierw obejrzeć folię w showroomie przy Legionów 59, a pomiar umówić potem?",
-        a: "Tak, i wielu klientów z Piotrkowa tak robi. Showroom przy fabryce Alto Design, ul. Legionów 59, działa w dni robocze między 9:00 a 15:30; zobaczysz tam napięte próbki w macie, satynie i połysku, poliester, sufit świetlny i linie LED, a także halę, w której powstaje folia. Warto wcześniej zadzwonić pod +32 485 48 30 35 (po ukraińsku: +48 455 444 475), żebyśmy zarezerwowali dla ciebie czas. Termin pomiaru w Piotrkowie ustawimy od razu na miejscu.",
+        a: "Tak, i wielu klientów z Piotrkowa tak robi. Showroom przy fabryce Alto Design, ul. Legionów 59, działa w dni robocze między 9:00 a 15:30; zobaczysz tam napięte próbki w macie, satynie i połysku, poliester, sufit świetlny i linie LED, a także halę, w której powstaje folia. Warto wcześniej zadzwonić pod +48 730 700 333 (po ukraińsku: +48 455 444 475), żebyśmy zarezerwowali dla ciebie czas. Termin pomiaru w Piotrkowie ustawimy od razu na miejscu.",
       },
       {
         q: "Czy dojeżdżacie do Bełchatowa, Tomaszowa Mazowieckiego, Sulejowa i Wolborza?",
