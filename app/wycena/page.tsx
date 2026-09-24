@@ -338,7 +338,7 @@ export default function WycenaPage() {
                   href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2.5 rounded-full bg-bg px-[26px] py-4 text-sm font-semibold text-white transition-colors hover:bg-[#2a2a2a]"
                 >
-                  📞 +32 485 48 30 35
+                  📞 +48 730 700 333
                 </TrackedCTA>
                 <TrackedCTA
                   event="whatsapp_click"

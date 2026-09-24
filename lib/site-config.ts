@@ -19,9 +19,9 @@ export const siteConfig = {
   defaultLocale: "pl" as const,
 
   contact: {
-    phonePL: "+32485483035",
+    phonePL: "+48730700333",
     phonePLUA: "+48455444475",
-    whatsapp: "32485483035",
+    whatsapp: "48730700333",
     email: "info@stretch-sufit.pl",
     address: {
       street: "ul. Legionów 59",
