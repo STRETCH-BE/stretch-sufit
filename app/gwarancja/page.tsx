@@ -350,7 +350,7 @@ export default function GwarancjaPage() {
               <ProcessStep
                 number="01"
                 title="Skontaktuj się"
-                body="Email na info@stretch-sufit.pl lub telefon +48 730 700 333. Opisz problem, dołącz zdjęcia."
+                body="Email na info@stretch-sufit.pl lub telefon +32 485 48 30 35. Opisz problem, dołącz zdjęcia."
               />
               <ProcessStep
                 number="02"
@@ -419,10 +419,10 @@ export default function GwarancjaPage() {
                   Napisz email
                 </a>
                 <a
-                  href="tel:+48730700333"
+                  href="tel:+32485483035"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +48 730 700 333
+                  +32 485 48 30 35
                 </a>
               </div>
             </div>

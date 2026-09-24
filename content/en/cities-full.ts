@@ -328,7 +328,7 @@ export const citiesFull: City[] = [
       },
       {
         title: "Helpline in Polish and Ukrainian",
-        body: "Call +48 730 700 333 or, if you would rather speak Ukrainian, +48 455 444 475 — our office in Częstochowa answers. We arrange a showroom visit, a measurement, or a preliminary quote if you send us a floor plan of the room with dimensions. The form on the website works the same way, and we call back no later than the next working day.",
+        body: "Call +32 485 48 30 35 or, if you would rather speak Ukrainian, +48 455 444 475 — our office in Częstochowa answers. We arrange a showroom visit, a measurement, or a preliminary quote if you send us a floor plan of the room with dimensions. The form on the website works the same way, and we call back no later than the next working day.",
       },
     ],
     sections: [

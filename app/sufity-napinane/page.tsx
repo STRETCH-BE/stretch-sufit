@@ -230,7 +230,7 @@ export default function CitiesHubPage() {
                   href={`tel:${siteConfig.contact.phonePL}`}
                   className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-display text-base font-semibold text-bg transition-transform hover:scale-[1.02]"
                 >
-                  +48 730 700 333
+                  +32 485 48 30 35
                 </TrackedCTA>
                 <TrackedCTA
                   event="cta_wycena"

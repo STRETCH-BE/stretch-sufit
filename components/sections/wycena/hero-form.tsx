@@ -615,7 +615,7 @@ export function WycenaHeroForm({ cities }: { cities: WycenaCity[] }) {
                       href={`tel:${siteConfig.contact.phonePL}`}
                       className="font-semibold underline underline-offset-2"
                     >
-                      +48 730 700 333
+                      +32 485 48 30 35
                     </a>
                     .
                   </p>

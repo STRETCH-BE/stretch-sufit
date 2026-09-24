@@ -347,7 +347,7 @@ export const blogPosts: BlogPost[] = [
           "Zamknij źródło — zakręć wodę u siebie i zaalarmuj sąsiada z góry lub administrację, żeby odcięli awarię. To zawsze krok pierwszy.",
           "Nie nakłuwaj membrany — przebicie folii oznacza niekontrolowany wypływ całej wody naraz i zwykle konieczność wymiany membrany. Napięta folia z wodą wygląda groźnie, ale trzyma.",
           "Nie podpieraj i nie wybieraj wody przez krawędź — zostaw obniżenie w spokoju, wyłącz oświetlenie wpuszczane w sufit, jeśli woda zbiera się w jego okolicy.",
-          "Zadzwoń do nas — +48 730 700 333. Umawiamy interwencję serwisową; opisz, gdzie zbiera się woda i czy awaria u źródła jest już opanowana.",
+          "Zadzwoń do nas — +32 485 48 30 35. Umawiamy interwencję serwisową; opisz, gdzie zbiera się woda i czy awaria u źródła jest już opanowana.",
           "Nasza ekipa spuszcza wodę w sposób kontrolowany — przez otwór po oprawie oświetleniowej albo przez odpięty narożnik membrany, do naczyń. Bez zalewania pomieszczenia.",
           "Osuszenie i ponowny naciąg — przestrzeń nad membraną zostaje osuszona, a folia po podgrzaniu nagrzewnicą wraca do idealnego napięcia. W większości przypadków bez wymiany membrany i bez śladu po awarii.",
         ],
