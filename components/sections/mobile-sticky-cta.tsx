@@ -65,7 +65,7 @@ export function MobileStickyCTA({ city }: { city?: string } = {}) {
             event="phone_click"
             props={{ location: "sticky" }}
             href={`tel:${siteConfig.contact.phonePL}`}
-            aria-label="Zadzwoń: +48 730 700 333"
+            aria-label="Zadzwoń: +32 485 48 30 35"
             className="flex w-[52px] items-center justify-center rounded-full border border-white/10 bg-bg-card text-lg shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
           >
             📞

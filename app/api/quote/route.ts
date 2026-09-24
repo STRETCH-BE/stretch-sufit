@@ -206,7 +206,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         ok: false,
-        error: "Nie udało się wysłać zgłoszenia. Zadzwoń: +48 730 700 333.",
+        error: "Nie udało się wysłać zgłoszenia. Zadzwoń: +32 485 48 30 35.",
       },
       { status: 500 }
     );

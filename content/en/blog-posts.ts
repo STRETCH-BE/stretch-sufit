@@ -303,7 +303,7 @@ export const blogPosts: BlogPost[] = [
           "Shut off the source — turn off your water and alert the neighbour upstairs or the building manager to stop the leak. That is always step one.",
           "Do not puncture the membrane — piercing the film means an uncontrolled release of all the water at once and usually a membrane replacement. A tensioned film full of water looks alarming, but it holds.",
           "Do not prop it up and do not bail water over the edge — leave the sag alone, and switch off any recessed lighting if water is collecting near it.",
-          "Call us — +48 730 700 333. We schedule a service call-out; describe where the water is collecting and whether the leak at the source is already under control.",
+          "Call us — +32 485 48 30 35. We schedule a service call-out; describe where the water is collecting and whether the leak at the source is already under control.",
           "Our crew drains the water in a controlled way — through a light-fitting opening or an unclipped corner of the membrane, into containers. Without flooding the room.",
           "Drying and re-tensioning — the space above the membrane is dried, and after heating with a heat gun the film returns to perfect tension. In most cases with no membrane replacement and no trace of the incident.",
         ],

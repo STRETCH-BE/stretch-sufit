@@ -674,10 +674,10 @@ export default function RegulaminPage() {
                     <div>
                       Telefon:{" "}
                       <a
-                        href="tel:+48730700333"
+                        href="tel:+32485483035"
                         className="text-red underline"
                       >
-                        +48 730 700 333
+                        +32 485 48 30 35
                       </a>
                     </div>
                   </div>

@@ -197,10 +197,10 @@ export default async function ProductPageEn({
                       Free measurement →
                     </Link>
                     <a
-                      href="tel:+48730700333"
+                      href="tel:+32485483035"
                       className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/5"
                     >
-                      +48 730 700 333
+                      +32 485 48 30 35
                     </a>
                   </div>
                 </FadeIn>
@@ -447,10 +447,10 @@ export default async function ProductPageEn({
                   Book a free measurement →
                 </Link>
                 <a
-                  href="tel:+48730700333"
+                  href="tel:+32485483035"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +48 730 700 333
+                  +32 485 48 30 35
                 </a>
               </div>
             </div>

@@ -23,7 +23,7 @@ const BASE_URL =
 export const metadata: Metadata = {
   title: "Contact — call, write or visit",
   description:
-    "Get in touch with Stretch Sufit — office in Częstochowa, ul. Legionów 59. Tel. +48 730 700 333. Factory and showroom in Częstochowa, installation across Silesia and Poland. We respond within 24 hours.",
+    "Get in touch with Stretch Sufit — office in Częstochowa, ul. Legionów 59. Tel. +32 485 48 30 35. Factory and showroom in Częstochowa, installation across Silesia and Poland. We respond within 24 hours.",
   alternates: {
     canonical: "/en/contact",
     languages: languageAlternates(routes.contact),
@@ -123,14 +123,14 @@ export default function ContactPageEn() {
             <div className="grid gap-6 md:grid-cols-3 md:gap-8">
               <FadeIn>
                 <a
-                  href="tel:+48730700333"
+                  href="tel:+32485483035"
                   className="group block rounded border border-white/10 bg-bg-card/40 p-8 transition-all hover:border-red hover:bg-bg-card"
                 >
                   <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-red">
                     Phone · PL / EN
                   </div>
                   <div className="mt-5 font-display text-3xl font-semibold tracking-[-0.02em] text-white md:text-4xl">
-                    +48 730 700 333
+                    +32 485 48 30 35
                   </div>
                   <p className="mt-4 text-[15px] leading-relaxed text-white/65">
                     The fastest way. We answer Monday to Friday — outside hours leave a message and we'll call back.
@@ -149,7 +149,7 @@ export default function ContactPageEn() {
 
               <FadeIn delay={80}>
                 <a
-                  href="https://wa.me/48730700333"
+                  href="https://wa.me/32485483035"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block rounded border border-white/10 bg-bg-card/40 p-8 transition-all hover:border-[#25d366] hover:bg-bg-card"
@@ -359,10 +359,10 @@ export default function ContactPageEn() {
                   Book a free measurement →
                 </Link>
                 <a
-                  href="tel:+48730700333"
+                  href="tel:+32485483035"
                   className="inline-flex items-center gap-2 rounded-full border border-white/40 px-7 py-4 font-display text-base font-semibold text-white transition-colors hover:bg-white/10"
                 >
-                  +48 730 700 333
+                  +32 485 48 30 35
                 </a>
               </div>
             </div>
